@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="600" minWidth="900" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.redsoftware.ltd.bnc.controllers.Apply">
+    <children>
+        <HBox layoutX="832.0" layoutY="1.0" prefHeight="27.0" prefWidth="28.0">
+            <children>
+                <Button fx:id="btnMinimize" maxHeight="23.0" maxWidth="30.0" mnemonicParsing="false" onAction="#minimizeApp" prefHeight="24.0" prefWidth="30.0" text="➖" textFill="#b8ff00">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font></Button>
+                <Button fx:id="btnClose" maxHeight="23.0" maxWidth="30.0" mnemonicParsing="false" onAction="#closeApp" prefHeight="24.0" prefWidth="30.0" text="✖" textFill="#ff4d4d" />
+            </children>
+        </HBox>
+        <VBox layoutX="6.0" layoutY="68.0" prefHeight="487.0" prefWidth="888.0">
+            <children>
+                <SplitPane fx:id="cmainsplit" dividerPositions="0.25278396436525613" prefHeight="513.0" prefWidth="900.0">
+                    <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                            <children>
+                                <Button fx:id="settingsSceneBtn" mnemonicParsing="false" prefHeight="54.0" prefWidth="223.0" style="-fx-border-radius: 0.1; -fx-border-color: #2f2f2f;" text="SETTINGS" textFill="#e4e4e4">
+                                    <font>
+                                        <Font name="Consolas" size="27.0" />
+                                    </font></Button>
+                                <Button fx:id="cctvSceneBtn" layoutY="54.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="223.0" style="-fx-border-radius: 0.1; -fx-border-color: #2f2f2f;" text="CCTV SETTINGS" textFill="WHITESMOKE">
+                                    <font>
+                                        <Font name="Consolas" size="27.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="scanSceneBtn" layoutY="108.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="223.0" style="-fx-border-radius: 0.1; -fx-border-color: #2f2f2f;" text="SCAN" textFill="#e4e4e4">
+                                    <font>
+                                        <Font name="Consolas" size="27.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="applySceneBtn" disable="true" layoutY="162.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="223.0" style="-fx-border-radius: 0.1; -fx-border-color: #2f2f2f;" text="APPLY" textFill="#e4e4e4">
+                                    <font>
+                                        <Font name="Consolas" size="27.0" />
+                                    </font>
+                                </Button>
+                            </children></AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                            <children>
+                                <HBox layoutX="6.0" layoutY="7.0" prefHeight="54.0" prefWidth="648.0">
+                                    <children>
+                                        <VBox fx:id="tasksLeftBarScan" prefHeight="33.0" prefWidth="648.0">
+                                            <children>
+                                                <Text fx:id="taskslefttxt" fill="#e0e2e4" strokeType="OUTSIDE" strokeWidth="0.0" text="Tasks Left (Applying)">
+                                                    <font>
+                                                        <Font name="Consolas" size="14.0" />
+                                                    </font></Text>
+                                                <ProgressBar fx:id="tasksLeftApply" prefHeight="21.0" prefWidth="648.0" progress="0.0" />
+                                            </children>
+                                        </VBox>
+                                    </children></HBox>
+                                <HBox layoutX="6.0" layoutY="68.0" prefHeight="54.0" prefWidth="648.0">
+                                    <children>
+                                        <VBox prefHeight="33.0" prefWidth="648.0">
+                                            <children>
+                                                <Text fx:id="backendtxt" fill="#e0e2e4" strokeType="OUTSIDE" strokeWidth="0.0" text="~BACKEND CHANGE~">
+                                                    <font>
+                                                        <Font name="Consolas" size="14.0" />
+                                                    </font>
+                                                </Text>
+                                                <ProgressBar fx:id="backendBarApply" prefHeight="21.0" prefWidth="648.0" progress="0.0" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                                <HBox layoutX="200.0" layoutY="122.0" prefHeight="39.0" prefWidth="262.0">
+                                    <children>
+                                        <Button fx:id="applyBtn" mnemonicParsing="false" prefHeight="39.0" prefWidth="262.0" text="Apply" textFill="#e0e2e4">
+                                            <font>
+                                                <Font name="Consolas" size="15.0" />
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </HBox>
+                                <ScrollPane fx:id="applySp" layoutX="7.0" layoutY="192.0" prefHeight="285.0" prefWidth="648.0">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="284.0" prefWidth="200.0" />
+                                    </content>
+                                </ScrollPane>
+                                <Text fx:id="applystatustxt" fill="#e0e2e4" layoutX="7.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apply status">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Text>
+                            </children></AnchorPane>
+                    </items>
+                </SplitPane>
+            </children></VBox>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2b2b2b" height="28.0" layoutX="27.0" stroke="#2b2b2b" strokeType="INSIDE" width="805.0" />
+        <Text fx:id="licensetxt" fill="#9e9e9e" layoutX="14.0" layoutY="583.0" strokeType="OUTSIDE" strokeWidth="0.0" text="License text">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Text>
+        <Text fx:id="versiontxt" fill="#9e9e9e" layoutX="773.0" layoutY="583.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Epsilon-1.21.22.4 (148,080)">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Text>
+        <HBox layoutY="1.0" prefHeight="27.0" prefWidth="25.0">
+            <children>
+                <Button fx:id="HelpBtn" mnemonicParsing="false" prefHeight="23.0" prefWidth="28.0" text="?" textFill="WHITE">
+                    <font>
+                        <Font name="Consolas Bold" size="12.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+        <Text fill="#7c7c7c" layoutX="407.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="camera - on" wrappingWidth="86.853515625" />
+    </children>
+</AnchorPane>

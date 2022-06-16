@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="800" minWidth="500" prefHeight="800.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.redsoftware.ltd.bnc.controllers.prefDisplayB">
+    <children>
+        <HBox layoutX="419.0" layoutY="-1.0" prefHeight="27.0" prefWidth="28.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2b2b2b" height="27.0" layoutY="1.0" stroke="#2b2b2b" strokeType="INSIDE" width="500.0" />
+        <HBox layoutY="1.0" prefHeight="27.0" prefWidth="25.0" />
+        <Text fill="#7c7c7c" layoutX="207.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Preferences" wrappingWidth="86.853515625" />
+        <Button fx:id="btnClose" layoutX="461.0" layoutY="1.0" maxHeight="23.0" maxWidth="30.0" mnemonicParsing="false" onAction="#closeApp" prefHeight="24.0" prefWidth="30.0" text="✖" textFill="#ff4d4d" />
+        <AnchorPane layoutX="10.0" layoutY="90.0" prefHeight="95.0" prefWidth="430.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2f2f30" height="106.0" layoutX="3.0" layoutY="4.0" stroke="#7c7c7c" strokeType="INSIDE" width="423.0" />
+                <HBox layoutX="14.0" layoutY="22.0" prefHeight="20.0" prefWidth="260.0">
+                    <children>
+                        <RadioButton fx:id="b1rb" mnemonicParsing="false" text="All scanned hosts" textFill="#e0e2e4">
+                            <font>
+                                <Font name="Consolas" size="12.0" />
+                            </font>
+                        </RadioButton>
+                    </children>
+                </HBox>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2f2f30" height="14.0" layoutX="14.0" layoutY="-3.0" stroke="TRANSPARENT" strokeType="INSIDE" width="208.0" />
+                <Text fx:id="b1head" fill="#e0e2e4" layoutX="14.0" layoutY="7.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Display in the results list" />
+                <HBox layoutX="14.0" layoutY="48.0" prefHeight="20.0" prefWidth="284.0">
+                    <children>
+                        <RadioButton fx:id="b2rb" mnemonicParsing="false" text="Alive hosts (responding to pings) only" textFill="#e0e2e4">
+                            <font>
+                                <Font name="Consolas" size="12.0" />
+                            </font>
+                        </RadioButton>
+                    </children>
+                </HBox>
+                <HBox layoutX="14.0" layoutY="76.0" prefHeight="20.0" prefWidth="284.0">
+                    <children>
+                        <RadioButton fx:id="b3rb" mnemonicParsing="false" text="Hosts with open ports only" textFill="#e0e2e4">
+                            <font>
+                                <Font name="Consolas" size="12.0" />
+                            </font>
+                        </RadioButton>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="10.0" layoutY="346.0" prefHeight="86.0" prefWidth="430.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2f2f30" height="82.0" layoutX="3.0" layoutY="4.0" stroke="#7c7c7c" strokeType="INSIDE" width="423.0" />
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2f2f30" height="14.0" layoutX="14.0" layoutY="-3.0" stroke="TRANSPARENT" strokeType="INSIDE" width="92.0" />
+                <Text fx:id="b3head" fill="#e0e2e4" layoutX="14.0" layoutY="7.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmation" />
+                <HBox layoutX="14.0" layoutY="21.0" prefHeight="20.0" prefWidth="15.0">
+                    <children>
+                        <CheckBox fx:id="askConfirmNewScanCHKb" mnemonicParsing="false" prefHeight="10.0" prefWidth="10.0" />
+                    </children>
+                </HBox>
+                <HBox layoutX="41.0" layoutY="26.0" prefHeight="14.0" prefWidth="284.0">
+                    <children>
+                        <Text fx:id="b31txt" fill="#e0e2e4" strokeType="OUTSIDE" strokeWidth="0.0" text="Ask for confirmation before starting a new scan">
+                            <font>
+                                <Font name="Consolas" size="12.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </HBox>
+                <HBox layoutX="14.0" layoutY="52.0" prefHeight="20.0" prefWidth="15.0">
+                    <children>
+                        <CheckBox fx:id="showInfoDialogCHKb" mnemonicParsing="false" prefHeight="10.0" prefWidth="10.0" />
+                    </children>
+                </HBox>
+                <HBox layoutX="41.0" layoutY="55.0" prefHeight="14.0" prefWidth="284.0">
+                    <children>
+                        <Text fx:id="b32txt" fill="#e0e2e4" strokeType="OUTSIDE" strokeWidth="0.0" text="Show info dialog after each scan">
+                            <font>
+                                <Font name="Consolas" size="12.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2b2b2b" height="49.0" layoutX="1.0" layoutY="751.0" stroke="TRANSPARENT" strokeType="INSIDE" width="500.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2b2b2b" height="724.0" layoutX="-4.0" layoutY="27.0" stroke="TRANSPARENT" strokeType="INSIDE" width="8.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2b2b2b" height="724.0" layoutX="495.0" layoutY="27.0" stroke="TRANSPARENT" strokeType="INSIDE" width="8.0" />
+        <Button fx:id="okBtn" layoutX="308.0" layoutY="762.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="87.0" text="OK" textFill="#2b2b2b" stylesheets="@prefBtns.css">
+            <font>
+                <Font name="Consolas" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="cancelBtn" layoutX="405.0" layoutY="762.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="87.0" text="Cancel" textFill="#2b2b2b" stylesheets="@prefBtns.css">
+            <font>
+                <Font name="Consolas" size="12.0" />
+            </font>
+        </Button>
+        <HBox layoutX="14.0" layoutY="37.0" prefHeight="29.0" prefWidth="344.0">
+            <children>
+                <Button fx:id="asSceneBtn" mnemonicParsing="false" prefHeight="29.0" prefWidth="97.0" style="-fx-border-radius: 0.1; -fx-border-color: #7c7c7c;" text="AngryScan" textFill="#e0e2e4">
+                    <font>
+                        <Font name="Consolas" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="ibsSceneBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="81.0" style="-fx-border-radius: 0.1; -fx-border-color: #7c7c7c;" text="IB-Scan" textFill="#e0e2e4">
+                    <font>
+                        <Font name="Consolas" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="cbsSceneBtn" layoutX="101.0" layoutY="10.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="82.0" style="-fx-border-radius: 0.1; -fx-border-color: #7c7c7c;" text="CB-Scan" textFill="#e0e2e4">
+                    <font>
+                        <Font name="Consolas" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="displaySceneBtn" disable="true" layoutX="188.0" layoutY="10.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="82.0" style="-fx-border-radius: 0.1; -fx-border-color: #7c7c7c;" text="Display" textFill="#e0e2e4">
+                    <font>
+                        <Font name="Consolas" size="12.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="339.0" layoutX="448.0" layoutY="93.0" stroke="#7c7c7c" strokeType="INSIDE" width="34.0" />
+        <VBox layoutX="461.0" layoutY="220.0" prefHeight="106.0" prefWidth="8.0">
+            <children>
+                <Text fill="#e0e2e4" strokeType="OUTSIDE" strokeWidth="0.0" text="D">
+                    <font>
+                        <Font name="Consolas" size="15.0" />
+                    </font>
+                </Text>
+                <Text fill="#e0e2e4" layoutX="10.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="I">
+                    <font>
+                        <Font name="Consolas" size="15.0" />
+                    </font>
+                </Text>
+                <Text fill="#e0e2e4" layoutX="10.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="S">
+                    <font>
+                        <Font name="Consolas" size="15.0" />
+                    </font>
+                </Text>
+                <Text fill="#e0e2e4" layoutX="10.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="P">
+                    <font>
+                        <Font name="Consolas" size="15.0" />
+                    </font>
+                </Text>
+                <Text fill="#e0e2e4" layoutX="10.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L">
+                    <font>
+                        <Font name="Consolas" size="15.0" />
+                    </font>
+                </Text>
+                <Text fill="#e0e2e4" layoutX="10.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A">
+                    <font>
+                        <Font name="Consolas" size="15.0" />
+                    </font>
+                </Text>
+                <Text fill="#e0e2e4" layoutX="10.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Y">
+                    <font>
+                        <Font name="Consolas" size="15.0" />
+                    </font>
+                </Text>
+            </children>
+        </VBox>
+        <AnchorPane layoutX="10.0" layoutY="214.0" prefHeight="106.0" prefWidth="430.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2f2f30" height="106.0" layoutX="4.0" layoutY="11.0" stroke="#7c7c7c" strokeType="INSIDE" width="423.0" />
+                <HBox layoutX="9.0" layoutY="36.0" prefHeight="27.0" prefWidth="270.0">
+                    <children>
+                        <Text fx:id="b21txt" fill="#e0e2e4" strokeType="OUTSIDE" strokeWidth="0.0" text="The value is not available (no results):" wrappingWidth="269.7109375">
+                            <font>
+                                <Font name="Consolas" size="12.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </HBox>
+                <HBox layoutX="308.0" layoutY="29.0" prefHeight="29.0" prefWidth="108.0">
+                    <children>
+                        <TextField fx:id="naTf" prefHeight="20.0" prefWidth="170.0" text="[n/a]" />
+                    </children>
+                </HBox>
+                <HBox layoutX="308.0" layoutY="69.0" prefHeight="29.0" prefWidth="108.0">
+                    <children>
+                        <TextField fx:id="nsTf" prefHeight="20.0" prefWidth="170.0" text="[n/s]" />
+                    </children>
+                </HBox>
+                <HBox layoutX="9.0" layoutY="76.0" prefHeight="15.0" prefWidth="242.0">
+                    <children>
+                        <Text fx:id="b22txt" fill="#e0e2e4" strokeType="OUTSIDE" strokeWidth="0.0" text="The actual value was not scanned (unknown):" wrappingWidth="287.9140625">
+                            <font>
+                                <Font name="Consolas" size="12.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </HBox>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2f2f30" height="27.0" layoutX="14.0" layoutY="-3.0" stroke="TRANSPARENT" strokeType="INSIDE" width="277.0" />
+                <Text fx:id="b2head" fill="#e0e2e4" layoutX="14.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Labels displayed in the results list" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

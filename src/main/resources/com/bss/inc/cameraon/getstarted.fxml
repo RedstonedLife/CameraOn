@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="510.0" prefWidth="745.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.redsoftware.ltd.bnc.controllers.getstarted">
+    <children>
+        <SplitPane fx:id="mainSplit" dividerPositions="0.2" scaleShape="false" VBox.vgrow="ALWAYS">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <Button fx:id="csettingsbtn" layoutY="51.0" mnemonicParsing="false" text="CCTV Settings" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="48.0" />
+                        <Button fx:id="homebtn" layoutY="2.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="138.0" text="Home" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Button fx:id="settingsbtn" cancelButton="true" layoutY="26.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="138.0" text="Settings" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0" />
+                        <Button fx:id="scapscene" layoutY="73.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="138.0" text="Scan &amp; Apply" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                    </children></AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <TitledPane fx:id="SettingsTitledPane" animated="false" collapsible="false" text="Get Started" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <Button fx:id="settingsbtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Settings" />
+                                        <Button fx:id="csettingsbtn" layoutX="14.0" layoutY="96.0" mnemonicParsing="false" text="Camera Settings" />
+                                        <Text fx:id="settingstxt" layoutX="14.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About Settings" />
+                                        <Text fx:id="csettingstxt" layoutX="14.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="About Camera Settings" />
+                                        <Button fx:id="helpbtn" layoutX="14.0" layoutY="411.0" mnemonicParsing="false" text="?" />
+                                        <Text fx:id="licensetxt" fill="#9e9e9e" layoutX="43.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="License text">
+                                            <font>
+                                                <Font size="8.0" />
+                                            </font>
+                                        </Text>
+                                        <Text fx:id="versiontxt" fill="#9e9e9e" layoutX="472.0" layoutY="430.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Build and Version">
+                                            <font>
+                                                <Font size="8.0" />
+                                            </font>
+                                        </Text>
+                                    </children></AnchorPane>
+                            </content>
+                        </TitledPane>
+                    </children></AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</VBox>

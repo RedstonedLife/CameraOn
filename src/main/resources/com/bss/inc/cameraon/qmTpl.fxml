@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="500" minWidth="350" prefHeight="500.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.redsoftware.ltd.bnc.controllers.qm">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2b2b2b" height="57.0" layoutY="1.0" stroke="#2b2b2b" strokeType="INSIDE" width="350.0" />
+        <HBox layoutY="1.0" prefHeight="27.0" prefWidth="25.0" />
+        <HBox layoutY="-2.0" prefHeight="57.0" prefWidth="350.0">
+            <children>
+                <Button fx:id="qmHelpBtn" mnemonicParsing="false" prefHeight="57.0" prefWidth="120.0" text="Help" textAlignment="CENTER" textFill="#e0e2e4">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Button>
+                <Button fx:id="qmFaqBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="120.0" text="FAQ" textAlignment="CENTER" textFill="#e0e2e4">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Button>
+                <Button fx:id="qmTplBtn" disable="true" layoutX="110.0" layoutY="10.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="120.0" text="Third party licenses" textAlignment="CENTER" textFill="#e0e2e4" wrapText="true" />
+            </children></HBox>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1fff44" height="1.0" layoutY="58.0" stroke="TRANSPARENT" strokeType="INSIDE" width="117.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="1.0" layoutX="117.0" layoutY="58.0" stroke="TRANSPARENT" strokeType="INSIDE" width="117.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff4e89" height="1.0" layoutX="233.0" layoutY="58.0" stroke="TRANSPARENT" strokeType="INSIDE" width="117.0" />
+        <Text fx:id="qmTplTxt" fill="#e0e2e4" layoutX="3.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ ~BACKEND CHANGE~ " textAlignment="CENTER" wrappingWidth="343.267578125">
+            <font>
+                <Font name="Consolas" size="13.0" />
+            </font></Text>
+    </children>
+    <stylesheets>
+        <URL value="@app.css" />
+    </stylesheets>
+</AnchorPane>
