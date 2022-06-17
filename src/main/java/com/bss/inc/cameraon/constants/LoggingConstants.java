@@ -1,5 +1,7 @@
 package com.bss.inc.cameraon.constants;
 
+import com.bss.inc.cameraon.utils.OSValidator;
+
 import java.time.format.DateTimeFormatter;
 
 public class LoggingConstants {
