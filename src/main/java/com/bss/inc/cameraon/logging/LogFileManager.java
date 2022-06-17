@@ -1,9 +1,7 @@
 package com.bss.inc.cameraon.logging;
 
 import com.bss.inc.cameraon.MainClass;
-import com.redsoftware.ltd.bnc.BNC;
-import com.redsoftware.ltd.bnc.constants.ab;
-import com.redsoftware.ltd.bnc.constants.ac;
+import com.bss.inc.cameraon.constants.LoggingConstants;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -24,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 
 public class LogFileManager implements ErrorHandler, WarnHandler, InfoHandler, DebugHandler, LogHandler {
 
-    private static final File _folder = new File(ac.LOG_FOLDER);
+    private static final File _folder = new File(LoggingConstants.LOG_FOLDER);
     private boolean _LATEST_EXISTS;
     private final LocalDateTime _INIT_TIME;
     private static String _INIT_TIME_FORMATTED;
@@ -39,20 +37,20 @@ public class LogFileManager implements ErrorHandler, WarnHandler, InfoHandler, D
         /*CHECK IF LOGS FOLDER EXISTS*/
         if (!_folder.exists()) _folder.mkdir();
         /*CHECK IF LATEST.LOG EXISTS*/
-        _LATEST_EXISTS = _fileExists(ac.LOG_LATEST);
+        _LATEST_EXISTS = _fileExists(LoggingConstants.LOG_LATEST);
         /*FORMAT INIT TIME*/
-        _INIT_TIME_FORMATTED = _INIT_TIME.format(ac.LOG_DATE_FORMAT);
+        _INIT_TIME_FORMATTED = _INIT_TIME.format(LoggingConstants.LOG_DATE_FORMAT);
         /* COPY LATEST TO ITS OWN FILE */
         if (_LATEST_EXISTS) {
-            File latest = new File(_folder, ac.LOG_LATEST);
-            if (_sameDayLogs(_logCreationDateFormatted(ac.LOG_LATEST)) >= 1) {
-                currentLogFile = _createLog(ac.LOG_NAME_DUPLICATE_FORMAT.formatted(
-                        _logCreationDateFormatted(ac.LOG_LATEST),
-                        String.valueOf(_sameDayLogs(_logCreationDateFormatted(ac.LOG_LATEST)))
+            File latest = new File(_folder, LoggingConstants.LOG_LATEST);
+            if (_sameDayLogs(_logCreationDateFormatted(LoggingConstants.LOG_LATEST)) >= 1) {
+                currentLogFile = _createLog(LoggingConstants.LOG_NAME_DUPLICATE_FORMAT.formatted(
+                        _logCreationDateFormatted(LoggingConstants.LOG_LATEST),
+                        String.valueOf(_sameDayLogs(_logCreationDateFormatted(LoggingConstants.LOG_LATEST)))
                 ));
             } else {
-                currentLogFile = _createLog(ac.LOG_NAME_FORMAT.formatted(
-                        _logCreationDateFormatted(ac.LOG_LATEST)
+                currentLogFile = _createLog(LoggingConstants.LOG_NAME_FORMAT.formatted(
+                        _logCreationDateFormatted(LoggingConstants.LOG_LATEST)
                 ));
             }
             try {
@@ -63,7 +61,7 @@ public class LogFileManager implements ErrorHandler, WarnHandler, InfoHandler, D
             currentLogFile = latest;
             _wipeContents(currentLogFile);
         } else {
-            currentLogFile = _createLog(ac.LOG_LATEST);
+            currentLogFile = _createLog(LoggingConstants.LOG_LATEST);
         }
         System.out.println(getCurrentTimestamp());
     }
@@ -156,7 +154,7 @@ public class LogFileManager implements ErrorHandler, WarnHandler, InfoHandler, D
                             _logCreationDateMilli(
                                     Objects.requireNonNull(_getFile(baseName))
                             )
-                    ).toInstant(), ZoneId.systemDefault()).format(ac.LOG_DATE_FORMAT);
+                    ).toInstant(), ZoneId.systemDefault()).format(LoggingConstants.LOG_DATE_FORMAT);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -188,7 +186,7 @@ public class LogFileManager implements ErrorHandler, WarnHandler, InfoHandler, D
     }
 
     public static String getCurrentTimestamp() {
-        return "%sT%s".formatted(LocalDateTime.now().format(ac.LOG_DATE_FORMAT), LocalDateTime.now().format(ac.LOG_TIME_FORMAT));
+        return "%sT%s".formatted(LocalDateTime.now().format(LoggingConstants.LOG_DATE_FORMAT), LocalDateTime.now().format(LoggingConstants.LOG_TIME_FORMAT));
     }
 
     private void append(String line) {
@@ -201,81 +199,81 @@ public class LogFileManager implements ErrorHandler, WarnHandler, InfoHandler, D
     }
 
     @Override public void error(String message, Exception e) {
-        append(ac.LOG_CLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), e.getClass().getName(), Level.ERROR.label(), message));
+        append(LoggingConstants.LOG_CLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), e.getClass().getName(), Level.ERROR.label(), message));
     }
     @Override public void error(String message) {
-        append(ac.LOG_UNCLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.ERROR.label(), message));
+        append(LoggingConstants.LOG_UNCLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.ERROR.label(), message));
     }
     @Override public void error(Exception e) {
-        append(ac.LOG_CLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), e.getClass().getName(), Level.ERROR.label(), e.getMessage()));
+        append(LoggingConstants.LOG_CLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), e.getClass().getName(), Level.ERROR.label(), e.getMessage()));
     }
     @Override public void error(String message, Exception e, Class <?> clazz) {
-        append(ac.LOG_SUPER_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.ERROR.label(), clazz.getSimpleName(), e.getClass().getName(), message));
+        append(LoggingConstants.LOG_SUPER_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.ERROR.label(), clazz.getSimpleName(), e.getClass().getName(), message));
     }
     @Override public void error(String message, Exception e, String name) {
-        append(ac.LOG_SUPER_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.ERROR.label(), e.getClass().getName(), name, message));
+        append(LoggingConstants.LOG_SUPER_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.ERROR.label(), e.getClass().getName(), name, message));
     }
     @Override public void warn(String message, Exception e) {
-        append(ac.LOG_CLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), e.getClass().getName(), Level.WARN.label(), message));
+        append(LoggingConstants.LOG_CLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), e.getClass().getName(), Level.WARN.label(), message));
     }
     @Override public void warn(String message) {
-        append(ac.LOG_UNCLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.WARN.label(), message));
+        append(LoggingConstants.LOG_UNCLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.WARN.label(), message));
     }
     @Override public void warn(Exception e) {
-        append(ac.LOG_CLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), e.getClass().getName(), Level.WARN.label(), e.getMessage()));
+        append(LoggingConstants.LOG_CLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), e.getClass().getName(), Level.WARN.label(), e.getMessage()));
     }
     @Override public void warn(String message, Exception e, Class <?> clazz) {
-        append(ac.LOG_SUPER_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.WARN.label(), clazz.getSimpleName(), e.getClass().getName(), message));
+        append(LoggingConstants.LOG_SUPER_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.WARN.label(), clazz.getSimpleName(), e.getClass().getName(), message));
     }
     @Override public void warn(String message, Exception e, String name) {
-        append(ac.LOG_SUPER_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.WARN.label(), e.getClass().getName(), name, message));
+        append(LoggingConstants.LOG_SUPER_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.WARN.label(), e.getClass().getName(), name, message));
     }
     @Override public void debug(String message, Exception e) {
-        append(ac.LOG_CLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), e.getClass().getName(), Level.DEBUG.label(), message));
+        append(LoggingConstants.LOG_CLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), e.getClass().getName(), Level.DEBUG.label(), message));
     }
     @Override public void debug(String message) {
-        append(ac.LOG_UNCLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.DEBUG.label(), message));
+        append(LoggingConstants.LOG_UNCLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.DEBUG.label(), message));
     }
     @Override public void debug(Exception e) {
-        append(ac.LOG_CLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), e.getClass().getName(), Level.DEBUG.label(), e.getMessage()));
+        append(LoggingConstants.LOG_CLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), e.getClass().getName(), Level.DEBUG.label(), e.getMessage()));
     }
     @Override public void debug(String message, Exception e, Class <?> clazz) {
-        append(ac.LOG_SUPER_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.DEBUG.label(), clazz.getSimpleName(), e.getClass().getName(), message));
+        append(LoggingConstants.LOG_SUPER_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.DEBUG.label(), clazz.getSimpleName(), e.getClass().getName(), message));
     }
     @Override public void debug(String message, Exception e, String name) {
-        append(ac.LOG_SUPER_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.DEBUG.label(), e.getClass().getName(), name, message));
+        append(LoggingConstants.LOG_SUPER_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.DEBUG.label(), e.getClass().getName(), name, message));
     }
     @Override public void info(String message, Exception e) {
-        append(ac.LOG_CLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), e.getClass().getName(), Level.INFO.label(), message));
+        append(LoggingConstants.LOG_CLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), e.getClass().getName(), Level.INFO.label(), message));
     }
     @Override public void info(String message) {
-        append(ac.LOG_UNCLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.INFO.label(), message));
+        append(LoggingConstants.LOG_UNCLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.INFO.label(), message));
     }
     @Override public void info(Exception e) {
-        append(ac.LOG_CLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), e.getClass().getName(), Level.INFO.label(), e.getMessage()));
+        append(LoggingConstants.LOG_CLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), e.getClass().getName(), Level.INFO.label(), e.getMessage()));
     }
     @Override public void info(String message, Exception e, Class <?> clazz) {
-        append(ac.LOG_SUPER_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.INFO.label(), clazz.getSimpleName(), e.getClass().getName(), message));
+        append(LoggingConstants.LOG_SUPER_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.INFO.label(), clazz.getSimpleName(), e.getClass().getName(), message));
     }
     @Override public void info(String message, Exception e, String name) {
-        append(ac.LOG_SUPER_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.INFO.label(), e.getClass().getName(), name, message));
+        append(LoggingConstants.LOG_SUPER_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), Level.INFO.label(), e.getClass().getName(), name, message));
     }
     @Override @Deprecated(since = "2/18/2022", forRemoval = true) public void log(Level level, String message, Object... args) {
-        append(ac.LOG_UNCLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), level.label(), message.formatted(args)));
+        append(LoggingConstants.LOG_UNCLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), level.label(), message.formatted(args)));
     }
     @Override public void log(Level level, String message, Exception exception) {
-        append(ac.LOG_CLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), exception.getClass().getName(), level.label(), message));
+        append(LoggingConstants.LOG_CLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), exception.getClass().getName(), level.label(), message));
     }
     @Override public void log(Level level, String message, Exception exception, Class<?> clazz) {
-        append(ac.LOG_SUPER_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), level.label(), clazz.getName(), exception.getClass().getName(), message));
+        append(LoggingConstants.LOG_SUPER_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), level.label(), clazz.getName(), exception.getClass().getName(), message));
     }
     @Override public void log(Level level, String message, Class<?> clazz) {
-        append(ac.LOG_CLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), clazz.getSimpleName(), level.label(), message));
+        append(LoggingConstants.LOG_CLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), clazz.getSimpleName(), level.label(), message));
     }
     @Override public void log(Level level, String message, Class<?> clazz, Object... args) {
-        append(ac.LOG_CLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), clazz.getSimpleName(), level.label(), message.formatted(args)));
+        append(LoggingConstants.LOG_CLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), clazz.getSimpleName(), level.label(), message.formatted(args)));
     }
     @Override public void log(Level level, String message) {
-        append(ac.LOG_UNCLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), level.label(), message));
+        append(LoggingConstants.LOG_UNCLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), level.label(), message));
     }
 }
