@@ -1,5 +1,7 @@
 package com.bss.inc.cameraon.constants;
 
+import com.bss.inc.cameraon.utils.OSValidator;
+
 public class FilePaths {
     public static final String UNIX_CONFIG_LOCATION = "/.config/BNC/";
     public static final String WIN_CONFIG_LOCATION = "/AppData/Local/BNC/";
