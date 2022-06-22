@@ -29,9 +29,9 @@ public class Dialog {
         this.dialogName = name;
         for(URL file : files) {
             try {
-
-            } catch (IOException e) {
                 
+            } catch (IOException e) {
+
             }
         }
     }
