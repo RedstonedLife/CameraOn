@@ -31,7 +31,7 @@ public class Dialog {
         for(URL file : files) {
             try {
                 Scene scene = new Scene(FXMLLoader.load(file), w, h);
-                scene.getStylesheets().add()
+                scene.getStylesheets().add(null);
             } catch (IOException e) {
 
             }
