@@ -8,7 +8,7 @@ public class Settings implements ISettings {
 
     private File file;
 
-    
+
 
     @Override
     public void Setup() {
