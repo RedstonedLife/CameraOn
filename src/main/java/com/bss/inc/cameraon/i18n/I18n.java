@@ -54,5 +54,6 @@ public class I18n implements II18n {
         }
         return messageFormat.format(objects).replace(' ', ' ');
     }
+
     
 }
