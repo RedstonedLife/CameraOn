@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.display.controllers;
 
+import com.bss.inc.cameraon.exceptions.UnknownOS;
 import com.bss.inc.cameraon.settings.ISettings;
 
 import java.io.File;
@@ -8,7 +9,7 @@ public class Settings implements ISettings {
 
     private File file;
 
-    
+    public Settings() throws UnknownOS
 
     @Override
     public void Setup() {
