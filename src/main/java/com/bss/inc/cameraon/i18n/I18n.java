@@ -45,7 +45,8 @@ public class I18n implements II18n {
         String format = translate(string);
         MessageFormat messageFormat = messageFormatCache.get(format);
         if(messageFormat == null) {
-            try {messageFormat = new MessageFormat()
+            try {messageFormat = new MessageFormat(format);}
+            
         }
     }
 }
