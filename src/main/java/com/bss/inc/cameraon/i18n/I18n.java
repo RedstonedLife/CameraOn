@@ -22,6 +22,6 @@ public class I18n implements II18n {
     public I18n(final MainClass instance) {
         this._i = instance;
         defaultBundle = ResourceBundle.getBundle(FrontendPaths.MESSAGES, currentLocale);
-        localeBundle
+        localeBundle = defaultBundle
     }
 }
