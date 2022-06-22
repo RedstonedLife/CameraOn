@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.display;
 
+import com.bss.inc.cameraon.constants.FrontendPaths;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -31,7 +32,7 @@ public class Dialog {
         for(URL file : files) {
             try {
                 Scene scene = new Scene(FXMLLoader.load(file), w, h);
-                scene.getStylesheets().add(null);
+                scene.getStylesheets().add(FrontendPaths.APP_CSS);
             } catch (IOException e) {
 
             }
