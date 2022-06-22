@@ -33,6 +33,16 @@ public class Dialog {
             try {
                 Scene scene = new Scene(FXMLLoader.load(file), w, h);
                 scene.getStylesheets().add(FrontendPaths.APP_CSS);
+                scene.setOnMousePressed(mouseEvent -> {
+                    offsetX = mouseEvent.getSceneX();
+                    offsetY = mouseEvent.getSceneY();
+                });
+
+                scene.setOnMouseDragged(mouseEvent -> {
+                    parent.setX(mouseEvent.getScreenX() - offsetX);
+                    parent.setY(mouseEvent.getScreenY() - offsetY);
+                });
+                scenes.put(file, scene);
             } catch (IOException e) {
 
             }
