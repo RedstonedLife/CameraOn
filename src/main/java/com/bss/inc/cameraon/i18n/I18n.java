@@ -37,5 +37,5 @@ public class I18n implements II18n {
     public void OnStop() {instance = null;}
     @Override public Locale getCurrentLocale() {return currentLocale;}
 
-    private String translate(final String string)
+    private String translate(final String string, final Object... objects)
 }
