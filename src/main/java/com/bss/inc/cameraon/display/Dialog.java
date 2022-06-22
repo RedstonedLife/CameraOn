@@ -21,6 +21,9 @@ public class Dialog {
         parent.setResizable(false);
         parent.initStyle(StageStyle.UNDECORATED);
     }
-    
+
+    public Dialog(double w, double h, String name, URL[] files) {
+        
+    }
 
 }
