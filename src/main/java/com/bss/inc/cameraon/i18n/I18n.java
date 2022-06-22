@@ -46,7 +46,9 @@ public class I18n implements II18n {
         MessageFormat messageFormat = messageFormatCache.get(format);
         if(messageFormat == null) {
             try {messageFormat = new MessageFormat(format);}
-            
+            catch (final IllegalArgumentException ex) {
+                format = format.replaceAll()
+            }
         }
     }
 }
