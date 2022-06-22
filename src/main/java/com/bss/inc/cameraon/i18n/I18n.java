@@ -33,5 +33,6 @@ public class I18n implements II18n {
     }
 
     public static String capitalCase(final String input) {return input == null || input.length() == 0 ? input : input.toUpperCase(Locale.ENGLISH).charAt(0) + input.toLowerCase(Locale.ENGLISH).substring(1);}
-    
+    public void OnStart() {instance = this;}
+    public void OnStop() {instance = null;}
 }
