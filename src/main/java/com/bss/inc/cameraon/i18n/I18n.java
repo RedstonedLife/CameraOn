@@ -41,5 +41,7 @@ public class I18n implements II18n {
         } catch(final MissingResourceException ex) {return defaultBundle.getString(string);}
     }
 
-    public String format(final String string,)
+    public String format(final String string, final Object... objects) {
+        
+    }
 }
