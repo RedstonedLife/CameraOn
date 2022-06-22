@@ -15,7 +15,7 @@ public class Settings implements ISettings {
         this.name = name;
         file = new File(FilePaths.SETTINGS_FOLDER+name +".json");
         if(FilePaths.SETTINGS_FOLDER.equals("UKNS"))
-            throw new UnknownOS("An unsupported OS is being used")
+            throw new UnknownOS("An unsupported OS is being used, exiting.")
     }
 
     @Override
