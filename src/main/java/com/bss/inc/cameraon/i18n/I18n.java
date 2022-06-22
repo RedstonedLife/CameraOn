@@ -28,6 +28,6 @@ public class I18n implements II18n {
 
     public static String tl(final String string, final Object... objects) {
         if(instance == null) return "";
-        if(objects.length==0)
+        if(objects.length==0) return FrontendPaths
     }
 }
