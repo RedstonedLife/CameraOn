@@ -1,6 +1,11 @@
 package com.bss.inc.cameraon.display;
 
+import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
+import java.net.URL;
+import java.util.HashMap;
 
 public class Dialog {
     private double offsetX,offsetY;
@@ -9,5 +14,13 @@ public class Dialog {
     private boolean isFocused;
     private double width, height;
     private String dialogName;
+    private HashMap<URL, Scene> scenes = new HashMap<URL, Scene>();
+
+    static {
+        parent = new Stage();
+        parent.setResizable(false);
+        parent.initStyle(StageStyle.UNDECORATED);
+    }
+    
 
 }
