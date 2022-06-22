@@ -36,4 +36,6 @@ public class I18n implements II18n {
     public void OnStart() {instance = this;}
     public void OnStop() {instance = null;}
     @Override public Locale getCurrentLocale() {return currentLocale;}
+
+    private String translate(final )
 }
