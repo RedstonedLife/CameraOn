@@ -42,6 +42,6 @@ public class I18n implements II18n {
     }
 
     public String format(final String string, final Object... objects) {
-        
+        String format = translate(string)
     }
 }
