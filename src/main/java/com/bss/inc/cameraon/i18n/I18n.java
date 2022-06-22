@@ -25,5 +25,6 @@ public class I18n implements II18n {
         localeBundle = defaultBundle;
         customBundle = FrontendPaths.NULL_BUNDLE;
     }
-    
+
+    public static String tl
 }
