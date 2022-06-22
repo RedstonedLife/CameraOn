@@ -1,6 +1,7 @@
 package com.bss.inc.cameraon.i18n;
 
 import com.bss.inc.cameraon.MainClass;
+import com.bss.inc.cameraon.constants.FrontendPaths;
 
 import java.text.MessageFormat;
 import java.util.HashMap;
@@ -20,5 +21,6 @@ public class I18n implements II18n {
 
     public I18n(final MainClass instance) {
         this._i = instance;
+        defaultBundle = ResourceBundle.getBundle(FrontendPaths.MESSAGES, currentLocale);
     }
 }
