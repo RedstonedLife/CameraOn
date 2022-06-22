@@ -4,4 +4,6 @@ public interface ISettings {
     void Setup();
     void Save();
     void Load();
+    T getValue(String key);
+
 }
