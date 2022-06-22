@@ -26,7 +26,7 @@ public class $UI$01 {
     public static void u_02$1$1(Map<Button, String> map) {for(Button object : map.keySet()) {object.setText(map.get(object));}}
     public static void u_03$1$1(Map<Text, String> map) {for(Text object : map.keySet()) {object.setText(map.get(object));}}
     public static void u_04$1$1(Button object) {object.setOnAction(e -> {
-        BNC.getSCENE_MANAGER().changeDialogScene("preferencesDialog", MainClass.class.getResource(FrontendPaths.PREF_DISPLAY_FXML));
+        BNC.getSCENE_MANAGER().changeDialogScene("preferencesDialog", MainClass.class.getResource(FrontendPaths.PREF_DISPLAY_FXML)); // <--- Look at this closely;
         BNC.getSCENE_MANAGER().openDialog("preferencesDialog");
     });}
     public static <T> void u_05$1$1(ChoiceBox<T> cb, int dfv, T[] vl) {for(T v : vl) {cb.getItems().add(v);}cb.setValue(cb.getItems().get(dfv));}
