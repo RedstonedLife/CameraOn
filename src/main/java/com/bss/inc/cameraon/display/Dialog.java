@@ -4,6 +4,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
 
@@ -28,6 +29,8 @@ public class Dialog {
         this.dialogName = name;
         for(URL file : files) {
             try {
+
+            } catch (IOException e) {
                 
             }
         }
