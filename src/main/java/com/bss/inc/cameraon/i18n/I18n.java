@@ -26,5 +26,7 @@ public class I18n implements II18n {
         customBundle = FrontendPaths.NULL_BUNDLE;
     }
 
-    public static String tl(final String string, final Object...)
+    public static String tl(final String string, final Object... objects) {
+        
+    }
 }
