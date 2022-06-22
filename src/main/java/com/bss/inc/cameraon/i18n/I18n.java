@@ -2,6 +2,7 @@ package com.bss.inc.cameraon.i18n;
 
 import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.constants.FrontendPaths;
+import com.bss.inc.cameraon.utils.FileResClassLoader;
 
 import java.text.MessageFormat;
 import java.util.*;
