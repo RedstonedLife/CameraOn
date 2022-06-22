@@ -23,6 +23,6 @@ public class I18n implements II18n {
         this._i = instance;
         defaultBundle = ResourceBundle.getBundle(FrontendPaths.MESSAGES, currentLocale);
         localeBundle = defaultBundle;
-        customBundle = FrontendPaths.NULL_BUNDLE
+        customBundle = FrontendPaths.NULL_BUNDLE;
     }
 }
