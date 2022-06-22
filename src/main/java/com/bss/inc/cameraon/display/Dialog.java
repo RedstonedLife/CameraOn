@@ -23,7 +23,9 @@ public class Dialog {
     }
 
     public Dialog(double w, double h, String name, URL[] files) {
-        
+        this.width = w;
+        this.height = h;
+        this.dialogName = name;
     }
 
 }
