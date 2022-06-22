@@ -32,5 +32,5 @@ public class I18n implements II18n {
         else return instance.format(string, objects);
     }
 
-    public static String capitalCase(final String input)
+    public static String capitalCase(final String input) {return input == null || input.length() == 0 ? input : input.toUpperCase()}
 }
