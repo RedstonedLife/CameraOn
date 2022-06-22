@@ -29,7 +29,7 @@ public class Dialog {
         this.dialogName = name;
         for(URL file : files) {
             try {
-                
+                Scene scene = new Scene()
             } catch (IOException e) {
 
             }
