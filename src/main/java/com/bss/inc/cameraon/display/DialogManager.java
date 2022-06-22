@@ -3,6 +3,7 @@ package com.bss.inc.cameraon.display;
 import com.bss.inc.cameraon.MainClass;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.HashMap;
 
 public class DialogManager {
