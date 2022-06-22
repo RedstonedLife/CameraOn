@@ -49,8 +49,16 @@ public class Dialog {
                 Logger.getLogger("BNC").error("Could not initialize Dialog-{}".replace("{}", dialogName), e);
             }
         }
+    }
 
-        
+    public void openDialog() {this.isEnabled=true;this.parent.show();}
+    public void closeDialog() {this.isEnabled=false;this.parent.close();}
+    public void changeScene(URL file) {this.parent.setScene(scenes.get(file));}
+    public void minimize() {this.parent.setIconified(true);}
+    public String getDialogName() {return this.dialogName;}
+    public Stage getParent() {return parent;}
+    public boolean isEnabled() {return isEnabled;}
+    public void setEnabled(boolean v) {this.isEnabled=v;}
     }
 
 }
