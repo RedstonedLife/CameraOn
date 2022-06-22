@@ -42,15 +42,17 @@ public class I18n implements II18n {
     }
 
     public String format(final String string, final Object... objects) {
-        String format = translate(string);
-        MessageFormat messageFormat = messageFormatCache.get(format);
+        String fmt = translate(string);
+        MessageFormat messageFormat = messageFormatCache.get(fmt);
         if(messageFormat == null) {
-            try {messageFormat = new MessageFormat(format);}
+            try {messageFormat = new MessageFormat(fmt);}
             catch (final IllegalArgumentException ex) {
-                format = format.replaceAll("\\{(\\D*?)\\}", "\\[$1\\]");
-                messageFormat = new MessageFormat(format);
-
+                fmt = fmt.replaceAll("\\{(\\D*?)\\}", "\\[$1\\]");
+                messageFormat = new MessageFormat(fmt);
             }
+            messageFormatCache.put(fmt, messageFormat);
         }
+        return messageFormat.format(objects).replace(' ', ' ');
     }
+    
 }
