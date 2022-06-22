@@ -13,7 +13,7 @@ public class Settings implements ISettings {
 
     public Settings(final String name) throws UnknownOS {
         this.name = name;
-        file = new File(FilePaths.SETTINGS_FOLDER + name)
+        file = new File(FilePaths.SETTINGS_FOLDER + name + ".json");
     }
 
     @Override
