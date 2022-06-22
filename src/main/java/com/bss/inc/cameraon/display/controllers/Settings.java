@@ -11,7 +11,8 @@ public class Settings implements ISettings {
     private File file;
     private String name;
 
-    public Settings(String ) throws UnknownOS {
+    public Settings(final String name) throws UnknownOS {
+        this.name = name;
         file = new File(FilePaths.SETTINGS_FOLDER +)
     }
 
