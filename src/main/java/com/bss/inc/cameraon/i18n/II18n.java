@@ -4,6 +4,6 @@ public interface II18n {
     /**
      * Gets the current locale setting
      *
-     * @return 
+     * @return the current locale
      */
 }
