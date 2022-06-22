@@ -47,7 +47,9 @@ public class I18n implements II18n {
         if(messageFormat == null) {
             try {messageFormat = new MessageFormat(format);}
             catch (final IllegalArgumentException ex) {
-                format = format.replaceAll("\\{(\\D*?)\\}", "\\[$1\\]")
+                format = format.replaceAll("\\{(\\D*?)\\}", "\\[$1\\]");
+                messageFormat = new MessageFormat(format);
+
             }
         }
     }
