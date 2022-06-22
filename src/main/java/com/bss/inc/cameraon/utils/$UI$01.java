@@ -28,5 +28,5 @@ public class $UI$01 {
         BNC.getSCENE_MANAGER().changeDialogScene("preferencesDialog",BNC.class.getResource(aa.PREF_DISPLAY_FXML));
         BNC.getSCENE_MANAGER().openDialog("preferencesDialog");
     });}
-    public static <T> void u_05$1$1(ChoiceBox<T> cb, int dfv, T[] vl) {for(T v : vl) {cb.getItems().add(v);}cb.setValue(cb.getItems().get(dfv));};
+    public static <T> void u_05$1$1(ChoiceBox<T> cb, int dfv, T[] vl) {for(T v : vl) {cb.getItems().add(v);}cb.setValue(cb.getItems().get(dfv));}
 }
