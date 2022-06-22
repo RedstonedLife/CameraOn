@@ -1,6 +1,8 @@
 package com.bss.inc.cameraon.display;
 
 import com.bss.inc.cameraon.constants.FrontendPaths;
+import com.bss.inc.cameraon.logging.Level;
+import com.bss.inc.cameraon.logging.Logger;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -44,9 +46,11 @@ public class Dialog {
                 });
                 scenes.put(file, scene);
             } catch (IOException e) {
-
+                Logger.getLogger("BNC").error("Could not initialize Dialog-{}".replace("{}", dialogName), e);
             }
         }
+
+        
     }
 
 }
