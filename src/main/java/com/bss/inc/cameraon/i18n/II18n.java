@@ -8,5 +8,5 @@ public interface II18n {
      *
      * @return the current locale, if not set it will return the default locale
      */
-    Locale
+    Locale getCurrentLocale();
 }
