@@ -1,2 +1,4 @@
-package com.bss.inc.cameraon.display;public class DialogManager {
+package com.bss.inc.cameraon.display;
+
+public class DialogManager {
 }
