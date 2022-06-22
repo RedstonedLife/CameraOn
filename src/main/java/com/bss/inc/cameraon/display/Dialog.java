@@ -27,7 +27,9 @@ public class Dialog {
         this.height = h;
         this.dialogName = name;
         for(URL file : files) {
-            
+            try {
+                
+            }
         }
     }
 
