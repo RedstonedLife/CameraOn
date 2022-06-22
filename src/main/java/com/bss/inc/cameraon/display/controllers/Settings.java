@@ -1,4 +1,6 @@
 package com.bss.inc.cameraon.display.controllers;
 
-public class Settings {
+import com.bss.inc.cameraon.settings.ISettings;
+
+public class Settings implements ISettings {
 }
