@@ -4,10 +4,7 @@ import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.constants.FrontendPaths;
 
 import java.text.MessageFormat;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class I18n implements II18n {
     private static I18n instance;
@@ -40,7 +37,7 @@ public class I18n implements II18n {
     private String translate(final String string) {
         try {
             try {return customBundle.getString(string);}
-            catch (final IllegalArgumentException)
-        }
+            catch (final MissingResourceException ex) {return localeBundle.getString(string);}
+        } catch(final MissingResourceException ex) {return defaultBundle.getString(string);}
     }
 }
