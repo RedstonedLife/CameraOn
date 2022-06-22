@@ -69,4 +69,13 @@ public class I18n implements II18n {
         localeBundle = bundles[0];
         customBundle = bundles[1];
     }
+
+    public ResourceBundle[] updateLocale(Locale currentLocale) {
+        ResourceBundle localeBundle, customBundle;
+        try {localeBundle = ResourceBundle.getBundle(aa.MESSAGES, currentLocale);}
+        catch (final MissingResourceException ex) {localeBundle = aa.NULL_BUNDLE;}
+        try {customBundle = ResourceBundle.getBundle(aa.MESSAGES, currentLocale, new FileResClassLoader(I18n.class.getClassLoader(), this._i));}
+        catch (final MissingResourceException ex) {customBundle = aa.NULL_BUNDLE;}
+        return new ResourceBundle[]{localeBundle,customBundle};
+    }
 }
