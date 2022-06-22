@@ -8,5 +8,6 @@ public class Dialog {
     private boolean isEnabled = false;
     private boolean isFocused;
     private double width, height;
+    private String dialogName;
 
 }
