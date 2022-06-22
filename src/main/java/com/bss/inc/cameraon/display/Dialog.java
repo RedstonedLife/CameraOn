@@ -7,5 +7,6 @@ public class Dialog {
     private static Stage parent;
     private boolean isEnabled = false;
     private boolean isFocused;
+    private double width, height;
 
 }
