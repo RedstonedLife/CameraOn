@@ -40,7 +40,7 @@ public class I18n implements II18n {
     private String translate(final String string) {
         try {
             try {return customBundle.getString(string);}
-            
+            catch (final IllegalArgumentException)
         }
     }
 }
