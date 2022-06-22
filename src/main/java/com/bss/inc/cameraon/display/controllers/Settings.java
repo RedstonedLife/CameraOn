@@ -9,6 +9,7 @@ import java.io.File;
 public class Settings implements ISettings {
 
     private File file;
+    private String name;
 
     public Settings(String ) throws UnknownOS {
         file = new File(FilePaths.SETTINGS_FOLDER +)
