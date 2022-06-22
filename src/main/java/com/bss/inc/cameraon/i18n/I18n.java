@@ -31,4 +31,6 @@ public class I18n implements II18n {
         if(objects.length==0) return FrontendPaths.NODOUBLEMARK.matcher(instance.translate(string)).replaceAll("'");
         else return instance.format(string, objects);
     }
+
+    public static String capitalCase(final String input)
 }
