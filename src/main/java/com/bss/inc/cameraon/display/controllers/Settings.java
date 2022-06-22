@@ -13,7 +13,9 @@ public class Settings implements ISettings {
 
     public Settings(final String name) throws UnknownOS {
         this.name = name;
-        file = new File(FilePaths.SETTINGS_FOLDER + name + ".json");
+        file = new File(FilePaths.SETTINGS_FOLDER+name +".json");
+        if(FilePaths.SETTINGS_FOLDER.equals("UKNS"))
+            throw new UnknownOS()
     }
 
     @Override
