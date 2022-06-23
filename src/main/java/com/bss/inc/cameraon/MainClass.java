@@ -22,7 +22,8 @@ public class MainClass extends Application {
     static {
         dialogs = new Dialog[] {
           new Dialog(FrontendPaths.HEIGHT, FrontendPaths.WIDTH, "mainWindow", new URL[]{
-                  MainClass.class.getResource()
+                  clazz.getResource(FrontendPaths.ABOUTUS_FXML), clazz.getResource(FrontendPaths.SETTINGS_FXML),
+                  clazz.getResource(FrontendPaths.WELCOME_FXML), clazz.getResource(FrontendPaths.)
           })
         };
     }
