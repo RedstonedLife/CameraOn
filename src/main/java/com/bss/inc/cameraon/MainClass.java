@@ -24,7 +24,7 @@ public class MainClass extends Application {
         this._i18n.OnStart();
         this._i18n.updateLocale("en");
         try {WindowManager = new DialogManager(new Dialog[] {
-                new Dialog(stage,FrontendPaths.HEIGHT, FrontendPaths.WIDTH, "mainWindow", new URL[]{ // MainWindow URL[] Start
+                new Dialog(stage, FrontendPaths.HEIGHT, FrontendPaths.WIDTH, "mainWindow", new URL[]{ // MainWindow URL[] Start
                         clazz.getResource(FrontendPaths.SETTINGS_FXML),
                         clazz.getResource(FrontendPaths.WELCOME_FXML), clazz.getResource(FrontendPaths.CAM_SETTINGS),
                         clazz.getResource(FrontendPaths.SCAN_FXML), clazz.getResource(FrontendPaths.APPLY_FXML),
