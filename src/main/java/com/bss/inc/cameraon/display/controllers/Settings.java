@@ -35,7 +35,7 @@ public class Settings implements ISettings {
     }
 
     @Override
-    public T getValue(String key) {
+    public <T> T getValue(String key) {
         return null;
     }
 
