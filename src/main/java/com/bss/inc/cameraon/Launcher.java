@@ -20,5 +20,6 @@ public class Launcher {
         }
         Logger.getLogger("BNC").info("Value of TestValue: " + settings.getValue("TestValue"));
         settings.setValue("TestValue", (int)settings.getValue("TestValue")-300);
+        Logger.getLogger("BNC").info("Value of TestValue: " + settings.getValue("TestValue"));
     }
 }
