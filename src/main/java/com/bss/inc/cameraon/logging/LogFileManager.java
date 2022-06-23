@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.logging;
 
+import com.bss.inc.cameraon.Launcher;
 import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.constants.LoggingConstants;
 import org.jetbrains.annotations.Contract;
@@ -29,7 +30,7 @@ public class LogFileManager implements ErrorHandler, WarnHandler, InfoHandler, D
     private static File currentLogFile;
 
     public LogFileManager() {
-        this._INIT_TIME = MainClass._INIT_TIME;
+        this._INIT_TIME = Launcher._INIT_TIME;
         _initialize();
     }
 
