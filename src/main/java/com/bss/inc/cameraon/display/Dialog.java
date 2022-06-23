@@ -83,7 +83,7 @@ public class Dialog {
         if(dialogName.equals("preferencesDialog"))
             System.out.println("Changing scene of preferencesDialog");
         if(dialogName.equals("mainWindow"))
-            System.out.println("Changing scene of preferencesDialog");
+            System.out.println("Changing scene of mainWindow");
         this.parent.setScene(scenes.get(file));
     }
     public void minimize() {this.parent.setIconified(true);}
