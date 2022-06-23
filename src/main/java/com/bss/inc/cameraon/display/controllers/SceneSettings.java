@@ -8,6 +8,8 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.SplitPane;
 import javafx.scene.text.Text;
 
+import static com.bss.inc.cameraon.i18n.I18n.tl;
+
 public class SceneSettings {
     @FXML private ChoiceBox<String> langCb;
     @FXML private SplitPane cmainsplit;
@@ -30,9 +32,9 @@ public class SceneSettings {
         versiontxt.setText(tl("version.format",aa.VERSION_TEXT,aa.BUILD));
         licensetxt.setText(tl("license.format",aa.LICENSEE,aa.LICENSEKEY));
         langCb.setOnAction(e -> {
-            BNC.getSettingsManager().set_language(langCb.getItems().indexOf(langCb.getValue()) + 1);
-            BNC.getSCENE_MANAGER().changeDialogScene("confirmationDialog", BNC.class.getResource(aa.LANG_CONFIRMATION_FXML));
-            BNC.getSCENE_MANAGER().openDialog("confirmationDialog");
+            //BNC.getSettingsManager().set_language(langCb.getItems().indexOf(langCb.getValue()) + 1);
+            //BNC.getSCENE_MANAGER().changeDialogScene("confirmationDialog", BNC.class.getResource(aa.LANG_CONFIRMATION_FXML));
+            //BNC.getSCENE_MANAGER().openDialog("confirmationDialog");
         });
     }
 
