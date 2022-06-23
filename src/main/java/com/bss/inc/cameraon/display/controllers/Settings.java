@@ -20,7 +20,7 @@ public class Settings implements ISettings {
     private File file;
     private String name;
     private String defaultJsonSettings;
-    private HashMap<String, T> values = new HashMap<String, T>();
+    private HashMap<String, Object> values = new HashMap<String, Object>();
     private Logger logger;
 
     public Settings(final String name) throws UnknownOS {
@@ -91,6 +91,11 @@ public class Settings implements ISettings {
         JSONObject settings = new JSONObject(builder.toString());
         builder = null;
         reader = null;
+        for(String k : settings.keySet()) {
+            if(values.containsKey(k)) {
+                values.replace(k, settings.get(k));
+            }
+        }
     }
 
     @Override
