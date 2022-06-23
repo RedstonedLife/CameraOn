@@ -17,6 +17,7 @@ public class Settings implements ISettings {
     private File file;
     private String name;
     private String defaultJsonSettings;
+    private 
 
     public Settings(final String name) throws UnknownOS {
         this.name = name;
