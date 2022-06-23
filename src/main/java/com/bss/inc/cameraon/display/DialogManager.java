@@ -12,7 +12,7 @@ public class DialogManager {
     private int currentLanguage;
     private boolean alreadyScanned = false;
 
-    public DialogManager(Dialog[] dialogs) throws IOException {
+    public DialogManager(Stage mainStange, Dialog[] dialogs) throws IOException {
         //this.currentLanguage = BNC.getSettingsManager().get_language();
         for(Dialog dial : dialogs) {dial.init();dialogsMap.put(dial.getDialogName(),dial);}
     }
