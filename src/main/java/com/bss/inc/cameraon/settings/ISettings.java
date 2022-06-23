@@ -7,7 +7,7 @@ import java.io.FileNotFoundException;
 public interface ISettings {
     void Setup();
     void Save() throws FileNotFoundException, JSONException;
-    void Load();
+    void Load() throws FileNotFoundException, JSONException;
     <T> T getValue(String key);
     <T> void setValue(String key, T value);
 }
