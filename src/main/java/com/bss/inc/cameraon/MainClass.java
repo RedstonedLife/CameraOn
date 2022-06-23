@@ -20,7 +20,11 @@ public class MainClass extends Application {
     private static Class<MainClass> clazz = MainClass.class;
 
     static {
-
+        try {
+            WindowManager = new DialogManager();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
