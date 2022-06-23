@@ -13,7 +13,11 @@ public class Launcher {
         _LM = new LogManager();
         LogManager.addLogger("BNC", new Logger("BNC"));
         Settings settings = new Settings("test", "{}");
-        settings.Load();
+        try {
+            settings.Load();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         Logger.getLogger("BNC").info("Value of TestValue: " + settings.getValue("TestValue"));
     }
 }
