@@ -8,6 +8,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -49,7 +50,10 @@ public class Settings implements ISettings {
                 pw.write(_n.toString());
                 pw.flush();
                 pw.close();
-                _n,pw = null;
+                _n = null;
+                pw = null;
+            } catch(FileNotFoundException e) {
+                
             }
         }
     }
