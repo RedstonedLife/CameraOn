@@ -11,12 +11,14 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
 
 public class Settings implements ISettings {
 
     private File file;
     private String name;
     private String defaultJsonSettings;
+    private HashMap<String, T> values = new HashMap<String, T>();
     private Logger logger;
 
     public Settings(final String name) throws UnknownOS {
@@ -64,7 +66,7 @@ public class Settings implements ISettings {
 
     @Override
     public void Save() throws FileNotFoundException, JSONException {
-        
+
     }
 
     @Override
