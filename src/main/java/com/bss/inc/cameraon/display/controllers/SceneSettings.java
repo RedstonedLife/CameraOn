@@ -5,6 +5,7 @@ import com.bss.inc.cameraon.constants.FrontendPaths;
 import com.bss.inc.cameraon.utils.$UI$01;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.SplitPane;
@@ -15,7 +16,7 @@ import java.util.ResourceBundle;
 
 import static com.bss.inc.cameraon.i18n.I18n.tl;
 
-public class SceneSettings {
+public class SceneSettings implements Initializable {
     @FXML private ChoiceBox<String> langCb;
     @FXML private SplitPane cmainsplit;
     @FXML private Button settingsSceneBtn,cctvSceneBtn,scanSceneBtn,applySceneBtn,HelpBtn;
