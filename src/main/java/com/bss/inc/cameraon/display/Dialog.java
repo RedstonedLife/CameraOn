@@ -24,6 +24,9 @@ public class Dialog {
 
 
     public Dialog(double w, double h, String name, URL[] files) {
+        parent = new Stage();
+        parent.setResizable(false);
+        parent.initStyle(StageStyle.UNDECORATED);
         this.width = w;
         this.height = h;
         this.dialogName = name;
