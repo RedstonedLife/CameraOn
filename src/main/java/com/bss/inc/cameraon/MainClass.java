@@ -8,6 +8,7 @@ import com.bss.inc.cameraon.logging.Logger;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
+import java.net.URL;
 import java.time.LocalDateTime;
 
 public class MainClass extends Application {
@@ -19,7 +20,9 @@ public class MainClass extends Application {
 
     static {
         dialogs = new Dialog[] {
-          new Dialog(FrontendPaths.HEIGHT, FrontendPaths.WIDTH, "mainWindow")
+          new Dialog(FrontendPaths.HEIGHT, FrontendPaths.WIDTH, "mainWindow", new URL[]{
+                  
+          })
         };
     }
 
