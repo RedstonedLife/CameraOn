@@ -10,7 +10,7 @@ public class MainClass extends Application {
 
     public static final LocalDateTime _INIT_TIME = LocalDateTime.now();
     private static DialogManager WindowManager;
-    private 
+    private transiet 
 
     @Override
     public void start(Stage stage) {}
