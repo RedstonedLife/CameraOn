@@ -19,7 +19,7 @@ public class MainClass extends Application {
 
     static {
         dialogs = new Dialog[] {
-          new Dialog(FrontendPaths.HEIGHT, FrontendPaths.WIDTH, )
+          new Dialog(FrontendPaths.HEIGHT, FrontendPaths.WIDTH, "mainWindow")
         };
     }
 
