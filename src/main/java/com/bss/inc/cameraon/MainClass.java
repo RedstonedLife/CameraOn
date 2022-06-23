@@ -27,7 +27,7 @@ public class MainClass extends Application {
                   clazz.getResource(FrontendPaths.HELP_FXML), clazz.getResource(FrontendPaths.GETSTARTED_FXML),
                   clazz.getResource(FrontendPaths.SCAN_FXML), clazz.getResource(FrontendPaths.APPLY_FXML),
           }), // MainWindow URL[] End
-                new Dialog()
+                new Dialog(300d, 200d)
         };
     }
 
