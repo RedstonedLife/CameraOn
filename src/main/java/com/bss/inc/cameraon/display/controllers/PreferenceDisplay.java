@@ -1,4 +1,46 @@
 package com.bss.inc.cameraon.display.controllers;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import static com.bss.inc.cameraon.i18n.I18n.tl;
+
 public class PreferenceDisplay {
+    @FXML private Button btnClose,asSceneBtn,ibsSceneBtn,cbsSceneBtn,displaySceneBtn;
+    @FXML private Text threadtxt,t1txt,t2txt,pingtxt,p1txt,p2txt,p3txt,p4txt,skiptxt,s1txt,timetxt,tt1txt,tt2txt,tt3txt,portstxt,ps1txt,ps2txt,ps3txt,ps4txt;
+    private BNC instance = new BNC();
+
+    @FXML private void closeApp(ActionEvent event) {instance.getSCENE_MANAGER().closeDialog("preferencesDialog");}
+
+    private void initializeLanguage() {
+        displaySceneBtn.setText(tl("preferences.btn.display.text"));
+        threadtxt.setText(tl("preferences.threads.text"));
+        t1txt.setText(tl("preferences.threads.t1"));
+        t2txt.setText(tl("preferences.threads.t2"));
+        pingtxt.setText(tl("preferences.pinging.text"));
+        p1txt.setText(tl("preferences.pinging.p1"));
+        p2txt.setText(tl("preferences.pinging.p2"));
+        p3txt.setText(tl("preferences.pinging.p3"));
+        p4txt.setText(tl("preferences.pinging.p4"));
+        skiptxt.setText(tl("preferences.skipping.text"));
+        s1txt.setText(tl("preferences.skipping.s1"));
+        timetxt.setText(tl("preferences.timing.text"));
+        tt1txt.setText(tl("preferences.timing.ti1"));
+        tt2txt.setText(tl("preferences.timing.ti2"));
+        tt3txt.setText(tl("preferences.timing.ti3"));
+        portstxt.setText(tl("preferences.portselection.text"));
+        ps1txt.setText(tl("preferences.portselection.ps1"));
+        ps2txt.setText(tl("preferences.portselection.ps2"));
+        ps3txt.setText(tl("preferences.portselection.ps3"));
+        ps4txt.setText(tl("preferences.portselection.ps4"));
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        asSceneBtn.setOnAction(e -> {instance.getSCENE_MANAGER().changeDialogScene("preferencesDialog",instance.getClass().getResource(FrontendPaths.PREF_DISPLAY_AS_FXML));});
+        ibsSceneBtn.setOnAction(e -> {instance.getSCENE_MANAGER().changeDialogScene("preferencesDialog",instance.getClass().getResource(FrontendPaths.PREF_DISPLAY_IBS_FXML));});
+        cbsSceneBtn.setOnAction(e -> {instance.getSCENE_MANAGER().changeDialogScene("preferencesDialog",instance.getClass().getResource(FrontendPaths.PREF_DISPLAY_CBS_FXML));});
+        displaySceneBtn.setOnAction(e -> {instance.getSCENE_MANAGER().changeDialogScene("preferencesDialog",instance.getClass().getResource(FrontendPaths.PREF_DISPLAY_FXML));});
+        initializeLanguage();
+    }
 }
