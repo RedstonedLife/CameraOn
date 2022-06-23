@@ -105,6 +105,7 @@ public class Settings implements ISettings {
 
     @Override
     public void setValue(String key, Object value) {
-        
+        if(values.containsKey(key)) {values.replace(key, value);}
+        else {values.putIfAbsent(key, value);}
     }
 }
