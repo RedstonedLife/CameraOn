@@ -40,13 +40,13 @@ public class MainClass extends Application {
                   clazz.getResource(FrontendPaths.POP_FAQ_FXML)
           }) // PopUpWindow URL[] End
         };
-        try {WindowManager = new DialogManager(dialogs);}
-        catch (IOException e) {logger.error("Error occurred while initializing the WindowManager", e);}
     }
 
     @Override
     public void start(Stage stage) {
         this._i18n.OnStart();
+        try {WindowManager = new DialogManager(dialogs);}
+        catch (IOException e) {logger.error("Error occurred while initializing the WindowManager", e);}
         WindowManager.changeDialogScene("mainWindow", clazz.getResource(FrontendPaths.SETTINGS_FXML));
         WindowManager.openDialog("mainWindow");
     }
