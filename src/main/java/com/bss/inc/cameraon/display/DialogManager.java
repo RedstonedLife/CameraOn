@@ -16,7 +16,7 @@ public class DialogManager {
         //this.currentLanguage = BNC.getSettingsManager().get_language();
         for(Dialog dial : dialogs) {dial.init();dialogsMap.put(dial.getDialogName(),dial);}
     }
-    public DialogManager() {
+    public DialogManager() throws IOException {
 
     }
 
