@@ -17,7 +17,9 @@ public class MainClass extends Application {
     private transient I18n _i18n = new I18n(this);
 
     static {
-        
+        dialogs = new Dialog[] {
+                
+        };
     }
 
     @Override
