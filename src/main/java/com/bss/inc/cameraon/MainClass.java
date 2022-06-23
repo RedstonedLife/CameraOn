@@ -22,6 +22,7 @@ public class MainClass extends Application {
 
     @Override
     public void start(Stage stage) {
+        stage = null;
         this._i18n.OnStart();
         this._i18n.updateLocale("en");
         try {WindowManager = new DialogManager(new Dialog[] {
