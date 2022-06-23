@@ -24,6 +24,7 @@ public class Settings implements ISettings {
         file = new File(FilePaths.SETTINGS_FOLDER+name +".json");
         if(FilePaths.SETTINGS_FOLDER.equals("UKNS"))
             throw new UnknownOS("An unsupported OS is being used, exiting.");
+        logger = 
         Setup();
     }
 
