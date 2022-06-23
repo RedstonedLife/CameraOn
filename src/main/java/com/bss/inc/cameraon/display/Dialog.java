@@ -47,6 +47,12 @@ public class Dialog {
         }
     }
 
+    public void init() {
+        parent = new Stage();
+        parent.setResizable(false);
+        parent.initStyle(StageStyle.UNDECORATED);
+    }
+
     public void openDialog() {this.isEnabled=true;this.parent.show();}
     public void closeDialog() {this.isEnabled=false;this.parent.close();}
     public void changeScene(URL file) {this.parent.setScene(scenes.get(file));}
