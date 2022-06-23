@@ -6,5 +6,5 @@ import javafx.fxml.FXML;
 
 public class LanguageConfirmation {
     @FXML
-    private void closeApp(ActionEvent event) {MainClass.getSCENE_MANAGER().closeDialog("confirmationDialog");}
+    private void closeApp(ActionEvent event) {MainClass.getWindowManager().closeDialog("confirmationDialog");}
 }
