@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 public class MainClass extends Application {
 
     public static final LocalDateTime _INIT_TIME = LocalDateTime.now();
-    private static final DialogManager WindowManager;
+    private static DialogManager WindowManager;
 
     @Override
     public void start(Stage stage) {}
