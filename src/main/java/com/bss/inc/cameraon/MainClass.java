@@ -52,7 +52,7 @@ public class MainClass extends Application {
         launch();
     }
 
-    public DialogManager getWindowManager() {
-        return null;
+    public static DialogManager getWindowManager() {
+        return WindowManager;
     }
 }
