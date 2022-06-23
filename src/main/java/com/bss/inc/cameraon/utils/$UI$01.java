@@ -16,7 +16,7 @@ public class $UI$01 {
     public static void u_00$1$1(SplitPane csplitpane) {csplitpane.getDividers().get(0).positionProperty().addListener((observableValue, number, t1) -> csplitpane.getDividers().get(0).setPosition(FrontendPaths.DIVID_POS));}
     public static void u_01$1$1(SplitPane csplitpane, Button[] buttons) {
         u_00$1$1(csplitpane);
-        buttons[0].setOnAction(e -> MainClass.getWindowManager().changeDialogScene("mainWindow",MainClass.class.getResource(FrontendPaths.SETTINGS_FXML)));
+        buttons[0].setOnAction(e -> MainClass.getMainDialog().changeDialogScene("mainWindow",MainClass.class.getResource(FrontendPaths.SETTINGS_FXML)));
         buttons[1].setOnAction(e -> MainClass.getWindowManager().changeDialogScene("mainWindow",MainClass.class.getResource(FrontendPaths.CAM_SETTINGS)));
         buttons[2].setOnAction(e -> MainClass.getWindowManager().changeDialogScene("mainWindow",MainClass.class.getResource(FrontendPaths.APPLY_FXML)));
         buttons[3].setOnAction(e -> MainClass.getWindowManager().changeDialogScene("mainWindow",MainClass.class.getResource(FrontendPaths.SCAN_FXML)));
