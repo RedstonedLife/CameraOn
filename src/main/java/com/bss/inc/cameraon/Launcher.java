@@ -9,7 +9,12 @@ import java.io.FileNotFoundException;
 
 public class Launcher {
     private static LogManager LM;
+
+    static {
+        LM = new LogManager();
+    }
     public static void main(String[] args) throws UnknownOS {
+
         MainClass.launch(args);
     }
 }
