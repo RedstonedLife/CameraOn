@@ -34,7 +34,7 @@ public class MainClass extends Application {
                   clazz.getResource(FrontendPaths.PREF_DISPLAY_FXML), clazz.getResource(FrontendPaths.PREF_DISPLAY_AS_FXML),
                   clazz.getResource(FrontendPaths.PREF_DISPLAY_CBS_FXML), clazz.getResource(FrontendPaths.PREF_DISPLAY_IBS_FXML)
           }), // PreferencesDialog URL[] End
-          
+          new Dialog()
         };
     }
 
