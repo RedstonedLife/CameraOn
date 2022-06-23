@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.display.controllers;
 
+import com.bss.inc.cameraon.MainClass;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -26,7 +27,7 @@ public class CameraSettings implements Initializable {
     // # Minimize Window Button
     @FXML private void minimizeApp(ActionEvent event) {instance.getSCENE_MANAGER().minimizeDialog("mainWindow");}
 
-    private BNC instance = new BNC();
+    private MainClass instance;
 
     private void initializeLanguage() {
         cctvencodingtxt.setText(tl("settings.cctv.encoding"));
