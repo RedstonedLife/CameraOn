@@ -5,7 +5,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 public class PreferenceDisplayB {
-    private MainClass instance = new MainClass();
     @FXML
-    private void closeApp(ActionEvent event) {instance.getWindowManager().closeDialog("preferencesDialog");}
+    private void closeApp(ActionEvent event) {MainClass.getWindowManager().closeDialog("preferencesDialog");}
 }
