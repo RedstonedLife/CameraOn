@@ -1,5 +1,7 @@
 package com.bss.inc.cameraon.display.controllers;
 
+import com.bss.inc.cameraon.MainClass;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -8,9 +10,9 @@ import static com.bss.inc.cameraon.i18n.I18n.tl;
 public class PreferenceDisplay {
     @FXML private Button btnClose,asSceneBtn,ibsSceneBtn,cbsSceneBtn,displaySceneBtn;
     @FXML private Text threadtxt,t1txt,t2txt,pingtxt,p1txt,p2txt,p3txt,p4txt,skiptxt,s1txt,timetxt,tt1txt,tt2txt,tt3txt,portstxt,ps1txt,ps2txt,ps3txt,ps4txt;
-    private BNC instance = new BNC();
+    private MainClass instance;
 
-    @FXML private void closeApp(ActionEvent event) {instance.getSCENE_MANAGER().closeDialog("preferencesDialog");}
+    @FXML private void closeApp(ActionEvent event) {instance.getWindowManager().closeDialog("preferencesDialog");}
 
     private void initializeLanguage() {
         displaySceneBtn.setText(tl("preferences.btn.display.text"));
@@ -37,10 +39,10 @@ public class PreferenceDisplay {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        asSceneBtn.setOnAction(e -> {instance.getSCENE_MANAGER().changeDialogScene("preferencesDialog",instance.getClass().getResource(FrontendPaths.PREF_DISPLAY_AS_FXML));});
-        ibsSceneBtn.setOnAction(e -> {instance.getSCENE_MANAGER().changeDialogScene("preferencesDialog",instance.getClass().getResource(FrontendPaths.PREF_DISPLAY_IBS_FXML));});
-        cbsSceneBtn.setOnAction(e -> {instance.getSCENE_MANAGER().changeDialogScene("preferencesDialog",instance.getClass().getResource(FrontendPaths.PREF_DISPLAY_CBS_FXML));});
-        displaySceneBtn.setOnAction(e -> {instance.getSCENE_MANAGER().changeDialogScene("preferencesDialog",instance.getClass().getResource(FrontendPaths.PREF_DISPLAY_FXML));});
+        asSceneBtn.setOnAction(e -> {instance.getWindowManager().changeDialogScene("preferencesDialog",instance.getClass().getResource(FrontendPaths.PREF_DISPLAY_AS_FXML));});
+        ibsSceneBtn.setOnAction(e -> {instance.getWindowManager().changeDialogScene("preferencesDialog",instance.getClass().getResource(FrontendPaths.PREF_DISPLAY_IBS_FXML));});
+        cbsSceneBtn.setOnAction(e -> {instance.getWindowManager().changeDialogScene("preferencesDialog",instance.getClass().getResource(FrontendPaths.PREF_DISPLAY_CBS_FXML));});
+        displaySceneBtn.setOnAction(e -> {instance.getWindowManager().changeDialogScene("preferencesDialog",instance.getClass().getResource(FrontendPaths.PREF_DISPLAY_FXML));});
         initializeLanguage();
     }
 }
