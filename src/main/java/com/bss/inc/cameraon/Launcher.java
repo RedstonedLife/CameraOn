@@ -6,9 +6,11 @@ import com.bss.inc.cameraon.logging.LogManager;
 import com.bss.inc.cameraon.logging.Logger;
 
 import java.io.FileNotFoundException;
+import java.time.LocalDateTime;
 
 public class Launcher {
     private static LogManager LM;
+    public static final LocalDateTime _INIT_TIME = LocalDateTime.now();
 
     static {
         LM = new LogManager();
