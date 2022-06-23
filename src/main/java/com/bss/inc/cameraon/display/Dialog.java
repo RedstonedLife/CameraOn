@@ -50,6 +50,33 @@ public class Dialog {
         }
     }
 
+    public Dialog(Stage mainStange, double w, double h, String name, URL[] files) {
+        parent = mainStange;
+        parent.setResizable(false);
+        parent.initStyle(StageStyle.UNDECORATED);
+        this.width = w;
+        this.height = h;
+        this.dialogName = name;
+        for(URL file : files) {
+            try {
+                Scene scene = new Scene(FXMLLoader.load(file), w, h);
+                scene.getStylesheets().add(FrontendPaths.APP_CSS);
+                scene.setOnMousePressed(mouseEvent -> {
+                    offsetX = mouseEvent.getSceneX();
+                    offsetY = mouseEvent.getSceneY();
+                });
+
+                scene.setOnMouseDragged(mouseEvent -> {
+                    parent.setX(mouseEvent.getScreenX() - offsetX);
+                    parent.setY(mouseEvent.getScreenY() - offsetY);
+                });
+                scenes.put(file, scene);
+            } catch (IOException e) {
+                Logger.getLogger("BNC").error("Could not initialize Dialog-{}-({N})".replace("{}", dialogName).replace("{N}", file.getFile()), e);
+            }
+        }
+    }
+
     public void init() {
         parent = new Stage();
         parent.setResizable(false);
