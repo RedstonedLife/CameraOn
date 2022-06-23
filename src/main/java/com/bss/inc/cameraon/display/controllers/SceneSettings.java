@@ -33,7 +33,7 @@ public class SceneSettings {
         licensetxt.setText(tl("license.format",FrontendPaths.LICENSEE,FrontendPaths.LICENSEKEY));
         langCb.setOnAction(e -> {
             //BNC.getSettingsManager().set_language(langCb.getItems().indexOf(langCb.getValue()) + 1);
-            //BNC.getSCENE_MANAGER().changeDialogScene("confirmationDialog", BNC.class.getResource(aa.LANG_CONFIRMATION_FXML));
+            //BNC.getSCENE_MANAGER().changeDialogScene("confirmationDialog", BNC.class.getResource(FrontendPaths.LANG_CONFIRMATION_FXML));
             //BNC.getSCENE_MANAGER().openDialog("confirmationDialog");
         });
     }
