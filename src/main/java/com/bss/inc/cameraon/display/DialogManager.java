@@ -17,7 +17,7 @@ public class DialogManager {
         for(Dialog dial : dialogs) {dial.init();dialogsMap.put(dial.getDialogName(),dial);}
     }
     public DialogManager() {
-        
+
     }
 
     public void openDialog(String name) {dialogsMap.get(name).openDialog();}
