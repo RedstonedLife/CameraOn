@@ -37,7 +37,7 @@ public class Scan implements Initializable {
         $UI$01.u_01$1$1(cmainsplit,new Button[]{settingsSceneBtn,cctvSceneBtn,applySceneBtn,scanSceneBtn,HelpBtn});
         $UI$01.u_04$1$1(prefBtn);
         //
-        BNC.getStateMachine().addTransitionListener(this);
+        //BNC.getStateMachine().addTransitionListener(this);
         // I18n
         $UI$01.u_02$1$1(Map.ofEntries(
                 Map.entry(settingsSceneBtn, tl("settings.btn.text")),
