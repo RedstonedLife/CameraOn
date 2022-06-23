@@ -64,7 +64,7 @@ public class Settings implements ISettings {
 
     @Override
     public void Save() throws FileNotFoundException, JSONException {
-
+        
     }
 
     @Override
