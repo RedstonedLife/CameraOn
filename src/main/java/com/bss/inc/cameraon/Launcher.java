@@ -10,16 +10,6 @@ import java.io.FileNotFoundException;
 public class Launcher {
     static LogManager _LM;
     public static void main(String[] args) throws UnknownOS {
-        _LM = new LogManager();
-        LogManager.addLogger("BNC", new Logger("BNC"));
-        Settings settings = new Settings("test", "{}");
-        try {
-            settings.Load();
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-        Logger.getLogger("BNC").info("Value of TestValue: " + settings.getValue("TestValue"));
-        settings.setValue("TestValue", (int)settings.getValue("TestValue")-300);
-        Logger.getLogger("BNC").info("Value of TestValue: " + settings.getValue("TestValue"));
+        
     }
 }
