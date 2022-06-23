@@ -2,13 +2,15 @@ package com.bss.inc.cameraon;
 
 import com.bss.inc.cameraon.display.DialogManager;
 import com.bss.inc.cameraon.i18n.I18n;
+import com.bss.inc.cameraon.logging.Logger;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
 import java.time.LocalDateTime;
 
 public class MainClass extends Application {
-    
+
+    private static Logger logger = Logger.getLogger("BNC");
     private static DialogManager WindowManager;
     private transient I18n _i18n = new I18n(this);
 
