@@ -21,11 +21,12 @@ public class MainClass extends Application {
 
     static {
         dialogs = new Dialog[] {
-          new Dialog(FrontendPaths.HEIGHT, FrontendPaths.WIDTH, "mainWindow", new URL[]{
+          new Dialog(FrontendPaths.HEIGHT, FrontendPaths.WIDTH, "mainWindow", new URL[]{ // MainWindow URL[] Start
                   clazz.getResource(FrontendPaths.ABOUTUS_FXML), clazz.getResource(FrontendPaths.SETTINGS_FXML),
                   clazz.getResource(FrontendPaths.WELCOME_FXML), clazz.getResource(FrontendPaths.CAM_SETTINGS),
                   clazz.getResource(FrontendPaths.HELP_FXML), clazz.getResource(FrontendPaths.GETSTARTED_FXML),
-          })
+                  clazz.getResource(FrontendPaths.SCAN_FXML), clazz.getResource(FrontendPaths.APPLY_FXML),
+          }), // MainWindow URL[] End
         };
     }
 
