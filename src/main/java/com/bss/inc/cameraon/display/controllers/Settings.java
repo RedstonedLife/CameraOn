@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Collections;
 import java.util.HashMap;
 
 public class Settings implements ISettings {
@@ -66,7 +67,10 @@ public class Settings implements ISettings {
 
     @Override
     public void Save() throws FileNotFoundException, JSONException {
-
+        JSONObject settings = new JSONObject();
+        for(String k : values.keySet()) {
+            settings.put(k, Collections.singleton(values.get(k)));
+        }
     }
 
     @Override
