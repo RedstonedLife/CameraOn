@@ -39,7 +39,7 @@ public class Apply implements Initializable {
         backendtxt.setText(tl("apply.task.default",""));
         applystatustxt.setText(tl("apply.task.status"));
         versiontxt.setText(tl("version.format", FrontendPaths.VERSION_TEXT,FrontendPaths.BUILD));
-        licensetxt.setText(tl("license.format",aa.LICENSEE,FrontendPaths.LICENSEKEY));
+        licensetxt.setText(tl("license.format",FrontendPaths.LICENSEE,FrontendPaths.LICENSEKEY));
     }
 
 }
