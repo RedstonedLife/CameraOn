@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon;
 
+import com.bss.inc.cameraon.display.DialogManager;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -16,5 +17,9 @@ public class MainClass extends Application {
 
     public static void main(String[] args) {
         launch();
+    }
+
+    public DialogManager getDisplayManager() {
+        return null;
     }
 }
