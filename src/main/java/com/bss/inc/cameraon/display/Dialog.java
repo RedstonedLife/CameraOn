@@ -43,6 +43,7 @@ public class Dialog {
                     parent.setY(mouseEvent.getScreenY() - offsetY);
                 });
                 scenes.put(file, scene);
+                parent.setScene(scene);
             } catch (IOException e) {
                 Logger.getLogger("BNC").error("Could not initialize Dialog-{}-({N})".replace("{}", dialogName).replace("{N}", file.getFile()), e);
             }
