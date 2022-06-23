@@ -68,9 +68,7 @@ public class Settings implements ISettings {
     @Override
     public void Save() throws FileNotFoundException, JSONException {
         JSONObject settings = new JSONObject();
-        for(String k : values.keySet()) {
-            settings.put(k, Collections.singleton(values.get(k)));
-        }
+        for(String k : values.keySet()) {settings.put(k, Collections.singleton(values.get(k)));}
     }
 
     @Override
