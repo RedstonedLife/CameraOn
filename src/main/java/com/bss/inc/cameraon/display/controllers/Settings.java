@@ -55,9 +55,10 @@ public class Settings implements ISettings {
                 pw.close();
                 _n = null;
                 pw = null;
-            } catch(FileNotFoundException e) {
-                logger.error(name+".json was not found.");
-            }
+            } catch(FileNotFoundException e) {logger.error(name+".json was not found.",e);}
+        } else {
+            try {Load();}
+            catch (FileNotFoundException e) {logger.error(name+".json was not found.",e);
         }
     }
 
