@@ -17,6 +17,6 @@ public class Launcher {
         LogManager.addLogger("BNC", new Logger("BNC"));
     }
     public static void main(String[] args) throws UnknownOS {
-        MainClass.launch(args);
+        MainClass.main(args);
     }
 }
