@@ -5,5 +5,5 @@ public interface ISettings {
     void Save();
     void Load();
     <T> T getValue(String key);
-    void setValue(String key, T value);
+    <T> void setValue(String key, T value);
 }
