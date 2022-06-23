@@ -17,11 +17,12 @@ public class MainClass extends Application {
     private static DialogManager WindowManager;
     private static Dialog[] dialogs;
     private transient I18n _i18n = new I18n(this);
+    private static Class<MainClass> clazz = MainClass.class;
 
     static {
         dialogs = new Dialog[] {
           new Dialog(FrontendPaths.HEIGHT, FrontendPaths.WIDTH, "mainWindow", new URL[]{
-                  
+                  MainClass.class.getResource()
           })
         };
     }
