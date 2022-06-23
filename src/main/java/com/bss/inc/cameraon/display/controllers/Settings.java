@@ -70,6 +70,10 @@ public class Settings implements ISettings {
         JSONObject settings = new JSONObject();
         for(String k : values.keySet()) {settings.put(k, Collections.singleton(values.get(k)));}
         PrintWriter pw = null;
+        try {pw = new PrintWriter(file.getPath());}catch (FileNotFoundException e) {
+            logger.error(name+".json was not found! Running setup again!", e);
+            Setup();
+        }
     }
 
     @Override
