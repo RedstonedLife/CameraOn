@@ -24,13 +24,11 @@ public class CameraSettings implements Initializable {
     @FXML private Text cctvencodingtxt,cctvencodingbetxt,cctvfpstxt,cctvrestxt,cctvbrtxt,fpscounttxt,versiontxt,licensetxt;
 
     // # Close Window Button
-    @FXML private void closeApp(ActionEvent event) {instance.getWindowManager().closeDialogs();}
+    @FXML private void closeApp(ActionEvent event) {MainClass.getWindowManager().closeDialogs();}
 
     // # Minimize Window Button
-    @FXML private void minimizeApp(ActionEvent event) {instance.getWindowManager().minimizeDialog("mainWindow");}
-
-    private MainClass instance;
-
+    @FXML private void minimizeApp(ActionEvent event) {MainClass.getWindowManager().minimizeDialog("mainWindow");}
+    
     private void initializeLanguage() {
         cctvencodingtxt.setText(tl("settings.cctv.encoding"));
         cctvencodingbetxt.setText(tl("settings.cctv.encoding.below"));
