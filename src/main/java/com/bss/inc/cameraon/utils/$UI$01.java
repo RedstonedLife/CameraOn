@@ -27,6 +27,7 @@ public class $UI$01 {
     public static void u_04$1$1(Button object) {object.setOnAction(e -> {
         MainClass.getWindowManager().changeDialogScene("preferencesDialog", MainClass.class.getResource(FrontendPaths.PREF_DISPLAY_FXML)); // <--- Look at this closely;
         MainClass.getWindowManager().openDialog("preferencesDialog");
+        MainClass.getWindowManager().openDialog("mainWindow");
     });}
     public static <T> void u_05$1$1(ChoiceBox<T> cb, int dfv, T[] vl) {for(T v : vl) {cb.getItems().add(v);}cb.setValue(cb.getItems().get(dfv));}
 }
