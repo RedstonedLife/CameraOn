@@ -30,7 +30,7 @@ public class MainClass extends Application {
           new Dialog(300d, 200d, "confirmationDialog", new URL[]{ // ConfirmationDialog URL[] Start
                   clazz.getResource(FrontendPaths.CONFIRMATION_FXML), clazz.getResource(FrontendPaths.LANG_CONFIRMATION_FXML)
           }), // ConfirmationDialog URL[] End
-          new Dialog(500d, 800d, "preferencesDialog")
+          new Dialog(500d, 800d, "preferencesDialog", new URL[]{})
         };
     }
 
