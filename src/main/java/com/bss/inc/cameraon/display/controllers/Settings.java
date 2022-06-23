@@ -63,12 +63,12 @@ public class Settings implements ISettings {
     }
 
     @Override
-    public void Save() {
+    public void Save() throws FileNotFoundException, JSONException {
 
     }
 
     @Override
-    public void Load() {
+    public void Load() throws FileNotFoundException, JSONException{
 
     }
 
