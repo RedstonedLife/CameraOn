@@ -43,7 +43,7 @@ public class MainClass extends Application {
                     clazz.getResource(FrontendPaths.SETTINGS_FXML),
                     clazz.getResource(FrontendPaths.WELCOME_FXML), clazz.getResource(FrontendPaths.CAM_SETTINGS),
                     clazz.getResource(FrontendPaths.SCAN_FXML), clazz.getResource(FrontendPaths.APPLY_FXML),
-            }), // MainWindow URL[] End
+            }); // MainWindow URL[] End
         }
         //WindowManager.changeDialogScene("mainWindow", clazz.getResource(FrontendPaths.SETTINGS_FXML));
         //WindowManager.openDialog("mainWindow");
