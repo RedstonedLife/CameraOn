@@ -2,6 +2,7 @@ package com.bss.inc.cameraon.display.controllers;
 
 import com.bss.inc.cameraon.constants.FilePaths;
 import com.bss.inc.cameraon.exceptions.UnknownOS;
+import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.settings.ISettings;
 
 import java.io.File;
@@ -11,6 +12,7 @@ public class Settings implements ISettings {
 
     private File file;
     private String name;
+    private String defaultJsonSettings;
 
     public Settings(final String name) throws UnknownOS {
         this.name = name;
@@ -24,10 +26,9 @@ public class Settings implements ISettings {
     public void Setup() {
         if(!file.exists()) {
             file.getParentFile().mkdir();
-            try {file.createNewFile();}
-            catch (IOException e) {
-                
-            }
+            try{file.createNewFile();}
+            catch(IOException e){Logger.getLogger("BNC").error("Could not initialize "+name+".json ", e);}
+
         }
     }
 
