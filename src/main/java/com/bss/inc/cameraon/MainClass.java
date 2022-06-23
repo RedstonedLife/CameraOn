@@ -19,6 +19,7 @@ public class MainClass extends Application {
     public void stop() {}
 
     public static void main(String[] args) {
+        this._i18n
         launch();
     }
 
