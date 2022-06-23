@@ -35,7 +35,7 @@ public class MainClass extends Application {
                   clazz.getResource(FrontendPaths.PREF_DISPLAY_CBS_FXML), clazz.getResource(FrontendPaths.PREF_DISPLAY_IBS_FXML)
           }), // PreferencesDialog URL[] End
           new Dialog(350d, 500d, "popUpWindow", new URL[] { // PopUpWindow URL[] Start
-
+            
           }) // PopUpWindow URL[] End
         };
     }
