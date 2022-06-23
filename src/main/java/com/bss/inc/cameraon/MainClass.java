@@ -8,8 +8,6 @@ import javafx.stage.Stage;
 import java.time.LocalDateTime;
 
 public class MainClass extends Application {
-
-    public static final LocalDateTime _INIT_TIME = LocalDateTime.now();
     
     private static DialogManager WindowManager;
     private transient I18n _i18n = new I18n(this);
