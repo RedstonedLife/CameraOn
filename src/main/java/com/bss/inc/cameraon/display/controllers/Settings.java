@@ -22,6 +22,10 @@ public class Settings implements ISettings {
         Setup();
     }
 
+    public Settings(final String name, final String defaultJsonSettings) throws UnknownOS {
+        
+    }
+
     @Override
     public void Setup() {
         if(!file.exists()) {
