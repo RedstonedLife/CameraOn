@@ -5,6 +5,7 @@ import com.bss.inc.cameraon.exceptions.UnknownOS;
 import com.bss.inc.cameraon.settings.ISettings;
 
 import java.io.File;
+import java.io.IOException;
 
 public class Settings implements ISettings {
 
@@ -21,7 +22,13 @@ public class Settings implements ISettings {
 
     @Override
     public void Setup() {
-
+        if(!file.exists()) {
+            file.getParentFile().mkdir();
+            try {file.createNewFile();}
+            catch (IOException e) {
+                
+            }
+        }
     }
 
     @Override
