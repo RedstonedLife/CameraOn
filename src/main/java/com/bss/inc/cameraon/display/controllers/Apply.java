@@ -22,10 +22,10 @@ public class Apply implements Initializable {
     @FXML private Text taskslefttxt,backendtxt,applystatustxt,versiontxt,licensetxt;
 
     // # Close Window Button
-    @FXML private void closeApp(ActionEvent event) {MainClass.getWindowManager().closeDialogs();}
+    @FXML private void closeApp(ActionEvent event) {instance.getWindowManager().closeDialogs();}
 
     // # Minimize Window Button
-    @FXML private void minimizeApp(ActionEvent event) {MainClass.getWindowManager().minimizeDialog("mainWindow");}
+    @FXML private void minimizeApp(ActionEvent event) {instance.getWindowManager().minimizeDialog("mainWindow");}
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
