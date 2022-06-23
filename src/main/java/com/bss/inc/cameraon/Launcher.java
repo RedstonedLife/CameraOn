@@ -6,6 +6,7 @@ import com.bss.inc.cameraon.logging.LogManager;
 import com.bss.inc.cameraon.logging.Logger;
 
 public class Launcher {
+    LogManager _LM;
     public static void main(String[] args) throws UnknownOS {
         _LM = new LogManager();
         LogManager.addLogger("BNC", new Logger("BNC"));
