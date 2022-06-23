@@ -15,7 +15,7 @@ public class SceneSettings {
     @FXML private Text languagetxt,versiontxt,licensetxt;
     @FXML private Button btnClose;
     @FXML private Button btnMinimize;
-    
+
     // # Close Window Button
     @FXML private void closeApp(ActionEvent event) {MainClass.getWindowManager().closeDialogs();}
     // # Minimize Window Button
