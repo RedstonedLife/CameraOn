@@ -35,7 +35,7 @@ public class LogFileManager implements ErrorHandler, WarnHandler, InfoHandler, D
 
     private void _initialize() {
         /*CHECK IF LOGS FOLDER EXISTS*/
-        if (!_folder.exists()) _folder.mkdir();
+        if (!_folder.exists()) _folder.mkdirs();
         /*CHECK IF LATEST.LOG EXISTS*/
         _LATEST_EXISTS = _fileExists(LoggingConstants.LOG_LATEST);
         /*FORMAT INIT TIME*/
