@@ -1,6 +1,8 @@
 package com.bss.inc.cameraon.display.controllers;
 
 import com.bss.inc.cameraon.MainClass;
+import com.bss.inc.cameraon.constants.FrontendPaths;
+import com.bss.inc.cameraon.utils.$UI$01;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -38,7 +40,7 @@ public class CameraSettings implements Initializable {
         cctvSceneBtn.setText(tl("settings.cctv.btn.text"));
         scanSceneBtn.setText(tl("scan.btn.text"));
         applySceneBtn.setText(tl("apply.btn.text"));
-        versiontxt.setText(tl("version.format",FrontendPaths.VERSION_TEXT,FrontendPaths.BUILD));
+        versiontxt.setText(tl("version.format", FrontendPaths.VERSION_TEXT,FrontendPaths.BUILD));
         licensetxt.setText(tl("license.format",FrontendPaths.LICENSEE,FrontendPaths.LICENSEKEY));
     }
 
