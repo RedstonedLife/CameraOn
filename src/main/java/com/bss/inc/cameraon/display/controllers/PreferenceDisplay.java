@@ -1,6 +1,7 @@
 package com.bss.inc.cameraon.display.controllers;
 
 import com.bss.inc.cameraon.MainClass;
+import com.bss.inc.cameraon.constants.FrontendPaths;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
