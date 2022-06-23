@@ -6,7 +6,7 @@
 <?import javafx.scene.text.*?>
 
 <?import java.net.URL?>
-<AnchorPane minHeight="600" minWidth="900" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.redsoftware.ltd.bnc.controllers.Scan">
+<AnchorPane minHeight="600" minWidth="900" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bss.inc.cameraon.display.controllers.Scan">
     <children>
         <HBox layoutX="832.0" layoutY="1.0" prefHeight="27.0" prefWidth="28.0">
             <children>
