@@ -1,12 +1,14 @@
 package com.bss.inc.cameraon.display.controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.SplitPane;
+import javafx.stage.Stage;
 import javafx.scene.text.Text;
-
-import java.awt.*;
-import java.awt.event.ActionEvent;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class Apply implements Initializable {
 
