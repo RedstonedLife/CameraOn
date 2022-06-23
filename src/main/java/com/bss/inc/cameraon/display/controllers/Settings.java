@@ -53,7 +53,7 @@ public class Settings implements ISettings {
                 _n = null;
                 pw = null;
             } catch(FileNotFoundException e) {
-                
+                Logger.getLogger("BNC").error();
             }
         }
     }
