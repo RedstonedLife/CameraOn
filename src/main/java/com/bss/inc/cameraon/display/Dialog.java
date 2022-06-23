@@ -14,7 +14,7 @@ import java.util.HashMap;
 
 public class Dialog {
     private double offsetX,offsetY;
-    private static Stage parent;
+    private static Stage parent = new Stage();
     private boolean isEnabled = false;
     private boolean isFocused;
     private double width, height;
