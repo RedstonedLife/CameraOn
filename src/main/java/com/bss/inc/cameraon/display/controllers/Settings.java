@@ -73,6 +73,7 @@ public class Settings implements ISettings {
         try {pw = new PrintWriter(file.getPath());}catch (FileNotFoundException e) {
             logger.error(name+".json was not found! Running setup again!", e);
             Setup();
+            Save();
         }
     }
 
