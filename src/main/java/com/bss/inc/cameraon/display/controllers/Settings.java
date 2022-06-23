@@ -75,6 +75,11 @@ public class Settings implements ISettings {
             Setup();
             Save();
         }
+        pw.write(settings.toString());
+        pw.flush();
+        pw.close();
+        pw = null;
+        settings = null;
     }
 
     @Override
