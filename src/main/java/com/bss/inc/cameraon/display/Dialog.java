@@ -82,6 +82,8 @@ public class Dialog {
     public void changeScene(URL file) {
         if(dialogName.equals("preferencesDialog"))
             System.out.println("Changing scene of preferencesDialog");
+        if(dialogName.equals("mainWindow"))
+            System.out.println("Changing scene of preferencesDialog");
         this.parent.setScene(scenes.get(file));
     }
     public void minimize() {this.parent.setIconified(true);}
