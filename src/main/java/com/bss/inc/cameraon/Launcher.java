@@ -8,8 +8,7 @@ import com.bss.inc.cameraon.logging.Logger;
 import java.io.FileNotFoundException;
 
 public class Launcher {
-    static LogManager _LM;
     public static void main(String[] args) throws UnknownOS {
-        
+
     }
 }
