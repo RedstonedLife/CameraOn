@@ -5,7 +5,8 @@ import com.bss.inc.cameraon.utils.$UI$01;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
+import javafx.scene.control.*;
+import javafx.scene.text.Text;
 
 import java.net.URL;
 import java.util.Map;
@@ -14,6 +15,13 @@ import java.util.ResourceBundle;
 import static com.bss.inc.cameraon.i18n.I18n.tl;
 
 public class Scan implements Initializable {
+
+    @FXML private Button settingsSceneBtn,cctvSceneBtn,scanSceneBtn,applySceneBtn,prefBtn,scanBtn,HelpBtn;
+    @FXML private ChoiceBox<String> scanAlgCb;
+    @FXML private SplitPane cmainsplit;
+    @FXML private Text taskslefttxt,backendtxt,scanningalgotxt,scanstatustxt,versiontxt,licensetxt,iprangeTxt,iprangetoTxt;
+    @FXML private TextField iprangetoTf,iprangefromTf;
+    @FXML private ProgressBar tasksLeftScan;
 
     // # Close Window Button
     @FXML private void closeApp(ActionEvent event) {MainClass.getWindowManager().closeDialogs();}
