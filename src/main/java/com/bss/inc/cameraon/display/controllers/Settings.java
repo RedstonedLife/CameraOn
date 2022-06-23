@@ -99,7 +99,7 @@ public class Settings implements ISettings {
     }
 
     @Override
-    public <T> T getValue(String key) {
+    public Object getValue(String key) {
         return null;
     }
 
