@@ -1,6 +1,8 @@
 package com.bss.inc.cameraon.display.controllers;
 
 import com.bss.inc.cameraon.MainClass;
+import com.bss.inc.cameraon.constants.FrontendPaths;
+import com.bss.inc.cameraon.utils.$UI$01;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -10,6 +12,8 @@ import javafx.stage.Stage;
 import javafx.scene.text.Text;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static com.bss.inc.cameraon.i18n.I18n.tl;
 
 public class Apply implements Initializable {
 
@@ -34,8 +38,8 @@ public class Apply implements Initializable {
         taskslefttxt.setText(tl("apply.task.left"));
         backendtxt.setText(tl("apply.task.default",""));
         applystatustxt.setText(tl("apply.task.status"));
-        versiontxt.setText(tl("version.format",aa.VERSION_TEXT,aa.BUILD));
-        licensetxt.setText(tl("license.format",aa.LICENSEE,aa.LICENSEKEY));
+        versiontxt.setText(tl("version.format", FrontendPaths.VERSION_TEXT,FrontendPaths.BUILD));
+        licensetxt.setText(tl("license.format",aa.LICENSEE,FrontendPaths.LICENSEKEY));
     }
 
 }
