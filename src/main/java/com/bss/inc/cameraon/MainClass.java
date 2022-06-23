@@ -16,6 +16,10 @@ public class MainClass extends Application {
     private static Dialog[] dialogs;
     private transient I18n _i18n = new I18n(this);
 
+    static {
+        
+    }
+
     @Override
     public void start(Stage stage) {
         this._i18n.OnStart();
