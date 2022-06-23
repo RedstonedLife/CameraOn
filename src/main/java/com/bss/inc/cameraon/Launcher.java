@@ -19,5 +19,6 @@ public class Launcher {
             throw new RuntimeException(e);
         }
         Logger.getLogger("BNC").info("Value of TestValue: " + settings.getValue("TestValue"));
+        settings.setValue("TestValue", (int)settings.getValue("TestValue")-300);
     }
 }
