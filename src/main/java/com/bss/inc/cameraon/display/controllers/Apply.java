@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.display.controllers;
 
+import com.bss.inc.cameraon.MainClass;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -17,10 +18,10 @@ public class Apply implements Initializable {
     @FXML private Text taskslefttxt,backendtxt,applystatustxt,versiontxt,licensetxt;
 
     // # Close Window Button
-    @FXML private void closeApp(ActionEvent event) {BNC.getSCENE_MANAGER().closeDialogs();}
+    @FXML private void closeApp(ActionEvent event) {MainClass.getWindowManager().closeDialogs();}
 
     // # Minimize Window Button
-    @FXML private void minimizeApp(ActionEvent event) {BNC.getSCENE_MANAGER().minimizeDialog("mainWindow");}
+    @FXML private void minimizeApp(ActionEvent event) {MainClass.getWindowManager().minimizeDialog("mainWindow");}
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
