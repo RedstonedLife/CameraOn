@@ -4,6 +4,8 @@ import com.bss.inc.cameraon.constants.FilePaths;
 import com.bss.inc.cameraon.exceptions.UnknownOS;
 import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.settings.ISettings;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
@@ -37,7 +39,10 @@ public class Settings implements ISettings {
             file.getParentFile().mkdir();
             try{file.createNewFile();}
             catch(IOException e){Logger.getLogger("BNC").error("Could not initialize "+name+".json ", e);}
-
+            try {new JSONObject(defaultJsonSettings);} catch (JSONException e) {
+                Logger.getLogger("BNC").error("Invalid default JSON settings for "+name+".json, reverting to in-house default",e);
+                defaultJsonSettings="{}";
+            }
         }
     }
 
