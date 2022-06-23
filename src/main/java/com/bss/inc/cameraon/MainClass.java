@@ -23,7 +23,6 @@ public class MainClass extends Application {
     public void start(Stage stage) {
         this._i18n.OnStart();
         this._i18n.updateLocale("en");
-        stage.close();
         try {WindowManager = new DialogManager(new Dialog[] {
                 new Dialog(stage,FrontendPaths.HEIGHT, FrontendPaths.WIDTH, "mainWindow", new URL[]{ // MainWindow URL[] Start
                         clazz.getResource(FrontendPaths.SETTINGS_FXML),
