@@ -45,7 +45,7 @@ public class Settings implements ISettings {
             try{file.createNewFile();}
             catch(IOException e){Logger.getLogger("BNC").error("Could not initialize "+name+".json ", e);}
             try {new JSONObject(defaultJsonSettings);} catch (JSONException e) {
-                Logger.getLogger("BNC").error("Invalid default JSON settings for "+name+".json, reverting to in-house default",e);
+                logger.error("Invalid default JSON settings for "+name+".json, reverting to in-house default",e);
             }
             try {
                 JSONObject _n = new JSONObject("{}");
