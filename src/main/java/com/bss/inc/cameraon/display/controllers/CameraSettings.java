@@ -1,13 +1,19 @@
 package com.bss.inc.cameraon.display.controllers;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.SplitPane;
+import javafx.scene.text.Text;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import static com.bss.inc.cameraon.i18n.I18n.tl;
 
-public class CameraSettings {
+public class CameraSettings implements Initializable {
     @FXML private Button settingsSceneBtn,cctvSceneBtn,scanSceneBtn,applySceneBtn,btnClose,btnMinimize,HelpBtn;
     @FXML private Button fpsleftbtn,fpsDleftbtn,fpsrightbtn,fpsDrightbtn;
     @FXML private ChoiceBox<String> veCB,rCB,brCB;
