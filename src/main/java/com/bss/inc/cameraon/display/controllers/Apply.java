@@ -17,6 +17,8 @@ import static com.bss.inc.cameraon.i18n.I18n.tl;
 
 public class Apply implements Initializable {
 
+    private Class<MainClass> instance = MainClass.class;
+
     @FXML private Button settingsSceneBtn,cctvSceneBtn,scanSceneBtn,applySceneBtn,HelpBtn;
     @FXML private SplitPane cmainsplit;
     @FXML private Text taskslefttxt,backendtxt,applystatustxt,versiontxt,licensetxt;
