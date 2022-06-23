@@ -8,6 +8,7 @@ import com.bss.inc.cameraon.logging.Logger;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDateTime;
 
@@ -39,11 +40,15 @@ public class MainClass extends Application {
                   clazz.getResource(FrontendPaths.POP_FAQ_FXML)
           }) // PopUpWindow URL[] End
         };
+        try {WindowManager = new DialogManager(dialogs);}
+        catch (IOException e) {logger.error("Error occurred while initializing the WindowManager", e);}
     }
 
     @Override
     public void start(Stage stage) {
         this._i18n.OnStart();
+        WindowManager.changeDialogScene("mainWindow", clazz.getResource(FrontendPaths.SETTINGS_FXML));
+        WindowManager.openDialog("mainWindow");
     }
     @Override
     public void stop() {}
