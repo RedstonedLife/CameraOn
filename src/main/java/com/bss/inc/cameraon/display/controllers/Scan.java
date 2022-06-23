@@ -1,6 +1,7 @@
 package com.bss.inc.cameraon.display.controllers;
 
 import com.bss.inc.cameraon.MainClass;
+import com.bss.inc.cameraon.exceptions.HALT_AND_CATCH_FIRE;
 import com.bss.inc.cameraon.utils.$UI$01;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -28,6 +29,8 @@ public class Scan implements Initializable {
     // # Minimize Window Button
     @FXML private void minimizeApp(ActionEvent event) {MainClass.getWindowManager().minimizeDialog("mainWindow");}
 
+    @FXML
+    private void doScan(ActionEvent event) throws HALT_AND_CATCH_FIRE {}
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         $UI$01.u_05$1$1(scanAlgCb,0,new String[]{"AngryScan","IB-Scan","CB-Scan"});
