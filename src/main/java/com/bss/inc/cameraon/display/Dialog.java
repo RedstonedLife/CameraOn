@@ -21,13 +21,12 @@ public class Dialog {
     private String dialogName;
     private HashMap<URL, Scene> scenes = new HashMap<URL, Scene>();
 
-    static {
+
+
+    public Dialog(double w, double h, String name, URL[] files) {
         parent = new Stage();
         parent.setResizable(false);
         parent.initStyle(StageStyle.UNDECORATED);
-    }
-
-    public Dialog(double w, double h, String name, URL[] files) {
         this.width = w;
         this.height = h;
         this.dialogName = name;
