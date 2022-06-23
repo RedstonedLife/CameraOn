@@ -8,9 +8,7 @@ import javafx.fxml.Initializable;
 public class Scan implements Initializable {
 
     // # Close Window Button
-    @FXML
-    private void closeApp(ActionEvent event) {
-        MainClass.getWindowManager().closeDialogs();}
+    @FXML private void closeApp(ActionEvent event) {MainClass.getWindowManager().closeDialogs();}
 
     // # Minimize Window Button
     @FXML private void minimizeApp(ActionEvent event) {MainClass.getWindowManager().minimizeDialog("mainWindow");}
