@@ -1,12 +1,17 @@
 package com.bss.inc.cameraon.display.controllers;
 
 import com.bss.inc.cameraon.MainClass;
+import com.bss.inc.cameraon.constants.FrontendPaths;
+import com.bss.inc.cameraon.utils.$UI$01;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.SplitPane;
 import javafx.scene.text.Text;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import static com.bss.inc.cameraon.i18n.I18n.tl;
 
@@ -29,7 +34,7 @@ public class SceneSettings {
         scanSceneBtn.setText(tl("scan.btn.text"));
         applySceneBtn.setText(tl("apply.btn.text"));
         languagetxt.setText(tl("settings.language.text"));
-        versiontxt.setText(tl("version.format",FrontendPaths.VERSION_TEXT,FrontendPaths.BUILD));
+        versiontxt.setText(tl("version.format", FrontendPaths.VERSION_TEXT,FrontendPaths.BUILD));
         licensetxt.setText(tl("license.format",FrontendPaths.LICENSEE,FrontendPaths.LICENSEKEY));
         langCb.setOnAction(e -> {
             //BNC.getSettingsManager().set_language(langCb.getItems().indexOf(langCb.getValue()) + 1);
