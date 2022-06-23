@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class Settings implements ISettings {
 
@@ -84,7 +85,12 @@ public class Settings implements ISettings {
 
     @Override
     public void Load() throws FileNotFoundException, JSONException {
-        
+        StringBuilder builder = new StringBuilder();
+        Scanner reader = new Scanner(file);
+        while (reader.hasNextLine()) {builder.append(reader.nextLine());}
+        JSONObject settings = new JSONObject(builder.toString());
+        builder = null;
+        reader = null;
     }
 
     @Override
