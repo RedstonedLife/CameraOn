@@ -3,6 +3,7 @@ package com.bss.inc.cameraon.display.controllers;
 import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.constants.FrontendPaths;
 import com.bss.inc.cameraon.utils.$UI$01;
+import com.sun.tools.javac.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -24,10 +25,11 @@ public class Apply implements Initializable {
     @FXML private Text taskslefttxt,backendtxt,applystatustxt,versiontxt,licensetxt;
 
     // # Close Window Button
-    @FXML private void closeApp(ActionEvent event) {instance.getWindowManager().closeDialogs();}
+    @FXML private void closeApp(ActionEvent event) {
+        MainClass.getWindowManager().closeDialogs();}
 
     // # Minimize Window Button
-    @FXML private void minimizeApp(ActionEvent event) {instance.getWindowManager().minimizeDialog("mainWindow");}
+    @FXML private void minimizeApp(ActionEvent event) {MainClass.getWindowManager().minimizeDialog("mainWindow");}
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

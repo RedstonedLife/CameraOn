@@ -18,7 +18,7 @@ public class MainClass extends Application {
     private static DialogManager WindowManager;
     private transient I18n _i18n = new I18n(this);
     private static Class<MainClass> clazz = MainClass.class;
-    
+
     @Override
     public void start(Stage stage) {
         this._i18n.OnStart();
