@@ -29,8 +29,8 @@ public class SceneSettings {
         scanSceneBtn.setText(tl("scan.btn.text"));
         applySceneBtn.setText(tl("apply.btn.text"));
         languagetxt.setText(tl("settings.language.text"));
-        versiontxt.setText(tl("version.format",aa.VERSION_TEXT,aa.BUILD));
-        licensetxt.setText(tl("license.format",aa.LICENSEE,aa.LICENSEKEY));
+        versiontxt.setText(tl("version.format",FrontendPaths.VERSION_TEXT,FrontendPaths.BUILD));
+        licensetxt.setText(tl("license.format",FrontendPaths.LICENSEE,FrontendPaths.LICENSEKEY));
         langCb.setOnAction(e -> {
             //BNC.getSettingsManager().set_language(langCb.getItems().indexOf(langCb.getValue()) + 1);
             //BNC.getSCENE_MANAGER().changeDialogScene("confirmationDialog", BNC.class.getResource(aa.LANG_CONFIRMATION_FXML));
