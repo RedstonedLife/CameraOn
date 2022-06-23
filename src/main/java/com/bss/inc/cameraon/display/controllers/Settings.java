@@ -40,7 +40,7 @@ public class Settings implements ISettings {
     }
 
     @Override
-    public void setValue(String key, T value) {
+    public <T> void setValue(String key, T value) {
 
     }
 }
