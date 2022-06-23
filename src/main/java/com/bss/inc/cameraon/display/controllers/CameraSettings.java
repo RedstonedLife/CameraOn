@@ -28,7 +28,7 @@ public class CameraSettings implements Initializable {
 
     // # Minimize Window Button
     @FXML private void minimizeApp(ActionEvent event) {MainClass.getWindowManager().minimizeDialog("mainWindow");}
-    
+
     private void initializeLanguage() {
         cctvencodingtxt.setText(tl("settings.cctv.encoding"));
         cctvencodingbetxt.setText(tl("settings.cctv.encoding.below"));
