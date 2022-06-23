@@ -1,13 +1,18 @@
 package com.bss.inc.cameraon.display.controllers;
 
 import com.bss.inc.cameraon.MainClass;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.text.Text;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import static com.bss.inc.cameraon.i18n.I18n.tl;
 
-public class PreferenceDisplay {
+public class PreferenceDisplay implements Initializable {
     @FXML private Button btnClose,asSceneBtn,ibsSceneBtn,cbsSceneBtn,displaySceneBtn;
     @FXML private Text threadtxt,t1txt,t2txt,pingtxt,p1txt,p2txt,p3txt,p4txt,skiptxt,s1txt,timetxt,tt1txt,tt2txt,tt3txt,portstxt,ps1txt,ps2txt,ps3txt,ps4txt;
     private MainClass instance;
