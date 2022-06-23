@@ -14,7 +14,9 @@ public class MainClass extends Application {
     private transient I18n _i18n = new I18n(this);
 
     @Override
-    public void start(Stage stage) {}
+    public void start(Stage stage) {
+        this._i18n.OnStart();
+    }
     @Override
     public void stop() {}
 
