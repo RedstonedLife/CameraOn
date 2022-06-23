@@ -8,6 +8,6 @@ public interface ISettings {
     void Setup();
     void Save() throws FileNotFoundException, JSONException;
     void Load() throws FileNotFoundException, JSONException;
-    <T> T getValue(String key);
-    <T> void setValue(String key, T value);
+    Object getValue(String key);
+    void setValue(String key, Object value);
 }
