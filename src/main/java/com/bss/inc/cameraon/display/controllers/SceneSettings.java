@@ -19,7 +19,7 @@ public class SceneSettings {
     private MainClass instance = new MainClass();
     // # Close Window Button
     @FXML private void closeApp(ActionEvent event) {
-        MainClass.getSCENE_MANAGER().closeDialogs();}
+        MainClass.getWindowManager().closeDialogs();}
     // # Minimize Window Button
-    @FXML private void minimizeApp(ActionEvent event) {BNC.getSCENE_MANAGER().minimizeDialog("mainWindow");}
+    @FXML private void minimizeApp(ActionEvent event) {MainClass.getWindowManager().minimizeDialog("mainWindow");}
 }
