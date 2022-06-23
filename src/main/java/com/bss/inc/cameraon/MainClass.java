@@ -11,7 +11,7 @@ public class MainClass extends Application {
 
     public static final LocalDateTime _INIT_TIME = LocalDateTime.now();
     private static DialogManager WindowManager;
-    private transiet I18n _i18n = new I18n(this);
+    private transient I18n _i18n = new I18n(this);
 
     @Override
     public void start(Stage stage) {}
