@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon;
 
+import com.bss.inc.cameraon.constants.FrontendPaths;
 import com.bss.inc.cameraon.display.Dialog;
 import com.bss.inc.cameraon.display.DialogManager;
 import com.bss.inc.cameraon.i18n.I18n;
@@ -18,7 +19,7 @@ public class MainClass extends Application {
 
     static {
         dialogs = new Dialog[] {
-                
+          new Dialog(FrontendPaths.HEIGHT, FrontendPaths.WIDTH, )
         };
     }
 
