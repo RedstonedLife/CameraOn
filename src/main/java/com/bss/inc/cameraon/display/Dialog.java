@@ -51,7 +51,7 @@ public class Dialog {
     }
 
     public Dialog(final Stage mainStange, double w, double h, String name, URL[] files) {
-        parent = mainStange;
+        //parent = mainStange;
         parent.setResizable(false);
         parent.initStyle(StageStyle.UNDECORATED);
         this.width = w;
