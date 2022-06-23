@@ -1,6 +1,7 @@
 package com.bss.inc.cameraon.display;
 
 import com.bss.inc.cameraon.MainClass;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
