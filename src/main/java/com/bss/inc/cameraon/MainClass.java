@@ -19,7 +19,7 @@ public class MainClass extends Application {
         launch();
     }
 
-    public DialogManager getDisplayManager() {
+    public DialogManager getWindowManager() {
         return null;
     }
 }
