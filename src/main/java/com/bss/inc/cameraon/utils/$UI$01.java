@@ -2,8 +2,6 @@ package com.bss.inc.cameraon.utils;
 
 import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.constants.FrontendPaths;
-import com.redsoftware.ltd.bnc.BNC;
-import com.redsoftware.ltd.bnc.constants.aa;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
