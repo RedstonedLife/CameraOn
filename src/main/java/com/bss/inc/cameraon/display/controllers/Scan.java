@@ -1,9 +1,17 @@
 package com.bss.inc.cameraon.display.controllers;
 
 import com.bss.inc.cameraon.MainClass;
+import com.bss.inc.cameraon.utils.$UI$01;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+
+import java.net.URL;
+import java.util.Map;
+import java.util.ResourceBundle;
+
+import static com.bss.inc.cameraon.i18n.I18n.tl;
 
 public class Scan implements Initializable {
 
@@ -11,5 +19,32 @@ public class Scan implements Initializable {
     @FXML private void closeApp(ActionEvent event) {MainClass.getWindowManager().closeDialogs();}
     // # Minimize Window Button
     @FXML private void minimizeApp(ActionEvent event) {MainClass.getWindowManager().minimizeDialog("mainWindow");}
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        $UI$01.u_05$1$1(scanAlgCb,0,new String[]{"AngryScan","IB-Scan","CB-Scan"});
+        $UI$01.u_01$1$1(cmainsplit,new Button[]{settingsSceneBtn,cctvSceneBtn,applySceneBtn,scanSceneBtn,HelpBtn});
+        $UI$01.u_04$1$1(prefBtn);
+        //
+        BNC.getStateMachine().addTransitionListener(this);
+        // I18n
+        $UI$01.u_02$1$1(Map.ofEntries(
+                Map.entry(settingsSceneBtn, tl("settings.btn.text")),
+                Map.entry(cctvSceneBtn, tl("settings.cctv.btn.text")),
+                Map.entry(scanSceneBtn, tl("scan.btn.text")),
+                Map.entry(applySceneBtn, tl("apply.btn.text")),
+                Map.entry(prefBtn, tl("preferences.btn.text")),
+                Map.entry(scanBtn, tl("scan.btn.text"))
+        ));
+        /*$UI$01.u_03$1$1(Map.ofEntries(
+                Map.entry(taskslefttxt,tl("scan.text.left")),
+                Map.entry(taskslefttxt,tl("scan.text.left")),
+                Map.entry(backendtxt,tl("scan.text.default","")),
+                Map.entry(scanningalgotxt,tl("scan.algorithm.text")),
+                Map.entry(scanstatustxt,tl("scan.text.status")),
+                Map.entry(versiontxt,tl("version.format",aa.VERSION_TEXT,aa.BUILD)),
+                Map.entry(licensetxt,tl("license.format",aa.LICENSEE,aa.LICENSEKEY))
+        ));*/
+    }
 
 }
