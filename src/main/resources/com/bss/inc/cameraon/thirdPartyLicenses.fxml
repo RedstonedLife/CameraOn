@@ -6,7 +6,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane minHeight="800" minWidth="500" prefHeight="800.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cssbncrf.appController">
+<AnchorPane minHeight="800" minWidth="500" prefHeight="800.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bss.inc.cameraon.display.controllers.appController">
     <children>
         <HBox layoutX="419.0" layoutY="-1.0" prefHeight="27.0" prefWidth="28.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2b2b2b" height="27.0" layoutY="1.0" stroke="#2b2b2b" strokeType="INSIDE" width="500.0" />
