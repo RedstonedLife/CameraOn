@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-
-<?import java.net.URL?>
-<VBox alignment="CENTER" prefHeight="420.0" prefWidth="610.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bss.inc.cameraon.display.controllers.">
+<VBox alignment="CENTER" prefHeight="420.0" prefWidth="610.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <SplitPane fx:id="mainSplit" dividerPositions="0.2" scaleShape="false" VBox.vgrow="ALWAYS">
             <items>
