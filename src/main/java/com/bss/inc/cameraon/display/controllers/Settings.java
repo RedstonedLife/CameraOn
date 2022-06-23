@@ -104,7 +104,7 @@ public class Settings implements ISettings {
     }
 
     @Override
-    public <T> void setValue(String key, T value) {
+    public void setValue(String key, Object value) {
 
     }
 }
