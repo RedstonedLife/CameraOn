@@ -68,6 +68,6 @@
         <Text fill="#7c7c7c" layoutX="407.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="camera - on" wrappingWidth="86.853515625" />
     </children>
     <stylesheets>
-        <URL value="@appStyle.css" />
+        <URL value="@app.css" />
     </stylesheets>
 </AnchorPane>
