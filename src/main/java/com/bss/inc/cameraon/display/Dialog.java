@@ -89,4 +89,8 @@ public class Dialog {
     public Stage getParent() {return parent;}
     public boolean isEnabled() {return isEnabled;}
     public void setEnabled(boolean v) {this.isEnabled=v;}
+
+    public HashMap<URL, Scene> getScenes() {
+        return scenes;
+    }
 }
