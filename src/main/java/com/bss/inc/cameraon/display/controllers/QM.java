@@ -1,6 +1,7 @@
 package com.bss.inc.cameraon.display.controllers;
 
 import com.bss.inc.cameraon.MainClass;
+import com.bss.inc.cameraon.constants.FrontendPaths;
 import com.bss.inc.cameraon.utils.$UI$01;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,9 +25,9 @@ public class QM implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //tl("language.{}.changeConfirmation".replace("{}",prLang(instance.getSCENE_MANAGER().getCurrentLanguage())),prLang(instance.getSCENE_MANAGER().getSettings().get_language()))
-        qmHelpBtn.setOnAction(e -> instance.getSCENE_MANAGER().changeDialogScene("popUpWindow", BNC.class.getResource(aa.POP_HELP_FXML)));
-        qmFaqBtn.setOnAction(e -> instance.getSCENE_MANAGER().changeDialogScene("popUpWindow", BNC.class.getResource(aa.POP_FAQ_FXML)));
-        qmTplBtn.setOnAction(e -> instance.getSCENE_MANAGER().changeDialogScene("popUpWindow", BNC.class.getResource(aa.POP_TPL_FXML)));
+        qmHelpBtn.setOnAction(e -> MainClass.getWindowManager().changeDialogScene("popUpWindow", MainClass.class.getResource(FrontendPaths.POP_HELP_FXML)));
+        qmFaqBtn.setOnAction(e -> MainClass.getWindowManager().changeDialogScene("popUpWindow", MainClass.class.getResource(aa.POP_FAQ_FXML)));
+        qmTplBtn.setOnAction(e -> MainClass.getWindowManager().changeDialogScene("popUpWindow", MainClass.class.getResource(aa.POP_TPL_FXML)));
     }
 
 }
