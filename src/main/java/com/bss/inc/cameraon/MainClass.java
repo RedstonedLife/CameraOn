@@ -48,7 +48,7 @@ public class MainClass extends Application {
         //WindowManager.changeDialogScene("mainWindow", clazz.getResource(FrontendPaths.SETTINGS_FXML));
         //WindowManager.openDialog("mainWindow");
     }
-    @Override;
+    @Override
     public void stop() {}
 
     public static void main(String[] args) {
