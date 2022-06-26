@@ -31,7 +31,7 @@
             <font>
                 <Font name="Consolas" size="13.0" />
             </font></Text>
-      <Button layoutX="146.0" layoutY="466.0" mnemonicParsing="false" text="Close" textFill="WHITE" />
+      <Button fx:id="close" layoutX="146.0" layoutY="466.0" mnemonicParsing="false" text="Close" textFill="WHITE" />
     </children>
     <stylesheets>
         <URL value="@app.css" />
