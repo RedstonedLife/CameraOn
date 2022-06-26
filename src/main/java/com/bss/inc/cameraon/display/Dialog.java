@@ -83,7 +83,7 @@ public class Dialog {
         currentScene = scenes.get(file);
         parent.setScene(scenes.get(file));
     }
-
+    
     public Scene getCurrentScene() {return currentScene;}
     public void minimize() {this.parent.setIconified(true);}
     public String getDialogName() {return this.dialogName;}
