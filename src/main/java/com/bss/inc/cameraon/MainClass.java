@@ -58,5 +58,4 @@ public class MainClass extends Application {
     public static DialogManager getWindowManager() {
         return WindowManager;
     }
-    public static Dialog getMainDialog() {return MainDialog;}
 }
