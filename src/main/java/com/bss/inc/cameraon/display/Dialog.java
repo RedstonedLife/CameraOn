@@ -85,7 +85,8 @@ public class Dialog {
     }
 
     public void changeScene(Scene scene) {
-        
+        currentScene = scene;
+        parent.setScene(scene);
     }
 
     public Scene getCurrentScene() {return currentScene;}
