@@ -18,8 +18,7 @@ public class QM implements Initializable {
 
     private BNC instance = new BNC();
 
-    @FXML private void closeApp(ActionEvent event) {
-        $UI$01.u_06$1$1();}
+    @FXML private void closeApp(ActionEvent event) {$UI$01.u_06$1$1();}
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
