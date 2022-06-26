@@ -46,6 +46,7 @@ public class MainClass extends Application {
         catch (IOException e) {logger.error("Error occurred while initializing the WindowManager", e);}
         WindowManager.changeDialogScene("mainWindow",clazz.getResource(FrontendPaths.SETTINGS_FXML));
         WindowManager.openDialog("mainWindow");
+        stage.setTitle("CameraOn");
         //WindowManager.changeDialogScene("mainWindow", clazz.getResource(FrontendPaths.SETTINGS_FXML));
         //WindowManager.openDialog("mainWindow");
     }
