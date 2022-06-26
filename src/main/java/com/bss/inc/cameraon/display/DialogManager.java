@@ -19,7 +19,7 @@ public class DialogManager {
         //this.currentLanguage = BNC.getSettingsManager().get_language();
         for(Dialog dial : dialogs) {dialogsMap.put(dial.getDialogName(),dial);}
         for(Dialog dial : dialogs) {
-            lastDialogScene.putIfAbsent(dial.getDialogName(),)
+            lastDialogScene.putIfAbsent(dial.getDialogName(),dial.getScenes().keySet().toArray()[0])
         }
     }
 
