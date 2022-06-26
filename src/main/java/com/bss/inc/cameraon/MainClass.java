@@ -16,7 +16,6 @@ public class MainClass extends Application {
 
     private static Logger logger = Logger.getLogger("BNC");
     private static DialogManager WindowManager;
-    private static Dialog MainDialog;
     private transient I18n _i18n = new I18n(this);
     private static Class<MainClass> clazz = MainClass.class;
 
