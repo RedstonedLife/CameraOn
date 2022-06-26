@@ -20,9 +20,7 @@ public class Dialog {
     private double width, height;
     private String dialogName;
     private HashMap<URL, Scene> scenes = new HashMap<URL, Scene>();
-
-
-
+    
     public Dialog(double w, double h, String name, URL[] files) {
         parent.setResizable(false);
         parent.initStyle(StageStyle.UNDECORATED);
