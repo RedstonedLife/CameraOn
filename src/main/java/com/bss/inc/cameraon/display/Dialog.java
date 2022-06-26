@@ -19,6 +19,8 @@ public class Dialog {
     private boolean isFocused;
     private double width, height;
     private String dialogName;
+
+    private Scene currentScene;
     private HashMap<URL, Scene> scenes = new HashMap<URL, Scene>();
 
     public Dialog(double w, double h, String name, URL[] files) {
