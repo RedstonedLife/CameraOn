@@ -26,8 +26,8 @@ public class QM implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //tl("language.{}.changeConfirmation".replace("{}",prLang(instance.getSCENE_MANAGER().getCurrentLanguage())),prLang(instance.getSCENE_MANAGER().getSettings().get_language()))
         qmHelpBtn.setOnAction(e -> MainClass.getWindowManager().changeDialogScene("popUpWindow", MainClass.class.getResource(FrontendPaths.POP_HELP_FXML)));
-        qmFaqBtn.setOnAction(e -> MainClass.getWindowManager().changeDialogScene("popUpWindow", MainClass.class.getResource(aa.POP_FAQ_FXML)));
-        qmTplBtn.setOnAction(e -> MainClass.getWindowManager().changeDialogScene("popUpWindow", MainClass.class.getResource(aa.POP_TPL_FXML)));
+        qmFaqBtn.setOnAction(e -> MainClass.getWindowManager().changeDialogScene("popUpWindow", MainClass.class.getResource(FrontendPaths.POP_FAQ_FXML)));
+        qmTplBtn.setOnAction(e -> MainClass.getWindowManager().changeDialogScene("popUpWindow", MainClass.class.getResource(FrontendPaths.POP_TPL_FXML)));
     }
 
 }
