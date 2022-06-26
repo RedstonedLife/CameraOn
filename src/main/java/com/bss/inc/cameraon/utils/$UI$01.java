@@ -20,7 +20,7 @@ public class $UI$01 {
         buttons[1].setOnAction(e -> MainClass.getWindowManager().changeDialogScene("mainWindow",MainClass.class.getResource(FrontendPaths.CAM_SETTINGS)));
         buttons[2].setOnAction(e -> MainClass.getWindowManager().changeDialogScene("mainWindow",MainClass.class.getResource(FrontendPaths.APPLY_FXML)));
         buttons[3].setOnAction(e -> MainClass.getWindowManager().changeDialogScene("mainWindow",MainClass.class.getResource(FrontendPaths.SCAN_FXML)));
-        buttons[4].setOnAction(e -> {if(MainClass.getWindowManager().getDialog("popUpWindow").isEnabled()) {MainClass.getWindowManager().getDialog("popUpWindow").closeDialog();} else {MainClass.getWindowManager().getDialog("popUpWindow").openDialog();MainClass.getWindowManager().changeDialogScene("popUpWindow", MainClass.class.getResource(FrontendPaths.POP_HELP_FXML));}});
+        buttons[4].setOnAction(e -> );
     }
     public static void u_02$1$1(Map<Button, String> map) {for(Button object : map.keySet()) {object.setText(map.get(object));}}
     public static void u_03$1$1(Map<Text, String> map) {for(Text object : map.keySet()) {object.setText(map.get(object));}}
