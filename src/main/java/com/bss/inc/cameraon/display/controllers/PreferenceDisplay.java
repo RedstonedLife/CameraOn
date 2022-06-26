@@ -17,7 +17,7 @@ public class PreferenceDisplay implements Initializable {
     @FXML private Button btnClose,asSceneBtn,ibsSceneBtn,cbsSceneBtn,displaySceneBtn;
     @FXML private Text threadtxt,t1txt,t2txt,pingtxt,p1txt,p2txt,p3txt,p4txt,skiptxt,s1txt,timetxt,tt1txt,tt2txt,tt3txt,portstxt,ps1txt,ps2txt,ps3txt,ps4txt;
 
-    @FXML private void closeApp(ActionEvent event) {MainClass.getWindowManager().changeDialogScene("MainWindow");}
+    @FXML private void closeApp(ActionEvent event) {MainClass.getWindowManager().changeDialogScene("MainWindow",);}
 
     private void initializeLanguage() {
         displaySceneBtn.setText(tl("preferences.btn.display.text"));
@@ -50,4 +50,4 @@ public class PreferenceDisplay implements Initializable {
         displaySceneBtn.setOnAction(e -> {MainClass.getWindowManager().changeDialogScene("preferencesDialog",MainClass.class.getResource(FrontendPaths.PREF_DISPLAY_FXML));});
         initializeLanguage();
     }
-}
+}
