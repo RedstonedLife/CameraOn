@@ -2,6 +2,7 @@ package com.bss.inc.cameraon.display.controllers;
 
 import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.constants.FrontendPaths;
+import com.bss.inc.cameraon.utils.$UI$01;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -17,8 +18,8 @@ public class PreferenceDisplay implements Initializable {
     @FXML private Button btnClose,asSceneBtn,ibsSceneBtn,cbsSceneBtn,displaySceneBtn;
     @FXML private Text threadtxt,t1txt,t2txt,pingtxt,p1txt,p2txt,p3txt,p4txt,skiptxt,s1txt,timetxt,tt1txt,tt2txt,tt3txt,portstxt,ps1txt,ps2txt,ps3txt,ps4txt;
 
-    @FXML private void closeApp(ActionEvent event) {MainClass.getWindowManager().getDialog("mainWindow").changeScene(MainClass.getWindowManager().getDialog("mainWindow").getCurrentScene());}
-
+    @FXML private void closeApp(ActionEvent event) {
+        $UI$01.u_06$1$1();}
     private void initializeLanguage() {
         displaySceneBtn.setText(tl("preferences.btn.display.text"));
         threadtxt.setText(tl("preferences.threads.text"));
