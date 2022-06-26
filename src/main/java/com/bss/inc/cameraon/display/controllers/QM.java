@@ -1,5 +1,5 @@
 package com.bss.inc.cameraon.display.controllers;
 
-public class QM {
-    
+public class QM implements {
+
 }
