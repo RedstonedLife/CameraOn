@@ -30,5 +30,7 @@ public class $UI$01 {
         //MainClass.getWindowManager().openDialog("mainWindow");
     });}
     public static <T> void u_05$1$1(ChoiceBox<T> cb, int dfv, T[] vl) {for(T v : vl) {cb.getItems().add(v);}cb.setValue(cb.getItems().get(dfv));}
-    public static void u_
+    public static void u_06$1$1() {
+        MainClass.getWindowManager().getDialog("mainWindow").changeScene(MainClass.getWindowManager().getDialog("mainWindow").getCurrentScene());
+    }
 }
