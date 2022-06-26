@@ -50,4 +50,4 @@ public class PreferenceDisplay implements Initializable {
         displaySceneBtn.setOnAction(e -> {MainClass.getWindowManager().changeDialogScene("preferencesDialog",MainClass.class.getResource(FrontendPaths.PREF_DISPLAY_FXML));});
         initializeLanguage();
     }
-}
+}
