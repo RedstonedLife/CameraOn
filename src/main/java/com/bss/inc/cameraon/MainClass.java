@@ -30,7 +30,7 @@ public class MainClass extends Application {
                         clazz.getResource(FrontendPaths.SETTINGS_FXML),
                         clazz.getResource(FrontendPaths.WELCOME_FXML), clazz.getResource(FrontendPaths.CAM_SETTINGS),
                         clazz.getResource(FrontendPaths.SCAN_FXML), clazz.getResource(FrontendPaths.APPLY_FXML),
-                }); // MainWindow URL[] End
+                }), // MainWindow URL[] End
                 new Dialog(300d, 200d, "confirmationDialog", new URL[]{ // ConfirmationDialog URL[] Start
                         clazz.getResource(FrontendPaths.CONFIRMATION_FXML), clazz.getResource(FrontendPaths.LANG_CONFIRMATION_FXML)
                 }), // ConfirmationDialog URL[] End
