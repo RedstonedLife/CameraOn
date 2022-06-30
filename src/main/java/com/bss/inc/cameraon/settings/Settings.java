@@ -52,7 +52,7 @@ public class Settings implements ISettings {
                 logger.error("Invalid default JSON settings for "+name+".json, reverting to in-house default",e);
             }
             try {
-                JSONObject _n = new JSONObject("{}" :  ?);
+                JSONObject _n = new JSONObject(defaultJsonSettings :  ?);
                 PrintWriter pw = new PrintWriter(file.getPath());
                 pw.write(_n.toString());
                 pw.flush();
