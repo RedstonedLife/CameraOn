@@ -52,7 +52,8 @@ public class $UI$01 {
         AtomicInteger fps = new AtomicInteger(Integer.valueOf(fpsText.getText()));
         buttons[0].setOnAction(e -> {
             if(fps.get() <= 5 || fps.get() -5<=5) return;
-            else fps.set(-5);
+            else {
+                fps.set(-5);
                 _j.put("frameRate", fps.get() -5);
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
                 try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}
