@@ -43,7 +43,7 @@ public class $UI$01 {
         buttons[3] - Right x5
          */
         buttons[0].setOnAction(e -> {
-            if(Integer.valueOf(fpsText.getText()) <= 5)
+            if(Integer.valueOf(fpsText.getText()) <= 5) return;
         });
         buttons[1].setOnAction(e -> {
 
