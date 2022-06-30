@@ -57,6 +57,7 @@ public class $UI$01 {
             else {
                 _j.put("frameRate",fps-5);
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
+                try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {throw new RuntimeException(ex);}
             }
             fpsText.setText(String.valueOf(fps));
         });
@@ -65,6 +66,7 @@ public class $UI$01 {
             else {
                 _j.put("frameRate",fps-1);
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
+                try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {throw new RuntimeException(ex);}
             }
             fpsText.setText(String.valueOf(fps));
         });
@@ -73,6 +75,7 @@ public class $UI$01 {
             else {
                 _j.put("frameRate",fps+1);
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
+                try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {throw new RuntimeException(ex);}
             }
             fpsText.setText(String.valueOf(fps));
         });
@@ -81,6 +84,7 @@ public class $UI$01 {
             else {
                 _j.put("frameRate",fps+5);
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
+                try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {throw new RuntimeException(ex);}
             }
             fpsText.setText(String.valueOf(fps));
         });
