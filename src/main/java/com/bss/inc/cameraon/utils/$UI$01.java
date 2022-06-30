@@ -10,6 +10,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Control;
 import javafx.scene.control.SplitPane;
 import javafx.scene.text.Text;
+import org.json.JSONObject;
 
 import java.util.Map;
 
@@ -43,9 +44,10 @@ public class $UI$01 {
         buttons[2] - Right x1
         buttons[3] - Right x5
          */
+        JSONObject _j = new JSONObject(Launcher.SettingsContainer.getValue("cameraSettings"));
         buttons[0].setOnAction(e -> {
             if(Integer.valueOf(fpsText.getText()) <= 5) return;
-            else Launcher.SettingsContainer.getValue("cameraSettings"))
+
         });
         buttons[1].setOnAction(e -> {
 
