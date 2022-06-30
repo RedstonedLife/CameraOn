@@ -80,7 +80,7 @@ public class $UI$01 {
             fpsText.setText(String.valueOf(fps));
         });
 
-        cbs[0].setOnAction();
+        cbs[0].setOnAction(e -> {});
 
 
         Launcher.SettingsContainer.Save();
