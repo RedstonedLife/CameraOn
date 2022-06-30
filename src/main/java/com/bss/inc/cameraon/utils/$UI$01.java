@@ -46,6 +46,7 @@ public class $UI$01 {
         buttons[3] - Right x5
          */
         JSONObject _j = new JSONObject(Launcher.SettingsContainer.getValue("cameraSettings"));
+        int fps = Integer.valueOf(fpsText.getText());
         buttons[0].setOnAction(e -> {
             if(Integer.valueOf(fpsText.getText()) <= 5) return;
             else {
