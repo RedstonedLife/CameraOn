@@ -14,7 +14,7 @@ public class Launcher {
 
     static {
         try {
-            SettingsContainer = new Settings("app.settings","{}");
+            SettingsContainer = new Settings("app.settings","{\"}");
         } catch (UnknownOS e) {
             throw new RuntimeException(e);
         }
