@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.display.controllers;
 
+import com.bss.inc.cameraon.Launcher;
 import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.constants.FrontendPaths;
 import com.bss.inc.cameraon.utils.$UI$01;
@@ -59,6 +60,6 @@ public class CameraSettings implements Initializable {
         rCB.getItems().addAll("1080 (1920x1080)", "720 (1280x720)", "480 (720x480)", "360 (640x360)");
         brCB.getItems().addAll("4096 Kb/s (4 Mb/s)", "3072 Kb/s (3 Mb/s)", "2048 Kb/s (2 Mb/s)", "1024 Kb/s (1 Mb/s)");
 
-        int fps = 
+        int fps = Launcher.SettingsContainer.getValue("")
     }
 }
