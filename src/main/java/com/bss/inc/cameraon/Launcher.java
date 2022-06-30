@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 public class Launcher {
     private static LogManager LM;
     public static final LocalDateTime _INIT_TIME = LocalDateTime.now();
-    public static final Settings SettingsContainer = new Settings("");
+    public static final Settings SettingsContainer = new Settings("app.settings");
 
     static {
         LM = new LogManager();
