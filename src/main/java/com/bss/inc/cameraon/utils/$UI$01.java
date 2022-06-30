@@ -49,7 +49,7 @@ public class $UI$01 {
         cbs[2] - Bitrate
          */
         JSONObject _j = new JSONObject(Launcher.SettingsContainer.getValue("cameraSettings").toString());
-        AtomicInteger fps = new AtomicInteger(Integer.valueOf(fpsText.getText()));
+        int fps = Integer.valueOf(fpsText.getText());
         buttons[0].setOnAction(e -> {
             if(fps.get() <= 5 || fps.get() -5<=5) return;
             else {
