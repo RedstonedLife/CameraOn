@@ -68,6 +68,6 @@ public class CameraSettings implements Initializable {
         rCB.setValue(rCB.getItems().get(cb[0]));
         brCB.setValue(brCB.getItems().get(cb[1]));
 
-        $UI$01.u_07$1$1();
+        $UI$01.u_07$1$1(new Button[]{});
     }
 }
