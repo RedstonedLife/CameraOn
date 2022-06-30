@@ -12,6 +12,7 @@ import javafx.scene.control.SplitPane;
 import javafx.scene.text.Text;
 import org.json.JSONObject;
 
+import java.io.FileNotFoundException;
 import java.util.Map;
 
 public class $UI$01 {
@@ -36,7 +37,7 @@ public class $UI$01 {
         MainClass.getWindowManager().getDialog("mainWindow").changeScene(MainClass.getWindowManager().getDialog("mainWindow").getCurrentScene());
     }
 
-    public static <T> void u_07$1$1(Button[] buttons, Text fpsText, ChoiceBox<T> cbs) {
+    public static <T> void u_07$1$1(Button[] buttons, Text fpsText, ChoiceBox<T> cbs) throws FileNotFoundException {
         /*
         Buttons Map (4 Buttons)
         buttons[0] - Left  x5
@@ -61,6 +62,6 @@ public class $UI$01 {
         buttons[3].setOnAction(e -> {
 
         });
-
+        Launcher.SettingsContainer.Save();
     }
 }
