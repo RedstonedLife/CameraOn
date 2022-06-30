@@ -65,6 +65,8 @@ public class CameraSettings implements Initializable {
         fpscounttxt.setText(String.valueOf(settings.getInt("frameRate")));
 
         int[] cb = new int[] {settings.getInt("resolution"), settings.getInt("bitrate"), settings.getInt("videnc")};
+        veCB.setValue(veCB.getItems().get(cb[2]));
+        rCB.setValue(rCB.getItems().get(cb[0]));
         
     }
 }
