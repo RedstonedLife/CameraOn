@@ -45,7 +45,7 @@ public class $UI$01 {
          */
         buttons[0].setOnAction(e -> {
             if(Integer.valueOf(fpsText.getText()) <= 5) return;
-            else Launcher
+            else Launcher.SettingsContainer
         });
         buttons[1].setOnAction(e -> {
 
