@@ -44,6 +44,11 @@ public class $UI$01 {
         buttons[1] - Left  x1
         buttons[2] - Right x1
         buttons[3] - Right x5
+
+        CBS<T> Map (3 CBS)
+        cbs[0] - Video Encoding
+        cbs[1] - Resolution
+        cbs[2] - 
          */
         JSONObject _j = new JSONObject(Launcher.SettingsContainer.getValue("cameraSettings"));
         int fps = Integer.valueOf(fpsText.getText());
