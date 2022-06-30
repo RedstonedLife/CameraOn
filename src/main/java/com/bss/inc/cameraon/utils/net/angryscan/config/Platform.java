@@ -1,4 +1,4 @@
-package com.redsoftware.ltd.bnc.utils.networking.angryscan.config;
+package com.bss.inc.cameraon.utils.net.angryscan.config;
 
 import static java.lang.Double.parseDouble;
 
