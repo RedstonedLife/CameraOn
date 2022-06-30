@@ -67,6 +67,6 @@ public class CameraSettings implements Initializable {
         int[] cb = new int[] {settings.getInt("resolution"), settings.getInt("bitrate"), settings.getInt("videnc")};
         veCB.setValue(veCB.getItems().get(cb[2]));
         rCB.setValue(rCB.getItems().get(cb[0]));
-        
+        brCB.setValue(brCB.getItems().get(cb[1]));
     }
 }
