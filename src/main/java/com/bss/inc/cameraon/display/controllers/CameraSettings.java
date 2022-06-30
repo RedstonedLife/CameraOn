@@ -71,8 +71,8 @@ public class CameraSettings implements Initializable {
 
         try {
             $UI$01.u_07$1$1(new Button[]{fpsDleftbtn,fpsleftbtn,fpsrightbtn,fpsDrightbtn},fpscounttxt,new ChoiceBox[]{veCB,rCB,brCB});
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
