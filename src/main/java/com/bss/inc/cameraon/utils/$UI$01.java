@@ -42,5 +42,6 @@ public class $UI$01 {
         buttons[2] - Right x1
         buttons[3] - Right x5
          */
+        buttons[0].setOnAction();
     }
 }
