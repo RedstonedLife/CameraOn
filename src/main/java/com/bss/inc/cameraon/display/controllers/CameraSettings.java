@@ -50,7 +50,6 @@ public class CameraSettings implements Initializable {
         this.cctvbrtxt.getStyleClass().add("text");
         this.cctvfpstxt.getStyleClass().add("text");
     }
-    
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initializeLanguage();
