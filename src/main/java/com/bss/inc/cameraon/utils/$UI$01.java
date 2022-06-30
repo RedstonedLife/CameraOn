@@ -64,15 +64,15 @@ public class $UI$01 {
             fpsText.setText(String.valueOf(fps));
         });
         buttons[2].setOnAction(e -> {
-            if(fps >= 60 || fps+<=5) return;
+            if(fps >= 60) return;
             else {
-                _j.put("frameRate",fps-1);
+                _j.put("frameRate",fps+1);
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
             }
             fpsText.setText(String.valueOf(fps));
         });
         buttons[3].setOnAction(e -> {
-
+            
         });
         Launcher.SettingsContainer.Save();
     }
