@@ -46,6 +46,6 @@ public class $UI$01 {
         buttons[1].setOnAction(e -> {});
         buttons[2].setOnAction(e -> {});
         buttons[3].setOnAction(e -> {});
-        
+
     }
 }
