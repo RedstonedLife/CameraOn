@@ -1,6 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan.config;
 
-import com.redsoftware.ltd.bnc.utils.logging.Logger;
+import com.bss.inc.cameraon.logging.Logger;
 
 public class LoggerFactory {
 
