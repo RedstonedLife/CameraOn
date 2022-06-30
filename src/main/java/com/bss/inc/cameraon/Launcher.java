@@ -4,6 +4,7 @@ import com.bss.inc.cameraon.exceptions.UnknownOS;
 import com.bss.inc.cameraon.logging.LogManager;
 import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.settings.Settings;
+import org.json.JSONObject;
 
 import java.time.LocalDateTime;
 
@@ -23,6 +24,7 @@ public class Launcher {
     }
     public static void main(String[] args) throws UnknownOS {
         SettingsContainer.Setup();
+        JSONObject j_ = SettingsContainer.getValue("cameraSettings");
         MainClass.main(args);
     }
 }
