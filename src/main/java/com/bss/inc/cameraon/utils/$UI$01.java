@@ -53,7 +53,11 @@ public class $UI$01 {
         JSONObject _j = new JSONObject(Launcher.SettingsContainer.getValue("cameraSettings").toString());
         buttons[0].setOnAction(e -> {
             int fps = Integer.valueOf(fpsText.getText());
-            if(fps <= 5 || fps-5<=4) return;
+            if(fps <= 5 || fps-5<=4) {
+                _j.put("frameRate",5);
+                Launcher.SettingsContainer.setValue("cameraSettings",_j);
+                try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}
+            }
             else {
                 _j.put("frameRate",fps-5);
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
