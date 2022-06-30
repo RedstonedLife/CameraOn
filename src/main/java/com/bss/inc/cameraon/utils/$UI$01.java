@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils;
 
+import com.bss.inc.cameraon.Launcher;
 import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.constants.FrontendPaths;
 import javafx.event.ActionEvent;
@@ -44,6 +45,7 @@ public class $UI$01 {
          */
         buttons[0].setOnAction(e -> {
             if(Integer.valueOf(fpsText.getText()) <= 5) return;
+            else Launcher
         });
         buttons[1].setOnAction(e -> {
 
