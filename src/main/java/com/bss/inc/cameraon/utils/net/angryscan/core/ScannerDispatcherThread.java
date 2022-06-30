@@ -1,24 +1,12 @@
 package com.bss.inc.cameraon.utils.net.angryscan.core;
 
-import com.redsoftware.ltd.bnc.BNC;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.Scanner;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningResult;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningResultList;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningSubject;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.config.ScannerConfig;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.feeders.Feeder;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.net.state.ScanningState;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.net.state.StateMachine;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.net.state.StateTransitionListener;
+import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static com.redsoftware.ltd.bnc.utils.networking.angryscan.net.state.ScanningState.KILLING;
-import static com.redsoftware.ltd.bnc.utils.networking.angryscan.net.state.ScanningState.SCANNING;
-import static com.redsoftware.ltd.bnc.utils.networking.angryscan.utils.InetAddressUtils.isLikelyBroadcast;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 
 public class ScannerDispatcherThread extends Thread implements ThreadFactory, StateTransitionListener {
