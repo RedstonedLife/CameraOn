@@ -1,6 +1,7 @@
-package com.redsoftware.ltd.bnc.utils.networking.angryscan.feeders;
+package com.bss.inc.cameraon.utils.net.angryscan.feeders;
 
-import com.redsoftware.ltd.bnc.i18n.I18n;
+
+import com.bss.inc.cameraon.i18n.I18n;
 
 public abstract class AbstractFeeder implements Feeder {
 

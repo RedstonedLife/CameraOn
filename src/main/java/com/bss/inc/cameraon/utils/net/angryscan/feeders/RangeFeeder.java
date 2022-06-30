@@ -1,4 +1,4 @@
-package com.redsoftware.ltd.bnc.utils.networking.angryscan.feeders;
+package com.bss.inc.cameraon.utils.net.angryscan.feeders;
 
 import com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningSubject;
 import com.redsoftware.ltd.bnc.utils.networking.angryscan.utils.InetAddressUtils;
