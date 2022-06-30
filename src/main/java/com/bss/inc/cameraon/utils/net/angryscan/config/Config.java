@@ -37,7 +37,7 @@ public final class Config {
 
     public static Config getConfig() {
         return ConfigHolder.INSTANCE;
-    }
+    }//
 
     public void store() {
         preferences.put("language", language);
