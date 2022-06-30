@@ -1,4 +1,4 @@
-package com.redsoftware.ltd.bnc.utils.networking.angryscan.di;
+package com.bss.inc.cameraon.utils.net.angryscan.di;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.ParameterizedType;
