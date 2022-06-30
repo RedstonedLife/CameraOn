@@ -24,7 +24,8 @@ public class Launcher {
     }
     public static void main(String[] args) throws UnknownOS {
         SettingsContainer.Setup();
-        JSONObject j_ = SettingsContainer.getValue("cameraSettings");
+        JSONObject j_ = (JSONObject) SettingsContainer.getValue("cameraSettings");
+        j_.put("")
         MainClass.main(args);
     }
 }
