@@ -50,7 +50,7 @@ public class $UI$01 {
         cbs[1] - Resolution
         cbs[2] - Bitrate
          */
-        JSONObject _j = new JSONObject(Launcher.SettingsContainer.getValue("cameraSettings"));
+        JSONObject _j = new JSONObject(Launcher.SettingsContainer.getValue("cameraSettings").toString());
         System.out.println(_j.toString());
         int fps = Integer.valueOf(fpsText.getText());
         buttons[0].setOnAction(e -> {
