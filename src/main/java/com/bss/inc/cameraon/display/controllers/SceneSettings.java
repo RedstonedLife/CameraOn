@@ -43,7 +43,7 @@ public class SceneSettings implements Initializable {
             //BNC.getSCENE_MANAGER().openDialog("confirmationDialog");
         });
     }
-
+    
     public void modifyStyle() {
         this.languagetxt.getStyleClass().add("text");
     }
