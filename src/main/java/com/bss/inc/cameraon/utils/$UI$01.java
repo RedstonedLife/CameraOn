@@ -59,7 +59,7 @@ public class $UI$01 {
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
                 try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}
             }
-            fpsText.setText(String.valueOf(fps));
+            fpsText.setText(String.valueOf(_j.getInt("frameRate")));
         });
         buttons[1].setOnAction(e -> {
             if(fps <= 5) return;
@@ -68,17 +68,17 @@ public class $UI$01 {
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
                 try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}
             }
-            fpsText.setText(String.valueOf(fps));
+            fpsText.setText(String.valueOf(_j.getInt("frameRate")));
         });
         buttons[2].setOnAction(e -> {
             if(fps >= 60) return;
             else {
-                fps=fps+1;
+
                 _j.put("frameRate",fps+1);
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
                 try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}
             }
-            fpsText.setText(String.valueOf(fps));
+            fpsText.setText(String.valueOf(_j.getInt("frameRate")));
         });
         buttons[3].setOnAction(e -> {
             if(fps >= 60 || fps+5>=60) return;
@@ -87,7 +87,7 @@ public class $UI$01 {
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
                 try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}
             }
-            fpsText.setText(String.valueOf(fps));
+            fpsText.setText(String.valueOf(_j.getInt("frameRate")));
         });
 
         int[] cbt = new int[]{_j.getInt("videnc"),_j.getInt("resolution"),_j.getInt("bitrate")};
