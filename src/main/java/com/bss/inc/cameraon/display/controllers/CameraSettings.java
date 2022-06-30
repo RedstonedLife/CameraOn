@@ -13,6 +13,7 @@ import javafx.scene.control.SplitPane;
 import javafx.scene.text.Text;
 import org.json.JSONObject;
 
+import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -68,6 +69,10 @@ public class CameraSettings implements Initializable {
         rCB.setValue(rCB.getItems().get(cb[0]));
         brCB.setValue(brCB.getItems().get(cb[1]));
 
-        $UI$01.u_07$1$1(new Button[]{fpsDleftbtn,fpsleftbtn,fpsrightbtn,fpsDrightbtn},fpscounttxt,new ChoiceBox[]{veCB,rCB,brCB});
+        try {
+            $UI$01.u_07$1$1(new Button[]{fpsDleftbtn,fpsleftbtn,fpsrightbtn,fpsDrightbtn},fpscounttxt,new ChoiceBox[]{veCB,rCB,brCB});
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
