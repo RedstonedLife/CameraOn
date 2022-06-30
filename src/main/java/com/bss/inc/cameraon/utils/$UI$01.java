@@ -33,4 +33,6 @@ public class $UI$01 {
     public static void u_06$1$1() {
         MainClass.getWindowManager().getDialog("mainWindow").changeScene(MainClass.getWindowManager().getDialog("mainWindow").getCurrentScene());
     }
+
+    public static void u_07$1$1()
 }
