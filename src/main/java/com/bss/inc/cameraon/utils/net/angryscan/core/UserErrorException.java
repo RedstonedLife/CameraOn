@@ -1,4 +1,4 @@
-package com.redsoftware.ltd.bnc.utils.networking.angryscan.core;
+package com.bss.inc.cameraon.utils.net.angryscan.core;
 
 import com.redsoftware.ltd.bnc.i18n.I18n;
 
