@@ -25,6 +25,7 @@ public class Settings implements ISettings {
 
     public Settings(final String name) throws UnknownOS {
         this.name = name;
+        this.defaultJsonSettings="";
         file = new File(FilePaths.SETTINGS_FOLDER+name +".json");
         if(FilePaths.SETTINGS_FOLDER.equals("UKNS"))
             throw new UnknownOS("An unsupported OS is being used, exiting.");
@@ -52,7 +53,7 @@ public class Settings implements ISettings {
                 logger.error("Invalid default JSON settings for "+name+".json, reverting to in-house default",e);
             }
             try {
-                JSONObject _n = new JSONObject(defaultJsonSettings :  ?);
+                JSONObject _n = new JSONObject(defaultJsonSettings.equals("") :  ?);
                 PrintWriter pw = new PrintWriter(file.getPath());
                 pw.write(_n.toString());
                 pw.flush();
