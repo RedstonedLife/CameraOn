@@ -81,6 +81,8 @@ public class $UI$01 {
         });
 
         cbs[0].setOnAction(e -> {});
+        cbs[1].setOnAction(e -> {});
+        cbs[2].setOnAction(e -> {});
 
 
         Launcher.SettingsContainer.Save();
