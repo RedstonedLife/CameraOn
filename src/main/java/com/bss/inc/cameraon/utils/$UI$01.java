@@ -83,13 +83,13 @@ public class $UI$01 {
         int[] cbt = new int[]{_j.getInt("videnc"),_j.getInt("resolution"),_j.getInt("bitrate")};
 
         cbs[0].setOnAction(e -> {
-
+            
         });
         cbs[1].setOnAction(e -> {
 
         });
         cbs[2].setOnAction(e -> {
-            
+
         });
 
 
