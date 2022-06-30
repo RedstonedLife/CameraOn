@@ -56,6 +56,7 @@ public class $UI$01 {
             if(fps <= 5 || fps-5<=5) return;
             else {
                 _j.put("frameRate",fps-5);
+                Launcher.SettingsContainer.setValue("cameraSettings",_j);
             }
             fpsText.setText(String.valueOf(fps));
         });
@@ -63,6 +64,7 @@ public class $UI$01 {
             if(fps <= 5) return;
             else {
                 _j.put("frameRate",fps-1);
+                Launcher.SettingsContainer.setValue("cameraSettings",_j);
             }
             fpsText.setText(String.valueOf(fps));
         });
@@ -70,7 +72,7 @@ public class $UI$01 {
             if(fps >= 60) return;
             else {
                 _j.put("frameRate",fps+1);
-                Launcher..setValue("cameraSettings",_j);
+                Launcher.SettingsContainer.setValue("cameraSettings",_j);
             }
             fpsText.setText(String.valueOf(fps));
         });
