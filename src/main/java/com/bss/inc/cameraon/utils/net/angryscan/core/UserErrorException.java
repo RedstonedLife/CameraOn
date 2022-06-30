@@ -1,6 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan.core;
 
-import com.redsoftware.ltd.bnc.i18n.I18n;
+import com.bss.inc.cameraon.i18n.I18n;
 
 public class UserErrorException extends RuntimeException {
     public UserErrorException(String label) {
