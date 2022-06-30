@@ -53,7 +53,7 @@ public class SceneSettings implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         langCb.getItems().addAll(tl("language.english"),tl("language.russian"),tl("language.hebrew"),tl("language.german"),tl("language.spanish"),tl("language.ukrainian"),
                 tl("language.arabic"),tl("language.french"),tl("language.polish"),tl("language.portuguese"),tl("language.czech"),tl("language.italian"),tl("language.romanian"),tl("language.greek"));
-        langCb.setValue(Launcher.SettingsContainer.getValue("appLanguage"));
+        langCb.setValue(Integer.valueOf(Launcher.SettingsContainer.getValue("appLanguage").toString()));
         $UI$01.u_01$1$1(cmainsplit,new Button[]{settingsSceneBtn,cctvSceneBtn,applySceneBtn,scanSceneBtn,HelpBtn});
         initializeLanguage();
     }
