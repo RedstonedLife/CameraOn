@@ -51,6 +51,7 @@ public class $UI$01 {
         cbs[2] - Bitrate
          */
         JSONObject _j = new JSONObject(Launcher.SettingsContainer.getValue("cameraSettings"));
+        System.out.println(_j.toString());
         int fps = Integer.valueOf(fpsText.getText());
         buttons[0].setOnAction(e -> {
             if(fps <= 5 || fps-5<=5) return;
