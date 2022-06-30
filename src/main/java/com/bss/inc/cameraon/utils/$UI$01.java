@@ -51,14 +51,13 @@ public class $UI$01 {
         cbs[2] - Bitrate
          */
         JSONObject _j = new JSONObject(Launcher.SettingsContainer.getValue("cameraSettings").toString());
-        System.out.println(_j.toString());
         int fps = Integer.valueOf(fpsText.getText());
         buttons[0].setOnAction(e -> {
             if(fps <= 5 || fps-5<=5) return;
             else {
                 _j.put("frameRate",fps-5);
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
-                try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {throw new RuntimeException(ex);}
+                try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}
             }
             fpsText.setText(String.valueOf(fps));
         });
@@ -67,7 +66,7 @@ public class $UI$01 {
             else {
                 _j.put("frameRate",fps-1);
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
-                try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {throw new RuntimeException(ex);}
+                try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}
             }
             fpsText.setText(String.valueOf(fps));
         });
@@ -76,7 +75,7 @@ public class $UI$01 {
             else {
                 _j.put("frameRate",fps+1);
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
-                try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {throw new RuntimeException(ex);}
+                try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}
             }
             fpsText.setText(String.valueOf(fps));
         });
@@ -85,16 +84,16 @@ public class $UI$01 {
             else {
                 _j.put("frameRate",fps+5);
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
-                try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {throw new RuntimeException(ex);}
+                try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}
             }
             fpsText.setText(String.valueOf(fps));
         });
 
         int[] cbt = new int[]{_j.getInt("videnc"),_j.getInt("resolution"),_j.getInt("bitrate")};
 
-        cbs[0].setOnAction(e -> {_j.put("videnc", cbs[0].getItems().indexOf(cbs[0].getValue())+1);try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {throw new RuntimeException(ex);}});
-        cbs[1].setOnAction(e -> {_j.put("resolution", cbs[1].getItems().indexOf(cbs[1].getValue())+1);try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {throw new RuntimeException(ex);}});
-        cbs[2].setOnAction(e -> {_j.put("bitrate", cbs[2].getItems().indexOf(cbs[2].getValue())+1);try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {throw new RuntimeException(ex);}});
+        cbs[0].setOnAction(e -> {_j.put("videnc", cbs[0].getItems().indexOf(cbs[0].getValue())+1);try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}});
+        cbs[1].setOnAction(e -> {_j.put("resolution", cbs[1].getItems().indexOf(cbs[1].getValue())+1);try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}});
+        cbs[2].setOnAction(e -> {_j.put("bitrate", cbs[2].getItems().indexOf(cbs[2].getValue())+1);try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}});
 
 
         Launcher.SettingsContainer.Save();
