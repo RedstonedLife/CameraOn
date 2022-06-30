@@ -79,6 +79,8 @@ public class $UI$01 {
             }
             fpsText.setText(String.valueOf(fps));
         });
+
+        
         Launcher.SettingsContainer.Save();
     }
 }
