@@ -14,7 +14,7 @@ public class Launcher {
 
     static {
         try {
-            SettingsContainer = new Settings("app.settings","{\"appLanguage\":0}");
+            SettingsContainer = new Settings("app.settings","{\"appLanguage\":0,\"}");
         } catch (UnknownOS e) {
             throw new RuntimeException(e);
         }
