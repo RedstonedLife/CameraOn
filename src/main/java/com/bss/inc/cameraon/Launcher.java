@@ -6,6 +6,7 @@ import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.settings.Settings;
 import org.json.JSONObject;
 
+import java.io.FileNotFoundException;
 import java.time.LocalDateTime;
 
 public class Launcher {
@@ -22,7 +23,7 @@ public class Launcher {
         LM = new LogManager();
         LogManager.addLogger("BNC", new Logger("BNC"));
     }
-    public static void main(String[] args) throws UnknownOS {
+    public static void main(String[] args) throws UnknownOS, FileNotFoundException {
         SettingsContainer.Setup();
         JSONObject j_ = (JSONObject) SettingsContainer.getValue("cameraSettings");
         if(!j_.has("frameRate")) {j_.put("frameRate",30);}
@@ -30,7 +31,7 @@ public class Launcher {
         if(!j_.has("bitrate")) {j_.put("bitrate",0);}
         if(!j_.has("videnc")) {j_.put("videnc",0);}
         SettingsContainer.setValue("cameraSettings",j_);
-        
+        SettingsContainer.Save();
         MainClass.main(args);
     }
 }
