@@ -52,7 +52,7 @@ public class $UI$01 {
                 _j.put("frameRate",Integer.valueOf(fpsText.getText())-5);
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
             }
-            fpsText.getText(String.valueOf);
+            fpsText.getText(String.valueOf());
         });
         buttons[1].setOnAction(e -> {
 
