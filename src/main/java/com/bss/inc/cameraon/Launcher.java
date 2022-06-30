@@ -22,6 +22,7 @@ public class Launcher {
         LogManager.addLogger("BNC", new Logger("BNC"));
     }
     public static void main(String[] args) throws UnknownOS {
+        SettingsContainer.Setup();
         MainClass.main(args);
     }
 }
