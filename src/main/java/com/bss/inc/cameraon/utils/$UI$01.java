@@ -43,7 +43,7 @@ public class $UI$01 {
         buttons[3] - Right x5
          */
         buttons[0].setOnAction(e -> {
-
+            
         });
         buttons[1].setOnAction(e -> {
 
@@ -52,7 +52,7 @@ public class $UI$01 {
 
         });
         buttons[3].setOnAction(e -> {
-            
+
         });
 
     }
