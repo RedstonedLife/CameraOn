@@ -35,6 +35,6 @@ public class $UI$01 {
     }
 
     public static <T> void u_07$1$1(Button[] buttons, Text fpsText, ChoiceBox<T> cbs) {
-        buttons
+        buttons[0]
     }
 }
