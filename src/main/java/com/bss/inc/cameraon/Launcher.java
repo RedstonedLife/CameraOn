@@ -25,7 +25,8 @@ public class Launcher {
     public static void main(String[] args) throws UnknownOS {
         SettingsContainer.Setup();
         JSONObject j_ = (JSONObject) SettingsContainer.getValue("cameraSettings");
-        if(!j_.has("frameRate")) {j_.put("frameRate",30);
+        if(!j_.has("frameRate")) {j_.put("frameRate",30);}
+        if(!j_.has)
         MainClass.main(args);
     }
 }
