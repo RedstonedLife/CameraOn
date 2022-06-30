@@ -34,5 +34,7 @@ public class $UI$01 {
         MainClass.getWindowManager().getDialog("mainWindow").changeScene(MainClass.getWindowManager().getDialog("mainWindow").getCurrentScene());
     }
 
-    public static void u_07$1$1(Button[] )
+    public static void u_07$1$1(Button[] buttons, Text fpsText, ChoiceBox<T> cbs) {
+        
+    }
 }
