@@ -29,7 +29,6 @@ public class Launcher {
         if(!j_.has("resolution")) {j_.put("resolution",0);}
         if(!j_.has("bitrate")) {j_.put("bitrate",0);}
         if(!j_.has("videnc")) {j_.put("videnc",0);}
-        
         MainClass.main(args);
     }
 }
