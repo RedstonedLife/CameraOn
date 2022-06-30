@@ -80,7 +80,7 @@ public class $UI$01 {
             fpsText.setText(String.valueOf(fps));
         });
 
-        int[] cbt = 
+        int[] cbt = new int[]{};
 
         cbs[0].setOnAction(e -> {});
         cbs[1].setOnAction(e -> {});
