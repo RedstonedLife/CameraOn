@@ -61,6 +61,6 @@ public class CameraSettings implements Initializable {
         rCB.getItems().addAll("1080 (1920x1080)", "720 (1280x720)", "480 (720x480)", "360 (640x360)");
         brCB.getItems().addAll("4096 Kb/s (4 Mb/s)", "3072 Kb/s (3 Mb/s)", "2048 Kb/s (2 Mb/s)", "1024 Kb/s (1 Mb/s)");
 
-        JSONObject  = Launcher.SettingsContainer.getValue("cameraSettings")
+        JSONObject settings = new JSONObject(Launcher.SettingsContainer.getValue("cameraSettings").toString());
     }
 }
