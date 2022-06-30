@@ -10,9 +10,14 @@ import java.time.LocalDateTime;
 public class Launcher {
     private static LogManager LM;
     public static final LocalDateTime _INIT_TIME = LocalDateTime.now();
-    public static final Settings SettingsContainer = new Settings("app.settings");
+    public static final Settings SettingsContainer;
 
     static {
+        try {
+            SettingsContainer = new Settings("app.settings");
+        } catch (UnknownOS e) {
+            throw new RuntimeException(e);
+        }
         LM = new LogManager();
         LogManager.addLogger("BNC", new Logger("BNC"));
     }
