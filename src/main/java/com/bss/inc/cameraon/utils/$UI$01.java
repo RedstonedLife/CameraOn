@@ -3,15 +3,17 @@ package com.bss.inc.cameraon.utils;
 import com.bss.inc.cameraon.Launcher;
 import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.constants.FrontendPaths;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Control;
 import javafx.scene.control.SplitPane;
 import javafx.scene.text.Text;
 import org.json.JSONObject;
 
 import java.io.FileNotFoundException;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class $UI$01 {
     public static void u_00$1$1(SplitPane csplitpane) {csplitpane.getDividers().get(0).positionProperty().addListener((observableValue, number, t1) -> csplitpane.getDividers().get(0).setPosition(FrontendPaths.DIVID_POS));}
@@ -51,42 +53,41 @@ public class $UI$01 {
         JSONObject _j = new JSONObject(Launcher.SettingsContainer.getValue("cameraSettings").toString());
         int fps = Integer.valueOf(fpsText.getText());
         buttons[0].setOnAction(e -> {
-            if(fps.get() <= 5 || fps.get() -5<=5) return;
+            if(fps <= 5 || fps-5<=5) return;
             else {
-                fps.set(-5);
-                _j.put("frameRate", fps.get() -5);
+                _j.put("frameRate",fps-5);
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
                 try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}
             }
-            fpsText.setText(String.valueOf(fps.get()));
+            fpsText.setText(String.valueOf(fps));
         });
         buttons[1].setOnAction(e -> {
-            if(fps.get() <= 5) return;
+            if(fps <= 5) return;
             else {
-                _j.put("frameRate", fps.get() -1);
+                _j.put("frameRate",fps-1);
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
                 try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}
             }
-            fpsText.setText(String.valueOf(fps.get()));
+            fpsText.setText(String.valueOf(fps));
         });
         buttons[2].setOnAction(e -> {
-            if(fps.get() >= 60) return;
+            if(fps >= 60) return;
             else {
-                fps.set(+1);
-                _j.put("frameRate", fps.get() +1);
+                fps=+1;
+                _j.put("frameRate",fps+1);
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
                 try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}
             }
-            fpsText.setText(String.valueOf(fps.get()));
+            fpsText.setText(String.valueOf(fps));
         });
         buttons[3].setOnAction(e -> {
-            if(fps.get() >= 60 || fps.get() +5>=60) return;
+            if(fps >= 60 || fps+5>=60) return;
             else {
-                _j.put("frameRate", fps.get() +5);
+                _j.put("frameRate",fps+5);
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
                 try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}
             }
-            fpsText.setText(String.valueOf(fps.get()));
+            fpsText.setText(String.valueOf(fps));
         });
 
         int[] cbt = new int[]{_j.getInt("videnc"),_j.getInt("resolution"),_j.getInt("bitrate")};
