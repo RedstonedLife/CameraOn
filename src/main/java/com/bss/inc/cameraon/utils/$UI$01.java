@@ -84,7 +84,11 @@ public class $UI$01 {
         });
         buttons[3].setOnAction(e -> {
             int fps = Integer.valueOf(fpsText.getText());
-            if(fps >= 60 || fps+5>=60) return;
+            if(fps >= 60 || fps+5>=60) {
+                _j.put("frameRate",60);
+                Launcher.SettingsContainer.setValue("cameraSettings",_j);
+                try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}
+            }
             else {
                 _j.put("frameRate",fps+5);
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
