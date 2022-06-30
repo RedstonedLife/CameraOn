@@ -51,8 +51,8 @@ public class $UI$01 {
         cbs[2] - Bitrate
          */
         JSONObject _j = new JSONObject(Launcher.SettingsContainer.getValue("cameraSettings").toString());
-        int fps = Integer.valueOf(fpsText.getText());
         buttons[0].setOnAction(e -> {
+            int fps = Integer.valueOf(fpsText.getText());
             if(fps <= -500 || fps-5<=-500) return;
             else {
                 _j.put("frameRate",fps-5);
@@ -62,6 +62,7 @@ public class $UI$01 {
             fpsText.setText(String.valueOf(_j.getInt("frameRate")));
         });
         buttons[1].setOnAction(e -> {
+            int fps = Integer.valueOf(fpsText.getText());
             if(fps <= -500) return;
             else {
                 _j.put("frameRate",fps-1);
@@ -71,6 +72,7 @@ public class $UI$01 {
             fpsText.setText(String.valueOf(_j.getInt("frameRate")));
         });
         buttons[2].setOnAction(e -> {
+            int fps = Integer.valueOf(fpsText.getText());
             if(fps >= 500) return;
             else {
 
@@ -81,6 +83,7 @@ public class $UI$01 {
             fpsText.setText(String.valueOf(_j.getInt("frameRate")));
         });
         buttons[3].setOnAction(e -> {
+            int fps = Integer.valueOf(fpsText.getText());
             if(fps >= 500 || fps+5>=500) return;
             else {
                 _j.put("frameRate",fps+5);
