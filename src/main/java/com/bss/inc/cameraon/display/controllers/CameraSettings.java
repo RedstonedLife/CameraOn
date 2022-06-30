@@ -64,6 +64,6 @@ public class CameraSettings implements Initializable {
         JSONObject settings = new JSONObject(Launcher.SettingsContainer.getValue("cameraSettings").toString());
         fpscounttxt.setText(String.valueOf(settings.getInt("frameRate")));
 
-        int 
+        int[] cb = new int[] {}
     }
 }
