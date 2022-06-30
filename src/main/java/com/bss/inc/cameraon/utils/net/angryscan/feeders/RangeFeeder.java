@@ -1,8 +1,5 @@
 package com.bss.inc.cameraon.utils.net.angryscan.feeders;
 
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningSubject;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.utils.InetAddressUtils;
-
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
