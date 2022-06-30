@@ -67,5 +67,7 @@ public class CameraSettings implements Initializable {
         veCB.setValue(veCB.getItems().get(cb[2]));
         rCB.setValue(rCB.getItems().get(cb[0]));
         brCB.setValue(brCB.getItems().get(cb[1]));
+
+        $UI$01.u_07$1$1();
     }
 }
