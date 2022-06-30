@@ -38,7 +38,7 @@ public class $UI$01 {
         /*
         Buttons Map (4 Buttons)
         buttons[0] - Left x5
-        butto
+        buttons[1] - Left x1
          */
     }
 }
