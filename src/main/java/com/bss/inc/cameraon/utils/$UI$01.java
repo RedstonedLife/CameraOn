@@ -53,7 +53,7 @@ public class $UI$01 {
         JSONObject _j = new JSONObject(Launcher.SettingsContainer.getValue("cameraSettings").toString());
         int fps = Integer.valueOf(fpsText.getText());
         buttons[0].setOnAction(e -> {
-            if(fps <= 5 || fps-5<=5) return;
+            if(fps <= -20 || fps-5<=-20) return;
             else {
                 _j.put("frameRate",fps-5);
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
@@ -62,7 +62,7 @@ public class $UI$01 {
             fpsText.setText(String.valueOf(_j.getInt("frameRate")));
         });
         buttons[1].setOnAction(e -> {
-            if(fps <= 5) return;
+            if(fps <= -20) return;
             else {
                 _j.put("frameRate",fps-1);
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
@@ -71,7 +71,7 @@ public class $UI$01 {
             fpsText.setText(String.valueOf(_j.getInt("frameRate")));
         });
         buttons[2].setOnAction(e -> {
-            if(fps >= 60) return;
+            if(fps >= 85) return;
             else {
 
                 _j.put("frameRate",fps+1);
@@ -81,7 +81,7 @@ public class $UI$01 {
             fpsText.setText(String.valueOf(_j.getInt("frameRate")));
         });
         buttons[3].setOnAction(e -> {
-            if(fps >= 60 || fps+5>=60) return;
+            if(fps >= 85 || fps+5>=85) return;
             else {
                 _j.put("frameRate",fps+5);
                 Launcher.SettingsContainer.setValue("cameraSettings",_j);
