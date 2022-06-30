@@ -9,7 +9,7 @@ public class Platform {
     public static final boolean ARCH_64 = System.getProperty("os.arch").contains("64");
 
     /**
-     * Mac OS detection :-)-
+     * Mac OS detection :-)
      */
     public static final boolean MAC_OS = OS_NAME.contains("OS X");
 
