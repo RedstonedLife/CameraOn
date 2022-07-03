@@ -8,10 +8,6 @@ import com.bss.inc.cameraon.logging.Level;
 import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.utils.net.angryscan.config.LoggerFactory;
 import com.bss.inc.cameraon.utils.net.angryscan.config.Platform;
-import com.redsoftware.ltd.bnc.utils.logging.Level;
-import com.redsoftware.ltd.bnc.utils.logging.Logger;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.config.LoggerFactory;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.config.Platform;
 
 import java.util.regex.Pattern;
 
