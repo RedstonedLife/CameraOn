@@ -5,6 +5,8 @@ import com.bss.inc.cameraon.logging.Level;
 import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
 import com.bss.inc.cameraon.utils.net.angryscan.config.LoggerFactory;
+import com.bss.inc.cameraon.utils.net.angryscan.utils.MDNSResolver;
+import com.bss.inc.cameraon.utils.net.angryscan.utils.NetBIOSResolver;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
