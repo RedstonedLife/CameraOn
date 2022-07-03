@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan.core;
 
+import com.bss.inc.cameraon.utils.net.angryscan.ScanningResult;
 import com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningResult;
 
 public interface ScanningResultCallback {
