@@ -1,7 +1,7 @@
 package com.bss.inc.cameraon.utils.net.angryscan.fetchers;
 
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningSubject;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.values.InetAddressHolder;
+import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
+import com.bss.inc.cameraon.utils.net.angryscan.values.InetAddressHolder;
 
 public class IPFetcher extends AbstractFetcher {
     public IPFetcher() {}
