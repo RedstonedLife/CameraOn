@@ -3,6 +3,7 @@ package com.bss.inc.cameraon.utils.net.angryscan;
 
 import com.bss.inc.cameraon.utils.net.angryscan.config.Config;
 import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
+import com.bss.inc.cameraon.utils.net.angryscan.state.PingResult;
 import com.bss.inc.cameraon.utils.net.angryscan.utils.InetAddressUtils;
 
 import java.net.Inet6Address;
