@@ -1,4 +1,4 @@
-module com.redsoftware.ltd.bnc {
+module com.com.bss.inc.cameraon {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
