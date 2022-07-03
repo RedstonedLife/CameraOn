@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan.state;
 
+import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
 import com.bss.inc.cameraon.utils.net.angryscan.fetchers.MACFetcher;
 
 import java.io.IOException;
