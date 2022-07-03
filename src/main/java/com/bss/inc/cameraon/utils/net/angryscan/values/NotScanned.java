@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan.values;
 
+import com.bss.inc.cameraon.utils.net.angryscan.config.Config;
 import com.redsoftware.ltd.bnc.utils.networking.angryscan.config.Config;
 
 public class NotScanned extends Empty {
