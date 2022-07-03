@@ -1,4 +1,4 @@
-module com.com.bss.inc.cameraon {
+module com.com.bss {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
