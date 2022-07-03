@@ -1,4 +1,4 @@
-package com.redsoftware.ltd.bnc.utils.networking.angryscan.utils;
+package com.bss.inc.cameraon.utils.net.angryscan.utils;
 
 import java.util.Iterator;
 
