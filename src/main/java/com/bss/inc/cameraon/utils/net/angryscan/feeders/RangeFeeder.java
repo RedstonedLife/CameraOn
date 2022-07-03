@@ -1,6 +1,7 @@
 package com.bss.inc.cameraon.utils.net.angryscan.feeders;
 
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
+import com.bss.inc.cameraon.utils.net.angryscan.utils.InetAddressUtils;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
