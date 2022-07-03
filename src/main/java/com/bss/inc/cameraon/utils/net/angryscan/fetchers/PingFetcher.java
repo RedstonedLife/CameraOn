@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan.fetchers;
 
+import com.bss.inc.cameraon.logging.Logger;
 import com.redsoftware.ltd.bnc.utils.logging.Logger;
 import com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningResult.ResultType;
 import com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningSubject;
