@@ -1,9 +1,9 @@
 package com.bss.inc.cameraon.utils.net.angryscan.state;
 
-import com.redsoftware.ltd.bnc.utils.logging.Logger;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningSubject;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.config.LoggerFactory;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.config.ScannerConfig;
+import com.bss.inc.cameraon.logging.Logger;
+import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
+import com.bss.inc.cameraon.utils.net.angryscan.config.LoggerFactory;
+import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -11,8 +11,8 @@ import java.net.NoRouteToHostException;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
 
-import static com.redsoftware.ltd.bnc.utils.logging.Level.INFO;
-import static com.redsoftware.ltd.bnc.utils.networking.angryscan.utils.IOUtils.closeQuietly;
+import static com.bss.inc.cameraon.logging.Level.INFO;
+import static com.bss.inc.cameraon.utils.net.angryscan.utils.IOUtils.closeQuietly;
 import static java.lang.Math.min;
 
 public class TCPPinger implements Pinger {
