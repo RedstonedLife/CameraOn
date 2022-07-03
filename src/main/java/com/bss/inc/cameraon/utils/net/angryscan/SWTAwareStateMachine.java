@@ -1,7 +1,5 @@
 package com.bss.inc.cameraon.utils.net.angryscan;
 
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.net.state.StateMachine;
+import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateMachine;
 
-public class SWTAwareStateMachine extends StateMachine {
-
-}
+public class SWTAwareStateMachine extends StateMachine {}
