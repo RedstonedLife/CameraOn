@@ -16,6 +16,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import static com.bss.inc.cameraon.utils.net.angryscan.state.state.ScanningState.KILLING;
 import static com.bss.inc.cameraon.utils.net.angryscan.state.state.ScanningState.SCANNING;
 import static com.bss.inc.cameraon.utils.net.angryscan.utils.InetAddressUtils.isLikelyBroadcast;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
