@@ -1,4 +1,4 @@
-package com.redsoftware.ltd.bnc.utils.networking.angryscan.net.state;
+package com.bss.inc.cameraon.utils.net.angryscan.state.state;
 
 public enum ScanningState {
 

@@ -1,4 +1,4 @@
-package com.redsoftware.ltd.bnc.utils.networking.angryscan.net;
+package com.bss.inc.cameraon.utils.net.angryscan.state;
 
 import com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningSubject;
 import com.redsoftware.ltd.bnc.utils.networking.angryscan.fetchers.MACFetcher;
