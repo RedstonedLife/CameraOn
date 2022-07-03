@@ -1,4 +1,4 @@
-package com.redsoftware.ltd.bnc.utils.networking.angryscan;
+package com.bss.inc.cameraon.utils.net.angryscan;
 
 import com.redsoftware.ltd.bnc.utils.networking.angryscan.config.Config;
 import com.redsoftware.ltd.bnc.utils.networking.angryscan.config.ScannerConfig;
