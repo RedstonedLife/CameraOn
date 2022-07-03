@@ -1,6 +1,7 @@
 package com.bss.inc.cameraon.utils.net.angryscan.values;
 
-import com.redsoftware.ltd.bnc.i18n.I18n;
+
+import com.bss.inc.cameraon.i18n.I18n;
 
 public class IntegerWithUnit implements Comparable<IntegerWithUnit> {
 
