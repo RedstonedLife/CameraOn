@@ -1,12 +1,22 @@
 package com.bss.inc.cameraon.utils.net.angryscan.core;
 
+import com.bss.inc.cameraon.MainClass;
+import com.bss.inc.cameraon.utils.net.angryscan.Scanner;
+import com.bss.inc.cameraon.utils.net.angryscan.ScanningResult;
+import com.bss.inc.cameraon.utils.net.angryscan.ScanningResultList;
+import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
 import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
+import com.bss.inc.cameraon.utils.net.angryscan.feeders.Feeder;
+import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateMachine;
+import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateTransitionListener;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import static com.bss.inc.cameraon.utils.net.angryscan.state.state.ScanningState.SCANNING;
+import static com.bss.inc.cameraon.utils.net.angryscan.utils.InetAddressUtils.isLikelyBroadcast;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 
 public class ScannerDispatcherThread extends Thread implements ThreadFactory, StateTransitionListener {
@@ -56,7 +66,7 @@ public class ScannerDispatcherThread extends Thread implements ThreadFactory, St
     public void run() {
         try {
             // register this scan specific listener
-            BNC.getStateMachine().addTransitionListener(this);
+            MainClass.getStateMachine().addTransitionListener(this);
             long lastNotifyTime = 0;
 
             try {
