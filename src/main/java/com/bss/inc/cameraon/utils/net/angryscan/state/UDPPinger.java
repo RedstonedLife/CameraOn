@@ -1,5 +1,7 @@
 package com.bss.inc.cameraon.utils.net.angryscan.state;
 
+import com.bss.inc.cameraon.logging.Logger;
+
 import java.io.IOException;
 import java.net.*;
 import java.nio.ByteBuffer;
