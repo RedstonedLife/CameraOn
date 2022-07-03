@@ -2,12 +2,16 @@ package com.bss.inc.cameraon.utils.net.angryscan.fetchers;
 
 import com.bss.inc.cameraon.logging.Level;
 import com.bss.inc.cameraon.logging.Logger;
+import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
 import com.bss.inc.cameraon.utils.net.angryscan.config.LoggerFactory;
 import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
+import com.bss.inc.cameraon.utils.net.angryscan.state.PingResult;
+import com.bss.inc.cameraon.utils.net.angryscan.state.PingerRegistry;
 
 import java.io.IOException;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import static com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject.PARAMETER_PING_RESULT;
 import static com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningSubject.PARAMETER_PING_RESULT;
 
 public class PingFetcher extends AbstractFetcher {

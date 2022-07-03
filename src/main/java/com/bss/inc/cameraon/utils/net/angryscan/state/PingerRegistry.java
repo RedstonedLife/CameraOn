@@ -1,16 +1,14 @@
 package com.bss.inc.cameraon.utils.net.angryscan.state;
 
+import com.bss.inc.cameraon.logging.Level;
+import com.bss.inc.cameraon.logging.Logger;
+import com.bss.inc.cameraon.utils.net.angryscan.config.LoggerFactory;
+import com.bss.inc.cameraon.utils.net.angryscan.config.Platform;
+import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
+import com.bss.inc.cameraon.utils.net.angryscan.di.InjectException;
+import com.bss.inc.cameraon.utils.net.angryscan.di.Injector;
 import com.bss.inc.cameraon.utils.net.angryscan.fetchers.FetcherException;
 import com.bss.inc.cameraon.utils.net.angryscan.fetchers.MACFetcher;
-import com.redsoftware.ltd.bnc.utils.logging.Level;
-import com.redsoftware.ltd.bnc.utils.logging.Logger;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.config.LoggerFactory;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.config.Platform;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.config.ScannerConfig;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.di.InjectException;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.di.Injector;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.fetchers.FetcherException;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.fetchers.MACFetcher;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
