@@ -15,7 +15,7 @@ import static com.bss.inc.cameraon.i18n.I18n.tl;
 
 public class PreferenceDisplayB implements Initializable {
     @FXML private void closeApp(ActionEvent event) {$UI$01.u_06$1$1();}
-    @FXML private Button btnClose,asSceneBtn,ibsSceneBtn,cbsSceneBtn,displaySceneBtn;
+    @FXML private Button btnClose,asSceneBtn,displaySceneBtn;
 
     private void initializeLanguage() {
         displaySceneBtn.setText(tl("preferences.btn.display.text"));
@@ -24,8 +24,6 @@ public class PreferenceDisplayB implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         asSceneBtn.setOnAction(e -> {MainClass.getWindowManager().changeDialogScene("preferencesDialog",MainClass.class.getResource(FrontendPaths.PREF_DISPLAY_AS_FXML));});
-        ibsSceneBtn.setOnAction(e -> {MainClass.getWindowManager().changeDialogScene("preferencesDialog",MainClass.class.getResource(FrontendPaths.PREF_DISPLAY_IBS_FXML));});
-        cbsSceneBtn.setOnAction(e -> {MainClass.getWindowManager().changeDialogScene("preferencesDialog",MainClass.class.getResource(FrontendPaths.PREF_DISPLAY_CBS_FXML));});
         displaySceneBtn.setOnAction(e -> {MainClass.getWindowManager().changeDialogScene("preferencesDialog",MainClass.class.getResource(FrontendPaths.PREF_DISPLAY_FXML));});
         initializeLanguage();
     }
