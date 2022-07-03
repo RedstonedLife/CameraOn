@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan;
 
+import com.bss.inc.cameraon.utils.net.angryscan.values.Empty;
 import com.bss.inc.cameraon.utils.net.angryscan.values.NotAvailable;
 
 import java.util.Comparator;
