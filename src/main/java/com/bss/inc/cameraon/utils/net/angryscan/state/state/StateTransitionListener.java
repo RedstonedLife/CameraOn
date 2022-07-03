@@ -9,6 +9,6 @@ public interface StateTransitionListener {
      * @param state
      * @param transition
      */
-    void transitionTo(ScanningState state, Transition transition);
+    void transitionTo(ScanningState state, StateMachine.Transition transition);
 
 }
