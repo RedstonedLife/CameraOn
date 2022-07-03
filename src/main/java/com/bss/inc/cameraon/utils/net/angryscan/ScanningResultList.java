@@ -5,13 +5,6 @@ import com.bss.inc.cameraon.utils.net.angryscan.fetchers.FetcherRegistry;
 import com.bss.inc.cameraon.utils.net.angryscan.fetchers.HostnameFetcher;
 import com.bss.inc.cameraon.utils.net.angryscan.fetchers.IPFetcher;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateMachine;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.feeders.Feeder;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.fetchers.*;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.net.state.ScanningState;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.net.state.StateMachine;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.net.state.StateMachine.Transition;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningResult.ResultType;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.net.state.StateTransitionListener;
 
 import java.net.InetAddress;
 import java.util.*;
