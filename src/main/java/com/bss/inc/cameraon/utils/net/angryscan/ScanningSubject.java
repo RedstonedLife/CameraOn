@@ -1,9 +1,9 @@
 package com.bss.inc.cameraon.utils.net.angryscan;
 
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.config.Config;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.config.ScannerConfig;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.net.PingResult;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.utils.InetAddressUtils;
+
+import com.bss.inc.cameraon.utils.net.angryscan.config.Config;
+import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
+import com.bss.inc.cameraon.utils.net.angryscan.utils.InetAddressUtils;
 
 import java.net.Inet6Address;
 import java.net.InetAddress;
@@ -11,7 +11,7 @@ import java.net.InterfaceAddress;
 import java.net.NetworkInterface;
 import java.util.*;
 
-import static com.redsoftware.ltd.bnc.utils.networking.angryscan.utils.InetAddressUtils.matchingAddress;
+import static com.bss.inc.cameraon.utils.net.angryscan.utils.InetAddressUtils.matchingAddress;
 
 public class ScanningSubject {
     public static final String PARAMETER_PING_RESULT = "pinger";
