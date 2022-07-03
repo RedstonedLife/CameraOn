@@ -83,7 +83,7 @@ public class ScannerDispatcherThread extends Thread implements ThreadFactory, St
                         if (config.skipBroadcastAddresses && isLikelyBroadcast(subject.getAddress(), subject.getIfAddress()))
                             continue;
 
-                        com.bss.inc.cameraon.utils.net.angryscan.ScanningResult result = scanningResultList.createResult(subject.getAddress());
+                        ScanningResult result = scanningResultList.createResult(subject.getAddress());
                         resultsCallback.prepareForResults(result);
 
                         // scan each IP in parallel, in a separate thread
