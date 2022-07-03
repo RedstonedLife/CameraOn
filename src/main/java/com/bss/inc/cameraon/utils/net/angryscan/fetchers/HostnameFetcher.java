@@ -1,11 +1,10 @@
 package com.bss.inc.cameraon.utils.net.angryscan.fetchers;
 
-import com.redsoftware.ltd.bnc.utils.logging.Level;
-import com.redsoftware.ltd.bnc.utils.logging.Logger;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningSubject;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.config.LoggerFactory;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.utils.MDNSResolver;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.utils.NetBIOSResolver;
+
+import com.bss.inc.cameraon.logging.Level;
+import com.bss.inc.cameraon.logging.Logger;
+import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
+import com.bss.inc.cameraon.utils.net.angryscan.config.LoggerFactory;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
