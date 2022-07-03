@@ -21,7 +21,8 @@ public class ARPPinger implements Pinger {
         this.trigger = trigger;
     }
 
-    @Override public PingResult ping(ScanningSubject subject, int count) throws IOException {
+    @Override
+    public PingResult ping(ScanningSubject subject, int count) throws IOException {
         if (trigger != null) count -= count / 2;
         PingResult result = new PingResult(subject.getAddress(), count);
         for (int i = 0; i < count; i++) {
