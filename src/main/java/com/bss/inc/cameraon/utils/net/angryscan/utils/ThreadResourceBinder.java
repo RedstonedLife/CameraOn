@@ -7,7 +7,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static com.bss.inc.cameraon.utils.net.angryscan.utils.IOUtils.closeQuietly;
-import static com.redsoftware.ltd.bnc.utils.networking.angryscan.utils.IOUtils.closeQuietly;
 
 public class ThreadResourceBinder<T> {
     private Map<Long, T> resources = new ConcurrentHashMap<>(256);
