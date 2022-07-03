@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan;
 
+import com.bss.inc.cameraon.utils.net.angryscan.feeders.Feeder;
 import com.bss.inc.cameraon.utils.net.angryscan.fetchers.Fetcher;
 import com.bss.inc.cameraon.utils.net.angryscan.fetchers.FetcherRegistry;
 import com.bss.inc.cameraon.utils.net.angryscan.fetchers.HostnameFetcher;
