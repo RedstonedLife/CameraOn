@@ -1,7 +1,5 @@
 package com.bss.inc.cameraon.utils.net.angryscan.state.state;
 
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.net.state.StateMachine.Transition;
-
 public interface StateTransitionListener {
 
     /**
