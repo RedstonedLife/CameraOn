@@ -1,6 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan.fetchers;
 
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.core.UserErrorException;
+import com.bss.inc.cameraon.utils.net.angryscan.core.UserErrorException;
 
 public class FetcherException extends UserErrorException {
     public FetcherException(String label, Throwable cause) {
