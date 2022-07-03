@@ -1,17 +1,8 @@
 package com.bss.inc.cameraon.utils.net.angryscan.fetchers;
 
 import com.bss.inc.cameraon.logging.Logger;
-import com.redsoftware.ltd.bnc.utils.logging.Logger;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningResult.ResultType;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningSubject;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.config.LoggerFactory;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.config.ScannerConfig;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.feeders.Feeder;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.net.PingResult;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.net.Pinger;
-import com.redsoftware.ltd.bnc.utils.logging.Level;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.net.PingerRegistry;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.values.IntegerWithUnit;
+import com.bss.inc.cameraon.utils.net.angryscan.config.LoggerFactory;
+import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
 
 import java.io.IOException;
 import java.util.concurrent.atomic.AtomicInteger;
