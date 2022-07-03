@@ -1,16 +1,8 @@
 package com.bss.inc.cameraon.utils.net.angryscan.state;
 
-import com.redsoftware.ltd.bnc.utils.logging.Level;
-import com.redsoftware.ltd.bnc.utils.logging.Logger;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningSubject;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.config.LoggerFactory;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.config.ScannerConfig;
-
 import java.io.IOException;
 import java.net.*;
 import java.nio.ByteBuffer;
-
-import static com.redsoftware.ltd.bnc.utils.networking.angryscan.utils.IOUtils.closeQuietly;
 
 public class UDPPinger implements Pinger {
     private static final Logger LOG = LoggerFactory.getLogger();
