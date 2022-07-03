@@ -6,6 +6,7 @@ import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
 import com.bss.inc.cameraon.utils.net.angryscan.config.LoggerFactory;
 import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
 import com.bss.inc.cameraon.utils.net.angryscan.state.PingResult;
+import com.bss.inc.cameraon.utils.net.angryscan.state.Pinger;
 import com.bss.inc.cameraon.utils.net.angryscan.state.PingerRegistry;
 
 import java.io.IOException;
