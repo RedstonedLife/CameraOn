@@ -1,7 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan.state;
 
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningSubject;
 
 import java.io.IOException;
 
