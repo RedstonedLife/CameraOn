@@ -21,7 +21,7 @@ module com.redsoftware.ltd.bnc {
     requires com.sun.jna;
     requires java.prefs;
     opens com.bss.inc.cameraon to javafx.fxml;
-    opens com.redsoftware.ltd.bnc.controllers to javafx.fxml;
+    opens com.bss.inc.cameraon.controllers to javafx.fxml;
     opens com.redsoftware.ltd.bnc.utils to javafx.fxml;
     exports com.bss.inc.cameraon;
     exports com.bss.inc.cameraon.utils.net.angryscan;
