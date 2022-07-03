@@ -1,7 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan;
 
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.values.Empty;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.values.NotAvailable;
+import com.bss.inc.cameraon.utils.net.angryscan.values.NotAvailable;
 
 import java.util.Comparator;
 
