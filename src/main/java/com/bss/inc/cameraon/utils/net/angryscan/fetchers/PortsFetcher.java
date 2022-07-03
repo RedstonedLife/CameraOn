@@ -7,6 +7,7 @@ import com.bss.inc.cameraon.utils.net.angryscan.core.PortIterator;
 import com.bss.inc.cameraon.utils.net.angryscan.utils.SequenceIterator;
 import com.bss.inc.cameraon.utils.net.angryscan.utils.ThreadResourceBinder;
 import com.bss.inc.cameraon.utils.net.angryscan.values.NotScanned;
+import com.bss.inc.cameraon.utils.net.angryscan.values.NumericRangeList;
 
 import java.io.IOException;
 import java.net.ConnectException;
