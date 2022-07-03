@@ -1,6 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan;
 
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.fetchers.Fetcher;
+import com.bss.inc.cameraon.utils.net.angryscan.fetchers.Fetcher;
 
 import java.net.InetAddress;
 import java.util.Arrays;
