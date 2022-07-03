@@ -7,6 +7,7 @@ import com.bss.inc.cameraon.utils.net.angryscan.ScanningResultList;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
 import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
 import com.bss.inc.cameraon.utils.net.angryscan.feeders.Feeder;
+import com.bss.inc.cameraon.utils.net.angryscan.state.state.ScanningState;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateMachine;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateTransitionListener;
 
