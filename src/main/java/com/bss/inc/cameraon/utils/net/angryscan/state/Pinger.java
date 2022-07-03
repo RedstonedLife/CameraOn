@@ -19,6 +19,4 @@ public interface Pinger extends AutoCloseable {
     PingResult ping(ScanningSubject subject, int count) throws IOException;
 
     @Override default void close() throws IOException {}
-
-    PingResult ping(ScanningSubject subject, int count) throws IOException;
 }
