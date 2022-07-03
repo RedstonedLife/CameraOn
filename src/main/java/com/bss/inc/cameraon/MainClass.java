@@ -21,6 +21,8 @@ public class MainClass extends Application {
     private static Class<MainClass> clazz = MainClass.class;
     private static StateMachine stateMachine = new StateMachine();
 
+    public static StateMachine getStateMachine() {return stateMachine;}
+
     @Override
     public void start(Stage stage) {
         this._i18n.OnStart();
