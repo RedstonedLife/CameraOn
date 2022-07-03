@@ -3,6 +3,8 @@ package com.bss.inc.cameraon.utils.net.angryscan.fetchers;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
 import com.bss.inc.cameraon.utils.net.angryscan.core.Plugin;
 import com.bss.inc.cameraon.utils.net.angryscan.feeders.Feeder;
+import com.bss.inc.cameraon.utils.net.angryscan.values.NotAvailable;
+import com.bss.inc.cameraon.utils.net.angryscan.values.NotScanned;
 
 public interface Fetcher extends Cloneable, Plugin {
 
