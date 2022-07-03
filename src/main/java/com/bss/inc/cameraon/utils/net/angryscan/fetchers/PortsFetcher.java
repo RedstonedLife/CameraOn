@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan.fetchers;
 
+import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
 import com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningResult;
 import com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningSubject;
 import com.redsoftware.ltd.bnc.utils.networking.angryscan.config.ScannerConfig;
