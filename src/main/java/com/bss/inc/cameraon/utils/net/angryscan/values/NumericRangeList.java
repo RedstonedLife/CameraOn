@@ -1,4 +1,4 @@
-package com.redsoftware.ltd.bnc.utils.networking.angryscan.values;
+package com.bss.inc.cameraon.utils.net.angryscan.values;
 
 import java.util.Collection;
 
