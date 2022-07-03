@@ -5,11 +5,6 @@ import com.bss.inc.cameraon.utils.net.angryscan.ScanningResultList;
 import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
 import com.bss.inc.cameraon.utils.net.angryscan.feeders.Feeder;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateMachine;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.Scanner;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningResultList;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.config.ScannerConfig;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.feeders.Feeder;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.net.state.StateMachine;
 
 public class ScannerDispatcherThreadFactory {
     private ScanningResultList scanningResults;
