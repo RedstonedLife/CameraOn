@@ -11,9 +11,15 @@ import javafx.scene.control.Button;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import static com.bss.inc.cameraon.i18n.I18n.tl;
+
 public class PreferenceDisplayB implements Initializable {
     @FXML private void closeApp(ActionEvent event) {$UI$01.u_06$1$1();}
     @FXML private Button btnClose,asSceneBtn,ibsSceneBtn,cbsSceneBtn,displaySceneBtn;
+
+    private void initializeLanguage() {
+        displaySceneBtn.setText(tl("preferences.btn.display.text"));
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
