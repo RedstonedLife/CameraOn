@@ -1,6 +1,7 @@
 package com.bss.inc.cameraon.utils.net.angryscan.fetchers;
 
 import com.bss.inc.cameraon.i18n.I18n;
+import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
 import com.bss.inc.cameraon.utils.net.angryscan.config.Config;
 
 import java.util.MissingResourceException;
@@ -37,6 +38,8 @@ public abstract class AbstractFetcher implements Fetcher {
     public void init() {
         // nothing's here by default
     }
+
+    public abstract Object scan(ScanningSubject subject);
 
     public void cleanup() {
         // nothing's here by default
