@@ -1,6 +1,7 @@
 package com.bss.inc.cameraon.utils.net.angryscan.state;
 
 import com.bss.inc.cameraon.logging.Logger;
+import com.bss.inc.cameraon.utils.net.angryscan.config.LoggerFactory;
 
 import java.io.IOException;
 import java.net.*;
