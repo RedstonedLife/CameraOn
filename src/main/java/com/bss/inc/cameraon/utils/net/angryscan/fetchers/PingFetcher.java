@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan.fetchers;
 
+import com.bss.inc.cameraon.logging.Level;
 import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.utils.net.angryscan.config.LoggerFactory;
 import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
