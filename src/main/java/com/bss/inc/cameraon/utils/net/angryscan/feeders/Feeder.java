@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan.feeders;
 
+import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
 import com.bss.inc.cameraon.utils.net.angryscan.core.Plugin;
 
 import java.net.InetAddress;
