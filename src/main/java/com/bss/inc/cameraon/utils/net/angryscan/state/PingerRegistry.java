@@ -1,5 +1,7 @@
 package com.bss.inc.cameraon.utils.net.angryscan.state;
 
+import com.bss.inc.cameraon.utils.net.angryscan.fetchers.FetcherException;
+import com.bss.inc.cameraon.utils.net.angryscan.fetchers.MACFetcher;
 import com.redsoftware.ltd.bnc.utils.logging.Level;
 import com.redsoftware.ltd.bnc.utils.logging.Logger;
 import com.redsoftware.ltd.bnc.utils.networking.angryscan.config.LoggerFactory;
