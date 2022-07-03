@@ -5,7 +5,9 @@ import com.bss.inc.cameraon.utils.net.angryscan.fetchers.Fetcher;
 import com.bss.inc.cameraon.utils.net.angryscan.fetchers.FetcherRegistry;
 import com.bss.inc.cameraon.utils.net.angryscan.fetchers.HostnameFetcher;
 import com.bss.inc.cameraon.utils.net.angryscan.fetchers.IPFetcher;
+import com.bss.inc.cameraon.utils.net.angryscan.state.state.ScanningState;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateMachine;
+import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateTransitionListener;
 
 import java.net.InetAddress;
 import java.util.*;
@@ -232,7 +234,7 @@ public class ScanningResultList implements Iterable<ScanningResult> {
         if (info == null) {
             return;
         }
-        if (result.getType() == ResultType.ALIVE) {
+        if (result.getType() == ScanningResult.ResultType.ALIVE) {
             info.numAlive++;
         }
         else if (result.getType() == ScanningResult.ResultType.WITH_PORTS) {
