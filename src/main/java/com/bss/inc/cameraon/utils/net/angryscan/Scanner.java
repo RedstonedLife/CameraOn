@@ -1,13 +1,13 @@
-package com.redsoftware.ltd.bnc.utils.networking.angryscan;
+package com.bss.inc.cameraon.utils.net.angryscan;
 
-import com.redsoftware.ltd.bnc.utils.logging.Level;
-import com.redsoftware.ltd.bnc.utils.logging.Logger;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.feeders.Feeder;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.fetchers.Fetcher;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.fetchers.FetcherRegistry;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.fetchers.MACFetcher;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.values.NotAvailable;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.values.NotScanned;
+import com.bss.inc.cameraon.logging.Level;
+import com.bss.inc.cameraon.logging.Logger;
+import com.bss.inc.cameraon.utils.net.angryscan.feeders.Feeder;
+import com.bss.inc.cameraon.utils.net.angryscan.fetchers.Fetcher;
+import com.bss.inc.cameraon.utils.net.angryscan.fetchers.FetcherRegistry;
+import com.bss.inc.cameraon.utils.net.angryscan.fetchers.MACFetcher;
+import com.bss.inc.cameraon.utils.net.angryscan.values.NotAvailable;
+import com.bss.inc.cameraon.utils.net.angryscan.values.NotScanned;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
