@@ -1,14 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan.fetchers;
 
 import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningResult;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningSubject;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.config.ScannerConfig;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.core.PortIterator;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.utils.SequenceIterator;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.utils.ThreadResourceBinder;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.values.NotScanned;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.values.NumericRangeList;
 
 import java.io.IOException;
 import java.net.ConnectException;
