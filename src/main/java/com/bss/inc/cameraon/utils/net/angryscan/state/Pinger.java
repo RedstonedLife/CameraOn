@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan.state;
 
+import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
 import com.redsoftware.ltd.bnc.utils.networking.angryscan.ScanningSubject;
 
 import java.io.IOException;
@@ -19,4 +20,6 @@ public interface Pinger extends AutoCloseable {
     PingResult ping(ScanningSubject subject, int count) throws IOException;
 
     @Override default void close() throws IOException {}
+
+    PingResult ping(ScanningSubject subject, int count) throws IOException;
 }
