@@ -1,7 +1,7 @@
 package com.bss.inc.cameraon.utils.net.angryscan.fetchers;
 
-import com.redsoftware.ltd.bnc.i18n.I18n;
-import com.redsoftware.ltd.bnc.utils.networking.angryscan.config.Config;
+import com.bss.inc.cameraon.i18n.I18n;
+import com.bss.inc.cameraon.utils.net.angryscan.config.Config;
 
 import java.util.MissingResourceException;
 import java.util.prefs.Preferences;
