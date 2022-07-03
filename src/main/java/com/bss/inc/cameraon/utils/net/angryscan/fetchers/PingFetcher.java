@@ -2,6 +2,7 @@ package com.bss.inc.cameraon.utils.net.angryscan.fetchers;
 
 import com.bss.inc.cameraon.logging.Level;
 import com.bss.inc.cameraon.logging.Logger;
+import com.bss.inc.cameraon.utils.net.angryscan.ScanningResult;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
 import com.bss.inc.cameraon.utils.net.angryscan.config.LoggerFactory;
 import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
@@ -59,7 +60,7 @@ public class PingFetcher extends AbstractFetcher {
     @Override
     public Object scan(ScanningSubject subject) {
         PingResult result = executePing(subject);
-        subject.setResultType(result.isAlive() ? ResultType.ALIVE : ResultType.DEAD);
+        subject.setResultType(result.isAlive() ? ScanningResult.ResultType.ALIVE : ScanningResult.ResultType.DEAD);
 
         if (!result.isAlive() && !config.scanDeadHosts) {
             // the host is dead, we are not going to continue...
