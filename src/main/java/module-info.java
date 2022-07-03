@@ -22,7 +22,7 @@ module com.redsoftware.ltd.bnc {
     requires java.prefs;
     opens com.bss.inc.cameraon to javafx.fxml;
     opens com.bss.inc.cameraon.display.controllers to javafx.fxml;
-    opens com.redsoftware.ltd.bnc.utils to javafx.fxml;
+    opens com.bss.inc.cameraon.utils to javafx.fxml;
     exports com.bss.inc.cameraon;
     exports com.bss.inc.cameraon.utils.net.angryscan;
 }
