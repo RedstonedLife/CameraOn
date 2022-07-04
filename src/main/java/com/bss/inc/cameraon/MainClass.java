@@ -20,6 +20,8 @@ public class MainClass extends Application {
     private static DialogManager WindowManager;
     private transient I18n _i18n = new I18n(this);
     private static Class<MainClass> clazz = MainClass.class;
+
+    private static 
     private static StateMachine stateMachine = new StateMachine();
     private static Config config = new Config();
 
