@@ -45,8 +45,12 @@ public class Launcher {
         if(!j_.has("")) {} // Port Timeout         portTimeout           (Default 2000 MS, 2s)       (int)
         if(!j_.has("")) {} // Adapt Port Timeout   adaptPortTimeout      (Default true)              (bool)
         if(!j_.has("")) {} // Min Port Timeout     minPortTimeout        (Default 100 MS, 0.1s)      (int)
-        if(!j_.has("")) {} // Port String          portString            (Default "80,443,8080")     (string)
-        if(!j_.has("")) {} // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
+        if(!j_.has("")) {
+            
+        } // Port String          portString            (Default "80,443,8080")     (string)
+        if(!j_.has("")) {
+
+        } // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
 
         SettingsContainer.Save();
     }
