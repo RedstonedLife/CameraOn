@@ -59,17 +59,17 @@ public class Launcher {
         if(!j_.has("portTimeout")) {
             j_.put("portTimeout", 2000);
         } // Port Timeout         portTimeout           (Default 2000 MS, 2s)       (int)
-        if(!j_.has("")) {
-            j_.put("pingTimeout", 20);
+        if(!j_.has("adaptPortTimeout")) {
+            j_.put("adaptPortTimeout", true);
         } // Adapt Port Timeout   adaptPortTimeout      (Default true)              (bool)
-        if(!j_.has("")) {
-            j_.put("pingTimeout", 20);
+        if(!j_.has("minPortTimeout")) {
+            j_.put("minPortTimeout", 100);
         } // Min Port Timeout     minPortTimeout        (Default 100 MS, 0.1s)      (int)
-        if(!j_.has("")) {
-            j_.put("pingTimeout", 20);
+        if(!j_.has("portString")) {
+            j_.put("portString", "80,443,8080");
         } // Port String          portString            (Default "80,443,8080")     (string)
-        if(!j_.has("")) {
-            j_.put("pingTimeout", 20);
+        if(!j_.has("useRequestedPorts")) {
+            j_.put("useRequestedPorts", true);
         } // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
 
         SettingsContainer.Save();
