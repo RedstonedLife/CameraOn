@@ -35,7 +35,7 @@ public class Launcher {
         if(!j_.has("videnc")) {j_.put("videnc",0);}
         SettingsContainer.setValue("cameraSettings",j_);
         j_ = (JSONObject) SettingsContainer.getValue("scanSettings");
-        if(!j_.has("")) {}
+        if(!j_.has("")) {} // Thread Delay
         SettingsContainer.Save();
     }
 
