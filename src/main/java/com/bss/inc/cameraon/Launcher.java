@@ -24,7 +24,8 @@ public class Launcher {
         LM = new LogManager();
         LogManager.addLogger("BNC", new Logger("BNC"));
     }
-    public static void main(String[] args) throws UnknownOS, FileNotFoundException {
+
+    public static void setSettings() throws FileNotFoundException {
         SettingsContainer.Setup();
         JSONObject j_ = (JSONObject) SettingsContainer.getValue("cameraSettings");
         if(SettingsContainer.getValue("scanSettings")==null) {SettingsContainer.setValue("scanSettings",new JSONObject("{}"));}
@@ -34,6 +35,10 @@ public class Launcher {
         if(!j_.has("videnc")) {j_.put("videnc",0);}
         SettingsContainer.setValue("cameraSettings",j_);
         SettingsContainer.Save();
+    }
+
+    public static void main(String[] args) throws UnknownOS, FileNotFoundException {
+
         MainClass.main(args);
     }
 }
