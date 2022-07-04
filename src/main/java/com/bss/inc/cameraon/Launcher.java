@@ -47,9 +47,6 @@ public class Launcher {
         if(!j_.has("")) {} // Min Port Timeout     minPortTimeout        (Default 100 MS, 0.1s)      (int)
         if(!j_.has("")) {} // Port String          portString            (Default "80,443,8080")     (string)
         if(!j_.has("")) {} // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
-        if(!j_.has("")) {} // 
-        if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
-        if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
 
         SettingsContainer.Save();
     }
