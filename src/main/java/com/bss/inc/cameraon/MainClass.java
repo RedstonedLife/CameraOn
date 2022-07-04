@@ -5,6 +5,7 @@ import com.bss.inc.cameraon.display.Dialog;
 import com.bss.inc.cameraon.display.DialogManager;
 import com.bss.inc.cameraon.i18n.I18n;
 import com.bss.inc.cameraon.logging.Logger;
+import com.bss.inc.cameraon.utils.net.angryscan.config.Config;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateMachine;
 import javafx.application.Application;
 import javafx.stage.Stage;
