@@ -48,28 +48,28 @@ public class Launcher {
             j_.put("selectedPinger", "pinger.arp");
         } // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
         if(!j_.has("pingTimeout")) {
-            j_.put("selectedPinger", 20);
+            j_.put("pingTimeout", 20);
         } // Ping Timeout         pingTimeout           (Default 20 MS)             (int)
         if(!j_.has("")) {
-
+            j_.put("pingTimeout", 20);
         } // Ping Count           pingCount             (Default 3 Probes/Packets)  (int)
         if(!j_.has("")) {
-
+            j_.put("pingTimeout", 20);
         } // Skip Broadcast IP    skipBroadcastAddress  (Default true)              (bool)
         if(!j_.has("")) {
-
+            j_.put("pingTimeout", 20);
         } // Port Timeout         portTimeout           (Default 2000 MS, 2s)       (int)
         if(!j_.has("")) {
-
+            j_.put("pingTimeout", 20);
         } // Adapt Port Timeout   adaptPortTimeout      (Default true)              (bool)
         if(!j_.has("")) {
-
+            j_.put("pingTimeout", 20);
         } // Min Port Timeout     minPortTimeout        (Default 100 MS, 0.1s)      (int)
         if(!j_.has("")) {
-
+            j_.put("pingTimeout", 20);
         } // Port String          portString            (Default "80,443,8080")     (string)
         if(!j_.has("")) {
-
+            j_.put("pingTimeout", 20);
         } // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
 
         SettingsContainer.Save();
