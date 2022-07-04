@@ -28,7 +28,7 @@ public class Launcher {
         SettingsContainer.Setup();
         JSONObject j_ = (JSONObject) SettingsContainer.getValue("cameraSettings");
         if(SettingsContainer.getValue("scanSettings")==null) {
-            SettingsContainer.setValue("scanSettings",new JSONObject());
+            SettingsContainer.setValue("scanSettings",new JSONObject(""));
         }
         if(!j_.has("frameRate")) {j_.put("frameRate",30);}
         if(!j_.has("resolution")) {j_.put("resolution",0);}
