@@ -34,7 +34,8 @@ public class Launcher {
         if(!j_.has("bitrate")) {j_.put("bitrate",0);}
         if(!j_.has("videnc")) {j_.put("videnc",0);}
         SettingsContainer.setValue("cameraSettings",j_);
-        JSONObject j_ = (JSONObject) SettingsContainer.getValue("scanSettings");
+        j_ = (JSONObject) SettingsContainer.getValue("scanSettings");
+        if(!j_.has("")) {}
         SettingsContainer.Save();
     }
 
