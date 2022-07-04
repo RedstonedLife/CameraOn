@@ -16,7 +16,7 @@ public class Launcher {
 
     static {
         try {
-            SettingsContainer = new Settings("app.settings","{\"appLanguage\":0,\"cameraSettings\":{},}");
+            SettingsContainer = new Settings("app.settings","{\"appLanguage\":0,\"cameraSettings\":{}}");
         } catch (UnknownOS e) {
             throw new RuntimeException(e);
         }
