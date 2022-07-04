@@ -22,7 +22,7 @@ public class MainClass extends Application {
     private transient I18n _i18n = new I18n(this);
     private static Class<MainClass> clazz = MainClass.class;
 
-    private Injector injector
+    private Injector injector;
     private static StateMachine stateMachine = new StateMachine();
     private static Config config = new Config();
 
