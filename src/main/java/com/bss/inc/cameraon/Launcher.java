@@ -71,7 +71,7 @@ public class Launcher {
         if(!j_.has("useRequestedPorts")) {
             j_.put("useRequestedPorts", true);
         } // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
-        SettingsContainer.setValue("scanSettings",);
+        SettingsContainer.setValue("scanSettings", );
         SettingsContainer.Save();
     }
 
