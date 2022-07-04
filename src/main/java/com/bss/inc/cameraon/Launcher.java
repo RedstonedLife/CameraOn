@@ -36,7 +36,7 @@ public class Launcher {
         SettingsContainer.setValue("cameraSettings",j_);
         j_ = (JSONObject) SettingsContainer.getValue("scanSettings");
         if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
-        if(!j_.has("")) {} // Max Threads (255 Defaults
+        if(!j_.has("")) {} // Max Threads (255 Default)
         if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
         if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
         if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
