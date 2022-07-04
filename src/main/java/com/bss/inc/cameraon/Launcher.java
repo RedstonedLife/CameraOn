@@ -35,10 +35,10 @@ public class Launcher {
         if(!j_.has("videnc")) {j_.put("videnc",0);}
         SettingsContainer.setValue("cameraSettings",j_);
         j_ = (JSONObject) SettingsContainer.getValue("scanSettings");
-        if(!j_.has("")) {} // Thread Delay       threadDelay           (20 MS Default) (int)
-        if(!j_.has("")) {} // Max Threads        maxThreads            (255 Default) (int)
-        if(!j_.has("")) {} // Scan Dead Hosts    scanDeadHosts         (Default false) (bool)
-        if(!j_.has("")) {} // 
+        if(!j_.has("")) {} // Thread Delay       threadDelay           (20 MS Default)             (int)
+        if(!j_.has("")) {} // Max Threads        maxThreads            (255 Default)               (int)
+        if(!j_.has("")) {} // Scan Dead Hosts    scanDeadHosts         (Default false)             (bool)
+        if(!j_.has("")) {} // Selected Pinger    selectedPinger        (Default "pinger.arp")      (string)
         if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
         if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
         if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
