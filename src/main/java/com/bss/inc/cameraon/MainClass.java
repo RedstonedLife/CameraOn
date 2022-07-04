@@ -20,6 +20,7 @@ public class MainClass extends Application {
     private transient I18n _i18n = new I18n(this);
     private static Class<MainClass> clazz = MainClass.class;
     private static StateMachine stateMachine = new StateMachine();
+    
 
     public static StateMachine getStateMachine() {return stateMachine;}
 
