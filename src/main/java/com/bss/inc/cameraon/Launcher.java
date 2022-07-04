@@ -40,7 +40,7 @@ public class Launcher {
         if(!j_.has("")) {} // Scan Dead Hosts    scanDeadHosts         (Default false)             (bool)
         if(!j_.has("")) {} // Selected Pinger    selectedPinger        (Default "pinger.arp")      (string)
         if(!j_.has("")) {} // Ping Timeout       pingTimeout           (Default 20 MS)
-        if(!j_.has("")) {} // Ping Count         pingCount             (Default 
+        if(!j_.has("")) {} // Ping Count         pingCount             (Default 3 Probes)
         if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
         if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
         if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
