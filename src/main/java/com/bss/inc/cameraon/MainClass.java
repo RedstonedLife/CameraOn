@@ -6,6 +6,7 @@ import com.bss.inc.cameraon.display.DialogManager;
 import com.bss.inc.cameraon.i18n.I18n;
 import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.utils.net.angryscan.config.Config;
+import com.bss.inc.cameraon.utils.net.angryscan.di.Injector;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateMachine;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -21,7 +22,7 @@ public class MainClass extends Application {
     private transient I18n _i18n = new I18n(this);
     private static Class<MainClass> clazz = MainClass.class;
 
-    private static 
+    private Injector injector
     private static StateMachine stateMachine = new StateMachine();
     private static Config config = new Config();
 
