@@ -35,7 +35,7 @@ public class Launcher {
         if(!j_.has("videnc")) {j_.put("videnc",0);}
         SettingsContainer.setValue("cameraSettings",j_);
         j_ = (JSONObject) SettingsContainer.getValue("scanSettings");
-        if(!j_.has("")) {
+        if(!j_.has("maxThreads")) {
 
         } // Thread Delay         threadDelay           (Default 20 MS)             (int)
         if(!j_.has("")) {
