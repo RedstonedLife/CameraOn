@@ -35,18 +35,38 @@ public class Launcher {
         if(!j_.has("videnc")) {j_.put("videnc",0);}
         SettingsContainer.setValue("cameraSettings",j_);
         j_ = (JSONObject) SettingsContainer.getValue("scanSettings");
-        if(!j_.has("")) {} // Thread Delay         threadDelay           (Default 20 MS)             (int)
-        if(!j_.has("")) {} // Max Threads          maxThreads            (Default 255 Threads)       (int)
-        if(!j_.has("")) {} // Scan Dead Hosts      scanDeadHosts         (Default false)             (bool)
-        if(!j_.has("")) {} // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
-        if(!j_.has("")) {} // Ping Timeout         pingTimeout           (Default 20 MS)             (int)
-        if(!j_.has("")) {} // Ping Count           pingCount             (Default 3 Probes/Packets)  (int)
-        if(!j_.has("")) {} // Skip Broadcast IP    skipBroadcastAddress  (Default true)              (bool)
-        if(!j_.has("")) {} // Port Timeout         portTimeout           (Default 2000 MS, 2s)       (int)
-        if(!j_.has("")) {} // Adapt Port Timeout   adaptPortTimeout      (Default true)              (bool)
-        if(!j_.has("")) {} // Min Port Timeout     minPortTimeout        (Default 100 MS, 0.1s)      (int)
         if(!j_.has("")) {
             
+        } // Thread Delay         threadDelay           (Default 20 MS)             (int)
+        if(!j_.has("")) {
+
+        } // Max Threads          maxThreads            (Default 255 Threads)       (int)
+        if(!j_.has("")) {
+
+        } // Scan Dead Hosts      scanDeadHosts         (Default false)             (bool)
+        if(!j_.has("")) {
+
+        } // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
+        if(!j_.has("")) {
+
+        } // Ping Timeout         pingTimeout           (Default 20 MS)             (int)
+        if(!j_.has("")) {
+
+        } // Ping Count           pingCount             (Default 3 Probes/Packets)  (int)
+        if(!j_.has("")) {
+
+        } // Skip Broadcast IP    skipBroadcastAddress  (Default true)              (bool)
+        if(!j_.has("")) {
+
+        } // Port Timeout         portTimeout           (Default 2000 MS, 2s)       (int)
+        if(!j_.has("")) {
+
+        } // Adapt Port Timeout   adaptPortTimeout      (Default true)              (bool)
+        if(!j_.has("")) {
+
+        } // Min Port Timeout     minPortTimeout        (Default 100 MS, 0.1s)      (int)
+        if(!j_.has("")) {
+
         } // Port String          portString            (Default "80,443,8080")     (string)
         if(!j_.has("")) {
 
