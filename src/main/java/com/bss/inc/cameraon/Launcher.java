@@ -42,8 +42,8 @@ public class Launcher {
         if(!j_.has("")) {} // Ping Timeout       pingTimeout           (Default 20 MS)             (int)
         if(!j_.has("")) {} // Ping Count         pingCount             (Default 3 Probes/Packets)  (int)
         if(!j_.has("")) {} // Skip Broadcast IP  skipBroadcastAddress  (Default true)              (bool)
+        if(!j_.has("")) {} // Port Timeout       portTimeout           (Default 2000 MS, 2s)       (int)
         if(!j_.has("")) {} // 
-        if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
         if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
         if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
         if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
