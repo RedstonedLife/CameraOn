@@ -50,14 +50,14 @@ public class Launcher {
         if(!j_.has("pingTimeout")) {
             j_.put("pingTimeout", 20);
         } // Ping Timeout         pingTimeout           (Default 20 MS)             (int)
-        if(!j_.has("")) {
-            j_.put("pingTimeout", 20);
+        if(!j_.has("pingCount")) {
+            j_.put("pingCount", 3);
         } // Ping Count           pingCount             (Default 3 Probes/Packets)  (int)
-        if(!j_.has("")) {
-            j_.put("pingTimeout", 20);
+        if(!j_.has("skipBroadcastAddress")) {
+            j_.put("skipBroadcastAddress", true);
         } // Skip Broadcast IP    skipBroadcastAddress  (Default true)              (bool)
-        if(!j_.has("")) {
-            j_.put("pingTimeout", 20);
+        if(!j_.has("portTimeout")) {
+            j_.put("portTimeout", 2000);
         } // Port Timeout         portTimeout           (Default 2000 MS, 2s)       (int)
         if(!j_.has("")) {
             j_.put("pingTimeout", 20);
