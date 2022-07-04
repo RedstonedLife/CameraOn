@@ -48,7 +48,7 @@ public class Launcher {
             j_.put("selectedPinger", "pinger.arp");
         } // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
         if(!j_.has("pingTimeout")) {
-            
+            j_.put("selectedPinger", 20);
         } // Ping Timeout         pingTimeout           (Default 20 MS)             (int)
         if(!j_.has("")) {
 
