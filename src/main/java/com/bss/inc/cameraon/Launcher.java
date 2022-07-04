@@ -35,7 +35,22 @@ public class Launcher {
         if(!j_.has("videnc")) {j_.put("videnc",0);}
         SettingsContainer.setValue("cameraSettings",j_);
         j_ = (JSONObject) SettingsContainer.getValue("scanSettings");
-        if(!j_.has("")) {} // Thread Delay threadDelay
+        if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
+        if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
+        if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
+        if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
+        if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
+        if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
+        if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
+        if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
+        if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
+        if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
+        if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
+        if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
+        if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
+        if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
+        if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
+        
         SettingsContainer.Save();
     }
 
