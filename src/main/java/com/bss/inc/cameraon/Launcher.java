@@ -8,6 +8,7 @@ import org.json.JSONObject;
 
 import java.io.FileNotFoundException;
 import java.time.LocalDateTime;
+import java.util.Set;
 
 public class Launcher {
     private static LogManager LM;
@@ -26,7 +27,9 @@ public class Launcher {
     public static void main(String[] args) throws UnknownOS, FileNotFoundException {
         SettingsContainer.Setup();
         JSONObject j_ = (JSONObject) SettingsContainer.getValue("cameraSettings");
-        if(SettingsContainer.getValue("scanSettings")==null)
+        if(SettingsContainer.getValue("scanSettings")==null) {
+            SettingsContainer.setValue();
+        }
         if(!j_.has("frameRate")) {j_.put("frameRate",30);}
         if(!j_.has("resolution")) {j_.put("resolution",0);}
         if(!j_.has("bitrate")) {j_.put("bitrate",0);}
