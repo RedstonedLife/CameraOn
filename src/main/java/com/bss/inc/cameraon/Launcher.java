@@ -38,7 +38,7 @@ public class Launcher {
         if(!j_.has("")) {} // Thread Delay       threadDelay           (20 MS Default) (int)
         if(!j_.has("")) {} // Max Threads        maxThreads            (255 Default) (int)
         if(!j_.has("")) {} // Scan Dead Hosts    scanDeadHosts         (Default false) (bool)
-        if(!j_.has("")) {} //
+        if(!j_.has("")) {} // 
         if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
         if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
         if(!j_.has("")) {} // Thread Delay threadDelay (20 MS Default)
