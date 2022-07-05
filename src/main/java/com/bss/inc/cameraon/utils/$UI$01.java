@@ -154,7 +154,7 @@ public class $UI$01 {
             tfs[4].setText(String.valueOf(j_.getInt("portTimeout")));
         } // Port Timeout         portTimeout           (Default 2000 MS, 2s)       (int)
         if(!j_.has("adaptPortTimeout")) {
-            chkbs[2].setSelected();
+            chkbs[2].setSelected(j_.getBoolean("adaptPortTimeout"));
         } // Adapt Port Timeout   adaptPortTimeout      (Default true)              (bool)
         if(!j_.has("minPortTimeout")) {
             j_.put("minPortTimeout", preferences.getInt("minPortTimeout", 100));
