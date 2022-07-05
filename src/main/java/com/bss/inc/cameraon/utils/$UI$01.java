@@ -105,5 +105,5 @@ public class $UI$01 {
         cbs[2].setOnAction(e -> {_j.put("bitrate", cbs[2].getItems().indexOf(cbs[2].getValue())+1);try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}});
     }
 
-    public static void u_08$1$1(TextField[] tfs)
+    public static void u_08$1$1(TextField[] tfs, )
 }
