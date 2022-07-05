@@ -139,7 +139,7 @@ public class $UI$01 {
             } // Max Threads          maxThreads            (Default 255 Threads)       (int)
             if (j_.has("scanDeadHosts")) {
                 chkbs[0].setSelected(j_.getBoolean("scanDeadHosts"));
-            } // Scan Dead Hosts      scanDeadHosts         (Default false)             (bool)
+            } // Scan Dead Hosts      scanDeadHosts         (Default true)             (bool)
             if (j_.has("selectedPinger")) {
                 pingMethod.setValue(pingMethod.getItems().get(pingMethod.getItems().indexOf(j_.getString("selectedPinger"))));
             } // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
