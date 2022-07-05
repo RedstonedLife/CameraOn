@@ -62,9 +62,6 @@ public class MainClass extends Application {
         config.onExit();
     }
 
-    @Override
-    public void o
-
     public static void main(String[] args) {
         launch();
     }
