@@ -46,6 +46,7 @@ public class Dialog {
                 parent.setScene(scene);
             } catch (IOException e) {
                 Logger.getLogger("BNC").error("Could not initialize Dialog-{}-({N})".replace("{}", dialogName).replace("{N}", file.getFile()), e);
+                e.printStackTrace();
             }
         }
     }
