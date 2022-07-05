@@ -109,7 +109,9 @@ public class $UI$01 {
         /*
         TextFields Array Layout
         0 - threadsDelay
-        
+        1 - maxThreads
+        2 - pingProbes
+        3 - pingTimeout
          */
     }
 
