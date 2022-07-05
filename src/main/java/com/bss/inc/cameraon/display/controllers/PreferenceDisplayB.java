@@ -18,7 +18,7 @@ public class PreferenceDisplayB implements Initializable {
     @FXML private void closeApp(ActionEvent event) {$UI$01.u_06$1$1();}
     @FXML private Button btnClose,asSceneBtn,displaySceneBtn;
 
-    @FXML private TextField threadsDelayTf
+    @FXML private TextField threadsDelayTf,threadsMaxTf,
 
     private void initializeLanguage() {
         displaySceneBtn.setText(tl("preferences.btn.display.text"));
