@@ -164,7 +164,7 @@ public class $UI$01 {
         scannerConfig.portTimeout = Integer.valueOf(tfs[4].getText());
         scannerConfig.minPortTimeout = Integer.valueOf(tfs[5].getText());
         scannerConfig.scanDeadHosts = chkbs[0].isSelected();
-        scannerConfig
+        scannerConfig.skipBroadcastAddresses = 
     }
 
     public static void u_08$1$1(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) {
