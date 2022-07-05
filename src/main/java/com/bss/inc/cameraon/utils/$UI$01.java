@@ -4,13 +4,8 @@ import com.bss.inc.cameraon.Launcher;
 import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.constants.FrontendPaths;
 import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
-import com.dlsc.formsfx.model.validators.RegexValidator;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
-import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
 
 import java.io.FileNotFoundException;
@@ -116,9 +111,7 @@ public class $UI$01 {
         cbs[2].setOnAction(e -> {_j.put("bitrate", cbs[2].getItems().indexOf(cbs[2].getValue())+1);try {Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}});
     }
 
-    public static void u_08$1$3(String i) {
-        
-    }
+    public static boolean u_08$1$3(String i) {return digitPattern.matcher(i).matches();}
 
     public static void u_08$1$1(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) {
         /*
