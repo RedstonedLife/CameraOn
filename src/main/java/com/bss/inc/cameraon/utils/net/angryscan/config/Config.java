@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan.config;
 
+import java.io.FileNotFoundException;
 import java.util.Locale;
 import java.util.UUID;
 import java.util.prefs.Preferences;
@@ -74,7 +75,7 @@ public final class Config {
         return uuid;
     }
 
-    public void onExit() {
-        
+    public void onExit() throws FileNotFoundException {
+        forScanner().onExit();
     }
 }
