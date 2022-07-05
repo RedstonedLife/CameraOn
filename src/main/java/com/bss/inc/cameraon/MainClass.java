@@ -11,6 +11,7 @@ import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateMachine;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDateTime;
@@ -57,7 +58,9 @@ public class MainClass extends Application {
         //WindowManager.openDialog("mainWindow");
     }
     @Override
-    public void stop() {}
+    public void stop() throws FileNotFoundException {
+        config.onExit();
+    }
 
     public static void main(String[] args) {
         launch();
