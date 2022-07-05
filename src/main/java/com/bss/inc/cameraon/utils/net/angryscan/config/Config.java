@@ -77,5 +77,6 @@ public final class Config {
 
     public void onExit() throws FileNotFoundException {
         forScanner().onExit();
+        
     }
 }
