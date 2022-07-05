@@ -1,6 +1,8 @@
 package com.bss.inc.cameraon.utils.net.angryscan.config;
 
+import com.bss.inc.cameraon.Launcher;
 import com.bss.inc.cameraon.i18n.I18n;
+import org.json.JSONObject;
 
 import java.util.prefs.Preferences;
 
@@ -67,6 +69,6 @@ public class ScannerConfig {
     }
 
     public void onExit() {
-        
+        JSONObject j_ = Launcher.SettingsContainer.getValue("scanSettings")
     }
 }
