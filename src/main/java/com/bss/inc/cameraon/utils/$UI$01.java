@@ -125,7 +125,9 @@ public class $UI$01 {
         Text Area ptsct - portsToScan (portString)
         PingMethod<String> - selectedPinger
          */
-
+        tfs[0].setOnAction(e -> {
+            
+        });
 
     }
 
