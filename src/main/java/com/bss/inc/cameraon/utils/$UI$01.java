@@ -161,7 +161,7 @@ public class $UI$01 {
         scannerConfig.maxThreads = Integer.valueOf(tfs[1].getText());
         scannerConfig.pingCount = Integer.valueOf(tfs[2].getText());
         scannerConfig.pingTimeout = Integer.valueOf(tfs[3].getText());
-        scannerConfig.portTimeout = Integer.valueOf(tfs[])
+        scannerConfig.portTimeout = Integer.valueOf(tfs[4].getText());
     }
 
     public static void u_08$1$1(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) {
