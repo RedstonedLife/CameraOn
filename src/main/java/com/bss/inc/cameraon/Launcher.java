@@ -4,6 +4,7 @@ import com.bss.inc.cameraon.exceptions.UnknownOS;
 import com.bss.inc.cameraon.logging.LogManager;
 import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.settings.Settings;
+import com.bss.inc.cameraon.utils.$UI$01;
 import org.json.JSONObject;
 
 import java.io.FileNotFoundException;
@@ -76,6 +77,7 @@ public class Launcher {
     }
 
     public static void main(String[] args) throws UnknownOS, FileNotFoundException {
+        System.out.println($UI$01.u_08$1$3("Fuck0"));
         //setSettings();
         //MainClass.main(args);
     }
