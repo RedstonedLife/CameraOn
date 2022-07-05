@@ -23,6 +23,7 @@ public class PreferenceDisplayB implements Initializable {
     @FXML private TextArea portToScanTa;
     @FXML private ChoiceBox<String> pingMethodCb;
     @FXML private CheckBox scanDeadHostsCHKb,skipUnassignedCHKb,adaptTimeoutToPingCHKb,forEachHostCHKb;
+    @FXML private void okApp(ActionEvent event) {$UI$01.u_08$1$5();}
 
     private void initializeLanguage() {
         displaySceneBtn.setText(tl("preferences.btn.display.text"));
