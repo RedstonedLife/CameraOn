@@ -148,7 +148,7 @@ public class $UI$01 {
             tfs[2].setText(String.valueOf(j_.getInt("pingCount")));
         } // Ping Count           pingCount             (Default 3 Probes/Packets)  (int)
         if(!j_.has("skipBroadcastAddress")) {
-            j_.put("skipBroadcastAddress", preferences.getBoolean("skipBroadcastAddress", true));
+            chkbs[]
         } // Skip Broadcast IP    skipBroadcastAddress  (Default true)              (bool)
         if(!j_.has("portTimeout")) {
             j_.put("portTimeout", preferences.getInt("portTimeout", 2000));
