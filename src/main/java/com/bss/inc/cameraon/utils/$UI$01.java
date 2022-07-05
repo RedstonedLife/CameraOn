@@ -142,7 +142,7 @@ public class $UI$01 {
             pingMethod.setValue(pingMethod.getItems().get(pingMethod.getItems().indexOf(j_.get("selectedPinger"))));
         } // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
         if(!j_.has("pingTimeout")) {
-            tfs[]
+            tfs[3]
         } // Ping Timeout         pingTimeout           (Default 20 MS)             (int)
         if(!j_.has("pingCount")) {
             j_.put("pingCount", preferences.getInt("pingCount", 3));
