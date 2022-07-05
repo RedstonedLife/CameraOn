@@ -165,7 +165,7 @@ public class $UI$01 {
             });
         }
         ptsct.textProperty().addListener((observable, ov, nv) -> {
-            
+
         });
 
     }
