@@ -113,7 +113,7 @@ public class $UI$01 {
         2 - pingProbes
         3 - pingTimeout
         4 - defaultPortTimeout
-        5 - 
+        5 - adaptPortTimeout
          */
     }
 
