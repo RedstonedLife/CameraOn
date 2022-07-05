@@ -126,7 +126,7 @@ public class $UI$01 {
         PingMethod<String> - selectedPinger
          */
         tfs[0].textProperty().addListener((observable, oldValue, newValue) -> {
-            if(oldValue == null || oldValue == "");
+            if(oldValue == null || oldValue == "")
         });
 
     }
