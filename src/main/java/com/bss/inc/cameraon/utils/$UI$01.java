@@ -139,7 +139,7 @@ public class $UI$01 {
                     Character.isWhitespace(c) && pc == ',';
 
     }
-    public static void u_08$1$5(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) {
+    public static void u_08$1$5(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) throws FileNotFoundException {
         /*
         TextFields Array Layout
         0 - threadsDelay
