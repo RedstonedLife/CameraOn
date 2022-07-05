@@ -112,7 +112,8 @@ public class $UI$01 {
     }
 
     /**
-    
+     * 
+    @param i String to validate
      */
     public static boolean u_08$1$3(String i) {return digitPattern.matcher(i).matches();}
 
