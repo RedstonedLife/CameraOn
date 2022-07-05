@@ -139,7 +139,7 @@ public class $UI$01 {
             chkbs[0].setSelected(j_.getBoolean("scanDeadHosts"));
         } // Scan Dead Hosts      scanDeadHosts         (Default false)             (bool)
         if(!j_.has("selectedPinger")) {
-            j_.put("selectedPinger", preferences.get("selectedPinger", "pinger.arp"));
+            pingMethod.getItems().indexOf()
         } // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
         if(!j_.has("pingTimeout")) {
             j_.put("pingTimeout", preferences.getInt("pingTimeout", 20));
