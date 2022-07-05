@@ -117,7 +117,7 @@ public class $UI$01 {
         Checkboxes Array Layout
         0 - scanDeadHosts
         1 - skipUnassigned
-        
+        2 - adaptPortTimeout
          */
     }
 
