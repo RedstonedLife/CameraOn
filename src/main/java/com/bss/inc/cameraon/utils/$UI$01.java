@@ -3,6 +3,7 @@ package com.bss.inc.cameraon.utils;
 import com.bss.inc.cameraon.Launcher;
 import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.constants.FrontendPaths;
+import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -124,7 +125,7 @@ public class $UI$01 {
         Text Area ptsct - portsToScan (portString)
         PingMethod<String> - selectedPinger
          */
-        
+        ScannerConfig scannerConfig
 
     }
 
