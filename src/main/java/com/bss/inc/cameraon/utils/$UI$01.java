@@ -119,7 +119,8 @@ public class $UI$01 {
         1 - skipUnassigned
         2 - adaptPortTimeout
         3 - useRequestedPorts
-        Text Area ptsct - 
+        Text Area ptsct - portsToScan (portString)
+        PingMethod<String> - selectedPinger
          */
     }
 
