@@ -163,7 +163,7 @@ public class $UI$01 {
             ptsct.setText(j_.getString("portString"));
         } // Port String          portString            (Default "80,443,8080")     (string)
         if(!j_.has("useRequestedPorts")) {
-            j_.put("useRequestedPorts", preferences.getBoolean("useRequestedPorts", true));
+            chkbs[]
         } // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
     }
 }
