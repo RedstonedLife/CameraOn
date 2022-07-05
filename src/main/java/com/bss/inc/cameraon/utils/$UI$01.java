@@ -21,7 +21,7 @@ public class $UI$01 {
     public static final Pattern digitPattern;
 
     static {
-        digitPattern = Pattern.compile("[0-9]+");
+        digitPattern = Pattern.compile("\d+");
     }
 
     public static void u_00$1$1(SplitPane csplitpane) {csplitpane.getDividers().get(0).positionProperty().addListener((observableValue, number, t1) -> csplitpane.getDividers().get(0).setPosition(FrontendPaths.DIVID_POS));}
