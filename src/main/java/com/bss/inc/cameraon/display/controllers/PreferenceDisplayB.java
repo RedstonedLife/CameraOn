@@ -21,7 +21,7 @@ public class PreferenceDisplayB implements Initializable {
 
     @FXML private TextField threadsDelayTf,threadsMaxTf,defaultPortTimeoutTf,minAdptdConTimeoutTf,pingProbesTf,pingTimeoutTf;
     @FXML private TextArea portToScanTa;
-    @FXML private ChoiceBox pingMethodCb;
+    @FXML private ChoiceBox<String> pingMethodCb;
     @FXML private CheckBox scanDeadHostsCHKb,skipUnassignedCHKb,adaptTimeoutToPingCHKb,forEachHostCHKb;
 
     private void initializeLanguage() {
