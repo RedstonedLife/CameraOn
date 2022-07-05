@@ -78,7 +78,7 @@ public class ScannerConfig {
             j_.put("maxThreads", preferences.getInt("maxThreads", 255));
         } // Max Threads          maxThreads            (Default 255 Threads)       (int)
         if(!j_.has("scanDeadHosts")) {
-            j_.put("scanDeadHosts", preferences.getBoolean("scanDeadHosts", false));
+            j_.put("scanDeadHosts", preferences.getBoolean("scanDeadHosts", true));
         } // Scan Dead Hosts      scanDeadHosts         (Default false)             (bool)
         if(!j_.has("selectedPinger")) {
             j_.put("selectedPinger", preferences.get("selectedPinger", "pinger.arp"));
