@@ -4,6 +4,7 @@ import com.bss.inc.cameraon.Launcher;
 import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.constants.FrontendPaths;
 import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
+import com.dlsc.formsfx.model.validators.RegexValidator;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -128,7 +129,7 @@ public class $UI$01 {
          */
         tfs[0].textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
-            
+            if(RegexValidator.forPattern())
         });
 
     }
