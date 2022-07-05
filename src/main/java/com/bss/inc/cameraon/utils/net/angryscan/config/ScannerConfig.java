@@ -69,6 +69,6 @@ public class ScannerConfig {
     }
 
     public void onExit() {
-        JSONObject j_ = Launcher.SettingsContainer.getValue("scanSettings")
+        JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
     }
 }
