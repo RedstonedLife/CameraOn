@@ -14,6 +14,11 @@ import java.io.FileNotFoundException;
 import java.util.Map;
 
 public class $UI$01 {
+    private static TextField[] tfs;
+    private static CheckBox[] chkbs;
+    private static TextArea ptsct;
+    private static ChoiceBox<String> pingMethod;
+
     public static void u_00$1$1(SplitPane csplitpane) {csplitpane.getDividers().get(0).positionProperty().addListener((observableValue, number, t1) -> csplitpane.getDividers().get(0).setPosition(FrontendPaths.DIVID_POS));}
     public static void u_01$1$1(SplitPane csplitpane, Button[] buttons) {
         u_00$1$1(csplitpane);
@@ -127,6 +132,10 @@ public class $UI$01 {
     }
 
     public static void u_08$1$2(TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) {
+        $UI$01.tfs = tfs;
+        $UI$01.chkbs = chkbs;
+        $UI$01.ptsct = ptsct;
+        $UI$01.pingMethod = pingMethod;
         try {
             pingMethod.getItems().addAll("pinger.windows", "pinger.udp", "pinger.tcp", "pinger.combined", "pinger.java", "pinger.arp");
             JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
