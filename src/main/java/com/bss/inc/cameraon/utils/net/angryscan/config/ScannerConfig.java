@@ -105,7 +105,7 @@ public class ScannerConfig {
             j_.put("portString", preferences.get("portString", "80,443,8080"));
         } // Port String          portString            (Default "80,443,8080")     (string)
         if(!j_.has("useRequestedPorts")) {
-            j_.put("useRequestedPorts", true);
+            j_.put("useRequestedPorts", preferences.getBoolean("useRequestedPorts", true));
         } // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
         Launcher.SettingsContainer.setValue("scanSettings", j_);
         Launcher.SettingsContainer.Save();
