@@ -168,7 +168,7 @@ public class $UI$01 {
         scannerConfig.adaptPortTimeout = chkbs[2].isSelected();
         scannerConfig.useRequestedPorts = chkbs[3].isSelected();
         scannerConfig.portString = ptsct.getText();
-        scannerConfig.onExit();
+        scannerConfig.store();
     }
 
     public static void u_08$1$1(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) {
