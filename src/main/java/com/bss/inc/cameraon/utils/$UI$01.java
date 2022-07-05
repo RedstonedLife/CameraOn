@@ -126,7 +126,7 @@ public class $UI$01 {
     public static boolean u_08$1$4(String text) {
             // previous
             char pc = 0;
-            for (Character chr : text.getChars(0,);) {
+            for (Character chr : text.getChars();) {
                 pc = text.charAt(i);
                 if (!Character.isWhitespace(pc))
                     break;
