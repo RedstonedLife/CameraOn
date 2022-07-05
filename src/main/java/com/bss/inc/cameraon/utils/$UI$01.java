@@ -16,7 +16,7 @@ import java.io.FileNotFoundException;
 import java.util.Map;
 
 public class $UI$01 {
-    public static final String num_regex = ""
+    public static final String num_regex = "[0-9]"
     public static void u_00$1$1(SplitPane csplitpane) {csplitpane.getDividers().get(0).positionProperty().addListener((observableValue, number, t1) -> csplitpane.getDividers().get(0).setPosition(FrontendPaths.DIVID_POS));}
     public static void u_01$1$1(SplitPane csplitpane, Button[] buttons) {
         u_00$1$1(csplitpane);
