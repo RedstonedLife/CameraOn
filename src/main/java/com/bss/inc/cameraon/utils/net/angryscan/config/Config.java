@@ -73,4 +73,8 @@ public final class Config {
     public String getUUID() {
         return uuid;
     }
+
+    public void onExit() {
+        
+    }
 }
