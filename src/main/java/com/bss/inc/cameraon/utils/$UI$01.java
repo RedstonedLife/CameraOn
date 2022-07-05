@@ -133,7 +133,6 @@ public class $UI$01 {
             JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
             System.out.println("REACHED!");
             if (!j_.has("threadDelay")) {
-                tfs[0].setUserData("Test");
                 tfs[0].setText(String.valueOf(j_.getInt("threadDelay")));
             } // Thread Delay         threadDelay           (Default 20 MS)             (int)
             if (!j_.has("maxThreads")) {
