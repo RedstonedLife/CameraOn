@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.regex.Pattern;
 
 public class $UI$01 {
-    public static final Pattern digitPattern = Pattern.compile("[]")
+    public static final Pattern digitPattern = Pattern.compile("[0-9]+");
     public static void u_00$1$1(SplitPane csplitpane) {csplitpane.getDividers().get(0).positionProperty().addListener((observableValue, number, t1) -> csplitpane.getDividers().get(0).setPosition(FrontendPaths.DIVID_POS));}
     public static void u_01$1$1(SplitPane csplitpane, Button[] buttons) {
         u_00$1$1(csplitpane);
