@@ -19,11 +19,11 @@ public class PreferenceDisplay implements Initializable {
     @FXML private Button ibsSceneBtn;
     @FXML private Button cbsSceneBtn;
     @FXML private Button displaySceneBtn;
-    @FXML private Text threadtxt,t1txt,t2txt,pingtxt,p1txt,p2txt,p3txt,p4txt,skiptxt,s1txt,timetxt,tt1txt,tt2txt,tt3txt,portstxt,ps1txt,ps2txt,ps3txt,ps4txt;
+    /*@FXML private Text threadtxt,t1txt,t2txt,pingtxt,p1txt,p2txt,p3txt,p4txt,skiptxt,s1txt,timetxt,tt1txt,tt2txt,tt3txt,portstxt,ps1txt,ps2txt,ps3txt,ps4txt;*/
 
     @FXML private void closeApp(ActionEvent event) {
         $UI$01.u_06$1$1();}
-    private void initializeLanguage() {
+    /*private void initializeLanguage() {
         displaySceneBtn.setText(tl("preferences.btn.display.text"));
         threadtxt.setText(tl("preferences.threads.text"));
         t1txt.setText(tl("preferences.threads.t1"));
@@ -44,7 +44,7 @@ public class PreferenceDisplay implements Initializable {
         ps2txt.setText(tl("preferences.portselection.ps2"));
         ps3txt.setText(tl("preferences.portselection.ps3"));
         ps4txt.setText(tl("preferences.portselection.ps4"));
-    }
+    }*/
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
