@@ -23,7 +23,7 @@ public final class Config {
     public Config() {
         preferences = Preferences.userRoot().node("cameraon");
         scannerConfig = new ScannerConfig(preferences);
-        language = preferences.get("language", "system");
+        language = preferences.get("language", "en");
         uuid = preferences.get("uuid", null);
         if (uuid == null) {
             uuid = UUID.randomUUID().toString();
@@ -77,6 +77,6 @@ public final class Config {
 
     public void onExit() throws FileNotFoundException {
         forScanner().onExit();
-        
+
     }
 }
