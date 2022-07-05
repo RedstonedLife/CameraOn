@@ -132,6 +132,7 @@ public class $UI$01 {
             //pingMethod.getItems().addAll("pinger.windows", "pinger.udp", "pinger.tcp", "pinger.combined", "pinger.java", "pinger.arp");
             JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
             System.out.println("REACHED!");
+            System.out.println(j_.toString());
             if (!j_.has("threadDelay")) {
                 tfs[0].setText(String.valueOf(j_.getInt("threadDelay")));
                 tfs[0].setText("Fuck Off");
