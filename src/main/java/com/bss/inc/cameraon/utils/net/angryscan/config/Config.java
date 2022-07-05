@@ -59,7 +59,7 @@ public final class Config {
     }
 
     public Locale getLocale() {
-        if (language == null || "system".equals(language)) {
+        if (language == null || "en".equals(language)) {
             return System.getProperty("locale") == null ? Locale.getDefault() : createLocale(System.getProperty("locale"));
         }
         else {
