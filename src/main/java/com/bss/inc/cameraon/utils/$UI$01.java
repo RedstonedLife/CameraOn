@@ -163,7 +163,7 @@ public class $UI$01 {
         scannerConfig.pingTimeout = Integer.valueOf(tfs[3].getText());
         scannerConfig.portTimeout = Integer.valueOf(tfs[4].getText());
         scannerConfig.minPortTimeout = Integer.valueOf(tfs[5].getText());
-        
+        chkbs
     }
 
     public static void u_08$1$1(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) {
