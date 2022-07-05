@@ -127,6 +127,41 @@ public class $UI$01 {
 
     public static void u_08$1$2(TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) {
         JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
-
+        if(!j_.has("threadDelay")) {
+            j_.put("threadDelay", preferences.getInt("threadDelay", 20));
+        } // Thread Delay         threadDelay           (Default 20 MS)             (int)
+        if(!j_.has("maxThreads")) {
+            j_.put("maxThreads", preferences.getInt("maxThreads", 255));
+        } // Max Threads          maxThreads            (Default 255 Threads)       (int)
+        if(!j_.has("scanDeadHosts")) {
+            j_.put("scanDeadHosts", preferences.getBoolean("scanDeadHosts", false));
+        } // Scan Dead Hosts      scanDeadHosts         (Default false)             (bool)
+        if(!j_.has("selectedPinger")) {
+            j_.put("selectedPinger", preferences.get("selectedPinger", "pinger.arp"));
+        } // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
+        if(!j_.has("pingTimeout")) {
+            j_.put("pingTimeout", preferences.getInt("pingTimeout", 20));
+        } // Ping Timeout         pingTimeout           (Default 20 MS)             (int)
+        if(!j_.has("pingCount")) {
+            j_.put("pingCount", preferences.getInt("pingCount", 3));
+        } // Ping Count           pingCount             (Default 3 Probes/Packets)  (int)
+        if(!j_.has("skipBroadcastAddress")) {
+            j_.put("skipBroadcastAddress", preferences.getBoolean("skipBroadcastAddress", true));
+        } // Skip Broadcast IP    skipBroadcastAddress  (Default true)              (bool)
+        if(!j_.has("portTimeout")) {
+            j_.put("portTimeout", preferences.getInt("portTimeout", 2000));
+        } // Port Timeout         portTimeout           (Default 2000 MS, 2s)       (int)
+        if(!j_.has("adaptPortTimeout")) {
+            j_.put("adaptPortTimeout", preferences.getBoolean("adaptPortTimeout", true));
+        } // Adapt Port Timeout   adaptPortTimeout      (Default true)              (bool)
+        if(!j_.has("minPortTimeout")) {
+            j_.put("minPortTimeout", preferences.getInt("minPortTimeout", 100));
+        } // Min Port Timeout     minPortTimeout        (Default 100 MS, 0.1s)      (int)
+        if(!j_.has("portString")) {
+            j_.put("portString", preferences.get("portString", "80,443,8080"));
+        } // Port String          portString            (Default "80,443,8080")     (string)
+        if(!j_.has("useRequestedPorts")) {
+            j_.put("useRequestedPorts", preferences.getBoolean("useRequestedPorts", true));
+        } // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
     }
 }
