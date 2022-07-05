@@ -67,6 +67,6 @@ public class ScannerConfig {
     }
 
     public void onExit() {
-
+            
     }
 }
