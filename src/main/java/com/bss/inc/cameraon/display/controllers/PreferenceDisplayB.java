@@ -10,6 +10,8 @@ import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+
+import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -23,8 +25,14 @@ public class PreferenceDisplayB implements Initializable {
     @FXML private TextArea portToScanTa;
     @FXML private ChoiceBox<String> pingMethodCb;
     @FXML private CheckBox scanDeadHostsCHKb,skipUnassignedCHKb,adaptTimeoutToPingCHKb,forEachHostCHKb;
-    @FXML private void okApp(ActionEvent event) {$UI$01.u_08$1$5(MainClass.getConfig().forScanner(),new TextField[]{threadsDelayTf,threadsMaxTf,pingProbesTf,pingTimeoutTf,defaultPortTimeoutTf,minAdptdConTimeoutTf},
-            new CheckBox[]{scanDeadHostsCHKb,skipUnassignedCHKb,adaptTimeoutToPingCHKb,forEachHostCHKb},portToScanTa,pingMethodCb);$UI$01.u_06$1$1();}
+    @FXML private void okApp(ActionEvent event) {
+        try {
+            $UI$01.u_08$1$5(MainClass.getConfig().forScanner(),new TextField[]{threadsDelayTf,threadsMaxTf,pingProbesTf,pingTimeoutTf,defaultPortTimeoutTf,minAdptdConTimeoutTf},
+                    new CheckBox[]{scanDeadHostsCHKb,skipUnassignedCHKb,adaptTimeoutToPingCHKb,forEachHostCHKb},portToScanTa,pingMethodCb);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        $UI$01.u_06$1$1();}
 
     private void initializeLanguage() {
         displaySceneBtn.setText(tl("preferences.btn.display.text"));
