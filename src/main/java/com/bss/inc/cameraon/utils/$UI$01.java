@@ -165,7 +165,6 @@ public class $UI$01 {
         if(!j_.has("useRequestedPorts")) {
             chkbs[3].setSelected(j_.getBoolean("useRequestedPorts"));
         } // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
-        j_ = null;
         return;
     }
 }
