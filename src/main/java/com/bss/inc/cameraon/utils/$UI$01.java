@@ -134,7 +134,7 @@ public class $UI$01 {
             tfs[1].setText(String.valueOf(j_.getInt("maxThreads")));
         } // Max Threads          maxThreads            (Default 255 Threads)       (int)
         if(!j_.has("scanDeadHosts")) {
-            chkbs[0].setSelected(j_.getBoolean());
+            chkbs[0].setSelected(j_.getBoolean("scanDeadHosts"));
         } // Scan Dead Hosts      scanDeadHosts         (Default false)             (bool)
         if(!j_.has("selectedPinger")) {
             j_.put("selectedPinger", preferences.get("selectedPinger", "pinger.arp"));
