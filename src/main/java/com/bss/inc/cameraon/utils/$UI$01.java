@@ -5,10 +5,7 @@ import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.constants.FrontendPaths;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Control;
-import javafx.scene.control.SplitPane;
+import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import org.json.JSONObject;
 
