@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
+import java.awt.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -20,7 +21,8 @@ public class PreferenceDisplayB implements Initializable {
     @FXML private Button btnClose,asSceneBtn,displaySceneBtn;
 
     @FXML private TextField threadsDelayTf,threadsMaxTf,defaultPortTimeoutTf,minAdptdConTimeoutTf,pingProbesTf,pingTimeoutTf;
-    @FXML private TextArea 
+    @FXML private TextArea portToScanTa;
+    @FXML private Checkbox 
 
     private void initializeLanguage() {
         displaySceneBtn.setText(tl("preferences.btn.display.text"));
