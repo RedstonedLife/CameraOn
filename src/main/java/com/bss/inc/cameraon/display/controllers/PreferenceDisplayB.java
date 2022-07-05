@@ -33,7 +33,7 @@ public class PreferenceDisplayB implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         $UI$01.u_08$1$2(new TextField[]{threadsDelayTf,threadsMaxTf,pingProbesTf,pingTimeoutTf,defaultPortTimeoutTf,minAdptdConTimeoutTf},
-                new CheckBox[]{scanDeadHostsCHKb,skipUnassignedCHKb,adaptTimeoutToPingCHKb,forEachHostsCHKb},);
+                new CheckBox[]{scanDeadHostsCHKb,skipUnassignedCHKb,adaptTimeoutToPingCHKb,forEachHostsCHKb},portToScanTa,pingMethodCb);
         asSceneBtn.setOnAction(e -> {MainClass.getWindowManager().changeDialogScene("preferencesDialog",MainClass.class.getResource(FrontendPaths.PREF_DISPLAY_AS_FXML));});
         displaySceneBtn.setOnAction(e -> {MainClass.getWindowManager().changeDialogScene("preferencesDialog",MainClass.class.getResource(FrontendPaths.PREF_DISPLAY_FXML));});
         initializeLanguage();
