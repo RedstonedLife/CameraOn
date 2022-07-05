@@ -166,7 +166,6 @@ public class $UI$01 {
         }
         ptsct.textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
-            //if(!u_08$1$3(newValue)) {ptsct.setText(oldValue);}
             if((newValue.length() > 142)) {ptsct.setText(oldValue);}
             if(!u_08$1$4(newValue.charAt(newValue.length()-1),newValue,newValue.length()-oldValue.length()+1)){ptsct.setText(oldValue);}
         });
