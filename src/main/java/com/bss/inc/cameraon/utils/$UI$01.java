@@ -137,7 +137,7 @@ public class $UI$01 {
             return isPrevDigit && (isCurDigit || c == '-' || c == ',') ||
                     isCurDigit && (pc == '-' || pc == ',' || pc == 0) ||
                     Character.isWhitespace(c) && pc == ',';
-            
+
     }
 
     public static void u_08$1$1(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) {
