@@ -70,5 +70,41 @@ public class ScannerConfig {
 
     public void onExit() {
         JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
+        if(!j_.has("threadDelay")) {
+            j_.put("threadDelay", 20);
+        } // Thread Delay         threadDelay           (Default 20 MS)             (int)
+        if(!j_.has("maxThreads")) {
+            j_.put("maxThreads", 255);
+        } // Max Threads          maxThreads            (Default 255 Threads)       (int)
+        if(!j_.has("scanDeadHosts")) {
+            j_.put("scanDeadHosts", false);
+        } // Scan Dead Hosts      scanDeadHosts         (Default false)             (bool)
+        if(!j_.has("selectedPinger")) {
+            j_.put("selectedPinger", "pinger.arp");
+        } // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
+        if(!j_.has("pingTimeout")) {
+            j_.put("pingTimeout", 20);
+        } // Ping Timeout         pingTimeout           (Default 20 MS)             (int)
+        if(!j_.has("pingCount")) {
+            j_.put("pingCount", 3);
+        } // Ping Count           pingCount             (Default 3 Probes/Packets)  (int)
+        if(!j_.has("skipBroadcastAddress")) {
+            j_.put("skipBroadcastAddress", true);
+        } // Skip Broadcast IP    skipBroadcastAddress  (Default true)              (bool)
+        if(!j_.has("portTimeout")) {
+            j_.put("portTimeout", 2000);
+        } // Port Timeout         portTimeout           (Default 2000 MS, 2s)       (int)
+        if(!j_.has("adaptPortTimeout")) {
+            j_.put("adaptPortTimeout", true);
+        } // Adapt Port Timeout   adaptPortTimeout      (Default true)              (bool)
+        if(!j_.has("minPortTimeout")) {
+            j_.put("minPortTimeout", 100);
+        } // Min Port Timeout     minPortTimeout        (Default 100 MS, 0.1s)      (int)
+        if(!j_.has("portString")) {
+            j_.put("portString", "80,443,8080");
+        } // Port String          portString            (Default "80,443,8080")     (string)
+        if(!j_.has("useRequestedPorts")) {
+            j_.put("useRequestedPorts", true);
+        } // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
     }
 }
