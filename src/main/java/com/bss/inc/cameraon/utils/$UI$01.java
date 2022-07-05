@@ -14,11 +14,9 @@ import java.util.regex.Pattern;
 
 public class $UI$01 {
     public static final Pattern digitPattern;
-    public static final Pattern portPattern;
 
     static {
         digitPattern = Pattern.compile("\\d+");
-        portPattern = Pattern.compile(	"[\\d]+|[\\,\\-]+[^a-z][^A-Z]");
     }
 
     public static void u_00$1$1(SplitPane csplitpane) {csplitpane.getDividers().get(0).positionProperty().addListener((observableValue, number, t1) -> csplitpane.getDividers().get(0).setPosition(FrontendPaths.DIVID_POS));}
