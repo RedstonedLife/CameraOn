@@ -156,7 +156,9 @@ public class $UI$01 {
         Text Area ptsct - portsToScan (portString)
         PingMethod<String> - selectedPinger
          */
-        
+        scannerConfig.selectedPinger = pingMethod.getValue();
+        scannerConfig.threadDelay = Integer.valueOf(tfs[0].getText());
+        scannerConfig
     }
 
     public static void u_08$1$1(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) {
