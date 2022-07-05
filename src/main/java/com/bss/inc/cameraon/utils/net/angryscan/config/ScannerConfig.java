@@ -87,7 +87,7 @@ public class ScannerConfig {
             j_.put("pingTimeout", preferences.getInt("pingTimeout", 20));
         } // Ping Timeout         pingTimeout           (Default 20 MS)             (int)
         if(!j_.has("pingCount")) {
-            j_.put("pingCount", 3);
+            j_.put("pingCount", preferences.getInt("pingCount", 3));
         } // Ping Count           pingCount             (Default 3 Probes/Packets)  (int)
         if(!j_.has("skipBroadcastAddress")) {
             j_.put("skipBroadcastAddress", true);
