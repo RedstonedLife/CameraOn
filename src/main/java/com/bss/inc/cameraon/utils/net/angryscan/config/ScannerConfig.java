@@ -81,7 +81,7 @@ public class ScannerConfig {
             j_.put("scanDeadHosts", preferences.getBoolean("scanDeadHosts", false));
         } // Scan Dead Hosts      scanDeadHosts         (Default false)             (bool)
         if(!j_.has("selectedPinger")) {
-            j_.put("selectedPinger", "pinger.arp");
+            j_.put("selectedPinger", preferences.get("selectedPinger", "pinger.arp"));
         } // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
         if(!j_.has("pingTimeout")) {
             j_.put("pingTimeout", 20);
