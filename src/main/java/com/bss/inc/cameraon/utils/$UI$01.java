@@ -145,7 +145,7 @@ public class $UI$01 {
             tfs[3].setText(String.valueOf(j_.getInt("pingTimeout")));
         } // Ping Timeout         pingTimeout           (Default 20 MS)             (int)
         if(!j_.has("pingCount")) {
-            tfs[2]
+            tfs[2].setText(String.valueOf(j_.getInt("pingCount")));
         } // Ping Count           pingCount             (Default 3 Probes/Packets)  (int)
         if(!j_.has("skipBroadcastAddress")) {
             j_.put("skipBroadcastAddress", preferences.getBoolean("skipBroadcastAddress", true));
