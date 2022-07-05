@@ -119,6 +119,15 @@ public class $UI$01 {
      */
     public static boolean u_08$1$3(String i) {return digitPattern.matcher(i).matches();}
 
+    /**
+     * 
+     * @param scannerConfig
+     * @param tfs
+     * @param chkbs
+     * @param ptsct
+     * @param pingMethod
+     */
+
     public static void u_08$1$1(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) {
         /*
         TextFields Array Layout
