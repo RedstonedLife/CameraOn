@@ -75,7 +75,7 @@ public class ScannerConfig {
             j_.put("threadDelay", preferences.getInt("threadDelay", 20));
         } // Thread Delay         threadDelay           (Default 20 MS)             (int)
         if(!j_.has("maxThreads")) {
-            j_.put("maxThreads", 255);
+            j_.put("maxThreads", preferences.getInt("threadDelay", 20));
         } // Max Threads          maxThreads            (Default 255 Threads)       (int)
         if(!j_.has("scanDeadHosts")) {
             j_.put("scanDeadHosts", false);
