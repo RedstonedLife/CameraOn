@@ -131,7 +131,7 @@ public class $UI$01 {
             tfs[0].setText(String.valueOf(j_.getInt("threadDelay")));
         } // Thread Delay         threadDelay           (Default 20 MS)             (int)
         if(!j_.has("maxThreads")) {
-            j_.put("maxThreads", preferences.getInt("maxThreads", 255));
+            tfs[1].setText(String.valueOf(j_.getInt("maxThreads")));
         } // Max Threads          maxThreads            (Default 255 Threads)       (int)
         if(!j_.has("scanDeadHosts")) {
             j_.put("scanDeadHosts", preferences.getBoolean("scanDeadHosts", false));
