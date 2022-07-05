@@ -107,7 +107,8 @@ public class $UI$01 {
 
     public static void u_08$1$1(TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) {
         /*
-        
+        TextFields Array Layout
+        0 - threadsDelay
          */
     }
 
