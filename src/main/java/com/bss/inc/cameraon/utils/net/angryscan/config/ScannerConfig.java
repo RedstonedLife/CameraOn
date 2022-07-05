@@ -12,7 +12,7 @@ public class ScannerConfig {
 
     public int maxThreads = 255; // DEFAULT VALUE 255
     public int threadDelay = 20; // DELAY (MS) DEFAULT VALUE 20
-    public boolean scanDeadHosts = false; // DEFAULT FALSE
+    public boolean scanDeadHosts = true; // DEFAULT FALSE
     public String selectedPinger = "pinger.arp"; // DEFAULT VALUE pinger.arp for ARP (LAN only) Pinging Method
     public int pingTimeout = 20; // DEFAULT (MS) 20
     public int pingCount = 3; // DEFAULT 3 PING PROBES (PACKETS TO SEND)
