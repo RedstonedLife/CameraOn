@@ -32,7 +32,7 @@ public class PreferenceDisplayB implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        $UI$01.u_08$1$2(new TextField[]{threadsDelayTf,});
+        $UI$01.u_08$1$2(new TextField[]{threadsDelayTf,maxT});
         asSceneBtn.setOnAction(e -> {MainClass.getWindowManager().changeDialogScene("preferencesDialog",MainClass.class.getResource(FrontendPaths.PREF_DISPLAY_AS_FXML));});
         displaySceneBtn.setOnAction(e -> {MainClass.getWindowManager().changeDialogScene("preferencesDialog",MainClass.class.getResource(FrontendPaths.PREF_DISPLAY_FXML));});
         initializeLanguage();
