@@ -111,7 +111,7 @@ public class $UI$01 {
         TextFields Array Layout
         0 - threadsDelay
         1 - maxThreads
-        2 - pingProbes
+        2 - pingCount
         3 - pingTimeout
         4 - defaultPortTimeout
         5 - minPortTimeout
