@@ -142,10 +142,10 @@ public class $UI$01 {
             pingMethod.setValue(pingMethod.getItems().get(pingMethod.getItems().indexOf(j_.get("selectedPinger"))));
         } // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
         if(!j_.has("pingTimeout")) {
-            tfs[3].setText();
+            tfs[3].setText(String.valueOf(j_.getInt("pingTimeout")));
         } // Ping Timeout         pingTimeout           (Default 20 MS)             (int)
         if(!j_.has("pingCount")) {
-            j_.put("pingCount", preferences.getInt("pingCount", 3));
+            tfs[2]
         } // Ping Count           pingCount             (Default 3 Probes/Packets)  (int)
         if(!j_.has("skipBroadcastAddress")) {
             j_.put("skipBroadcastAddress", preferences.getBoolean("skipBroadcastAddress", true));
