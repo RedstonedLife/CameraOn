@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
@@ -18,7 +19,8 @@ public class PreferenceDisplayB implements Initializable {
     @FXML private void closeApp(ActionEvent event) {$UI$01.u_06$1$1();}
     @FXML private Button btnClose,asSceneBtn,displaySceneBtn;
 
-    @FXML private TextField threadsDelayTf,threadsMaxTf,defaultPortTimeoutTf,minAdptdConTimeoutTf,pingProbesTf,pingTimeoutTf
+    @FXML private TextField threadsDelayTf,threadsMaxTf,defaultPortTimeoutTf,minAdptdConTimeoutTf,pingProbesTf,pingTimeoutTf;
+    @FXML private TextArea 
 
     private void initializeLanguage() {
         displaySceneBtn.setText(tl("preferences.btn.display.text"));
