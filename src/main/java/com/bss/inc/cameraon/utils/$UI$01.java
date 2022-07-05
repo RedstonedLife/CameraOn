@@ -112,7 +112,7 @@ public class $UI$01 {
     }
 
     /**
-     * 
+     * u_08$1$3 Validates if a string contains any digit
     @param i String to validate
      */
     public static boolean u_08$1$3(String i) {return digitPattern.matcher(i).matches();}
