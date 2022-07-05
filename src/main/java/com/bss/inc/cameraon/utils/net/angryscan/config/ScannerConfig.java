@@ -72,7 +72,7 @@ public class ScannerConfig {
     public void onExit() throws FileNotFoundException {
         JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
         if(!j_.has("threadDelay")) {
-            j_.put("threadDelay", 20);
+            j_.put("threadDelay", preferences.getInt(""));
         } // Thread Delay         threadDelay           (Default 20 MS)             (int)
         if(!j_.has("maxThreads")) {
             j_.put("maxThreads", 255);
