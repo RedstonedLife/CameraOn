@@ -128,7 +128,7 @@ public class $UI$01 {
     public static void u_08$1$2(TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) {
         JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
         if(!j_.has("threadDelay")) {
-            j_.put("threadDelay", preferences.getInt("threadDelay", 20));
+            tfs[0].setText();
         } // Thread Delay         threadDelay           (Default 20 MS)             (int)
         if(!j_.has("maxThreads")) {
             j_.put("maxThreads", preferences.getInt("maxThreads", 255));
