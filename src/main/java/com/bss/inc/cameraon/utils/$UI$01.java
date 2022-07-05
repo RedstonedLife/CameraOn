@@ -16,6 +16,7 @@ import java.io.FileNotFoundException;
 import java.util.Map;
 
 public class $UI$01 {
+    public static 
     public static void u_00$1$1(SplitPane csplitpane) {csplitpane.getDividers().get(0).positionProperty().addListener((observableValue, number, t1) -> csplitpane.getDividers().get(0).setPosition(FrontendPaths.DIVID_POS));}
     public static void u_01$1$1(SplitPane csplitpane, Button[] buttons) {
         u_00$1$1(csplitpane);
@@ -127,7 +128,7 @@ public class $UI$01 {
          */
         tfs[0].textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
-            
+
         });
 
     }
