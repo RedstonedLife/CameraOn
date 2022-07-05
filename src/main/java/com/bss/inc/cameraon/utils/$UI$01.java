@@ -3,18 +3,15 @@ package com.bss.inc.cameraon.utils;
 import com.bss.inc.cameraon.Launcher;
 import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.constants.FrontendPaths;
-import javafx.beans.InvalidationListener;
-import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
-import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
 
 import java.io.FileNotFoundException;
-import java.util.*;
+import java.util.Map;
 
 public class $UI$01 {
     public static void u_00$1$1(SplitPane csplitpane) {csplitpane.getDividers().get(0).positionProperty().addListener((observableValue, number, t1) -> csplitpane.getDividers().get(0).setPosition(FrontendPaths.DIVID_POS));}
@@ -130,178 +127,7 @@ public class $UI$01 {
     }
 
     public static void u_08$1$2(TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) {
-        pingMethod.setItems(new ObservableList<String>() {
-            @Override
-            public void addListener(ListChangeListener<? super String> listChangeListener) {
-                
-            }
-
-            @Override
-            public void removeListener(ListChangeListener<? super String> listChangeListener) {
-
-            }
-
-            @Override
-            public boolean addAll(String... strings) {
-                return false;
-            }
-
-            @Override
-            public boolean setAll(String... strings) {
-                return false;
-            }
-
-            @Override
-            public boolean setAll(Collection<? extends String> collection) {
-                return false;
-            }
-
-            @Override
-            public boolean removeAll(String... strings) {
-                return false;
-            }
-
-            @Override
-            public boolean retainAll(String... strings) {
-                return false;
-            }
-
-            @Override
-            public void remove(int i, int i1) {
-
-            }
-
-            @Override
-            public int size() {
-                return 0;
-            }
-
-            @Override
-            public boolean isEmpty() {
-                return false;
-            }
-
-            @Override
-            public boolean contains(Object o) {
-                return false;
-            }
-
-            @NotNull
-            @Override
-            public Iterator<String> iterator() {
-                return null;
-            }
-
-            @NotNull
-            @Override
-            public Object[] toArray() {
-                return new Object[0];
-            }
-
-            @NotNull
-            @Override
-            public <T> T[] toArray(@NotNull T[] a) {
-                return null;
-            }
-
-            @Override
-            public boolean add(String s) {
-                return false;
-            }
-
-            @Override
-            public boolean remove(Object o) {
-                return false;
-            }
-
-            @Override
-            public boolean containsAll(@NotNull Collection<?> c) {
-                return false;
-            }
-
-            @Override
-            public boolean addAll(@NotNull Collection<? extends String> c) {
-                return false;
-            }
-
-            @Override
-            public boolean addAll(int index, @NotNull Collection<? extends String> c) {
-                return false;
-            }
-
-            @Override
-            public boolean removeAll(@NotNull Collection<?> c) {
-                return false;
-            }
-
-            @Override
-            public boolean retainAll(@NotNull Collection<?> c) {
-                return false;
-            }
-
-            @Override
-            public void clear() {
-
-            }
-
-            @Override
-            public String get(int index) {
-                return null;
-            }
-
-            @Override
-            public String set(int index, String element) {
-                return null;
-            }
-
-            @Override
-            public void add(int index, String element) {
-
-            }
-
-            @Override
-            public String remove(int index) {
-                return null;
-            }
-
-            @Override
-            public int indexOf(Object o) {
-                return 0;
-            }
-
-            @Override
-            public int lastIndexOf(Object o) {
-                return 0;
-            }
-
-            @NotNull
-            @Override
-            public ListIterator<String> listIterator() {
-                return null;
-            }
-
-            @NotNull
-            @Override
-            public ListIterator<String> listIterator(int index) {
-                return null;
-            }
-
-            @NotNull
-            @Override
-            public List<String> subList(int fromIndex, int toIndex) {
-                return null;
-            }
-
-            @Override
-            public void addListener(InvalidationListener invalidationListener) {
-
-            }
-
-            @Override
-            public void removeListener(InvalidationListener invalidationListener) {
-
-            }
-        });
+        pingMethod.getItems().addAll("");
         JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
         if(!j_.has("threadDelay")) {
             tfs[0].setText(String.valueOf(j_.getInt("threadDelay")));
