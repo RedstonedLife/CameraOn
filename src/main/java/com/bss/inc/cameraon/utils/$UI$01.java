@@ -134,10 +134,10 @@ public class $UI$01 {
         Text Area ptsct - portsToScan (portString)
         PingMethod<String> - selectedPinger
          */
-        tfs[0].textProperty().addListener((observable, oldValue, newValue) -> {
-            if(oldValue == null || oldValue == "") {return;}
-            if(!u_08$1$3(newValue)) {tfs[0].setText(oldValue);}
-        });
+        for (:
+             ) {
+            
+        }
 
     }
 
