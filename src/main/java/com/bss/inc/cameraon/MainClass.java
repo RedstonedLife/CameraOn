@@ -44,8 +44,7 @@ public class MainClass extends Application {
                         clazz.getResource(FrontendPaths.CONFIRMATION_FXML), clazz.getResource(FrontendPaths.LANG_CONFIRMATION_FXML)
                 }), // ConfirmationDialog URL[] End
                 new Dialog(500d, 800d, "preferencesDialog", new URL[]{ // PreferencesDialog URL[] Start
-                        clazz.getResource(FrontendPaths.PREF_DISPLAY_FXML), clazz.getResource(FrontendPaths.PREF_DISPLAY_AS_FXML),
-                        clazz.getResource(FrontendPaths.PREF_DISPLAY_CBS_FXML), clazz.getResource(FrontendPaths.PREF_DISPLAY_IBS_FXML)
+                        clazz.getResource(FrontendPaths.PREF_DISPLAY_FXML), clazz.getResource(FrontendPaths.PREF_DISPLAY_AS_FXML)
                 }), // PreferencesDialog URL[] End
                 new Dialog(350d, 500d, "popUpWindow", new URL[] { // PopUpWindow URL[] Start
                         clazz.getResource(FrontendPaths.POP_FAQ_FXML),clazz.getResource(FrontendPaths.POP_TPL_FXML),
