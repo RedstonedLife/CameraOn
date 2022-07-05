@@ -4,6 +4,7 @@ import com.bss.inc.cameraon.Launcher;
 import com.bss.inc.cameraon.i18n.I18n;
 import org.json.JSONObject;
 
+import java.io.FileNotFoundException;
 import java.util.prefs.Preferences;
 
 public class ScannerConfig {
@@ -68,7 +69,7 @@ public class ScannerConfig {
         preferences.put("notScannedText", notScannedText);
     }
 
-    public void onExit() {
+    public void onExit() throws FileNotFoundException {
         JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
         if(!j_.has("threadDelay")) {
             j_.put("threadDelay", 20);
