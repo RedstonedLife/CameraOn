@@ -163,7 +163,7 @@ public class $UI$01 {
                 if(oldValue == null || oldValue == "") {return;}
                 if(!u_08$1$3(newValue)) {textField.setText(oldValue);}
                 if((newValue.length() > 5)) {textField.setText(oldValue);}
-                if(!u_08$1$4(newValue.charAt(newValue.length()-1),newValue,))
+                if(!u_08$1$4(newValue.charAt(newValue.length()-1),newValue,newValue.length()-oldValue.length()+1));
             });
         }
 
