@@ -134,6 +134,7 @@ public class $UI$01 {
             System.out.println("REACHED!");
             if (!j_.has("threadDelay")) {
                 tfs[0].setText(String.valueOf(j_.getInt("threadDelay")));
+                tfs[0].setUserData("Fuck Off");
             } // Thread Delay         threadDelay           (Default 20 MS)             (int)
             if (!j_.has("maxThreads")) {
                 tfs[1].setText(String.valueOf(j_.getInt("maxThreads")));
