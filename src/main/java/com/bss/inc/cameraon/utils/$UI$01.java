@@ -136,7 +136,7 @@ public class $UI$01 {
          */
         tfs[0].textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
-            if(!u_08$1$3())
+            if(!u_08$1$3(newValue)) {
         });
 
     }
