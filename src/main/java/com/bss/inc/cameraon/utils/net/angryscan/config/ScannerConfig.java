@@ -39,7 +39,7 @@ public class ScannerConfig {
         selectedPinger = preferences.get("selectedPinger", Platform.WINDOWS ? "pinger.windows" : "pinger.arp");
         pingTimeout = preferences.getInt("pingTimeout", 2000);
         pingCount = preferences.getInt("pingCount", 3);
-        skipBroadcastAddresses = preferences.getBoolean("skipBroadcastAddresses", true);
+        skipBroadcastAddresses = preferences.getBoolean("skipBroadcastAddress", true);
         portTimeout = preferences.getInt("portTimeout", 2000);
         adaptPortTimeout = preferences.getBoolean("adaptPortTimeout", Platform.CRIPPLED_WINDOWS);
         minPortTimeout = preferences.getInt("minPortTimeout", 100);
@@ -59,7 +59,7 @@ public class ScannerConfig {
         preferences.put("selectedPinger", selectedPinger);
         preferences.putInt("pingTimeout", pingTimeout);
         preferences.putInt("pingCount", pingCount);
-        preferences.putBoolean("skipBroadcastAddresses", skipBroadcastAddresses);
+        preferences.putBoolean("skipBroadcastAddress", skipBroadcastAddresses);
         preferences.putInt("portTimeout", portTimeout);
         preferences.putBoolean("adaptPortTimeout", adaptPortTimeout);
         preferences.putInt("minPortTimeout", minPortTimeout);
