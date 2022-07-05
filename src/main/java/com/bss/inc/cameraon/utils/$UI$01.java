@@ -151,7 +151,7 @@ public class $UI$01 {
             chkbs[1].setSelected(j_.getBoolean("skipBroadcastAddress"));
         } // Skip Broadcast IP    skipBroadcastAddress  (Default true)              (bool)
         if(!j_.has("portTimeout")) {
-            tfs[]
+            tfs[4].setText(String.valueOf(j_.getInt("")));
         } // Port Timeout         portTimeout           (Default 2000 MS, 2s)       (int)
         if(!j_.has("adaptPortTimeout")) {
             j_.put("adaptPortTimeout", preferences.getBoolean("adaptPortTimeout", true));
