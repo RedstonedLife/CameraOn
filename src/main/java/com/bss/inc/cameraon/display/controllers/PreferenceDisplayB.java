@@ -22,7 +22,7 @@ public class PreferenceDisplayB implements Initializable {
 
     @FXML private TextField threadsDelayTf,threadsMaxTf,defaultPortTimeoutTf,minAdptdConTimeoutTf,pingProbesTf,pingTimeoutTf;
     @FXML private TextArea portToScanTa;
-    @FXML private Checkbox 
+    @FXML private Checkbox pingMethodCb,
 
     private void initializeLanguage() {
         displaySceneBtn.setText(tl("preferences.btn.display.text"));
