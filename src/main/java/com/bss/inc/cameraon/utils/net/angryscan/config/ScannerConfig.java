@@ -102,7 +102,7 @@ public class ScannerConfig {
             j_.put("minPortTimeout", preferences.getInt("minPortTimeout", 100));
         } // Min Port Timeout     minPortTimeout        (Default 100 MS, 0.1s)      (int)
         if(!j_.has("portString")) {
-            j_.put("portString", "80,443,8080");
+            j_.put("portString", preferences.get("portString", ""));
         } // Port String          portString            (Default "80,443,8080")     (string)
         if(!j_.has("useRequestedPorts")) {
             j_.put("useRequestedPorts", true);
