@@ -164,7 +164,7 @@ public class $UI$01 {
                 if((newValue.length() > 5)) {textField.setText(oldValue);}
             });
         }
-        ptsct.textProperty().addListener((observable, oldValue, nv) -> {
+        ptsct.textProperty().addListener((observable, oldValue, newValue) -> {
             if(!u_08$1$4(newValue.charAt(newValue.length()-1),newValue,newValue.length()-oldValue.length()+1)){textField.setText(oldValue);}
         });
 
