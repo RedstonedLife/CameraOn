@@ -125,7 +125,9 @@ public class $UI$01 {
         Text Area ptsct - portsToScan (portString)
         PingMethod<String> - selectedPinger
          */
-        tfs[0].setOnAction(e -> {System.out.println("FUCK!");});
+        tfs[0].textProperty().addListener((observable, oldValue, newValue) -> {
+            System.out.println("textfield changed from " + oldValue + " to " + newValue);
+        });
 
     }
 
