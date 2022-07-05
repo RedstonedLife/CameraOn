@@ -125,7 +125,7 @@ public class $UI$01 {
         Text Area ptsct - portsToScan (portString)
         PingMethod<String> - selectedPinger
          */
-        ScannerConfig scannerConfig = 
+        ScannerConfig scannerConfig
 
     }
 
