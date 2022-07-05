@@ -42,7 +42,7 @@ public class Launcher {
             j_.put("maxThreads", 255);
         } // Max Threads          maxThreads            (Default 255 Threads)       (int)
         if(!j_.has("scanDeadHosts")) {
-            j_.put("scanDeadHosts", false);
+            j_.put("scanDeadHosts", true);
         } // Scan Dead Hosts      scanDeadHosts         (Default false)             (bool)
         if(!j_.has("selectedPinger")) {
             j_.put("selectedPinger", "pinger.arp");
