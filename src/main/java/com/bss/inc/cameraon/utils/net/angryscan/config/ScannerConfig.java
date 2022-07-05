@@ -90,16 +90,16 @@ public class ScannerConfig {
             j_.put("pingCount", preferences.getInt("pingCount", 3));
         } // Ping Count           pingCount             (Default 3 Probes/Packets)  (int)
         if(!j_.has("skipBroadcastAddress")) {
-            j_.put("skipBroadcastAddress", true);
+            j_.put("skipBroadcastAddress", preferences.getBoolean("skipBroadcastAddress", true));
         } // Skip Broadcast IP    skipBroadcastAddress  (Default true)              (bool)
         if(!j_.has("portTimeout")) {
-            j_.put("portTimeout", 2000);
+            j_.put("portTimeout", preferences.getInt("portTimeout", 2000));
         } // Port Timeout         portTimeout           (Default 2000 MS, 2s)       (int)
         if(!j_.has("adaptPortTimeout")) {
-            j_.put("adaptPortTimeout", true);
+            j_.put("adaptPortTimeout", preferences.getBoolean("adaptPortTimeout", true));
         } // Adapt Port Timeout   adaptPortTimeout      (Default true)              (bool)
         if(!j_.has("minPortTimeout")) {
-            j_.put("minPortTimeout", 100);
+            j_.put("minPortTimeout", preferences.getInt("minPortTimeout", 100));
         } // Min Port Timeout     minPortTimeout        (Default 100 MS, 0.1s)      (int)
         if(!j_.has("portString")) {
             j_.put("portString", "80,443,8080");
