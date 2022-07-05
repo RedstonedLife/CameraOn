@@ -131,6 +131,7 @@ public class $UI$01 {
         try {
             //pingMethod.getItems().addAll("pinger.windows", "pinger.udp", "pinger.tcp", "pinger.combined", "pinger.java", "pinger.arp");
             JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
+            System.out.println("REACHED!");
             if (!j_.has("threadDelay")) {
                 tfs[0].setText(String.valueOf(j_.getInt("threadDelay")));
             } // Thread Delay         threadDelay           (Default 20 MS)             (int)
