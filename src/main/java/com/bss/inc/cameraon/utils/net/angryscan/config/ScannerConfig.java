@@ -41,7 +41,7 @@ public class ScannerConfig {
         pingCount = preferences.getInt("pingCount", 3);
         skipBroadcastAddresses = preferences.getBoolean("skipBroadcastAddresses", true);
         portTimeout = preferences.getInt("portTimeout", 2000);
-        adaptPortTimeout = preferences.getBoolean("adaptPortTimeout", !Platform.CRIPPLED_WINDOWS);
+        adaptPortTimeout = preferences.getBoolean("adaptPortTimeout", Platform.CRIPPLED_WINDOWS);
         minPortTimeout = preferences.getInt("minPortTimeout", 100);
         portString = preferences.get("portString", "80,443,8080");
         useRequestedPorts = preferences.getBoolean("useRequestedPorts", true);
