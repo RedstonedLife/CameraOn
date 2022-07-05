@@ -23,7 +23,8 @@ public class PreferenceDisplayB implements Initializable {
     @FXML private TextArea portToScanTa;
     @FXML private ChoiceBox<String> pingMethodCb;
     @FXML private CheckBox scanDeadHostsCHKb,skipUnassignedCHKb,adaptTimeoutToPingCHKb,forEachHostCHKb;
-    @FXML private void okApp(ActionEvent event) {$UI$01.u_08$1$5();}
+    @FXML private void okApp(ActionEvent event) {$UI$01.u_08$1$5(new TextField[]{threadsDelayTf,threadsMaxTf,pingProbesTf,pingTimeoutTf,defaultPortTimeoutTf,minAdptdConTimeoutTf},
+            new CheckBox[]{scanDeadHostsCHKb,skipUnassignedCHKb,adaptTimeoutToPingCHKb,forEachHostCHKb},portToScanTa,pingMethodCb);$UI$01.u_06$1$1();}
 
     private void initializeLanguage() {
         displaySceneBtn.setText(tl("preferences.btn.display.text"));
