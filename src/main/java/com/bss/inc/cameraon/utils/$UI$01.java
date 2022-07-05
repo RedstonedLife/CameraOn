@@ -125,10 +125,10 @@ public class $UI$01 {
      */
     public static boolean u_08$1$4(String text) {
             // previous
-            char pc = 0;
+            char c = 0;
             for (int i=0; i<text.length(); i++) {
-                pc = text.charAt(i);
-                if (!Character.isWhitespace(pc))
+                c = text.charAt(i);
+                if (!Character.isWhitespace(c))
                     break;
             }
 
@@ -137,8 +137,6 @@ public class $UI$01 {
             return isPrevDigit && (isCurDigit || c == '-' || c == ',') ||
                     isCurDigit && (pc == '-' || pc == ',' || pc == 0) ||
                     Character.isWhitespace(c) && pc == ',';
-
-        }
     }
 
     public static void u_08$1$1(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) {
