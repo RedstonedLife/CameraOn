@@ -160,7 +160,7 @@ public class $UI$01 {
             tfs[5].setText(String.valueOf(j_.getInt("minPortTimeout")));
         } // Min Port Timeout     minPortTimeout        (Default 100 MS, 0.1s)      (int)
         if(!j_.has("portString")) {
-            j_.put("portString", preferences.get("portString", "80,443,8080"));
+            ptsct.setText();
         } // Port String          portString            (Default "80,443,8080")     (string)
         if(!j_.has("useRequestedPorts")) {
             j_.put("useRequestedPorts", preferences.getBoolean("useRequestedPorts", true));
