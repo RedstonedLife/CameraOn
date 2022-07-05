@@ -125,9 +125,7 @@ public class $UI$01 {
         Text Area ptsct - portsToScan (portString)
         PingMethod<String> - selectedPinger
          */
-        tfs[0].setOnAction(e -> {
-            
-        });
+        tfs[0].setOnInputMethodTextChanged(e -> {System.out.println("FUCK!");});
 
     }
 
