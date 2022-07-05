@@ -140,7 +140,22 @@ public class $UI$01 {
 
     }
     public static void u_08$1$5(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) {
-        
+        /*
+        TextFields Array Layout
+        0 - threadsDelay
+        1 - maxThreads
+        2 - pingCount
+        3 - pingTimeout
+        4 - defaultPortTimeout
+        5 - minPortTimeout
+        Checkboxes Array Layout
+        0 - scanDeadHosts
+        1 - skipUnassigned
+        2 - adaptPortTimeout
+        3 - useRequestedPorts
+        Text Area ptsct - portsToScan (portString)
+        PingMethod<String> - selectedPinger
+         */
     }
 
     public static void u_08$1$1(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) {
