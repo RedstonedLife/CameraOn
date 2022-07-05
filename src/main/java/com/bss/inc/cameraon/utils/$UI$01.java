@@ -157,7 +157,7 @@ public class $UI$01 {
             chkbs[2].setSelected(j_.getBoolean("adaptPortTimeout"));
         } // Adapt Port Timeout   adaptPortTimeout      (Default true)              (bool)
         if(!j_.has("minPortTimeout")) {
-            j_.put("minPortTimeout", preferences.getInt("minPortTimeout", 100));
+            tfs[]
         } // Min Port Timeout     minPortTimeout        (Default 100 MS, 0.1s)      (int)
         if(!j_.has("portString")) {
             j_.put("portString", preferences.get("portString", "80,443,8080"));
