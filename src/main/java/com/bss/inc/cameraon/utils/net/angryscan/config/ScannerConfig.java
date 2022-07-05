@@ -65,4 +65,8 @@ public class ScannerConfig {
         preferences.put("notAvailableText", notAvailableText);
         preferences.put("notScannedText", notScannedText);
     }
+
+    public void onExit() {
+        
+    }
 }
