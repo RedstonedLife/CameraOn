@@ -123,7 +123,7 @@ public class $UI$01 {
      * @param i
      * @return
      */
-    public static boolean u_08$1$4(char c, String text, int caretPos) {
+    public static boolean u_08$1$4(String text) {
             // previous
             char pc = 0;
             for (int i = caretPos-1; i >= 0; i--) {
