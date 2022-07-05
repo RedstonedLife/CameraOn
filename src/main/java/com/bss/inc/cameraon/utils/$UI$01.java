@@ -165,7 +165,7 @@ public class $UI$01 {
             });
         }
         ptsct.textProperty().addListener((observable, oldValue, newValue) -> {
-            if(!u_08$1$4(newValue.charAt(newValue.length()-1),newValue,newValue.length()-oldValue.length()+1)){textField.setText(oldValue);}
+            if(!u_08$1$4(newValue.charAt(newValue.length()-1),newValue,newValue.length()-oldValue.length()+1)){ptsct.setText(oldValue);}
         });
 
     }
