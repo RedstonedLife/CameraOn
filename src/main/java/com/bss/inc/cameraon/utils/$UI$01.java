@@ -139,7 +139,7 @@ public class $UI$01 {
             chkbs[0].setSelected(j_.getBoolean("scanDeadHosts"));
         } // Scan Dead Hosts      scanDeadHosts         (Default false)             (bool)
         if(!j_.has("selectedPinger")) {
-            pingMethod.setValue(pingMethod.getItems().get(pingMethod.getItems().indexOf(j_.get("selectedPinger"))));
+            pingMethod.setValue(pingMethod.getItems().get(pingMethod.getItems().indexOf(j_.getString("selectedPinger"))));
         } // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
         if(!j_.has("pingTimeout")) {
             tfs[3].setText(String.valueOf(j_.getInt("pingTimeout")));
@@ -160,7 +160,7 @@ public class $UI$01 {
             tfs[5].setText(String.valueOf(j_.getInt("minPortTimeout")));
         } // Min Port Timeout     minPortTimeout        (Default 100 MS, 0.1s)      (int)
         if(!j_.has("portString")) {
-            ptsct.setText();
+            ptsct.setText(j_.getString("portString"));
         } // Port String          portString            (Default "80,443,8080")     (string)
         if(!j_.has("useRequestedPorts")) {
             j_.put("useRequestedPorts", preferences.getBoolean("useRequestedPorts", true));
