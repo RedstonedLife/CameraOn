@@ -131,43 +131,40 @@ public class $UI$01 {
         try {
             //pingMethod.getItems().addAll("pinger.windows", "pinger.udp", "pinger.tcp", "pinger.combined", "pinger.java", "pinger.arp");
             JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
-            System.out.println("REACHED!");
-            System.out.println(j_.toString());
-            if (!j_.has("threadDelay")) {
+            if (j_.has("threadDelay")) {
                 tfs[0].setText(String.valueOf(j_.getInt("threadDelay")));
-                tfs[0].setText("Fuck Off");
             } // Thread Delay         threadDelay           (Default 20 MS)             (int)
-            if (!j_.has("maxThreads")) {
+            if (j_.has("maxThreads")) {
                 tfs[1].setText(String.valueOf(j_.getInt("maxThreads")));
             } // Max Threads          maxThreads            (Default 255 Threads)       (int)
-            if (!j_.has("scanDeadHosts")) {
+            if (j_.has("scanDeadHosts")) {
                 chkbs[0].setSelected(j_.getBoolean("scanDeadHosts"));
             } // Scan Dead Hosts      scanDeadHosts         (Default false)             (bool)
-            if (!j_.has("selectedPinger")) {
+            if (j_.has("selectedPinger")) {
                 pingMethod.setValue(pingMethod.getItems().get(pingMethod.getItems().indexOf(j_.getString("selectedPinger"))));
             } // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
-            if (!j_.has("pingTimeout")) {
+            if (j_.has("pingTimeout")) {
                 tfs[3].setText(String.valueOf(j_.getInt("pingTimeout")));
             } // Ping Timeout         pingTimeout           (Default 20 MS)             (int)
-            if (!j_.has("pingCount")) {
+            if (j_.has("pingCount")) {
                 tfs[2].setText(String.valueOf(j_.getInt("pingCount")));
             } // Ping Count           pingCount             (Default 3 Probes/Packets)  (int)
-            if (!j_.has("skipBroadcastAddress")) {
+            if (j_.has("skipBroadcastAddress")) {
                 chkbs[1].setSelected(j_.getBoolean("skipBroadcastAddress"));
             } // Skip Broadcast IP    skipBroadcastAddress  (Default true)              (bool)
-            if (!j_.has("portTimeout")) {
+            if (j_.has("portTimeout")) {
                 tfs[4].setText(String.valueOf(j_.getInt("portTimeout")));
             } // Port Timeout         portTimeout           (Default 2000 MS, 2s)       (int)
-            if (!j_.has("adaptPortTimeout")) {
+            if (j_.has("adaptPortTimeout")) {
                 chkbs[2].setSelected(j_.getBoolean("adaptPortTimeout"));
             } // Adapt Port Timeout   adaptPortTimeout      (Default true)              (bool)
-            if (!j_.has("minPortTimeout")) {
+            if (j_.has("minPortTimeout")) {
                 tfs[5].setText(String.valueOf(j_.getInt("minPortTimeout")));
             } // Min Port Timeout     minPortTimeout        (Default 100 MS, 0.1s)      (int)
-            if (!j_.has("portString")) {
+            if (j_.has("portString")) {
                 ptsct.setText(j_.getString("portString"));
             } // Port String          portString            (Default "80,443,8080")     (string)
-            if (!j_.has("useRequestedPorts")) {
+            if (j_.has("useRequestedPorts")) {
                 chkbs[3].setSelected(j_.getBoolean("useRequestedPorts"));
             } // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
             return;
