@@ -114,7 +114,8 @@ public class $UI$01 {
         3 - pingTimeout
         4 - defaultPortTimeout
         5 - minPortTimeout
-        
+        Checkboxes Array Layout
+        0 - 
          */
     }
 
