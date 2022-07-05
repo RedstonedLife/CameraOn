@@ -123,7 +123,24 @@ public class $UI$01 {
      * @param i
      * @return
      */
-    public static boolean u_08$1$4(String i) {return portPattern.matcher(i).matches();}
+    public static boolean u_08$1$4(String i) {
+        boolean validateChar(char c, String text, int caretPos) {
+            // previous
+            char pc = 0;
+            for (int i = caretPos-1; i >= 0; i--) {
+                pc = text.charAt(i);
+                if (!Character.isWhitespace(pc))
+                    break;
+            }
+
+            boolean isCurDigit = c >= '0' && c <= '9';
+            boolean isPrevDigit = pc >= '0' && pc <= '9';
+            return isPrevDigit && (isCurDigit || c == '-' || c == ',') ||
+                    isCurDigit && (pc == '-' || pc == ',' || pc == 0) ||
+                    Character.isWhitespace(c) && pc == ',';
+
+        }
+    }
 
     public static void u_08$1$1(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) {
         /*
