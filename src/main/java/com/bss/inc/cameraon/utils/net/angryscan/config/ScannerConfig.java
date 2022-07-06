@@ -160,7 +160,7 @@ public class ScannerConfig {
         Launcher.SettingsContainer.setValue("scanSettings", j_);
         j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanResultDisplay");
         if(j_.has("displayResult")) {
-            j_.put("displayResult", preferences.getBoolean("useRequestedPorts", true));
+            j_.put("displayResult", preferences.getBoolean("displayResult", true));
         }
         if(j_.has("valueNotAvailable")) {
             j_.put("valueNotAvailable", "[n/a]");
