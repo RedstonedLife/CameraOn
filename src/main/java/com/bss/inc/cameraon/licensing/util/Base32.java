@@ -37,7 +37,7 @@ public class Base32 {
                 if (b + 1 < bytes.length) {
                     bool = (bytes[b + 1] >= 0) ? bytes[b + 1] : (bytes[b + 1] + 256);
                 } else {
-                    bool = false;
+                    bool = 0;
                 }
                 j &= 255 >> i;
                 i = (i + 5) % 8;
