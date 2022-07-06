@@ -82,7 +82,8 @@ public class ScannerConfig {
                 j_.getInt("portTimeout"),
                 j_.getBoolean("adaptPortTimeout"),
                 j_.getInt("minPortTimeout"),
-                j_.get
+                j_.getString("portString"),
+                
         };
     }
 
