@@ -247,7 +247,7 @@ public class $UI$01 {
             } // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
             return;
         } catch (Exception e) {
-            Logger.getLogger("BNC").error("An error occurred while trying to ");
+            Logger.getLogger("BNC").error("An error occurred while trying to set the ");
         }
     }
 
