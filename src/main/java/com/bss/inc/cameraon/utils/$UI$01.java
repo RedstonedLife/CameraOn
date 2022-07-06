@@ -271,7 +271,6 @@ public class $UI$01 {
                 case ALIVE -> {rbs[0].setSelected(false);rbs[1].setSelected(true);rbs[2].setSelected(false);}
                 case OPEN_PORTS_ONLY -> {rbs[0].setSelected(false);rbs[1].setSelected(false);rbs[2].setSelected(true);}
             }
-            j_.put("displayResult", preferences.get("displayResult", "ALL"));
         }
         if(j_.has("valueNotAvailable")) {
             j_.put("valueNotAvailable", preferences.get("notAvailableText", "[n/a]"));
