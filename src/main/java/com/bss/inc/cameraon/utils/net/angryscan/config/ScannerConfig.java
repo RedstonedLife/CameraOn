@@ -50,7 +50,7 @@ public class ScannerConfig {
         threadDelay = useDefault ? (int) data[1] : preferences.getInt("threadDelay", 20);
         scanDeadHosts = useDefault ? (boolean) data[2] : preferences.getBoolean("scanDeadHosts", true);
         selectedPinger = useDefault ? (String) data[3] : preferences.get("selectedPinger", Platform.WINDOWS ? "pinger.windows" : "pinger.arp");
-        pingTimeout = useDefault ? (int) data[0] : preferences.getInt("pingTimeout", 2000);
+        pingTimeout = useDefault ? (int) data[4] : preferences.getInt("pingTimeout", 2000);
         pingCount = useDefault ? (int) data[0] : preferences.getInt("pingCount", 3);
         skipBroadcastAddresses = useDefault ? (int) data[0] : preferences.getBoolean("skipBroadcastAddress", true);
         portTimeout = useDefault ? (int) data[0] : preferences.getInt("portTimeout", 2000);
