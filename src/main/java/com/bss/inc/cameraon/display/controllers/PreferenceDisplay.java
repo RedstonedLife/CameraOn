@@ -37,10 +37,9 @@ public class PreferenceDisplay implements Initializable {
     @FXML private void okApp(ActionEvent event) {
         try {
             $UI$01.u_08$1$5();
+            $UI$01.u_09$1$3();
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
-        }
-        $UI$01.u_09$1$3();
         $UI$01.u_06$1$1();
     }
     /*private void initializeLanguage() {
