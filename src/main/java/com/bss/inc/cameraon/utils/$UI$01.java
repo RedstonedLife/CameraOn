@@ -128,7 +128,8 @@ public class $UI$01 {
 
     /**
      * Validates a port pattern i.e 3-50,5,600-8000
-     * @param i
+     * @param c char
+     * @param 
      * @return
      */
     public static boolean u_08$1$4(char c, String text, int caretPos) {
