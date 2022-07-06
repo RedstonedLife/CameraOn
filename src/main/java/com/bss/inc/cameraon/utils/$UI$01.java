@@ -267,7 +267,7 @@ public class $UI$01 {
         JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanResultDisplay");
         if(j_.has("displayResult")) {
             switch (DisplayResultType.fromString(j_.getString("displayResult"))) {
-                case ALL -> 
+                case ALL -> rbs[0].setSelected(true);
             }
             j_.put("displayResult", preferences.get("displayResult", "ALL"));
         }
