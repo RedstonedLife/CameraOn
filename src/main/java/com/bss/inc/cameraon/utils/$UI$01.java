@@ -251,7 +251,7 @@ public class $UI$01 {
         }
     }
 
-    public static void u_09$1$1(TextField[] tfs, CheckBox[] chkbs, RadioButton[] rbs) {
+    public static void u_09$1$1(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, RadioButton[] rbs) {
         /*
         TextField Array Layout
         0 - NotAvailable Text Field                  naTf
@@ -264,7 +264,7 @@ public class $UI$01 {
         1 - Alive Hosts (Responding to Pings) only - ALIVE
         2 - Hosts with open ports only             - OPEN_PORTS_ONLY
          */
-        
+
     }
 
     public static void u_09$1$2(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, RadioButton[] rbs) {
