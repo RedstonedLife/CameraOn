@@ -24,4 +24,6 @@ public class Crypto {
         a = key + key.substring(key.length() - 4, key.length()) + key.substring(0, 5);
         return a(data, a);
     }
+
+    
 }
