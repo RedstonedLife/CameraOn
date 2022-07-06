@@ -60,7 +60,6 @@ public class MainClass extends Application {
     @Override
     public void stop() throws FileNotFoundException {
         config.onExit();
-        System.out.println("Test");
     }
 
     public static void main(String[] args) {

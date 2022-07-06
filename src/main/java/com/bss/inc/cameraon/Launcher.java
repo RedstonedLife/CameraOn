@@ -18,7 +18,7 @@ public class Launcher {
 
     static {
         try {
-            SettingsContainer = new Settings("app.settings","{\"appLanguage\":0,\"cameraSettings\":{},\"scanSettings\":{}}");
+            SettingsContainer = new Settings("app.settings","{\"appLanguage\":0,\"cameraSettings\":{},\"scanSettings\":{},\"scanResultDisplay\":{}}");
         } catch (UnknownOS e) {
             throw new RuntimeException(e);
         }
@@ -73,6 +73,23 @@ public class Launcher {
             j_.put("useRequestedPorts", true);
         } // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
         SettingsContainer.setValue("scanSettings", j_);
+        j_ = (JSONObject) SettingsContainer.getValue("scanResultDisplay");
+        if(!j_.has("displayResult")) {
+            j_.put("displayResult", "ALL");
+        }
+        if(!j_.has("valueNotAvailable")) {
+            j_.put("valueNotAvailable", "[n/a]");
+        }
+        if(!j_.has("valueNotScanned")) {
+            j_.put("valueNotScanned", "[n/s]");
+        }
+        if(!j_.has("askConfirmationBeforeScan")) {
+            j_.put("askConfirmationBeforeScan", false);
+        }
+        if(!j_.has("showInfoDialogAfterScan")) {
+            j_.put("showInfoDialogAfterScan", false);
+        }
+        SettingsContainer.setValue("scanResultDisplay", j_);
         SettingsContainer.Save();
     }
 

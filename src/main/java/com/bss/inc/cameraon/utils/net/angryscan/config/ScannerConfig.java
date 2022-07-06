@@ -69,6 +69,20 @@ public class ScannerConfig {
         preferences.put("notScannedText", notScannedText);
     }
 
+    public Object[] LoadFromFile() {
+        JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
+        return new Object[] {
+                j_.getInt("maxThreads"),
+                j_.getInt("threadsDelay"),
+                j_.getBoolean("scanDeadHosts"),
+                j_.getString("selectedPinger"),
+                j_.getInt("pingTimeout"),
+                j_.getInt("pingCount"),
+                j_.getBoolean("skipBroadcastAddress"),
+                j_.getInt("portTimeout")
+        };
+    }
+
     public void onExit() throws FileNotFoundException {
         JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
         if(j_.has("threadDelay")) {
