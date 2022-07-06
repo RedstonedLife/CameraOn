@@ -17,4 +17,11 @@ public class Crypto {
             InvalidAlgorithmParameterException, UnsupportedEncodingException {
         return a(data, "SHA512withRSA");
     }
+
+    public static String encrypt(String data, String key) throws NoSuchAlgorithmException, NoSuchPaddingException,
+            InvalidKeySpecException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException,
+            InvalidAlgorithmParameterException, UnsupportedEncodingException {
+        a = key + key.substring(key.length() - 4, key.length()) + key.substring(0, 5);
+        return a(data, a);
+    }
 }
