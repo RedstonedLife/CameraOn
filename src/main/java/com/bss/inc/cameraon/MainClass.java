@@ -11,6 +11,7 @@ import com.bss.inc.cameraon.utils.net.angryscan.enums.DisplayResultType;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateMachine;
 import javafx.application.Application;
 import javafx.stage.Stage;
+import org.json.JSONObject;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -33,7 +34,7 @@ public class MainClass extends Application {
     public static DisplayResultType DisplayType;
 
     static {
-        DisplayType = Launcher.SettingsContainer.getValue("scanResultDisplay")
+        DisplayType = DisplayResultType.valueOf((JSONObject)Launcher.SettingsContainer.getValue("scanResultDisplay")
     }
 
     @Override
