@@ -26,6 +26,8 @@ public class ScannerConfig {
     public String notAvailableText;
     public String notScannedText;
 
+    public String 
+
     /**
      * Package local constructor.
      * It loads all preferences.
