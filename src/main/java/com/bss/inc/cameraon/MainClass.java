@@ -7,6 +7,7 @@ import com.bss.inc.cameraon.i18n.I18n;
 import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.utils.net.angryscan.config.Config;
 import com.bss.inc.cameraon.utils.net.angryscan.di.Injector;
+import com.bss.inc.cameraon.utils.net.angryscan.enums.DisplayResultType;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateMachine;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -29,7 +30,7 @@ public class MainClass extends Application {
 
     public static StateMachine getStateMachine() {return stateMachine;}
     public static Config getConfig() {return config;}
-    public static 
+    public static DisplayResultType
 
     @Override
     public void start(Stage stage) {
