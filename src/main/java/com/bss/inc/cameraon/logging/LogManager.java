@@ -20,7 +20,7 @@ public class LogManager {
         else {
             addLogger(name, new Logger(name));
         }
-        return null;
+        return loggers.get(name);
     }
 
 
