@@ -6,7 +6,6 @@ public enum DisplayResultType {
     OPEN_PORTS_ONLY("OPEN_PORTS_ONLY");
 
     private String string;
-
     DisplayResultType(String string) {this.string = string;}
     public DisplayResultType fromString(String string) {return DisplayResultType.valueOf(string);}
     @Override public String toString() {return super.toString();}
