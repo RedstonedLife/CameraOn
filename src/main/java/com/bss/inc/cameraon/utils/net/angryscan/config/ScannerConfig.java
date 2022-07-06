@@ -27,7 +27,9 @@ public class ScannerConfig {
     public String notAvailableText;
     public String notScannedText;
 
-    public DisplayResultType displayResultType
+    public DisplayResultType displayResultType;
+
+    public 
 
     /**
      * Package local constructor.
