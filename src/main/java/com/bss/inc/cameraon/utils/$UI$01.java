@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
 
 public class $UI$01 {
     public static final Pattern digitPattern;
-    static TextField[] tfs;
+    static TextField[] tfs,tfs;
     static CheckBox[] chkbs;
     static TextArea ptsct;
     static ChoiceBox<String> pingMethod;
