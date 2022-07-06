@@ -255,6 +255,7 @@ public class $UI$01 {
         TextField Array Layout
         0 - NotAvailable Text Field     naTf
         1 - NotScanned Text Field       nsTf
+        CheckBox Array Layout
          */
     }
 }
