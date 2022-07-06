@@ -71,7 +71,7 @@ public class ScannerConfig {
 
     public Object[] LoadFromFile() {
         JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
-        JSONObject 
+        JSONObject rj_ = (JSONObject) Launcher.SettingsContainer.getValue("")
         return new Object[] {
                 j_.getInt("maxThreads"),
                 j_.getInt("threadsDelay"),
