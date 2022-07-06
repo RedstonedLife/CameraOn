@@ -259,7 +259,7 @@ public class $UI$01 {
         0 - Ask Confirmation Before Scan    askConfirmBeforeScan
         1 - Show Info Dialog After Scan     showInfoAfterScan
         RadioButton Array Layout
-        0 - All Scanned Hosts -             DISPLAY ALL
+        0 - All Scanned Hosts -                      DISPLAY ALL
         1 - Alive Hosts (Responding to Pings) only - ALIVE
         2 - Hosts with open ports only
          */
