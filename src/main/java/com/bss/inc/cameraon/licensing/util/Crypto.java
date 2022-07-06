@@ -15,6 +15,11 @@ import java.security.spec.InvalidKeySpecException;
 
 public class Crypto {
     private static String a = null;
+    private static Logger logger;
+
+    static {
+        logger = Logger.getLogger(Crypto.class.getName())
+    }
 
     public static String encrypt(String data) throws NoSuchAlgorithmException, NoSuchPaddingException,
             InvalidKeySpecException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException,
