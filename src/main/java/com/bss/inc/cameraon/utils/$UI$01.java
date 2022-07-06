@@ -17,9 +17,9 @@ import java.util.regex.Pattern;
 public class $UI$01 {
     public static final Pattern digitPattern;
     static TextField[] tfs;
-    CheckBox[] chkbs;
-    TextArea ptsct;
-    ChoiceBox<String> pingMethod;
+    static CheckBox[] chkbs;
+    static TextArea ptsct;
+    static ChoiceBox<String> pingMethod;
 
     static {
         digitPattern = Pattern.compile("\\d+");
@@ -146,9 +146,11 @@ public class $UI$01 {
 
     }
 
-    public static void u_08$1$6(TextField[] textFields, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) {
+    public static void u_08$1$6(TextField[] textFields, CheckBox[] checkBoxes, TextArea ptsct, ChoiceBox<String> pingMethod) {
         tfs = textFields;
+        chkbs = checkBoxes;
         
+
     }
 
     public static void u_08$1$5(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) throws FileNotFoundException {
