@@ -33,9 +33,9 @@ public class Base32 {
         while (b < bytes.length) {
             j = (bytes[b] >= 0) ? bytes[b] : (bytes[b] + 256);
             if (i > 3) {
-                boolean bool;
+                int bool;
                 if (b + 1 < bytes.length) {
-                    bool = (bytes[b + 1] >= 0) ? Boolean.valueOf(String.valueOf(bytes[b + 1])) : Boolean.valueOf(String.valueOf(bytes[b + 1] + 256));
+                    bool = (bytes[b + 1] >= 0) ? bytes[b + 1] : (bytes[b + 1] + 256);
                 } else {
                     bool = false;
                 }
