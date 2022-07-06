@@ -82,7 +82,7 @@ public class Launcher {
             j_.put("valueNotAvailable", "[n/a]");
         }
         if(!j_.has("valueNotScanned")) {
-            if(j_.getString("valueNotScanned").equals("")) {j_.put("valueNotScanned")
+            if(j_.getString("valueNotScanned").equals("")) {j_.put("valueNotScanned", "[")
             j_.put("valueNotScanned", "[n/s]");
         }
         if(!j_.has("askConfirmationBeforeScan")) {
