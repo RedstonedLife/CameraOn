@@ -59,7 +59,7 @@ public class PreferenceDisplay implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         asSceneBtn.setOnAction(e -> {MainClass.getWindowManager().changeDialogScene("preferencesDialog",MainClass.class.getResource(FrontendPaths.PREF_DISPLAY_AS_FXML));});
         displaySceneBtn.setOnAction(e -> {MainClass.getWindowManager().changeDialogScene("preferencesDialog",MainClass.class.getResource(FrontendPaths.PREF_DISPLAY_FXML));});
-        $UI$01.u_09$1$1(new TextField[]{naTf,nsTf}, new CheckBox[]{askConfirmNewScanCHKb, showInfoDialogCHKb}, new RadioButton[]{allScannedHostsRb, aliveHostsRb, openPortHostsRb});
+        $UI$01.u_09$1$1();
         $UI$01.u_09$1$2(new RadioButton[]{allScannedHostsRb, aliveHostsRb, openPortHostsRb});
         //initializeLanguage();
     }
