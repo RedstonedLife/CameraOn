@@ -85,8 +85,8 @@ public class ScannerConfig {
                 j_.getInt("minPortTimeout"),
                 j_.getString("portString"),
                 j_.getBoolean("useRequestedPorts"),
-                rj_.getString(),
-                rj_.getString()
+                rj_.getString("valueNotAvailable"),
+                rj_.getString("valueNotScanned")
         };
     }
 
