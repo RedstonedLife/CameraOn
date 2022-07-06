@@ -306,5 +306,5 @@ public class $UI$01 {
         if(rbs[2].isSelected()) {scannerConfig.displayResultType = DisplayResultType.OPEN_PORTS_ONLY;}
         scannerConfig.store();
     }
-    
+
 }
