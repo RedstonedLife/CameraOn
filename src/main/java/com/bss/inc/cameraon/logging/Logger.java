@@ -1,7 +1,5 @@
 package com.bss.inc.cameraon.logging;
 
-import java.time.LocalDateTime;
-
 public class Logger implements ErrorHandler, WarnHandler, InfoHandler, DebugHandler, LogHandler {
 
     /**
