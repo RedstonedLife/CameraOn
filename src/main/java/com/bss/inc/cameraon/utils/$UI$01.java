@@ -250,5 +250,7 @@ public class $UI$01 {
         }
     }
 
-    public static void u_09$1$1(TextField[] )
+    public static void u_09$1$1(TextField[] tfs, CheckBox[] chkbs, RadioButton[] rbs) {
+        
+    }
 }
