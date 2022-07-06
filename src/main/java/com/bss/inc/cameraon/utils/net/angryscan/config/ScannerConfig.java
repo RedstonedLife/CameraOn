@@ -46,7 +46,7 @@ public class ScannerConfig {
             data = LoadFromFile();
         }
 
-        maxThreads = preferences.getInt("maxThreads", Platform.CRIPPLED_WINDOWS ? 10 : 255);
+        maxThreads = useDefault ?  : preferences.getInt("maxThreads", Platform.CRIPPLED_WINDOWS ? 10 : 255);
         threadDelay = preferences.getInt("threadDelay", 20);
         scanDeadHosts = preferences.getBoolean("scanDeadHosts", true);
         selectedPinger = preferences.get("selectedPinger", Platform.WINDOWS ? "pinger.windows" : "pinger.arp");
