@@ -41,6 +41,7 @@ public class ScannerConfig {
             Logger.getLogger("BNC").warn("If this issue persists contact support.");
             useDefault = true;
         }
+        
 
         maxThreads = preferences.getInt("maxThreads", Platform.CRIPPLED_WINDOWS ? 10 : 255);
         threadDelay = preferences.getInt("threadDelay", 20);
