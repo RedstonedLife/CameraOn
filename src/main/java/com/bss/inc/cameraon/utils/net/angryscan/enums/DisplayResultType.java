@@ -10,8 +10,5 @@ public enum DisplayResultType {
         this.string = string;
     }
 
-    @Override
-    public String toString() {
-        return super.toString();
-    }
+    @Override public String toString() {return super.toString();}
 }
