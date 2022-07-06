@@ -73,6 +73,7 @@ public class Launcher {
             j_.put("useRequestedPorts", true);
         } // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
         SettingsContainer.setValue("scanSettings", j_);
+        if(SettingsContainer.getValue("scanResultDisplay")==null) {SettingsContainer.setValue("scanResultDisplay",new JSONObject("{}"));}
         j_ = (JSONObject) SettingsContainer.getValue("scanResultDisplay");
         if(!j_.has("displayResult")) {
             j_.put("displayResult", "ALL");
