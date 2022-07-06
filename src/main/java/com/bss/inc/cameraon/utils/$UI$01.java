@@ -3,6 +3,7 @@ package com.bss.inc.cameraon.utils;
 import com.bss.inc.cameraon.Launcher;
 import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.constants.FrontendPaths;
+import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
@@ -246,7 +247,7 @@ public class $UI$01 {
             } // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
             return;
         } catch (Exception e) {
-            e.printStackTrace();
+            Logger.getLogger("BNC").error("An error occured while trying ");
         }
     }
 
