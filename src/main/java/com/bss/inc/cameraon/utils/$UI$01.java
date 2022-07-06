@@ -256,6 +256,7 @@ public class $UI$01 {
         0 - NotAvailable Text Field     naTf
         1 - NotScanned Text Field       nsTf
         CheckBox Array Layout
+        0 - Ask Confirmation Before Scan
          */
     }
 }
