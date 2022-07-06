@@ -253,10 +253,10 @@ public class $UI$01 {
     public static void u_09$1$1(TextField[] tfs, CheckBox[] chkbs, RadioButton[] rbs) {
         /*
         TextField Array Layout
-        0 - NotAvailable Text Field     naTf
-        1 - NotScanned Text Field       nsTf
+        0 - NotAvailable Text Field         naTf
+        1 - NotScanned Text Field           nsTf
         CheckBox Array Layout
-        0 - Ask Confirmation Before Scan
+        0 - Ask Confirmation Before Scan    askConfirmBeforeScan
          */
     }
 }
