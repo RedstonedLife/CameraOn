@@ -21,8 +21,6 @@ import static com.bss.inc.cameraon.i18n.I18n.tl;
 
 public class PreferenceDisplay implements Initializable {
     @FXML private Button asSceneBtn;
-    @FXML private Button ibsSceneBtn;
-    @FXML private Button cbsSceneBtn;
     @FXML private Button displaySceneBtn;
 
     @FXML private TextField naTf,nsTf;
