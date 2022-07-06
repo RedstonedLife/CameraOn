@@ -51,4 +51,34 @@ public class Crypto {
         }
         return str;
     }
+
+    public static String decrypt(String data, String key) throws NoSuchAlgorithmException, InvalidKeySpecException,
+            NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException, InvalidKeyException,
+            InvalidAlgorithmParameterException {
+        a = key + key.substring(key.length() - 4, key.length()) + key.substring(0, 5);
+        return b(data, a);
+    }
+
+    public static String decrypt(String data) throws NoSuchAlgorithmException, InvalidKeySpecException,
+            NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException, InvalidKeyException,
+            InvalidAlgorithmParameterException {
+        return b(data, "SHA512withRSA");
+    }
+
+    private static String b(String paramString1, String paramString2) throws NoSuchAlgorithmException, InvalidKeySpecException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException, InvalidKeyException, InvalidAlgorithmParameterException {
+        paramString1 = paramString1.replace("\r\n", "").replace("\n", "").substring((paramString1 = paramString1.replace("\r\n", "").replace("\n", "")).indexOf(")") + 1, paramString1.length());
+        String str = "";
+        byte[] arrayOfByte = { -57, 115, 33, -116, 126, -56, -18, -103 };
+        PBEParameterSpec pBEParameterSpec = new PBEParameterSpec(arrayOfByte, 10);
+        PBEKeySpec pBEKeySpec = new PBEKeySpec(paramString2.toCharArray());
+        SecretKey secretKey = SecretKeyFactory.getInstance(new String(Base32.decode("KBBEKV3JORUE2RBVIFXGIRCFKM"))).generateSecret(pBEKeySpec);
+        Cipher cipher;
+        (cipher = Cipher.getInstance(new String(Base32.decode("KBBEKV3JORUE2RBVIFXGIRCFKM")))).init(2, secretKey, pBEParameterSpec);
+        try {
+            str = new String(cipher.doFinal(Hex.decodeHex(paramString1.toCharArray())), "UTF-8");
+        } catch (Exception exception) {
+            Logger.getLogger(Crypto.class.getName()).log(Level.FINE, "Decryption error.", exception);
+        }
+        return str;
+    }
 }
