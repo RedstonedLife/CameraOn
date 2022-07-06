@@ -150,7 +150,7 @@ public class $UI$01 {
     public static void u_08$1$6(ScannerConfig scConfig, TextField[] textFields, CheckBox[] checkBoxes, TextArea textArea, ChoiceBox<String> pingMeth)
     {scannerConfig = scConfig;tfs = textFields;chkbs = checkBoxes;ptsct = textArea;pingMethod = pingMeth;}
 
-    public static void u_08$1$5(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) throws FileNotFoundException {
+    public static void u_08$1$5() throws FileNotFoundException {
         /*
         TextFields Array Layout
         0 - threadsDelay
