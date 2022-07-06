@@ -90,8 +90,9 @@ public class ScannerConfig {
         preferences.put("notAvailableText", notAvailableText);
         preferences.put("notScannedText", notScannedText);
         preferences.put("displayResult", displayResultType.toString());
-        preferences.put("askConfirmationBeforeScan", askConfirmationBeforeScan);
-        
+        preferences.putBoolean("askConfirmationBeforeScan", askConfirmationBeforeScan);
+        preferences.putBoolean("showInfoDialogAfterScan", showInfoDialogAfterScan);
+
     }
 
     public Object[] LoadFromFile() {
