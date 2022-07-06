@@ -86,7 +86,7 @@ public class Crypto {
         try {
             str = new String(cipher.doFinal(Hex.decodeHex(paramString1.toCharArray())), "UTF-8");
         } catch (Exception exception) {
-            logger.log(logger, Level.ERROR, "Decryption error.", exception);
+            logger.log(logger, Level.ERROR, "Decryption Error");
         }
         return str;
     }
