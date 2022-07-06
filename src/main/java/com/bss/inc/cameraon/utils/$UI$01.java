@@ -278,8 +278,8 @@ public class $UI$01 {
         if(j_.has("showInfoDialogAfterScan")) {chkbs[1].setSelected(j_.getBoolean("showInfoDialogAfterScan"));}
     }
 
-    public static void u_09$1$2(TextField[] tfs, CheckBox[] chkbs, RadioButton[] rbs) {
-        
+    public static void u_09$1$2(CheckBox[] chkbs, RadioButton[] rbs) {
+
     }
 
     public static void u_09$1$3(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, RadioButton[] rbs) {
