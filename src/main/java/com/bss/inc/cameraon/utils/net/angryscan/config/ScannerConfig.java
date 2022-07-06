@@ -89,6 +89,7 @@ public class ScannerConfig {
         preferences.putBoolean("useRequestedPorts", useRequestedPorts);
         preferences.put("notAvailableText", notAvailableText);
         preferences.put("notScannedText", notScannedText);
+        preferences.put();
     }
 
     public Object[] LoadFromFile() {
