@@ -18,7 +18,7 @@ public class Logger implements ErrorHandler, WarnHandler, InfoHandler, DebugHand
         return LogManager.getLogger(name);
     }
 
-    
+    public String getName() {return LOGGER_NAME;}
     @Override public void debug(String message, Exception e) {LogManager.getLFM().debug(message, e);}
     @Override public void debug(String message) {LogManager.getLFM().debug(message);}
     @Override public void debug(Exception e) {LogManager.getLFM().debug(e);}
