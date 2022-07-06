@@ -28,7 +28,7 @@
                 <Text fx:id="b1head" fill="#e0e2e4" layoutX="14.0" layoutY="7.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Display in the results list" />
                 <HBox layoutX="14.0" layoutY="48.0" prefHeight="20.0" prefWidth="284.0">
                     <children>
-                        <RadioButton fx:id="b2rb" mnemonicParsing="false" text="Alive hosts (responding to pings) only" textFill="#e0e2e4">
+                        <RadioButton fx:id="aliveHostsRb" mnemonicParsing="false" text="Alive hosts (responding to pings) only" textFill="#e0e2e4">
                             <font>
                                 <Font name="Consolas" size="12.0" />
                             </font>
