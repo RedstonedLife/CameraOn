@@ -254,10 +254,10 @@ public class $UI$01 {
         /*
         TextField Array Layout
         0 - NotAvailable Text Field         naTf
-        1 - NotScanned Text Field           nsTf
+        1 - NotScanned Text Field                    nsTf
         CheckBox Array Layout
-        0 - Ask Confirmation Before Scan    askConfirmBeforeScan
-        1 - Show Info Dialog After Scan     showInfoAfterScan
+        0 - Ask Confirmation Before Scan             askConfirmBeforeScan
+        1 - Show Info Dialog After Scan              showInfoAfterScan
         RadioButton Array Layout
         0 - All Scanned Hosts -                      DISPLAY ALL
         1 - Alive Hosts (Responding to Pings) only - ALIVE
