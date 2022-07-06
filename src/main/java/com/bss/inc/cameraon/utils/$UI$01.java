@@ -261,6 +261,7 @@ public class $UI$01 {
         RadioButton Array Layout
         0 - All Scanned Hosts - DISPLAY ALL
         1 - Alive Hosts (Responding to Pings) only - ALIVE
+        2 - 
          */
     }
 }
