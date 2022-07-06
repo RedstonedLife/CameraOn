@@ -80,7 +80,7 @@ public class ScannerConfig {
                 j_.getInt("pingCount"),
                 j_.getBoolean("skipBroadcastAddress"),
                 j_.getInt("portTimeout"),
-                j_.getI
+                j_.getBoolean("")
         };
     }
 
