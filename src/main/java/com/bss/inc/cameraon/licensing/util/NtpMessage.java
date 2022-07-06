@@ -58,7 +58,7 @@ public class NtpMessage {
         arrayOfByte[2] = this.e;
         arrayOfByte[3] = this.f;
         int i = (int)(this.g * 65536.0D);
-        arrayOfByte[4] = i >> 24;
+        arrayOfByte[4] = (byte) (i >> 24);
         arrayOfByte[5] = (byte)(i >> 16);
         arrayOfByte[6] = (byte)(i >> 8);
         arrayOfByte[7] = (byte)i;
