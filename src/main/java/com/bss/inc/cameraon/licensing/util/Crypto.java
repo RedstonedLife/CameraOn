@@ -18,7 +18,7 @@ public class Crypto {
     private static Logger logger;
 
     static {
-        logger = Logger.getLogger(Crypto.class.getName())
+        logger = Logger.getLogger(Crypto.class.getName());
     }
 
     public static String encrypt(String data) throws NoSuchAlgorithmException, NoSuchPaddingException,
