@@ -33,9 +33,7 @@ public class MainClass extends Application {
     public static Config getConfig() {return config;}
     public static DisplayResultType DisplayType;
 
-    static {
-        DisplayType = DisplayResultType.valueOf(((JSONObject)Launcher.SettingsContainer.getValue("scanResultDisplay")).getString("displayResult"));
-    }
+    static {DisplayType = DisplayResultType.valueOf(((JSONObject)Launcher.SettingsContainer.getValue("scanResultDisplay")).getString("displayResult"));}
 
     @Override
     public void start(Stage stage) {
