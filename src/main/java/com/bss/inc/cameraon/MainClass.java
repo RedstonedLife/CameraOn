@@ -32,6 +32,10 @@ public class MainClass extends Application {
     public static Config getConfig() {return config;}
     public static DisplayResultType DisplayType;
 
+    static {
+        DisplayType = 
+    }
+
     @Override
     public void start(Stage stage) {
         this._i18n.OnStart();
