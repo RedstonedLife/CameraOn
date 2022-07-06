@@ -272,18 +272,10 @@ public class $UI$01 {
                 case OPEN_PORTS_ONLY -> {rbs[0].setSelected(false);rbs[1].setSelected(false);rbs[2].setSelected(true);}
             }
         }
-        if(j_.has("valueNotAvailable")) {
-            tfs[0].setText(j_.getString("valueNotAvailable"));
-        }
-        if(j_.has("valueNotScanned")) {
-            tfs[1].setText(j_.getString("valueNotScanned"));
-        }
-        if(j_.has("askConfirmationBeforeScan")) {
-            chkbs[0].setSelected(j_.getBoolean("askConfirmationBeforeScan"));
-        }
-        if(j_.has("showInfoDialogAfterScan")) {
-            chkbs[1].setSelected(j_.getBoolean("showInfoDialogAfterScan"));
-        }
+        if(j_.has("valueNotAvailable")) {tfs[0].setText(j_.getString("valueNotAvailable"));}
+        if(j_.has("valueNotScanned")) {tfs[1].setText(j_.getString("valueNotScanned"));}
+        if(j_.has("askConfirmationBeforeScan")) {chkbs[0].setSelected(j_.getBoolean("askConfirmationBeforeScan"));}
+        if(j_.has("showInfoDialogAfterScan")) {chkbs[1].setSelected(j_.getBoolean("showInfoDialogAfterScan"));}
     }
 
     public static void u_09$1$2() {
