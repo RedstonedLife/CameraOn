@@ -39,7 +39,7 @@ public class ScannerConfig {
             Logger.getLogger("BNC").info("Could not find 'scanResultDisplay' column or 'scanSettings' column in 'app.settings.json'");
             Logger.getLogger("BNC").info("Reverting to default settings, and creating both columns!");
             Logger.getLogger("BNC").warn("If this issue persists contact support.");
-            useDefault = !useDefault;
+            useDefault = true;
         }
 
         maxThreads = preferences.getInt("maxThreads", Platform.CRIPPLED_WINDOWS ? 10 : 255);
