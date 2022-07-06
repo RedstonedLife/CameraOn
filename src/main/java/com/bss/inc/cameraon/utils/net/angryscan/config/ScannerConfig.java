@@ -158,6 +158,7 @@ public class ScannerConfig {
             j_.put("useRequestedPorts", preferences.getBoolean("useRequestedPorts", true));
         } // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
         Launcher.SettingsContainer.setValue("scanSettings", j_);
+        j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
         Launcher.SettingsContainer.Save();
     }
 }
