@@ -17,7 +17,7 @@
                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2f2f30" height="106.0" layoutX="3.0" layoutY="4.0" stroke="#7c7c7c" strokeType="INSIDE" width="423.0" />
                 <HBox layoutX="14.0" layoutY="22.0" prefHeight="20.0" prefWidth="260.0">
                     <children>
-                        <RadioButton fx:id="b1rb" mnemonicParsing="false" text="All scanned hosts" textFill="#e0e2e4">
+                        <RadioButton fx:id="allScannedHostsRb" mnemonicParsing="false" text="All scanned hosts" textFill="#e0e2e4">
                             <font>
                                 <Font name="Consolas" size="12.0" />
                             </font>
