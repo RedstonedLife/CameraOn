@@ -148,6 +148,7 @@ public class $UI$01 {
 
     public static void u_08$1$6(TextField[] textFields, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) {
         tfs = textFields;
+        
     }
 
     public static void u_08$1$5(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) throws FileNotFoundException {
