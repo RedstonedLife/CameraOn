@@ -33,6 +33,7 @@ public class ScannerConfig {
      */
     public ScannerConfig(Preferences preferences) {
         this.preferences = preferences;
+        
 
         if(Launcher.SettingsContainer.getValue("scanResultDisplay") == null || Launcher.SettingsContainer.getValue("scanSettings") == null) {
             Logger.getLogger("BNC").info("Could not find 'scanResultDisplay' column or 'scanSettings' column in 'app.settings.json'");
