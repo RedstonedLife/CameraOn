@@ -32,6 +32,10 @@ public class PreferenceDisplay implements Initializable {
 
     @FXML private void closeApp(ActionEvent event) {
         $UI$01.u_06$1$1();}
+
+    @FXML private void okApp(ActionEvent event) {
+        $UI$01.u_06$1$1();
+    }
     /*private void initializeLanguage() {
         displaySceneBtn.setText(tl("preferences.btn.display.text"));
         threadtxt.setText(tl("preferences.threads.text"));
