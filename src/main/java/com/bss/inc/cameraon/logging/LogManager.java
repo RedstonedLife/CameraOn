@@ -16,11 +16,11 @@ public class LogManager {
     public static LogFileManager getLFM() {return _LFM; }
     public static void addLogger(String name, Logger logger) {loggers.put(name, logger);}
     public static Logger getLogger(final String name) {
-        if(loggers.containsKey(name))
-            return loggers.get(name);
+        if(loggers.containsKey(name)){return loggers.get(name);}
         else {
             addLogger(name, new Logger(name));
         }
+        return null;
     }
 
 
