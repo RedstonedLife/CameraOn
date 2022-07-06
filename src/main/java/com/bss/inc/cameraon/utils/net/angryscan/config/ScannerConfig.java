@@ -35,7 +35,7 @@ public class ScannerConfig {
         this.preferences = preferences;
 
         if(Launcher.SettingsContainer.getValue("scanResultDisplay") == null || Launcher.SettingsContainer.getValue("scanSettings") == null) {
-            Logger.getLogger("BNC")
+            Logger.getLogger("BNC").info("Could not find ");
         }
 
         maxThreads = preferences.getInt("maxThreads", Platform.CRIPPLED_WINDOWS ? 10 : 255);
