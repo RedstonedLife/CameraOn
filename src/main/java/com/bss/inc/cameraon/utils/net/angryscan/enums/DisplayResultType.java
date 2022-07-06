@@ -7,6 +7,6 @@ public enum DisplayResultType {
 
     private String string;
     DisplayResultType(String string) {this.string = string;}
-    public DisplayResultType fromString(String string) {return DisplayResultType.valueOf(string);}
+    public static DisplayResultType fromString(String string) {return DisplayResultType.valueOf(string);}
     @Override public String toString() {return super.toString();}
 }
