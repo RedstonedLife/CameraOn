@@ -260,7 +260,7 @@ public class $UI$01 {
         1 - Show Info Dialog After Scan     showInfoAfterScan
         RadioButton Array Layout
         0 - All Scanned Hosts - DISPLAY ALL
-        1 - 
+        1 - Alive Hosts (Responding to Pings) only - ALIVE
          */
     }
 }
