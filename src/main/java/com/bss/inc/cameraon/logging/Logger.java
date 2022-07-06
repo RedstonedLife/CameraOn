@@ -48,5 +48,6 @@ public class Logger implements ErrorHandler, WarnHandler, InfoHandler, DebugHand
 
     @Override
     public void log(Logger logger, Level level, String message) {
+        
     }
 }
