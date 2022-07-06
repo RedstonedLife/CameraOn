@@ -26,7 +26,7 @@ public class PreferenceDisplay implements Initializable {
 
     @FXML private TextField naTf,nsTf;
     @FXML private CheckBox askConfirmNewScanCHKb,showInfoDialogCHKb;
-    @FXML private RadioButton allScannedHostsRb, aliveHostsRb, openPortHostsRb
+    @FXML private RadioButton allScannedHostsRb, aliveHostsRb, openPortHostsRb;
 
     /*@FXML private Text threadtxt,t1txt,t2txt,pingtxt,p1txt,p2txt,p3txt,p4txt,skiptxt,s1txt,timetxt,tt1txt,tt2txt,tt3txt,portstxt,ps1txt,ps2txt,ps3txt,ps4txt;*/
 
