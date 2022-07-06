@@ -105,7 +105,8 @@ public class ScannerConfig {
                 j_.getString("portString"),
                 j_.getBoolean("useRequestedPorts"),
                 rj_.getString("valueNotAvailable"),
-                rj_.getString("valueNotScanned")
+                rj_.getString("valueNotScanned"),
+                
         };
     }
 
