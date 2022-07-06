@@ -39,7 +39,7 @@ public class FrontendPaths {
     };
     /* VERSION */
     public static final String VERSION_TEXT="Epsilon-1.21.22.5";
-    public static final int BUILD = 173805;
+    public static final int BUILD = 277684;
     public static final String LICENSEE="Tal B.";
     public static final String LICENSEKEY="A7F8CC0281A0E9E8E30CB0E5C3840541";
     /* CACHED THEME */
