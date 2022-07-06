@@ -182,7 +182,7 @@ public class $UI$01 {
         scannerConfig.store();
     }
 
-    public static void u_08$1$1(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) {
+    public static void u_08$1$1() {
         /*
         TextFields Array Layout
         0 - threadsDelay
