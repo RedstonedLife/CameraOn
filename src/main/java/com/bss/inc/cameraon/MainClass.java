@@ -29,6 +29,7 @@ public class MainClass extends Application {
 
     public static StateMachine getStateMachine() {return stateMachine;}
     public static Config getConfig() {return config;}
+    public static 
 
     @Override
     public void start(Stage stage) {
