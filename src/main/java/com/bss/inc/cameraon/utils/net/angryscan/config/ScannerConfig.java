@@ -172,7 +172,7 @@ public class ScannerConfig {
             j_.put("askConfirmationBeforeScan", preferences.getBoolean("askConfirmationBeforeScan", false););
         }
         if(j_.has("showInfoDialogAfterScan")) {
-            j_.put("showInfoDialogAfterScan", preferences.getBoolean("showInfoDialogAfterScan", false););
+            j_.put("showInfoDialogAfterScan", preferences.getBoolean("showInfoDialogAfterScan", false));
         }
         Launcher.SettingsContainer.Save();
     }
