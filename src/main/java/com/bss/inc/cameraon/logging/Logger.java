@@ -45,9 +45,5 @@ public class Logger implements ErrorHandler, WarnHandler, InfoHandler, DebugHand
     @Override public void warn(Exception e) {LogManager.getLFM().warn(e);}
     @Override public void warn(String message, Exception e, Class<?> clazz) {LogManager.getLFM().warn(message, e, clazz);}
     @Override public void warn(String message, Exception e, String subname) {LogManager.getLFM().warn(message, e, subname);}
-
-    @Override
-    public void log(Logger logger, Level level, String message) {
-        
-    }
+    @Override public void log(Logger logger, Level level, String message) {LogManager.getLFM().log(logger,level,message);}
 }
