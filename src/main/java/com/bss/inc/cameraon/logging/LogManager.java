@@ -19,7 +19,7 @@ public class LogManager {
         if(loggers.containsKey(name))
             return loggers.get(name);
         else
-            addLogger();
+            addLogger(name);
     }
 
 
