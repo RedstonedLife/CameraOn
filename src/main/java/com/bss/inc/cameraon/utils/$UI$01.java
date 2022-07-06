@@ -296,7 +296,7 @@ public class $UI$01 {
         rbs[2].setOnAction(e -> {rbs[0].setSelected(false);rbs[1].setSelected(false);});
     }
 
-    public static void u_09$1$3() {
+    public static void u_09$1$3() throws FileNotFoundException {
         scannerConfig.notAvailableText = tfs2[0].getText();
         scannerConfig.notScannedText = tfs2[1].getText();
         scannerConfig.askConfirmationBeforeScan = chkbs2[0].isSelected();
