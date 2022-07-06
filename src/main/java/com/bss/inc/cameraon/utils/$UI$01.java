@@ -136,18 +136,12 @@ public class $UI$01 {
     public static boolean u_08$1$4(char c, String text, int caretPos) {
             // previous
             char pc = 0;
-            for (int i = caretPos-1; i >= 0; i--) {
-                pc = text.charAt(i);
-                if (!Character.isWhitespace(pc))
-                    break;
-            }
-
+            for (int i = caretPos-1; i >= 0; i--) {pc = text.charAt(i);if (!Character.isWhitespace(pc)) break;}
             boolean isCurDigit = c >= '0' && c <= '9';
             boolean isPrevDigit = pc >= '0' && pc <= '9';
             return isPrevDigit && (isCurDigit || c == '-' || c == ',') ||
                     isCurDigit && (pc == '-' || pc == ',' || pc == 0) ||
                     Character.isWhitespace(c) && pc == ',';
-
     }
 
     public static void u_08$1$6(ScannerConfig scConfig, TextField[] textFields, CheckBox[] checkBoxes, TextArea textArea, ChoiceBox<String> pingMeth)
