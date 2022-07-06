@@ -268,7 +268,8 @@ public class $UI$01 {
         if(j_.has("displayResult")) {
             switch (DisplayResultType.fromString(j_.getString("displayResult"))) {
                 case ALL -> {rbs[0].setSelected(true);rbs[1].setSelected(false);rbs[2].setSelected(false);}
-                case ALIVE -> 
+                case ALIVE -> {rbs[0].setSelected(false);rbs[1].setSelected(true);rbs[2].setSelected(false);}
+                case OPEN_PORTS_ONLY -> {rbs[0].setSelected(false);rbs[1].setSelected(false);rbs[2].setSelected(true);}
             }
             j_.put("displayResult", preferences.get("displayResult", "ALL"));
         }
