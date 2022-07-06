@@ -289,7 +289,8 @@ public class $UI$01 {
         scannerConfig.notScannedText = tfs[1].getText();
         scannerConfig.askConfirmationBeforeScan = chkbs[0].isSelected();
         scannerConfig.showInfoDialogAfterScan = chkbs[1].isSelected();
-        
+        if(rbs[0].isSelected()) {scannerConfig.displayResultType = DisplayResultType.ALL;}
+        if(rbs[1].isSelected()) {scannerConfig.displayResultType = DisplayResultType.ALIVE
         scannerConfig.store();
     }
 }
