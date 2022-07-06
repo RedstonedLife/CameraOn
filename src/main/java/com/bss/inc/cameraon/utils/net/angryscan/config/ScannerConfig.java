@@ -163,10 +163,10 @@ public class ScannerConfig {
             j_.put("displayResult", preferences.get("displayResult", "ALL"));
         }
         if(j_.has("valueNotAvailable")) {
-            j_.put("valueNotAvailable", preferences.get("valueNotAvailable", "[n/a]"));
+            j_.put("valueNotAvailable", preferences.get("notAvailableText", "[n/a]"));
         }
         if(j_.has("valueNotScanned")) {
-            j_.put("valueNotScanned", preferences.get("valueNotScanned", "[n/a]");
+            j_.put("valueNotScanned", preferences.get("notScannedText", "[n/s]"));
         }
         if(j_.has("askConfirmationBeforeScan")) {
             j_.put("askConfirmationBeforeScan", false);
