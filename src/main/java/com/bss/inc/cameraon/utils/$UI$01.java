@@ -18,6 +18,7 @@ public class $UI$01 {
     public static final Pattern digitPattern;
     static TextField[] tfs,tfs2;
     static CheckBox[] chkbs, chkbs2;
+    static RadioButton[] rbs;
     static TextArea ptsct;
     static ChoiceBox<String> pingMethod;
     static ScannerConfig scannerConfig;
