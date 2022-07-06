@@ -18,8 +18,9 @@ public class LogManager {
     public static Logger getLogger(final String name) {
         if(loggers.containsKey(name))
             return loggers.get(name);
-        else
-            addLogger(name);
+        else {
+            addLogger(name, new Logger(name));
+        }
     }
 
 
