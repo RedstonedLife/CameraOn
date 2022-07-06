@@ -26,12 +26,9 @@ public class PreferenceDisplayB implements Initializable {
     @FXML private ChoiceBox<String> pingMethodCb;
     @FXML private CheckBox scanDeadHostsCHKb,skipUnassignedCHKb,adaptTimeoutToPingCHKb,forEachHostCHKb;
     @FXML private void okApp(ActionEvent event) {
-        try {
-            $UI$01.u_08$1$5();
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-        $UI$01.u_06$1$1();}
+        try {$UI$01.u_08$1$5();$UI$01.u_09$1$3();} catch (FileNotFoundException e) {throw new RuntimeException(e);}
+        $UI$01.u_06$1$1();
+    }
 
     private void initializeLanguage() {
         displaySceneBtn.setText(tl("preferences.btn.display.text"));
