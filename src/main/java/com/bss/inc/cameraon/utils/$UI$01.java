@@ -290,7 +290,7 @@ public class $UI$01 {
         if(j_.has("showInfoDialogAfterScan")) {chkbs2[1].setSelected(j_.getBoolean("showInfoDialogAfterScan"));}
     }
 
-    public static void u_09$1$2(RadioButton[] rbs) {
+    public static void u_09$1$2() {
         rbs[0].setOnAction(e -> {rbs[1].setSelected(false);rbs[2].setSelected(false);});
         rbs[1].setOnAction(e -> {rbs[0].setSelected(false);rbs[2].setSelected(false);});
         rbs[2].setOnAction(e -> {rbs[0].setSelected(false);rbs[1].setSelected(false);});
