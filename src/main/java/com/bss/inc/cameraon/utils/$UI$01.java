@@ -279,7 +279,8 @@ public class $UI$01 {
     }
 
     public static void u_09$1$2(RadioButton[] rbs) {
-        rbs[0].setOnAction(e -> {});
+        rbs[0].setOnAction(e -> {rbs[1].setSelected(false);rbs[2].setSelected(false);});
+        rbs[1].setOnAction(e -> {rbs[0].setSelected(false);rbs[2].setSelected(false);});
     }
 
     public static void u_09$1$3(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, RadioButton[] rbs) {
