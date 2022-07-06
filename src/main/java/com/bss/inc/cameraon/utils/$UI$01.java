@@ -257,6 +257,7 @@ public class $UI$01 {
         1 - NotScanned Text Field           nsTf
         CheckBox Array Layout
         0 - Ask Confirmation Before Scan    askConfirmBeforeScan
+        1 - Show Info Dialog After Scan     showInfoAfterScan
          */
     }
 }
