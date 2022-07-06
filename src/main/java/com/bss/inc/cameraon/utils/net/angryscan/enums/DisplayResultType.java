@@ -6,5 +6,8 @@ public enum DisplayResultType {
     OPEN_PORTS_ONLY;
 
     private String string;
-    DisplayResultType()
+    DisplayResultType(String string) {
+        this.string = string;
+    }
+    
 }
