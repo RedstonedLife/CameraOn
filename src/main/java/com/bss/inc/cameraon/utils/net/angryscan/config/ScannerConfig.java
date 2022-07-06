@@ -107,7 +107,8 @@ public class ScannerConfig {
                 rj_.getString("valueNotAvailable"),
                 rj_.getString("valueNotScanned"),
                 DisplayResultType.fromString(rj_.getString("displayResult")),
-                
+                rj_.getBoolean("askConfirmationBeforeScan"),
+                rj_.getBoolean("showInfoDialogAfterScan")
         };
     }
 
