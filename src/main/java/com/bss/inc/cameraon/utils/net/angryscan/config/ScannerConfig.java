@@ -33,6 +33,8 @@ public class ScannerConfig {
     public ScannerConfig(Preferences preferences) {
         this.preferences = preferences;
 
+        if(Launcher.SettingsContainer.getValue())
+
         maxThreads = preferences.getInt("maxThreads", Platform.CRIPPLED_WINDOWS ? 10 : 255);
         threadDelay = preferences.getInt("threadDelay", 20);
         scanDeadHosts = preferences.getBoolean("scanDeadHosts", true);
