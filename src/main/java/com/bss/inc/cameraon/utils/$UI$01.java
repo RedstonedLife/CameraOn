@@ -296,11 +296,11 @@ public class $UI$01 {
         rbs[2].setOnAction(e -> {rbs[0].setSelected(false);rbs[1].setSelected(false);});
     }
 
-    public static void u_09$1$3(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, RadioButton[] rbs) {
-        scannerConfig.notAvailableText = tfs[0].getText();
-        scannerConfig.notScannedText = tfs[1].getText();
-        scannerConfig.askConfirmationBeforeScan = chkbs[0].isSelected();
-        scannerConfig.showInfoDialogAfterScan = chkbs[1].isSelected();
+    public static void u_09$1$3() {
+        scannerConfig.notAvailableText = tfs2[0].getText();
+        scannerConfig.notScannedText = tfs2[1].getText();
+        scannerConfig.askConfirmationBeforeScan = chkbs2[0].isSelected();
+        scannerConfig.showInfoDialogAfterScan = chkbs2[1].isSelected();
         if(rbs[0].isSelected()) {scannerConfig.displayResultType = DisplayResultType.ALL;}
         if(rbs[1].isSelected()) {scannerConfig.displayResultType = DisplayResultType.ALIVE;}
         if(rbs[2].isSelected()) {scannerConfig.displayResultType = DisplayResultType.OPEN_PORTS_ONLY;}
