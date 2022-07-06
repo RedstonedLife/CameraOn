@@ -43,7 +43,7 @@ public class ScannerConfig {
             useDefault = true;
         }
         if (!useDefault) {
-
+            data = LoadFromFile();
         }
 
         maxThreads = preferences.getInt("maxThreads", Platform.CRIPPLED_WINDOWS ? 10 : 255);
