@@ -16,5 +16,6 @@ public class Base32 {
             case 3 -> j = 3;
             case 4 -> j = 1;
         }
+        
     }
 }
