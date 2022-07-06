@@ -263,7 +263,7 @@ public class $UI$01 {
 
     public static void u_09$1$4(TextField[] textFields, CheckBox[] checkBoxes, RadioButton[] radioButtons)
     {tfs2 = textFields;chkbs2 = checkBoxes;rbs = radioButtons;}
-    public static void u_09$1$1(TextField[] tfs, CheckBox[] chkbs, RadioButton[] rbs) {
+    public static void u_09$1$1() {
         /*
         TextField Array Layout
         0 - NotAvailable Text Field                  naTf
@@ -284,10 +284,10 @@ public class $UI$01 {
                 case OPEN_PORTS_ONLY -> {rbs[0].setSelected(false);rbs[1].setSelected(false);rbs[2].setSelected(true);}
             }
         }
-        if(j_.has("valueNotAvailable")) {tfs[0].setText(j_.getString("valueNotAvailable"));}
-        if(j_.has("valueNotScanned")) {tfs[1].setText(j_.getString("valueNotScanned"));}
-        if(j_.has("askConfirmationBeforeScan")) {chkbs[0].setSelected(j_.getBoolean("askConfirmationBeforeScan"));}
-        if(j_.has("showInfoDialogAfterScan")) {chkbs[1].setSelected(j_.getBoolean("showInfoDialogAfterScan"));}
+        if(j_.has("valueNotAvailable")) {tfs2[0].setText(j_.getString("valueNotAvailable"));}
+        if(j_.has("valueNotScanned")) {tfs2[1].setText(j_.getString("valueNotScanned"));}
+        if(j_.has("askConfirmationBeforeScan")) {chkbs2[0].setSelected(j_.getBoolean("askConfirmationBeforeScan"));}
+        if(j_.has("showInfoDialogAfterScan")) {chkbs2[1].setSelected(j_.getBoolean("showInfoDialogAfterScan"));}
     }
 
     public static void u_09$1$2(RadioButton[] rbs) {
