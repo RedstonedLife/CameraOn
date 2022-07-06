@@ -10,5 +10,5 @@ public class Crypto {
     private static String a = null;
 
     public static String encrypt(String data) throws NoSuchAlgorithmException, NoSuchPaddingException,
-            InvalidKeySpecException, InvalidKeyException, IllegalBlockSizeException,
+            InvalidKeySpecException, InvalidKeyException, IllegalBlockSizeException, 
 }
