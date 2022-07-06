@@ -67,6 +67,7 @@ public class ScannerConfig {
         notAvailableText = useDefault ? (String) data[12] : preferences.get("notAvailableText", I18n.tl("fetcher.value.notAvailable"));
         notScannedText = useDefault ? (String) data[13] : preferences.get("notScannedText", I18n.tl("fetcher.value.notScanned"));
         displayResultType = useDefault ? (DisplayResultType) data[14] : DisplayResultType.fromString(preferences.get("displayResult", "ALL"));
+        askConfirmationBeforeScan;
         
     }
 
