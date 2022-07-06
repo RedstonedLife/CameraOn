@@ -274,7 +274,6 @@ public class $UI$01 {
         }
         if(j_.has("valueNotAvailable")) {
             tfs[0].setText(j_.getString("valueNotAvailable"));
-            System.out.println(j_.getString("valueNotAvailable"));
         }
         if(j_.has("valueNotScanned")) {
             tfs[1].setText(j_.getString("valueNotScanned"));
