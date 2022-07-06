@@ -19,7 +19,7 @@ import static com.bss.inc.cameraon.i18n.I18n.tl;
 
 public class PreferenceDisplayB implements Initializable {
     @FXML private void closeApp(ActionEvent event) {$UI$01.u_06$1$1();}
-    @FXML private Button btnClose,asSceneBtn,displaySceneBtn;
+    @FXML private Button asSceneBtn,displaySceneBtn;
 
     @FXML private TextField threadsDelayTf,threadsMaxTf,defaultPortTimeoutTf,minAdptdConTimeoutTf,pingProbesTf,pingTimeoutTf;
     @FXML private TextArea portToScanTa;
