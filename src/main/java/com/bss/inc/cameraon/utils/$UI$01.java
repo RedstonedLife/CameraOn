@@ -273,7 +273,7 @@ public class $UI$01 {
             }
         }
         if(j_.has("valueNotAvailable")) {
-            
+            tfs
         }
         if(j_.has("valueNotScanned")) {
             j_.put("valueNotScanned", preferences.get("notScannedText", "[n/s]"));
