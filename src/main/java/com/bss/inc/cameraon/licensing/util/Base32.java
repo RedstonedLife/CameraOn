@@ -12,7 +12,7 @@ public class Base32 {
         int j = 0;
         switch(bytes.length) {
             case 1 -> j = 6;
-            
+            case 
         }
     }
 }
