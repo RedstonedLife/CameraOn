@@ -263,6 +263,6 @@ public class $UI$01 {
         1 - Alive Hosts (Responding to Pings) only - ALIVE
         2 - Hosts with open ports only             - OPEN_PORTS_ONLY
          */
-        
+
     }
 }
