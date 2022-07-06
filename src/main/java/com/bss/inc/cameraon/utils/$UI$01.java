@@ -16,6 +16,10 @@ import java.util.regex.Pattern;
 
 public class $UI$01 {
     public static final Pattern digitPattern;
+    TextField[] tfs;
+    CheckBox[] chkbs;
+    TextArea ptsct;
+    ChoiceBox<String> pingMethod;
 
     static {
         digitPattern = Pattern.compile("\\d+");
