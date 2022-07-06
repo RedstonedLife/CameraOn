@@ -47,19 +47,19 @@ public class ScannerConfig {
         }
 
         maxThreads = useDefault ? (int) data[0] : preferences.getInt("maxThreads", Platform.CRIPPLED_WINDOWS ? 10 : 255);
-        threadDelay = preferences.getInt("threadDelay", 20);
-        scanDeadHosts = preferences.getBoolean("scanDeadHosts", true);
-        selectedPinger = preferences.get("selectedPinger", Platform.WINDOWS ? "pinger.windows" : "pinger.arp");
-        pingTimeout = preferences.getInt("pingTimeout", 2000);
-        pingCount = preferences.getInt("pingCount", 3);
-        skipBroadcastAddresses = preferences.getBoolean("skipBroadcastAddress", true);
-        portTimeout = preferences.getInt("portTimeout", 2000);
-        adaptPortTimeout = preferences.getBoolean("adaptPortTimeout", Platform.CRIPPLED_WINDOWS);
-        minPortTimeout = preferences.getInt("minPortTimeout", 100);
-        portString = preferences.get("portString", "80,443,8080");
-        useRequestedPorts = preferences.getBoolean("useRequestedPorts", true);
-        notAvailableText = preferences.get("notAvailableText", I18n.tl("fetcher.value.notAvailable"));
-        notScannedText = preferences.get("notScannedText", I18n.tl("fetcher.value.notScanned"));
+        threadDelay = useDefault ? (int) data[1] : preferences.getInt("threadDelay", 20);
+        scanDeadHosts = useDefault ? (int) data[0] : preferences.getBoolean("scanDeadHosts", true);
+        selectedPinger = useDefault ? (int) data[0] : preferences.get("selectedPinger", Platform.WINDOWS ? "pinger.windows" : "pinger.arp");
+        pingTimeout = useDefault ? (int) data[0] : preferences.getInt("pingTimeout", 2000);
+        pingCount = useDefault ? (int) data[0] : preferences.getInt("pingCount", 3);
+        skipBroadcastAddresses = useDefault ? (int) data[0] : preferences.getBoolean("skipBroadcastAddress", true);
+        portTimeout = useDefault ? (int) data[0] : preferences.getInt("portTimeout", 2000);
+        adaptPortTimeout = useDefault ? (int) data[0] : preferences.getBoolean("adaptPortTimeout", Platform.CRIPPLED_WINDOWS);
+        minPortTimeout = useDefault ? (int) data[0] : preferences.getInt("minPortTimeout", 100);
+        portString = useDefault ? (int) data[0] : preferences.get("portString", "80,443,8080");
+        useRequestedPorts = useDefault ? (int) data[0] : preferences.getBoolean("useRequestedPorts", true);
+        notAvailableText = useDefault ? (int) data[0] : preferences.get("notAvailableText", I18n.tl("fetcher.value.notAvailable"));
+        notScannedText = useDefault ? (int) data[0] : preferences.get("notScannedText", I18n.tl("fetcher.value.notScanned"));
     }
 
     /**
