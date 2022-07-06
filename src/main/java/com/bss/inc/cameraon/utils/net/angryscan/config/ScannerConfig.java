@@ -81,7 +81,7 @@ public class ScannerConfig {
                 j_.getBoolean("skipBroadcastAddress"),
                 j_.getInt("portTimeout"),
                 j_.getBoolean("adaptPortTimeout"),
-                j_.getInt()
+                j_.getInt("minPortTimeout",)
         };
     }
 
