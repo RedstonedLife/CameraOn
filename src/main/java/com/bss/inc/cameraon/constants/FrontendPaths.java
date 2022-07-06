@@ -30,11 +30,6 @@ public class FrontendPaths {
     public static final double WIDTH = 600d;
     public static final double DIVID_POS = 0.25278396436525613d;
     public static final double EPSILON = 0.0000005;
-    /* Default Settings */
-    public static final String DEFAULT_JSON_SETTINGS = """
-            {"theme": 0, "language": 0}""";
-    public static final String DEFAULT_CAM_JSON_SETTINGS = """
-            {"fps":5,"videoenc":1,"bitrate":1,"resolution":1}""";
     /* Internationalization (I18n) */
     public static final String MESSAGES = "messages"; //"messages_en";
     public static final Pattern NODOUBLEMARK = Pattern.compile("''");
