@@ -65,7 +65,9 @@ public class Crypto {
         return b(data, "SHA512withRSA");
     }
 
-    private static String b(String paramString1, String paramString2) throws NoSuchAlgorithmException, InvalidKeySpecException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException, InvalidKeyException, InvalidAlgorithmParameterException {
+    private static String b(String paramString1, String paramString2) throws NoSuchAlgorithmException,
+            InvalidKeySpecException, NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException,
+            InvalidKeyException, InvalidAlgorithmParameterException {
         paramString1 = paramString1.replace("\r\n", "").replace("\n", "").substring((paramString1 = paramString1.replace("\r\n", "").replace("\n", "")).indexOf(")") + 1, paramString1.length());
         String str = "";
         byte[] arrayOfByte = { -57, 115, 33, -116, 126, -56, -18, -103 };
