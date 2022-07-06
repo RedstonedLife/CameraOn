@@ -291,7 +291,7 @@ public class $UI$01 {
         scannerConfig.showInfoDialogAfterScan = chkbs[1].isSelected();
         if(rbs[0].isSelected()) {scannerConfig.displayResultType = DisplayResultType.ALL;}
         if(rbs[1].isSelected()) {scannerConfig.displayResultType = DisplayResultType.ALIVE;}
-        if(rbs[2].isSelected())
+        if(rbs[2].isSelected()) {scannerConfig.displayResultType = DisplayResultType.OPEN_PORTS_ONLY;}
         scannerConfig.store();
     }
 }
