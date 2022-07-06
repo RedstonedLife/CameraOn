@@ -261,11 +261,8 @@ public class $UI$01 {
         }
     }
 
-    public static void u_09$1$4(TextField[] tfs, CheckBox[] chkbs, RadioButton[] rbs) {
-        tfs2 = tfs;
-        chkbs2 = chkbs2;
-        rbs = rbs;
-    }
+    public static void u_09$1$4(TextField[] textFields, CheckBox[] checkBoxes, RadioButton[] radioButtons)
+    {tfs2 = textFields;chkbs2 = checkBoxes;rbs = radioButtons;}
     public static void u_09$1$1(TextField[] tfs, CheckBox[] chkbs, RadioButton[] rbs) {
         /*
         TextField Array Layout
