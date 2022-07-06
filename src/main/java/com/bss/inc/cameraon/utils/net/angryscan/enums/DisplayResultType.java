@@ -9,5 +9,9 @@ public enum DisplayResultType {
     DisplayResultType(String string) {
         this.string = string;
     }
-    
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }
