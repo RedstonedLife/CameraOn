@@ -146,10 +146,11 @@ public class $UI$01 {
 
     }
 
-    public static void u_08$1$6(TextField[] textFields, CheckBox[] checkBoxes, TextArea ptsct, ChoiceBox<String> pingMethod) {
+    public static void u_08$1$6(TextField[] textFields, CheckBox[] checkBoxes, TextArea textArea, ChoiceBox<String> pingMethod) {
         tfs = textFields;
         chkbs = checkBoxes;
-        
+        ptsct = textArea;
+
 
     }
 
