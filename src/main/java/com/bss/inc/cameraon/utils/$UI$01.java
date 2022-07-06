@@ -131,7 +131,7 @@ public class $UI$01 {
      * @param c char
      * @param text String
      * @param caretPos int
-     * @return
+     * @return true if 
      */
     public static boolean u_08$1$4(char c, String text, int caretPos) {
             // previous
