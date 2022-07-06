@@ -33,7 +33,7 @@ public class MainClass extends Application {
     public static DisplayResultType DisplayType;
 
     static {
-        DisplayType = Launcher.SettingsContainer.getValue("scanResultSettings")
+        DisplayType = Launcher.SettingsContainer.getValue("scanResultDisplay")
     }
 
     @Override
