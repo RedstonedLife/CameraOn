@@ -29,7 +29,8 @@ public class ScannerConfig {
 
     public DisplayResultType displayResultType;
 
-    public 
+    public boolean askConfirmationBeforeScan;
+    public boolean showInfoDialogAfterScan;
 
     /**
      * Package local constructor.
