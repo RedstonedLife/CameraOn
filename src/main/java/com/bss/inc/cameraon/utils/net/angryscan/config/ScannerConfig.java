@@ -58,8 +58,8 @@ public class ScannerConfig {
         minPortTimeout = useDefault ? (int) data[9] : preferences.getInt("minPortTimeout", 100);
         portString = useDefault ? (String) data[10] : preferences.get("portString", "80,443,8080");
         useRequestedPorts = useDefault ? (boolean) data[11] : preferences.getBoolean("useRequestedPorts", true);
-        notAvailableText = useDefault ? (int) data[0] : preferences.get("notAvailableText", I18n.tl("fetcher.value.notAvailable"));
-        notScannedText = useDefault ? (int) data[0] : preferences.get("notScannedText", I18n.tl("fetcher.value.notScanned"));
+        notAvailableText = useDefault ? (String) data[12] : preferences.get("notAvailableText", I18n.tl("fetcher.value.notAvailable"));
+        notScannedText = useDefault ? (String) data[13] : preferences.get("notScannedText", I18n.tl("fetcher.value.notScanned"));
     }
 
     /**
