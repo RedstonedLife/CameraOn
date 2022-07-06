@@ -87,7 +87,7 @@ public class ScannerConfig {
         JSONObject rj_ = (JSONObject) Launcher.SettingsContainer.getValue("scanResultDisplay");
         return new Object[] {
                 j_.getInt("maxThreads"),
-                j_.getInt("threadsDelay"),
+                j_.getInt("threadDelay"),
                 j_.getBoolean("scanDeadHosts"),
                 j_.getString("selectedPinger"),
                 j_.getInt("pingTimeout"),
