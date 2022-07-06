@@ -265,7 +265,7 @@ public class $UI$01 {
          */
         JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanResultDisplay");
         if(j_.has("displayResult")) {
-            
+            switch ()
             j_.put("displayResult", preferences.get("displayResult", "ALL"));
         }
         if(j_.has("valueNotAvailable")) {
