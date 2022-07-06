@@ -12,7 +12,7 @@ public enum DisplayResultType {
     }
 
     public DisplayResultType fromString(String string) {
-        
+        return DisplayResultType()
     }
 
     @Override public String toString() {return super.toString();}
