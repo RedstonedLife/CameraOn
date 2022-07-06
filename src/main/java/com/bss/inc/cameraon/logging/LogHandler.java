@@ -9,6 +9,6 @@ public interface LogHandler {
     void log(Level level, String message, Class<?> clazz);
     void log(Level level, String message, Class<?> clazz, Object... args);
 
-    void log(Logger logger, Level level, String message);
+    void log(final Logger logger, Level level, String message);
 
 }
