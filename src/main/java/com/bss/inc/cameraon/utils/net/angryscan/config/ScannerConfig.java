@@ -2,6 +2,7 @@ package com.bss.inc.cameraon.utils.net.angryscan.config;
 
 import com.bss.inc.cameraon.Launcher;
 import com.bss.inc.cameraon.i18n.I18n;
+import com.bss.inc.cameraon.logging.Logger;
 import org.json.JSONObject;
 
 import java.io.FileNotFoundException;
@@ -34,7 +35,7 @@ public class ScannerConfig {
         this.preferences = preferences;
 
         if(Launcher.SettingsContainer.getValue("scanResultDisplay") == null || Launcher.SettingsContainer.getValue("scanSettings") == null) {
-            Lo
+            Logger.getLogger("BNC")
         }
 
         maxThreads = preferences.getInt("maxThreads", Platform.CRIPPLED_WINDOWS ? 10 : 255);
