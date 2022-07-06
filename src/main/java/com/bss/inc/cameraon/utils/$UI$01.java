@@ -288,8 +288,6 @@ public class $UI$01 {
         if(j_.has("valueNotScanned")) {tfs2[1].setText(j_.getString("valueNotScanned"));}
         if(j_.has("askConfirmationBeforeScan")) {chkbs2[0].setSelected(j_.getBoolean("askConfirmationBeforeScan"));}
         if(j_.has("showInfoDialogAfterScan")) {chkbs2[1].setSelected(j_.getBoolean("showInfoDialogAfterScan"));}
-        System.out.println("NA: " + j_.getString("valueNotAvailable"));
-        System.out.println("NS: " + j_.getString("valueNotScanned"));
     }
 
     public static void u_09$1$2() {
