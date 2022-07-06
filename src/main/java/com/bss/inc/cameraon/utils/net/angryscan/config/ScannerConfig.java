@@ -169,10 +169,10 @@ public class ScannerConfig {
             j_.put("valueNotScanned", preferences.get("notScannedText", "[n/s]"));
         }
         if(j_.has("askConfirmationBeforeScan")) {
-            j_.put("askConfirmationBeforeScan", false);
+            j_.put("askConfirmationBeforeScan", preferences.getBoolean("askConfirmationBeforeScan", false););
         }
         if(j_.has("showInfoDialogAfterScan")) {
-            j_.put("showInfoDialogAfterScan", false);
+            j_.put("showInfoDialogAfterScan", preferences.getBoolean("showInfoDialogAfterScan", false););
         }
         Launcher.SettingsContainer.Save();
     }
