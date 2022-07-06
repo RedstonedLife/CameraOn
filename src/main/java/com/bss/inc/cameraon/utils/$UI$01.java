@@ -279,10 +279,10 @@ public class $UI$01 {
             tfs[1].setText(j_.getString("valueNotScanned"));
         }
         if(j_.has("askConfirmationBeforeScan")) {
-            chkbs[]
+            chkbs[0].setSelected(j_.getBoolean("askConfirmationBeforeScan"));
         }
         if(j_.has("showInfoDialogAfterScan")) {
-            j_.put("showInfoDialogAfterScan",   preferences.getBoolean("showInfoDialogAfterScan", false));
+            chkbs[1].setSelected(j_.getBoolean("showInfoDialogAfterScan"));
         }
     }
 
