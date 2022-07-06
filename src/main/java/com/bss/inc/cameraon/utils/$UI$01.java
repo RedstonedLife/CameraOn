@@ -263,7 +263,22 @@ public class $UI$01 {
         1 - Alive Hosts (Responding to Pings) only - ALIVE
         2 - Hosts with open ports only             - OPEN_PORTS_ONLY
          */
-
+        JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanResultDisplay");
+        if(j_.has("displayResult")) {
+            j_.put("displayResult", preferences.get("displayResult", "ALL"));
+        }
+        if(j_.has("valueNotAvailable")) {
+            j_.put("valueNotAvailable", preferences.get("notAvailableText", "[n/a]"));
+        }
+        if(j_.has("valueNotScanned")) {
+            j_.put("valueNotScanned", preferences.get("notScannedText", "[n/s]"));
+        }
+        if(j_.has("askConfirmationBeforeScan")) {
+            j_.put("askConfirmationBeforeScan", preferences.getBoolean("askConfirmationBeforeScan", false));
+        }
+        if(j_.has("showInfoDialogAfterScan")) {
+            j_.put("showInfoDialogAfterScan",   preferences.getBoolean("showInfoDialogAfterScan", false));
+        }
     }
 
     public static void u_09$1$2(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, RadioButton[] rbs) {
