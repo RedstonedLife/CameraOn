@@ -33,12 +33,13 @@ public class ScannerConfig {
      */
     public ScannerConfig(Preferences preferences) {
         this.preferences = preferences;
-        
+        boolean useDefault = false;
 
         if(Launcher.SettingsContainer.getValue("scanResultDisplay") == null || Launcher.SettingsContainer.getValue("scanSettings") == null) {
             Logger.getLogger("BNC").info("Could not find 'scanResultDisplay' column or 'scanSettings' column in 'app.settings.json'");
             Logger.getLogger("BNC").info("Reverting to default settings, and creating both columns!");
             Logger.getLogger("BNC").warn("If this issue persists contact support.");
+            useDefault = !useDefault;
         }
 
         maxThreads = preferences.getInt("maxThreads", Platform.CRIPPLED_WINDOWS ? 10 : 255);
