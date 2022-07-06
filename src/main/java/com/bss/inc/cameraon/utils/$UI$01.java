@@ -276,10 +276,10 @@ public class $UI$01 {
             tfs[0].setText(j_.getString("valueNotAvailable"));
         }
         if(j_.has("valueNotScanned")) {
-            tfs[1].setText(j_.getString("valueNotAvailable"));
+            tfs[1].setText(j_.getString("valueNotScanned"));
         }
         if(j_.has("askConfirmationBeforeScan")) {
-            j_.put("askConfirmationBeforeScan", preferences.getBoolean("askConfirmationBeforeScan", false));
+            chkbs[]
         }
         if(j_.has("showInfoDialogAfterScan")) {
             j_.put("showInfoDialogAfterScan",   preferences.getBoolean("showInfoDialogAfterScan", false));
