@@ -13,6 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
 import java.awt.*;
+import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -34,7 +35,11 @@ public class PreferenceDisplay implements Initializable {
         $UI$01.u_06$1$1();}
 
     @FXML private void okApp(ActionEvent event) {
-        $UI$01.u_08$1$5();
+        try {
+            $UI$01.u_08$1$5();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         $UI$01.u_09$1$3();
         $UI$01.u_06$1$1();
     }
