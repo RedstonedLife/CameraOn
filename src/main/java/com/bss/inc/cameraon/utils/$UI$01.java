@@ -214,7 +214,7 @@ public class $UI$01 {
 
     }
 
-    public static void u_08$1$2(TextField[] tfs, CheckBox[] chkbs, TextArea ptsct, ChoiceBox<String> pingMethod) {
+    public static void u_08$1$2() {
         try {
             ptsct.setWrapText(true);
             JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
