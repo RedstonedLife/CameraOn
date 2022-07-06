@@ -15,6 +15,6 @@ public class Crypto {
     public static String encrypt(String data) throws NoSuchAlgorithmException, NoSuchPaddingException,
             InvalidKeySpecException, InvalidKeyException, IllegalBlockSizeException, BadPaddingException,
             InvalidAlgorithmParameterException, UnsupportedEncodingException {
-        return 
+        return a(data, "SHA512withRSA");
     }
 }
