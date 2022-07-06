@@ -287,7 +287,7 @@ public class $UI$01 {
     }
 
     public static void u_09$1$2() {
-        
+
     }
 
     public static void u_09$1$3(ScannerConfig scannerConfig, TextField[] tfs, CheckBox[] chkbs, RadioButton[] rbs) {
