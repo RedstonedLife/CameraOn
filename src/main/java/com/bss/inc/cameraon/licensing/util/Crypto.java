@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.licensing.util;
 
+import com.bss.inc.cameraon.logging.Level;
 import com.bss.inc.cameraon.logging.Logger;
 import org.apache.commons.codec.binary.Hex;
 
@@ -80,7 +81,7 @@ public class Crypto {
         try {
             str = new String(cipher.doFinal(Hex.decodeHex(paramString1.toCharArray())), "UTF-8");
         } catch (Exception exception) {
-            Logger.getLogger(Crypto.class.getName()).log(Level.FINE, "Decryption error.", exception);
+            Logger.getLogger(Crypto.class.getName()).log(Level.ERROR, "Decryption error.", exception);
         }
         return str;
     }
