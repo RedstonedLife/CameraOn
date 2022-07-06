@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.licensing.util;
 
+import com.bss.inc.cameraon.logging.Logger;
 import org.apache.commons.codec.binary.Hex;
 
 import javax.crypto.*;
