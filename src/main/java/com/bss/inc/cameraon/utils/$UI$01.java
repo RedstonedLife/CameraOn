@@ -20,6 +20,7 @@ public class $UI$01 {
     static CheckBox[] chkbs;
     static TextArea ptsct;
     static ChoiceBox<String> pingMethod;
+    static ScannerConfig scannerConfig;
 
     static {
         digitPattern = Pattern.compile("\\d+");
