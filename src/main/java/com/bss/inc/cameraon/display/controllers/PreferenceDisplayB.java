@@ -27,8 +27,7 @@ public class PreferenceDisplayB implements Initializable {
     @FXML private CheckBox scanDeadHostsCHKb,skipUnassignedCHKb,adaptTimeoutToPingCHKb,forEachHostCHKb;
     @FXML private void okApp(ActionEvent event) {
         try {
-            $UI$01.u_08$1$5(MainClass.getConfig().forScanner(),new TextField[]{threadsDelayTf,threadsMaxTf,pingProbesTf,pingTimeoutTf,defaultPortTimeoutTf,minAdptdConTimeoutTf},
-                    new CheckBox[]{scanDeadHostsCHKb,skipUnassignedCHKb,adaptTimeoutToPingCHKb,forEachHostCHKb},portToScanTa,pingMethodCb);
+            $UI$01.u_08$1$5();
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
