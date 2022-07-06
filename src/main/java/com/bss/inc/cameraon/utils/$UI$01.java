@@ -306,48 +306,5 @@ public class $UI$01 {
         if(rbs[2].isSelected()) {scannerConfig.displayResultType = DisplayResultType.OPEN_PORTS_ONLY;}
         scannerConfig.store();
     }
-    public static void u_09$1$5() {
-        try {
-            JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
-            if (j_.has("threadDelay")) {
-                tfs[0].setText(String.valueOf(j_.getInt("threadDelay")));
-            } // Thread Delay         threadDelay           (Default 20 MS)             (int)
-            if (j_.has("maxThreads")) {
-                tfs[1].setText(String.valueOf(j_.getInt("maxThreads")));
-            } // Max Threads          maxThreads            (Default 255 Threads)       (int)
-            if (j_.has("scanDeadHosts")) {
-                chkbs[0].setSelected(j_.getBoolean("scanDeadHosts"));
-            } // Scan Dead Hosts      scanDeadHosts         (Default true)             (bool)
-            if (j_.has("selectedPinger")) {
-                pingMethod.setValue(pingMethod.getItems().get(pingMethod.getItems().indexOf(j_.getString("selectedPinger"))));
-            } // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
-            if (j_.has("pingTimeout")) {
-                tfs[3].setText(String.valueOf(j_.getInt("pingTimeout")));
-            } // Ping Timeout         pingTimeout           (Default 20 MS)             (int)
-            if (j_.has("pingCount")) {
-                tfs[2].setText(String.valueOf(j_.getInt("pingCount")));
-            } // Ping Count           pingCount             (Default 3 Probes/Packets)  (int)
-            if (j_.has("skipBroadcastAddress")) {
-                chkbs[1].setSelected(j_.getBoolean("skipBroadcastAddress"));
-            } // Skip Broadcast IP    skipBroadcastAddress  (Default true)              (bool)
-            if (j_.has("portTimeout")) {
-                tfs[4].setText(String.valueOf(j_.getInt("portTimeout")));
-            } // Port Timeout         portTimeout           (Default 2000 MS, 2s)       (int)
-            if (j_.has("adaptPortTimeout")) {
-                chkbs[2].setSelected(j_.getBoolean("adaptPortTimeout"));
-            } // Adapt Port Timeout   adaptPortTimeout      (Default true)              (bool)
-            if (j_.has("minPortTimeout")) {
-                tfs[5].setText(String.valueOf(j_.getInt("minPortTimeout")));
-            } // Min Port Timeout     minPortTimeout        (Default 100 MS, 0.1s)      (int)
-            if (j_.has("portString")) {
-                ptsct.setText(j_.getString("portString"));
-            } // Port String          portString            (Default "80,443,8080")     (string)
-            if (j_.has("useRequestedPorts")) {
-                chkbs[3].setSelected(j_.getBoolean("useRequestedPorts"));
-            } // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
-            return;
-        } catch (Exception e) {
-            Logger.getLogger("BNC").error("An error occurred while trying to set the window with settings from file 'app.json.settings' 'scanSettings' column", e);
-        }
-    }
+    
 }
