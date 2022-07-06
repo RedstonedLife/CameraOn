@@ -5,6 +5,7 @@ import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.constants.FrontendPaths;
 import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
+import com.bss.inc.cameraon.utils.net.angryscan.enums.DisplayResultType;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import org.json.JSONObject;
@@ -265,7 +266,9 @@ public class $UI$01 {
          */
         JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanResultDisplay");
         if(j_.has("displayResult")) {
-            switch ()
+            switch (DisplayResultType.fromString(j_.getString("displayResult"))) {
+                case ALL -> 
+            }
             j_.put("displayResult", preferences.get("displayResult", "ALL"));
         }
         if(j_.has("valueNotAvailable")) {
