@@ -259,7 +259,8 @@ public class $UI$01 {
         0 - Ask Confirmation Before Scan    askConfirmBeforeScan
         1 - Show Info Dialog After Scan     showInfoAfterScan
         RadioButton Array Layout
-        0 - All Scanned Hosts
+        0 - All Scanned Hosts - DISPLAY ALL
+        1 - 
          */
     }
 }
