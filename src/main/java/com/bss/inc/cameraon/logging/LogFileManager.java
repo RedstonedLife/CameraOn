@@ -278,7 +278,7 @@ public class LogFileManager implements ErrorHandler, WarnHandler, InfoHandler, D
         append(LoggingConstants.LOG_UNCLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), level.label(), message));
     }
 
-    @Override public void log(Level level, String message) {
-        append(LoggingConstants.LOG_CLASSED_FORMAT.formatted(LogFileManager.getCurrentTimestamp(), level.label(), message));
+    @Override public void log(final Logger logger, Level level, String message) {
+        append(LoggingConstants.LOG_CLASSED_FORMAT.formatted(logger.getName(), LogFileManager.getCurrentTimestamp(), level.label(), message));
     }
 }
