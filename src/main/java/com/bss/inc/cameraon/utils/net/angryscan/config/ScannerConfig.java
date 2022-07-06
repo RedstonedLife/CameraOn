@@ -158,7 +158,22 @@ public class ScannerConfig {
             j_.put("useRequestedPorts", preferences.getBoolean("useRequestedPorts", true));
         } // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
         Launcher.SettingsContainer.setValue("scanSettings", j_);
-        j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
+        j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanResultDisplay");
+        if(j_.has("displayResult")) {
+            j_.put("displayResult", "ALL");
+        }
+        if(j_.has("valueNotAvailable")) {
+            j_.put("valueNotAvailable", "[n/a]");
+        }
+        if(j_.has("valueNotScanned")) {
+            j_.put("valueNotScanned", "[n/s]");
+        }
+        if(j_.has("askConfirmationBeforeScan")) {
+            j_.put("askConfirmationBeforeScan", false);
+        }
+        if(j_.has("showInfoDialogAfterScan")) {
+            j_.put("showInfoDialogAfterScan", false);
+        }
         Launcher.SettingsContainer.Save();
     }
 }
