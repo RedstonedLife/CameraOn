@@ -20,8 +20,6 @@ public class QM implements Initializable {
 
     private MainClass instance;
 
-    @FXML private void closeApp(ActionEvent event) {$UI$01.u_06$1$1();}
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //tl("language.{}.changeConfirmation".replace("{}",prLang(instance.getSCENE_MANAGER().getCurrentLanguage())),prLang(instance.getSCENE_MANAGER().getSettings().get_language()))
