@@ -15,6 +15,7 @@ target/
 __pycache__/
 
 *.txt
+*.salt
 
 # JIRA plugin
 atlassian-ide-plugin.xml

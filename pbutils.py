@@ -48,6 +48,15 @@ def createTotalShaPBKDF2HMAC64():
             sums.append(sum.createPBKDF2HMAC(salt64, 500))
     return Checksum.createStaticPBKDF2HMAC(sums, salt64, 500)
 
+with open("32byte.salt", "wb+") as f:
+    f.write(os.urandom(32))
+    f.flush()
+    f.close()
+with open("64byte.salt", "wb+") as f:
+    f.write(os.urandom(64))
+    f.flush()
+    f.close()
+
 with open("checksum.txt", "w+") as f:
     mdc = createTotalChecksum()
     sha1 = createTotalSha()
