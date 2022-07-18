@@ -32,6 +32,13 @@ class Checksum:
                 hash_upper.update(hashlib.pbkdf2_hmac('sha256', chunk, salt, app_iters))
         return hash_upper.hexdigest()
 
+    def createSha512(self) -> str:
+        with open(self.file_path, "rb") as f:
+            hash = hashlib.sha512()
+            while chunk := f.read(8192):
+                hash.update(chunk)
+        return hash.hexdigest()
+
     @staticmethod
     def createStaticChecksum(hashes: tuple) -> str:
         hash = hashlib.md5()
@@ -49,6 +56,13 @@ class Checksum:
     @staticmethod
     def createStaticSha256(hashes: tuple) -> str:
         hash = hashlib.sha256()
+        for h in hashes:
+            hash.update(bytes(h, 'utf8'))
+        return hash.hexdigest()
+
+    @staticmethod
+    def createStaticSha512(hashes: tuple) -> str:
+        hash = hashlib.sha512()
         for h in hashes:
             hash.update(bytes(h, 'utf8'))
         return hash.hexdigest()
