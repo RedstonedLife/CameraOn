@@ -11,7 +11,7 @@
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2b2b2b" height="27.0" layoutY="1.0" stroke="#2b2b2b" strokeType="INSIDE" width="500.0" />
         <HBox layoutY="1.0" prefHeight="27.0" prefWidth="25.0" />
         <Text fill="#7c7c7c" layoutX="207.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Preferences" wrappingWidth="86.853515625" />
-        <Button fx:id="btnClose" layoutX="461.0" layoutY="1.0" maxHeight="23.0" maxWidth="30.0" mnemonicParsing="false" onAction="#closeApp" prefHeight="24.0" prefWidth="30.0" text="✖" textFill="#ff4d4d" />
+        <Button fx:id="btnClose" layoutX="461.0" layoutY="1.0" maxHeight="23.0" maxWidth="30.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="30.0" text="✖" textFill="#ff4d4d" />
         <AnchorPane layoutX="10.0" layoutY="90.0" prefHeight="95.0" prefWidth="430.0">
             <children>
                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2f2f30" height="106.0" layoutX="3.0" layoutY="4.0" stroke="#7c7c7c" strokeType="INSIDE" width="423.0" />
@@ -84,12 +84,12 @@
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2b2b2b" height="49.0" layoutX="1.0" layoutY="751.0" stroke="TRANSPARENT" strokeType="INSIDE" width="500.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2b2b2b" height="724.0" layoutX="-4.0" layoutY="27.0" stroke="TRANSPARENT" strokeType="INSIDE" width="8.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2b2b2b" height="724.0" layoutX="495.0" layoutY="27.0" stroke="TRANSPARENT" strokeType="INSIDE" width="8.0" />
-        <Button fx:id="okBtn" layoutX="308.0" layoutY="762.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="87.0" stylesheets="@prefBtns.css" text="OK" onAction="#okApp" textFill="#2b2b2b">
+        <Button fx:id="okBtn" layoutX="308.0" layoutY="762.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="87.0" stylesheets="@prefBtns.css" text="OK" textFill="#2b2b2b">
             <font>
                 <Font name="Consolas" size="12.0" />
             </font>
         </Button>
-        <Button fx:id="cancelBtn" layoutX="405.0" layoutY="762.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="87.0" stylesheets="@prefBtns.css" onAction="#closeApp" text="Cancel" textFill="#2b2b2b">
+        <Button fx:id="cancelBtn" layoutX="405.0" layoutY="762.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="87.0" stylesheets="@prefBtns.css" text="Cancel" textFill="#2b2b2b">
             <font>
                 <Font name="Consolas" size="12.0" />
             </font>
