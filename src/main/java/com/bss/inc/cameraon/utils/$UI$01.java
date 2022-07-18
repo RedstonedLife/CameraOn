@@ -308,7 +308,7 @@ public class $UI$01 {
     }
 
     public static void u_10$1$2(Button button, String name) {
-        button.setOnAction(e -> {MainClass.getWindowManager().minimizeDialog("mainWindow");});
+        button.setOnAction(e -> {MainClass.getWindowManager().minimizeDialog(name);});
     }
 
 }
