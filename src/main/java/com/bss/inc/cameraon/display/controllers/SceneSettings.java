@@ -26,9 +26,9 @@ public class SceneSettings implements Initializable {
     @FXML private Button btnMinimize;
 
     // # Close Window Button
-    @FXML private void closeApp(ActionEvent event) {MainClass.getWindowManager().closeDialogs();}
+    private void closeApp(ActionEvent event) {MainClass.getWindowManager().closeDialogs();}
     // # Minimize Window Button
-    @FXML private void minimizeApp(ActionEvent event) {MainClass.getWindowManager().minimizeDialog("mainWindow");}
+    private void minimizeApp(ActionEvent event) {MainClass.getWindowManager().minimizeDialog("mainWindow");}
 
     private void initializeLanguage() {
         settingsSceneBtn.setText(tl("settings.btn.text"));
