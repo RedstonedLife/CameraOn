@@ -68,7 +68,7 @@ public class MainClass extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+        launch(this, args);
     }
     public static DialogManager getWindowManager() {
         return WindowManager;
