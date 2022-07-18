@@ -26,12 +26,6 @@ public class CameraSettings implements Initializable {
     @FXML private SplitPane cmainsplit;
     @FXML private Text cctvencodingtxt,cctvencodingbetxt,cctvfpstxt,cctvrestxt,cctvbrtxt,fpscounttxt,versiontxt,licensetxt;
 
-    // # Close Window Button
-    @FXML private void closeApp(ActionEvent event) {MainClass.getWindowManager().closeDialogs();}
-
-    // # Minimize Window Button
-    @FXML private void minimizeApp(ActionEvent event) {MainClass.getWindowManager().minimizeDialog("mainWindow");}
-
     private void initializeLanguage() {
         cctvencodingtxt.setText(tl("settings.cctv.encoding"));
         cctvencodingbetxt.setText(tl("settings.cctv.encoding.below"));
@@ -56,6 +50,8 @@ public class CameraSettings implements Initializable {
         initializeLanguage();
         modifyStyle();
         $UI$01.u_01$1$1(cmainsplit, new Button[]{settingsSceneBtn, cctvSceneBtn, applySceneBtn, scanSceneBtn, HelpBtn});
+        $UI$01.u_10$1$1(btnClose);
+        $UI$01.u_10$1$2(btnMinimize,"mainWindow");
         /* Load Choice Boxes */
         veCB.getItems().addAll("H.264", "H.264H", "H.265");
         rCB.getItems().addAll("1080 (1920x1080)", "720 (1280x720)", "480 (720x480)", "360 (640x360)");
