@@ -1,18 +1,29 @@
 import os
+from os.path import exists
 from MD5 import Checksum
 
 path = "src/main/"
 salt = None
 salt64 = None
 
-with open("32byte.salt", "rb") as f:
+cSalt = True if input('Generate new 32 byte salt? (Y/N): ').lower()[0] == 'y' else False
+cSalt64 =True if input('Generate new 64 byte salt? (Y/N): ').lower()[0] == 'y' else False
+
+if not exists('32byte.salt') or cSalt:
+    with open('32byte.salt', 'wb+') as f:
+        f.write(os.urandom(32))
+        f.flush()
+        f.close()
+if not exists('64byte.salt') or cSalt64:
+    with open('64byte.salt', 'wb+') as f:
+        f.write(os.urandom(64))
+        f.flush()
+        f.close()
+
+with open('32byte.salt', 'rb') as f:
     salt = f.read()
-    f.flush()
-    f.close()
-with open("64byte.salt", "rb") as f:
+with open('64byte.salt', 'rb') as f:
     salt64 = f.read()
-    f.flush()
-    f.close()
 
 def createTotalChecksum():
     sums = []
