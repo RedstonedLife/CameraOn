@@ -8,6 +8,7 @@ salt64 = None
 
 cSalt = True if input('Generate new 32 byte salt? (Y/N): ').lower()[0] == 'y' else False
 cSalt64 =True if input('Generate new 64 byte salt? (Y/N): ').lower()[0] == 'y' else False
+checksumJar = "out/artifacts/cameraon_jar/cameraon_out.jar"
 
 if not exists('32byte.salt') or cSalt:
     with open('32byte.salt', 'wb+') as f:
@@ -68,6 +69,14 @@ def createTotalShaPBKDF2HMAC64():
             sums.append(sum.createPBKDF2HMAC(salt64, 500))
     return Checksum.createStaticPBKDF2HMAC(sums, salt64, 500)
 
+with open("jar_checksum.txt", "w+") as f:
+    sum = Checksum(checksumJar)
+    mdc = sum.createChecksum()
+    sha1 = sum.createSha1()
+    sha256 = sum.createSha256()
+    sha512 = sum.createSha512()
+    pbk = sum.createPBKDF2HMAC(salt, 500)
+    pbk64 = sum.createPBKDF2HMAC(salt64, 500)
 
 with open("checksum.txt", "w+") as f:
     mdc = createTotalChecksum()
