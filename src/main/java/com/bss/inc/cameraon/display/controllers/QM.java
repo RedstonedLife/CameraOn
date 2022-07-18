@@ -16,7 +16,7 @@ public class QM implements Initializable {
 
     @FXML
     private Text qmHelpTxt,qmFaqTxt,qmTplTxt;
-    @FXML private Button qmHelpBtn,qmFaqBtn,qmTplBtn;
+    @FXML private Button qmHelpBtn,qmFaqBtn,qmTplBtn,close;
 
     private MainClass instance;
 
@@ -26,6 +26,7 @@ public class QM implements Initializable {
         qmHelpBtn.setOnAction(e -> MainClass.getWindowManager().changeDialogScene("popUpWindow", MainClass.class.getResource(FrontendPaths.POP_HELP_FXML)));
         qmFaqBtn.setOnAction(e -> MainClass.getWindowManager().changeDialogScene("popUpWindow", MainClass.class.getResource(FrontendPaths.POP_FAQ_FXML)));
         qmTplBtn.setOnAction(e -> MainClass.getWindowManager().changeDialogScene("popUpWindow", MainClass.class.getResource(FrontendPaths.POP_TPL_FXML)));
+        close.setOnAction(e -> $UI$01.u_06$1$1());
     }
 
 }
