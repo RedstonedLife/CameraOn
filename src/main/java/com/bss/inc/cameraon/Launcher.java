@@ -98,6 +98,7 @@ public class Launcher {
 
     public static void main(String[] args) throws UnknownOS, FileNotFoundException {
         setSettings();
-        MainClass.main(args);
+        MainClass.launch(MainClass);
+        //MainClass.main(args);
     }
 }
