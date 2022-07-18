@@ -29,13 +29,6 @@ public class PreferenceDisplay implements Initializable {
 
     /*@FXML private Text threadtxt,t1txt,t2txt,pingtxt,p1txt,p2txt,p3txt,p4txt,skiptxt,s1txt,timetxt,tt1txt,tt2txt,tt3txt,portstxt,ps1txt,ps2txt,ps3txt,ps4txt;*/
 
-    @FXML private void closeApp(ActionEvent event) {
-        $UI$01.u_06$1$1();}
-
-    @FXML private void okApp(ActionEvent event) {
-        try {$UI$01.u_08$1$5();$UI$01.u_09$1$3();} catch (FileNotFoundException e) {throw new RuntimeException(e);}
-        $UI$01.u_06$1$1();
-    }
     /*private void initializeLanguage() {
         displaySceneBtn.setText(tl("preferences.btn.display.text"));
         threadtxt.setText(tl("preferences.threads.text"));
@@ -63,6 +56,11 @@ public class PreferenceDisplay implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         asSceneBtn.setOnAction(e -> {MainClass.getWindowManager().changeDialogScene("preferencesDialog",MainClass.class.getResource(FrontendPaths.PREF_DISPLAY_AS_FXML));});
         displaySceneBtn.setOnAction(e -> {MainClass.getWindowManager().changeDialogScene("preferencesDialog",MainClass.class.getResource(FrontendPaths.PREF_DISPLAY_FXML));});
+        btnClose.setOnAction(e->{$UI$01.u_06$1$1();});
+        cancelBtn.setOnAction(e->{$UI$01.u_06$1$1();});
+        okBtn.setOnAction(e->{try {$UI$01.u_08$1$5();$UI$01.u_09$1$3();} catch (FileNotFoundException e) {throw new RuntimeException(e);}
+            $UI$01.u_06$1$1();});
+
         $UI$01.u_09$1$4(new TextField[]{naTf,nsTf}, new CheckBox[]{askConfirmNewScanCHKb, showInfoDialogCHKb}, new RadioButton[]{allScannedHostsRb, aliveHostsRb, openPortHostsRb});
         $UI$01.u_09$1$1();
         $UI$01.u_09$1$2();
