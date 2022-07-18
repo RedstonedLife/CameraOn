@@ -66,9 +66,6 @@ public class MainClass extends Application {
     public void stop() throws FileNotFoundException {
         config.onExit();
     }
-
-    public static void main(String[] args) {
-    }
     public static DialogManager getWindowManager() {
         return WindowManager;
     }
