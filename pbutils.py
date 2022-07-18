@@ -2,8 +2,17 @@ import os
 from MD5 import Checksum
 
 path = "src/main/"
-salt = os.urandom(32)
-salt64 = os.urandom(64)
+salt = None
+salt64 = None
+
+with open("32byte.salt", "rb") as f:
+    salt = f.read()
+    f.flush()
+    f.close()
+with open("64byte.salt", "rb") as f:
+    salt64 = f.read()
+    f.flush()
+    f.close()
 
 def createTotalChecksum():
     sums = []
@@ -48,14 +57,6 @@ def createTotalShaPBKDF2HMAC64():
             sums.append(sum.createPBKDF2HMAC(salt64, 500))
     return Checksum.createStaticPBKDF2HMAC(sums, salt64, 500)
 
-with open("32byte.salt", "wb+") as f:
-    f.write(os.urandom(32))
-    f.flush()
-    f.close()
-with open("64byte.salt", "wb+") as f:
-    f.write(os.urandom(64))
-    f.flush()
-    f.close()
 
 with open("checksum.txt", "w+") as f:
     mdc = createTotalChecksum()
