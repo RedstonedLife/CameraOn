@@ -51,7 +51,7 @@ public class SceneSettings implements Initializable {
         langCb.setValue(langCb.getItems().get(Integer.valueOf(Launcher.SettingsContainer.getValue("appLanguage").toString())));
         $UI$01.u_01$1$1(cmainsplit,new Button[]{settingsSceneBtn,cctvSceneBtn,applySceneBtn,scanSceneBtn,HelpBtn});
         $UI$01.u_10$1$1(btnClose);
-        $UI$01.u_10$1$2(btnMinimize,"main");
+        $UI$01.u_10$1$2(btnMinimize,"mainWindow");
         initializeLanguage();
     }
 }
