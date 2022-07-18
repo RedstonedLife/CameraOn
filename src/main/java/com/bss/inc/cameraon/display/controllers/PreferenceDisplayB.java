@@ -37,7 +37,7 @@ public class PreferenceDisplayB implements Initializable {
         $UI$01.u_08$1$1();
         $UI$01.u_08$1$2();
         btnClose.setOnAction(e-> $UI$01.u_06$1$1());
-        cancelBtn.setOnAction(e-> $UI$01.u_06$1$1();});
+        cancelBtn.setOnAction(e-> $UI$01.u_06$1$1());
         okBtn.setOnAction(e->{try {$UI$01.u_08$1$5();$UI$01.u_09$1$3();} catch (FileNotFoundException ex) {throw new RuntimeException(ex);}
             $UI$01.u_06$1$1();});
         asSceneBtn.setOnAction(e -> {MainClass.getWindowManager().changeDialogScene("preferencesDialog",MainClass.class.getResource(FrontendPaths.PREF_DISPLAY_AS_FXML));});
