@@ -18,7 +18,7 @@ import java.util.ResourceBundle;
 import static com.bss.inc.cameraon.i18n.I18n.tl;
 
 public class PreferenceDisplayB implements Initializable {
-    @FXML private Button asSceneBtn,displaySceneBtn,okBtn,cancelBtn,;
+    @FXML private Button asSceneBtn,displaySceneBtn,okBtn,cancelBtn,btnClose;
 
     @FXML private TextField threadsDelayTf,threadsMaxTf,defaultPortTimeoutTf,minAdptdConTimeoutTf,pingProbesTf,pingTimeoutTf;
     @FXML private TextArea portToScanTa;
@@ -36,6 +36,10 @@ public class PreferenceDisplayB implements Initializable {
                 new CheckBox[]{scanDeadHostsCHKb,skipUnassignedCHKb,adaptTimeoutToPingCHKb,forEachHostCHKb},portToScanTa,pingMethodCb);
         $UI$01.u_08$1$1();
         $UI$01.u_08$1$2();
+        btnClose.setOnAction(e->{$UI$01.u_06$1$1();});
+        cancelBtn.setOnAction(e->{$UI$01.u_06$1$1();});
+        okBtn.setOnAction(e->{try {$UI$01.u_08$1$5();$UI$01.u_09$1$3();} catch (FileNotFoundException ex) {throw new RuntimeException(ex);}
+            $UI$01.u_06$1$1();});
         asSceneBtn.setOnAction(e -> {MainClass.getWindowManager().changeDialogScene("preferencesDialog",MainClass.class.getResource(FrontendPaths.PREF_DISPLAY_AS_FXML));});
         displaySceneBtn.setOnAction(e -> {MainClass.getWindowManager().changeDialogScene("preferencesDialog",MainClass.class.getResource(FrontendPaths.PREF_DISPLAY_FXML));});
         initializeLanguage();
