@@ -20,7 +20,7 @@ import java.util.ResourceBundle;
 import static com.bss.inc.cameraon.i18n.I18n.tl;
 
 public class PreferenceDisplay implements Initializable {
-    @FXML private Button asSceneBtn,okBtn,cancelBtn,;
+    @FXML private Button asSceneBtn,okBtn,cancelBtn,btn;
     @FXML private Button displaySceneBtn;
 
     @FXML private TextField naTf,nsTf;
