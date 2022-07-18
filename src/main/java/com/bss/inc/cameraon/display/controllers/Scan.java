@@ -17,17 +17,13 @@ import static com.bss.inc.cameraon.i18n.I18n.tl;
 
 public class Scan implements Initializable {
 
-    @FXML private Button settingsSceneBtn,cctvSceneBtn,scanSceneBtn,applySceneBtn,prefBtn,scanBtn,HelpBtn;
+    @FXML private Button settingsSceneBtn,cctvSceneBtn,scanSceneBtn,applySceneBtn,prefBtn,scanBtn,HelpBtn,btnClose,btnMinimize;
     @FXML private ChoiceBox<String> scanAlgCb;
     @FXML private SplitPane cmainsplit;
     @FXML private Text taskslefttxt,backendtxt,scanningalgotxt,scanstatustxt,versiontxt,licensetxt,iprangeTxt,iprangetoTxt;
     @FXML private TextField iprangetoTf,iprangefromTf;
     @FXML private ProgressBar tasksLeftScan;
 
-    // # Close Window Button
-    @FXML private void closeApp(ActionEvent event) {MainClass.getWindowManager().closeDialogs();}
-    // # Minimize Window Button
-    @FXML private void minimizeApp(ActionEvent event) {MainClass.getWindowManager().minimizeDialog("mainWindow");}
 
     @FXML
     private void doScan(ActionEvent event) throws HALT_AND_CATCH_FIRE {}
