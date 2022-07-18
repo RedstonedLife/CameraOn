@@ -10,11 +10,11 @@
     <children>
         <HBox layoutX="832.0" layoutY="1.0" prefHeight="27.0" prefWidth="28.0">
             <children>
-                <Button fx:id="btnMinimize" maxHeight="23.0" maxWidth="30.0" mnemonicParsing="false" onAction="#minimizeApp" prefHeight="24.0" prefWidth="30.0" text="➖" textFill="#b8ff00">
+                <Button fx:id="btnMinimize" maxHeight="23.0" maxWidth="30.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="30.0" text="➖" textFill="#b8ff00">
                     <font>
                         <Font name="System Bold" size="12.0" />
                     </font></Button>
-                <Button fx:id="btnClose" maxHeight="23.0" maxWidth="30.0" mnemonicParsing="false" onAction="#closeApp" prefHeight="24.0" prefWidth="30.0" text="✖" textFill="#ff4d4d" />
+                <Button fx:id="btnClose" maxHeight="23.0" maxWidth="30.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="30.0" text="✖" textFill="#ff4d4d" />
             </children>
         </HBox>
         <VBox layoutX="6.0" layoutY="68.0" prefHeight="487.0" prefWidth="888.0">
