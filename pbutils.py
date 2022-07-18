@@ -77,6 +77,9 @@ with open("jar_checksum.txt", "w+") as f:
     sha512 = sum.createSha512()
     pbk = sum.createPBKDF2HMAC(salt, 500)
     pbk64 = sum.createPBKDF2HMAC(salt64, 500)
+    f.write(f"SALT (32 bytes): {salt.hex()}\nSALT (64 bytes): {salt64.hex()}\nMD5 Sum: {mdc}\nSHA1 Sum: {sha1}\nSHA256 Sum: {sha256}\nSHA512 Sum: {sha512}\nPBKDF2_HMAC Salted Sum: {pbk}\nPBKDF2HMAC Salt 64 Sum: {pbk64}")
+    f.flush()
+    f.close()
 
 with open("checksum.txt", "w+") as f:
     mdc = createTotalChecksum()
