@@ -25,11 +25,6 @@ public class SceneSettings implements Initializable {
     @FXML private Button btnClose;
     @FXML private Button btnMinimize;
 
-    // # Close Window Button
-    private void closeApp(ActionEvent event) {MainClass.getWindowManager().closeDialogs();}
-    // # Minimize Window Button
-    private void minimizeApp(ActionEvent event) {MainClass.getWindowManager().minimizeDialog("mainWindow");}
-
     private void initializeLanguage() {
         settingsSceneBtn.setText(tl("settings.btn.text"));
         cctvSceneBtn.setText(tl("settings.cctv.btn.text"));
@@ -55,6 +50,8 @@ public class SceneSettings implements Initializable {
                 tl("language.arabic"),tl("language.french"),tl("language.polish"),tl("language.portuguese"),tl("language.czech"),tl("language.italian"),tl("language.romanian"),tl("language.greek"));
         langCb.setValue(langCb.getItems().get(Integer.valueOf(Launcher.SettingsContainer.getValue("appLanguage").toString())));
         $UI$01.u_01$1$1(cmainsplit,new Button[]{settingsSceneBtn,cctvSceneBtn,applySceneBtn,scanSceneBtn,HelpBtn});
+        $UI$01.u_10$1$1(btnClose);
+        $UI$01.u_10$1$2(btnMinimize,"main");
         initializeLanguage();
     }
 }
