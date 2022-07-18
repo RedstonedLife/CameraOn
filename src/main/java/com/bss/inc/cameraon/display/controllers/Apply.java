@@ -20,15 +20,10 @@ public class Apply implements Initializable {
 
     private Class<MainClass> instance = MainClass.class;
 
-    @FXML private Button settingsSceneBtn,cctvSceneBtn,scanSceneBtn,applySceneBtn,HelpBtn;
+    @FXML private Button settingsSceneBtn,cctvSceneBtn,scanSceneBtn,applySceneBtn,HelpBtn,btnClose,btnMinimize;
     @FXML private SplitPane cmainsplit;
     @FXML private Text taskslefttxt,backendtxt,applystatustxt,versiontxt,licensetxt;
 
-    // # Close Window Button
-    @FXML private void closeApp(ActionEvent event) {MainClass.getWindowManager().closeDialogs();}
-
-    // # Minimize Window Button
-    @FXML private void minimizeApp(ActionEvent event) {MainClass.getWindowManager().minimizeDialog("mainWindow");}
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -43,6 +38,8 @@ public class Apply implements Initializable {
         applystatustxt.setText(tl("apply.task.status"));
         versiontxt.setText(tl("version.format", FrontendPaths.VERSION_TEXT,FrontendPaths.BUILD));
         licensetxt.setText(tl("license.format",FrontendPaths.LICENSEE,FrontendPaths.LICENSEKEY));
+        $UI$01.u_10$1$1(btnClose);
+        $UI$01.u_10$1$2(btnMinimize,"mainWindow");
     }
 
 }
