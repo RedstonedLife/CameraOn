@@ -58,4 +58,4 @@ class Checksum:
         hash = hashlib.sha512()
         for h in hashes:
             hash.update(hashlib.pbkdf2_hmac('sha512', bytes(h, 'utf8'), salt, app_iters))
-        return hashlib.pbkdf2_hmac('sha256', bytes(hash.hexdigest(), 'utf8'), salt, app_iters)
+        return hashlib.pbkdf2_hmac('sha256', bytes(hash.hexdigest(), 'utf8'), salt, app_iters).hex()

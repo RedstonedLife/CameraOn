@@ -2,9 +2,7 @@ import os
 from MD5 import Checksum
 
 path = "src/main/"
-password = bytes(input("Create a hashing Password: "), 'utf8')
 salt = os.urandom(32)
-print(salt)
 
 def createTotalChecksum():
     sums = []
@@ -34,9 +32,12 @@ def createTotalShaPBKDF2HMAC():
             sum = Checksum(os.path.join(r, file))
             sums.append(sum.createPBKDF2HMAC(salt, 500))
     return Checksum.createStaticPBKDF2HMAC(sums, salt, 500)
-print(createTotalShaPBKDF2HMAC())
-exit(0)
+
 with open("checksum.txt", "w+") as f:
-    f.write(createTotalChecksum() + "\n" + createTotalSha() + "\n" + createTotalSha256())
+    mdc = createTotalChecksum()
+    sha1 = createTotalSha()
+    sha256 = createTotalSha256()
+    pbd = createTotalShaPBKDF2HMAC()
+    f.write(f"SALT (32 bytes): {salt.hex()}\nMD5 Sum: {mdc}\nSHA1 Sum: {sha1}\nSHA256 Sum: {sha256}\nPBKDF2_HMAC Salted Sum: {pbd}")
     f.flush()
     f.close()
