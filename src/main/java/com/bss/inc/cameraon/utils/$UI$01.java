@@ -303,6 +303,8 @@ public class $UI$01 {
         scannerConfig.store();
     }
 
-    public static void u_
+    public static void u_10$1$1(Button button) {
+        button.setOnAction(e -> {MainClass.getWindowManager().closeDialogs();});
+    }
 
 }
