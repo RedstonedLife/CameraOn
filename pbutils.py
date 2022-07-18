@@ -6,4 +6,4 @@ path = "src/main/"
 for r, d, f in os.walk(path):
     for file in f:
         sum = Checksum(os.path.join(r, file))
-        print(sum.createChecksum())
+        print(sum.createChecksum()[0])

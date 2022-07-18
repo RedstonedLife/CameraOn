@@ -11,6 +11,9 @@ target/
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
+# Python
+__pycache__/
+
 # JIRA plugin
 atlassian-ide-plugin.xml
 
