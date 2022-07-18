@@ -18,17 +18,12 @@ import java.util.ResourceBundle;
 import static com.bss.inc.cameraon.i18n.I18n.tl;
 
 public class PreferenceDisplayB implements Initializable {
-    @FXML private void closeApp(ActionEvent event) {$UI$01.u_06$1$1();}
-    @FXML private Button asSceneBtn,displaySceneBtn;
+    @FXML private Button asSceneBtn,displaySceneBtn,okBtn,cancelBtn,;
 
     @FXML private TextField threadsDelayTf,threadsMaxTf,defaultPortTimeoutTf,minAdptdConTimeoutTf,pingProbesTf,pingTimeoutTf;
     @FXML private TextArea portToScanTa;
     @FXML private ChoiceBox<String> pingMethodCb;
     @FXML private CheckBox scanDeadHostsCHKb,skipUnassignedCHKb,adaptTimeoutToPingCHKb,forEachHostCHKb;
-    @FXML private void okApp(ActionEvent event) {
-        try {$UI$01.u_08$1$5();$UI$01.u_09$1$3();} catch (FileNotFoundException e) {throw new RuntimeException(e);}
-        $UI$01.u_06$1$1();
-    }
 
     private void initializeLanguage() {
         displaySceneBtn.setText(tl("preferences.btn.display.text"));
