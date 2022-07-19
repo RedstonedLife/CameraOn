@@ -132,8 +132,8 @@ public class Launcher {
             if(j_.getString("valueNotScanned").equals("")) {j_.put("valueNotScanned", "[n/s]");}
         }
         if(!j_.has("askConfirmationBeforeScan")) {
-            Logger.getLogger("BNC").info("Could not find 'askConfirmationBeforeScan' in column 'scanResultDisplay' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'askConfirmationBeforeScan' value to false");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","askConfirmationBeforeScan","scanResultDisplay"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","askConfirmationBeforeScan","false"));
             j_.put("askConfirmationBeforeScan", false);
         }
         if(!j_.has("showInfoDialogAfterScan")) {
