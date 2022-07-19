@@ -22,7 +22,6 @@ public class MainClass extends Application {
 
     private static Logger logger = Logger.getLogger("BNC");
     private static DialogManager WindowManager;
-    private transient I18n _i18n = new I18n(this);
     private static Class<MainClass> clazz = MainClass.class;
 
     private Injector injector;
@@ -37,8 +36,6 @@ public class MainClass extends Application {
 
     @Override
     public void start(Stage stage) {
-        this._i18n.OnStart();
-        this._i18n.updateLocale("en");
         try {WindowManager = new DialogManager(new Dialog[] {
                 new Dialog(stage, FrontendPaths.HEIGHT, FrontendPaths.WIDTH, "mainWindow", new URL[]{ // MainWindow URL[] Start
                         clazz.getResource(FrontendPaths.SETTINGS_FXML),
