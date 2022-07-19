@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils;
 
+import com.bss.inc.cameraon.Launcher;
 import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.constants.FilePaths;
 
@@ -13,7 +14,7 @@ import java.net.URL;
 public class FileResClassLoader extends ClassLoader {
     private final transient File dataFolder;
 
-    public FileResClassLoader(final ClassLoader classLoader, final MainClass instance) {
+    public FileResClassLoader(final ClassLoader classLoader, final Launcher instance) {
         super(classLoader);
         this.dataFolder = new File(FilePaths.SETTINGS_FOLDER);
     }
