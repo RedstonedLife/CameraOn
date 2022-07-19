@@ -107,16 +107,16 @@ public class Launcher {
             j_.put("portString", "80,443,8080");
         } // Port String          portString            (Default "80,443,8080")     (string)
         if(!j_.has("useRequestedPorts")) {
-            Logger.getLogger("BNC").info("Could not find 'userRequestedPorts' in column 'scanSettings' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'userRequestedPorts' value to true");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","useRequestedPorts","scanSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","useRequestedPorts","true"));
             j_.put("useRequestedPorts", true);
         } // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
         SettingsContainer.setValue("scanSettings", j_);
         if(SettingsContainer.getValue("scanResultDisplay")==null) {SettingsContainer.setValue("scanResultDisplay",new JSONObject("{}"));}
         j_ = (JSONObject) SettingsContainer.getValue("scanResultDisplay");
         if(!j_.has("displayResult")) {
-            Logger.getLogger("BNC").info("Could not find 'displayResult' in column 'scanResultDisplay' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'displayResult' value to ALL");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","displayResult","scanResultDisplay"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","displayResult","all"));
             j_.put("displayResult", "ALL");
         }
         if(!j_.has("valueNotAvailable")) {
