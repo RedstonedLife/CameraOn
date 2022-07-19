@@ -30,16 +30,32 @@ public class Launcher {
         SettingsContainer.Setup();
         JSONObject j_ = (JSONObject) SettingsContainer.getValue("cameraSettings");
         if(SettingsContainer.getValue("scanSettings")==null) {SettingsContainer.setValue("scanSettings",new JSONObject("{}"));}
-        if(!j_.has("frameRate")) {j_.put("frameRate",30);}
-        if(!j_.has("resolution")) {j_.put("resolution",0);}
-        if(!j_.has("bitrate")) {j_.put("bitrate",0);}
-        if(!j_.has("videnc")) {j_.put("videnc",0);}
+        if(!j_.has("frameRate")) {
+            Logger.getLogger("BNC").info("Could not find 'frameRate' in column 'cameraSettings' in app.settings.json");
+            Logger.getLogger("BNC").info("Updating to default 'frameRate' value of 30 frames per second");
+            j_.put("frameRate",30);}
+        if(!j_.has("resolution")) {
+            Logger.getLogger("BNC").info("Could not find 'resolution' in column 'cameraSettings' in app.settings.json");
+            Logger.getLogger("BNC").info("Updating to default 'resolution' value of 1920x1080 (1080p)");
+            j_.put("resolution",0);}
+        if(!j_.has("bitrate")) {
+            Logger.getLogger("BNC").info("Could not find 'bitrate' in column 'cameraSettings' in app.settings.json");
+            Logger.getLogger("BNC").info("Updating to default 'bitrate' value of 2048 Kb/s (2 Mb/s)");
+            j_.put("bitrate",0);}
+        if(!j_.has("videnc")) {
+            Logger.getLogger("BNC").info("Could not find 'videnc' in column 'cameraSettings' in app.settings.json");
+            Logger.getLogger("BNC").info("Updating to default 'videnc' value of H.264 Video Encoding Algorithm");
+            j_.put("videnc",0);}
         SettingsContainer.setValue("cameraSettings",j_);
         j_ = (JSONObject) SettingsContainer.getValue("scanSettings");
         if(!j_.has("threadDelay")) {
+            Logger.getLogger("BNC").info("Could not find 'threadDelay' in column 'scanSettings' in app.settings.json");
+            Logger.getLogger("BNC").info("Updating to default 'threadDelay' value of 20 ms");
             j_.put("threadDelay", 20);
         } // Thread Delay         threadDelay           (Default 20 MS)             (int)
         if(!j_.has("maxThreads")) {
+            Logger.getLogger("BNC").info("Could not find 'maxThreads' in column 'scanSettings' in app.settings.json");
+            Logger.getLogger("BNC").info("Updating to default 'maxThreads' value of 255 threads");
             j_.put("maxThreads", 255);
         } // Max Threads          maxThreads            (Default 255 Threads)       (int)
         if(!j_.has("scanDeadHosts")) {
