@@ -137,8 +137,8 @@ public class Launcher {
             j_.put("askConfirmationBeforeScan", false);
         }
         if(!j_.has("showInfoDialogAfterScan")) {
-            Logger.getLogger("BNC").info("Could not find 'showInfoDialogAfterScan' in column 'scanResultDisplay' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'showInfoDialogAfterScan' value to false");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","showInfoDialogAfterScan","scanResultDisplay"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","showInfoDialogAfterScan","false"));
             j_.put("showInfoDialogAfterScan", false);
         }
         SettingsContainer.setValue("scanResultDisplay", j_);
