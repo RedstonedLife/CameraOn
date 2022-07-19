@@ -114,7 +114,12 @@ public class Settings implements ISettings {
 
     @Override
     public void setValue(String key, Object value) {
-        if(values.containsKey(key)) {values.replace(key, value);}
-        else {values.putIfAbsent(key, value);}
+        if(values.containsKey(key)) {
+            logger.info("Replacing key:"+key+" value:"+value.toString());
+            values.replace(key, value);}
+        else {
+            logger.info("Loading key:"+key+" value:"+value.toString());
+            values.putIfAbsent(key, settings.get(k));
+        }
     }
 }
