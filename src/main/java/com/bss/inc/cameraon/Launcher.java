@@ -38,8 +38,8 @@ public class Launcher {
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","frameRate","30 frames per second"));
             j_.put("frameRate",30);}
         if(!j_.has("resolution")) {
-            Logger.getLogger("BNC").info("Could not find 'resolution' in column 'cameraSettings' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'resolution' value of 1920x1080 (1080p)");
+			Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","resolution","cameraSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","resolution","1920x1080 (1080p)"));
             j_.put("resolution",0);}
         if(!j_.has("bitrate")) {
             Logger.getLogger("BNC").info("Could not find 'bitrate' in column 'cameraSettings' in app.settings.json");
