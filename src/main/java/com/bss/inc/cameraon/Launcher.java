@@ -42,38 +42,45 @@ public class Launcher {
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","resolution","1920x1080 (1080p)"));
             j_.put("resolution",0);}
         if(!j_.has("bitrate")) {
-            Logger.getLogger("BNC").info("Could not find 'bitrate' in column 'cameraSettings' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'bitrate' value of 2048 Kb/s (2 Mb/s)");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","bitrate","cameraSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","bitrate","2048 Kb/s (2 Mb/s)"));
             j_.put("bitrate",0);}
         if(!j_.has("videnc")) {
-            Logger.getLogger("BNC").info("Could not find 'videnc' in column 'cameraSettings' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'videnc' value of H.264 Video Encoding Algorithm");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","videnc","cameraSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","videnc","H.264 Video Encoding Algorithm"));
             j_.put("videnc",0);}
         SettingsContainer.setValue("cameraSettings",j_);
         j_ = (JSONObject) SettingsContainer.getValue("scanSettings");
         if(!j_.has("threadDelay")) {
-            Logger.getLogger("BNC").info("Could not find 'threadDelay' in column 'scanSettings' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'threadDelay' value of 20 ms");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","threadDelay","cameraSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","threadDelay","20 MS"));
             j_.put("threadDelay", 20);
         } // Thread Delay         threadDelay           (Default 20 MS)             (int)
         if(!j_.has("maxThreads")) {
-            Logger.getLogger("BNC").info("Could not find 'maxThreads' in column 'scanSettings' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'maxThreads' value of 255 threads");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","maxThreads","cameraSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","maxTheads","255 Threads"));
             j_.put("maxThreads", 255);
         } // Max Threads          maxThreads            (Default 255 Threads)       (int)
         if(!j_.has("scanDeadHosts")) {
+<<<<<<< Updated upstream
             Logger.getLogger("BNC").info("Could not find 'scanDeadHosts' in column 'scanSettings' in app.settings.json");
             Logger.getLogger("BNC").info("Updating to default 'scanDeadHosts' value to true");
+=======
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","scanDeadHosts","cameraSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","scanDEadHosts","true"));
+>>>>>>> Stashed changes
             j_.put("scanDeadHosts", true);
         } // Scan Dead Hosts      scanDeadHosts         (Default true)             (bool)
         if(!j_.has("selectedPinger")) {
-            Logger.getLogger("BNC").info("Could not find 'selectedPinger' in column 'scanSettings' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'selectedPinger' value to 'pinger.arp'");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","selectPinger","cameraSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","selectPinger","pinger.arp"));
             j_.put("selectedPinger", "pinger.arp");
         } // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
         if(!j_.has("pingTimeout")) {
             Logger.getLogger("BNC").info("Could not find 'pingTimeout' in column 'scanSettings' in app.settings.json");
             Logger.getLogger("BNC").info("Updating to default 'pingTimeout' value 20 MS");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","pingTimeout","cameraSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","pingTimeout","20 MS"));
             j_.put("pingTimeout", 20);
         } // Ping Timeout         pingTimeout           (Default 20 MS)             (int)
         if(!j_.has("pingCount")) {
