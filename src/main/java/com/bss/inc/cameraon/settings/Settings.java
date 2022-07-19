@@ -98,7 +98,7 @@ public class Settings implements ISettings {
         for(String k : settings.keySet()) {
             if(values.containsKey(k)) {values.replace(k, settings.get(k));}
             else {
-                logger.info("Loading key:"+k+" value:"+);
+                logger.info("Loading key:"+k+" value:"+settings.get(k).toString());
                 values.putIfAbsent(k, settings.get(k));
             }
         }
