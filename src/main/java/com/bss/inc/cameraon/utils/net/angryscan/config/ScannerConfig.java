@@ -9,6 +9,8 @@ import org.json.JSONObject;
 import java.io.FileNotFoundException;
 import java.util.prefs.Preferences;
 
+import static com.bss.inc.cameraon.i18n.I18n.tl;
+
 public class ScannerConfig {
     private Preferences preferences;
 
@@ -126,6 +128,8 @@ public class ScannerConfig {
     public void onExit() throws FileNotFoundException {
         JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
         if(j_.has("threadDelay")) {
+            Logger.getLogger("BNC").info(tl("scannerconfig.found1","threadDelay","scanSettings"));
+            Logger.getLogger("BNC").info(tl("scannerconfig.found2","theadDelay"));
             j_.put("threadDelay", preferences.getInt("threadDelay", 20));
         } // Thread Delay         threadDelay           (Default 20 MS)             (int)
         if(j_.has("maxThreads")) {
