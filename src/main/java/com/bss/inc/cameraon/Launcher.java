@@ -32,7 +32,7 @@ public class Launcher {
         JSONObject j_ = (JSONObject) SettingsContainer.getValue("cameraSettings");
         if(SettingsContainer.getValue("scanSettings")==null) {SettingsContainer.setValue("scanSettings",new JSONObject("{}"));}
         if(!j_.has("frameRate")) {
-            Logger.getLogger("BNC").info("Could not find 'frameRate' in column 'cameraSettings' in app.settings.json");
+            Logger.getLogger("BNC").info(tl());
             Logger.getLogger("BNC").info("Updating to default 'frameRate' value of 30 frames per second");
             j_.put("frameRate",30);}
         if(!j_.has("resolution")) {
