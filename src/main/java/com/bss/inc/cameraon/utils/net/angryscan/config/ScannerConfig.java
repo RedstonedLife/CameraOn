@@ -148,6 +148,8 @@ public class ScannerConfig {
             j_.put("selectedPinger", preferences.get("selectedPinger", "pinger.arp"));
         } // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
         if(j_.has("pingTimeout")) {
+            Logger.getLogger("BNC").info(tl("scannerconfig.found1","pingTimeout","scanSettings"));
+            Logger.getLogger("BNC").info(tl("scannerconfig.found2","pingTimeout"));
             j_.put("pingTimeout", preferences.getInt("pingTimeout", 20));
         } // Ping Timeout         pingTimeout           (Default 20 MS)             (int)
         if(j_.has("pingCount")) {
