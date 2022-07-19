@@ -138,6 +138,8 @@ public class ScannerConfig {
             j_.put("maxThreads", preferences.getInt("maxThreads", 255));
         } // Max Threads          maxThreads            (Default 255 Threads)       (int)
         if(j_.has("scanDeadHosts")) {
+            Logger.getLogger("BNC").info(tl("scannerconfig.found1","scanDeadHosts","scanSettings"));
+            Logger.getLogger("BNC").info(tl("scannerconfig.found2","scanDeadHosts"));
             j_.put("scanDeadHosts", preferences.getBoolean("scanDeadHosts", true));
         } // Scan Dead Hosts      scanDeadHosts         (Default false)             (bool)
         if(j_.has("selectedPinger")) {
