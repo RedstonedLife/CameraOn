@@ -104,6 +104,8 @@ public class Launcher {
         if(!j_.has("portString")) {
             Logger.getLogger("BNC").info("Could not find 'portString' in column 'scanSettings' in app.settings.json");
             Logger.getLogger("BNC").info("Updating to default 'portString' value to '80,433,8080'");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","portString","scanSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","portString","80,443,8080"));
             j_.put("portString", "80,443,8080");
         } // Port String          portString            (Default "80,443,8080")     (string)
         if(!j_.has("useRequestedPorts")) {
