@@ -14,7 +14,7 @@ import java.util.Set;
 
 public class Launcher {
     private static LogManager LM;
-    private transient I18n _i18n = new I18n(this);
+    private static transient I18n _i18n = new I18n(this);
     public static final LocalDateTime _INIT_TIME = LocalDateTime.now();
     public static final Settings SettingsContainer;
 
@@ -145,6 +145,8 @@ public class Launcher {
     }
 
     public static void main(String[] args) throws UnknownOS, FileNotFoundException {
+        _i18n.OnStart();
+        _i18n.updateLocale("en");
         setSettings();
         MainClass.main(args);
     }
