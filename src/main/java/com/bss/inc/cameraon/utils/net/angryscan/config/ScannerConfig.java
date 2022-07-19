@@ -200,6 +200,8 @@ public class ScannerConfig {
             j_.put("valueNotAvailable", preferences.get("notAvailableText", "[n/a]"));
         }
         if(j_.has("valueNotScanned")) {
+            Logger.getLogger("BNC").info(tl("scannerconfig.found1","valueNotScanned","scanResultDisplay"));
+            Logger.getLogger("BNC").info(tl("scannerconfig.found2","valueNotScanned"));
             j_.put("valueNotScanned", preferences.get("notScannedText", "[n/s]"));
         }
         if(j_.has("askConfirmationBeforeScan")) {
