@@ -62,13 +62,10 @@ public class Launcher {
             j_.put("maxThreads", 255);
         } // Max Threads          maxThreads            (Default 255 Threads)       (int)
         if(!j_.has("scanDeadHosts")) {
-<<<<<<< Updated upstream
             Logger.getLogger("BNC").info("Could not find 'scanDeadHosts' in column 'scanSettings' in app.settings.json");
             Logger.getLogger("BNC").info("Updating to default 'scanDeadHosts' value to true");
-=======
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","scanDeadHosts","cameraSettings"));
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","scanDEadHosts","true"));
->>>>>>> Stashed changes
             j_.put("scanDeadHosts", true);
         } // Scan Dead Hosts      scanDeadHosts         (Default true)             (bool)
         if(!j_.has("selectedPinger")) {
