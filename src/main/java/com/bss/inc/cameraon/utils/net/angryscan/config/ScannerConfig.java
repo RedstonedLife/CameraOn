@@ -96,7 +96,7 @@ public class ScannerConfig {
     }
 
     public Object[] LoadFromFile() {
-        Logger.getLogger("BNC").info("Loading settings from app.settings.");
+        Logger.getLogger("BNC").info("Loading settings from app.settings.json");
         JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
         JSONObject rj_ = (JSONObject) Launcher.SettingsContainer.getValue("scanResultDisplay");
         return new Object[] {
