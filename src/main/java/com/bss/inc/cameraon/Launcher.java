@@ -92,8 +92,8 @@ public class Launcher {
             j_.put("portTimeout", 2000);
         } // Port Timeout         portTimeout           (Default 2000 MS, 2s)       (int)
         if(!j_.has("adaptPortTimeout")) {
-            Logger.getLogger("BNC").info("Could not find 'adaptPortTimeout' in column 'scanSettings' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'adaptPortTimeout' value to true");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","adaptPortTimeout","scanSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","adaptPortTimeout","true"));
             j_.put("adaptPortTimeout", true);
         } // Adapt Port Timeout   adaptPortTimeout      (Default true)              (bool)
         if(!j_.has("minPortTimeout")) {
