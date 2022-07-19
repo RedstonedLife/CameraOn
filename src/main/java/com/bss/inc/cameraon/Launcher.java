@@ -13,7 +13,7 @@ import java.util.Set;
 
 public class Launcher {
     private static LogManager LM;
-    private static transient I18n _i18n = new I18n(Launcher.class);
+    private static I18n _i18n = new I18n(Launcher.class);
     public static final LocalDateTime _INIT_TIME = LocalDateTime.now();
     public static final Settings SettingsContainer;
 
