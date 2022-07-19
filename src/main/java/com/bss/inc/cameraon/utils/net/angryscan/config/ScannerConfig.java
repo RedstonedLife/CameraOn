@@ -158,6 +158,8 @@ public class ScannerConfig {
             j_.put("pingCount", preferences.getInt("pingCount", 3));
         } // Ping Count           pingCount             (Default 3 Probes/Packets)  (int)
         if(j_.has("skipBroadcastAddress")) {
+            Logger.getLogger("BNC").info(tl("scannerconfig.found1","skipBroadcastAddress","scanSettings"));
+            Logger.getLogger("BNC").info(tl("scannerconfig.found2","skipBroadcastAddress"));
             j_.put("skipBroadcastAddress", preferences.getBoolean("skipBroadcastAddress", true));
         } // Skip Broadcast IP    skipBroadcastAddress  (Default true)              (bool)
         if(j_.has("portTimeout")) {
