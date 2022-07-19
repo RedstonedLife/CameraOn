@@ -89,6 +89,8 @@ public class Dialog {
     }
 
     public void changeScene(Scene scene) {
+        Logger.getLogger("BNC")
+                .info("Changing dialog-"+this.dialogName +" scene to " + scene.toString());
         currentScene = scene;
         parent.setScene(scene);
     }
