@@ -1,6 +1,6 @@
 package com.bss.inc.cameraon.licensing.exceptions;
 
-public class EncodingDataNotCompleteException {
+public class EncodingDataNotCompleteException extends ProductKeyGenerationException {
     /* PRIVATE CONSTANTS */
     private static final long serialVersionUID = 1L;
 
