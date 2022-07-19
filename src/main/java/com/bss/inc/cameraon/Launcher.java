@@ -1,6 +1,7 @@
 package com.bss.inc.cameraon;
 
 import com.bss.inc.cameraon.exceptions.UnknownOS;
+import com.bss.inc.cameraon.i18n.I18n;
 import com.bss.inc.cameraon.logging.LogManager;
 import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.settings.Settings;
@@ -13,7 +14,7 @@ import java.util.Set;
 
 public class Launcher {
     private static LogManager LM;
-    private static I18n 
+    private transient I18n _i18n = new I18n(this);
     public static final LocalDateTime _INIT_TIME = LocalDateTime.now();
     public static final Settings SettingsContainer;
 
