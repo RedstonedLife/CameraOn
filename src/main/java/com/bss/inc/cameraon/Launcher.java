@@ -87,10 +87,8 @@ public class Launcher {
             j_.put("skipBroadcastAddress", true);
         } // Skip Broadcast IP    skipBroadcastAddress  (Default true)              (bool)
         if(!j_.has("portTimeout")) {
-            Logger.getLogger("BNC").info("Could not find 'portTimeout' in column 'scanSettings' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'portTimeout' value to 2000 MS (2 seconds)");
-            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","scanDeadHosts","scanSettings"));
-            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","scanDeadHosts","true"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","portTimeout","scanSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","portTimeout","2000 MS (2 Seconds)"));
             j_.put("portTimeout", 2000);
         } // Port Timeout         portTimeout           (Default 2000 MS, 2s)       (int)
         if(!j_.has("adaptPortTimeout")) {
