@@ -205,6 +205,8 @@ public class ScannerConfig {
             j_.put("valueNotScanned", preferences.get("notScannedText", "[n/s]"));
         }
         if(j_.has("askConfirmationBeforeScan")) {
+            Logger.getLogger("BNC").info(tl("scannerconfig.found1","askConfirmationBeforeScan","scanResultDisplay"));
+            Logger.getLogger("BNC").info(tl("scannerconfig.found2","askConfirmationBeforeScan"));
             j_.put("askConfirmationBeforeScan", preferences.getBoolean("askConfirmationBeforeScan", false));
         }
         if(j_.has("showInfoDialogAfterScan")) {
