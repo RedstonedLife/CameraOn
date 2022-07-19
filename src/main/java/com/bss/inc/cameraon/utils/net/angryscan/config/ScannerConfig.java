@@ -210,6 +210,8 @@ public class ScannerConfig {
             j_.put("askConfirmationBeforeScan", preferences.getBoolean("askConfirmationBeforeScan", false));
         }
         if(j_.has("showInfoDialogAfterScan")) {
+            Logger.getLogger("BNC").info(tl("scannerconfig.found1","showInfoDialogAfterScan","scanResultDisplay"));
+            Logger.getLogger("BNC").info(tl("scannerconfig.found2","showInfoDialogAfterScan"));
             j_.put("showInfoDialogAfterScan",   preferences.getBoolean("showInfoDialogAfterScan", false));
         }
         Launcher.SettingsContainer.Save();
