@@ -1,2 +1,4 @@
-package com.bss.inc.cameraon.licensing.exceptions;public class InvalidSeedException {
+package com.bss.inc.cameraon.licensing.exceptions;
+
+public class InvalidSeedException {
 }
