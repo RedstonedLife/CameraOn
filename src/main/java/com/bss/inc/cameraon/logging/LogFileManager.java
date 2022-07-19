@@ -83,7 +83,7 @@ public class LogFileManager implements ErrorHandler, WarnHandler, InfoHandler, D
         try {
             log.createNewFile();
         } catch (IOException e) {
-            e.printStackTrace();
+            new LogFileManager().error("Could not create log file " + name, e);
         }
         return log;
     }
@@ -92,7 +92,7 @@ public class LogFileManager implements ErrorHandler, WarnHandler, InfoHandler, D
         try {
             file.createNewFile();
         } catch (IOException e) {
-            e.printStackTrace();
+            new LogFileManager().error("Could not create log file " + name, e);
         }
         return file;
     }
@@ -110,7 +110,7 @@ public class LogFileManager implements ErrorHandler, WarnHandler, InfoHandler, D
         try {
             Files.newBufferedWriter(a.toPath(), StandardOpenOption.TRUNCATE_EXISTING);
         } catch (IOException e) {
-            e.printStackTrace();
+            new LogFileManager().error("Could not wipe log file-" + a.getName() + " contents", e);
         }
     }
 
@@ -157,7 +157,7 @@ public class LogFileManager implements ErrorHandler, WarnHandler, InfoHandler, D
                             )
                     ).toInstant(), ZoneId.systemDefault()).format(LoggingConstants.LOG_DATE_FORMAT);
         } catch (IOException e) {
-            e.printStackTrace();
+            new LogFileManager().error("Log file name date format creation failed (base-name: " + baseName + ")", e);
         }
         return null;
     }
