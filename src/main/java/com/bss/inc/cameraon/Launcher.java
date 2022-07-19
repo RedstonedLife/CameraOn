@@ -77,8 +77,8 @@ public class Launcher {
             j_.put("pingTimeout", 20);
         } // Ping Timeout         pingTimeout           (Default 20 MS)             (int)
         if(!j_.has("pingCount")) {
-            Logger.getLogger("BNC").info("Could not find 'pingCount' in column 'scanSettings' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'pingCount' value to 3 Packets");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","pingCount","cameraSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","pingCount","3 Packets"));
             j_.put("pingCount", 3);
         } // Ping Count           pingCount             (Default 3 Probes/Packets)  (int)
         if(!j_.has("skipBroadcastAddress")) {
