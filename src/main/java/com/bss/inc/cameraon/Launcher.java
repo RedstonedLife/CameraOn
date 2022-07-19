@@ -5,7 +5,6 @@ import com.bss.inc.cameraon.i18n.I18n;
 import com.bss.inc.cameraon.logging.LogManager;
 import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.settings.Settings;
-import com.bss.inc.cameraon.utils.$UI$01;
 import org.json.JSONObject;
 
 import java.io.FileNotFoundException;
