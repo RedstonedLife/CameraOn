@@ -59,9 +59,13 @@ public class Launcher {
             j_.put("maxThreads", 255);
         } // Max Threads          maxThreads            (Default 255 Threads)       (int)
         if(!j_.has("scanDeadHosts")) {
+            Logger.getLogger("BNC").info("Could not find 'scanDeadHosts' in column 'scanSettings' in app.settings.json");
+            Logger.getLogger("BNC").info("Updating to default 'scanDeadHosts' value to false");
             j_.put("scanDeadHosts", true);
         } // Scan Dead Hosts      scanDeadHosts         (Default false)             (bool)
         if(!j_.has("selectedPinger")) {
+            Logger.getLogger("BNC").info("Could not find 'selectedPinger' in column 'scanSettings' in app.settings.json");
+            Logger.getLogger("BNC").info("Updating to default 'selectedPinger' value to 'pinger.arp'");
             j_.put("selectedPinger", "pinger.arp");
         } // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
         if(!j_.has("pingTimeout")) {
