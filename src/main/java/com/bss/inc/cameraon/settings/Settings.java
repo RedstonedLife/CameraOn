@@ -69,6 +69,7 @@ public class Settings implements ISettings {
 
     @Override
     public void Save() throws FileNotFoundException, JSONException {
+        logger.info("Starting save process on "+name+".json");
         JSONObject settings = new JSONObject();
         for(String k : values.keySet()) {settings.put(k, values.get(k));}
         PrintWriter pw = null;
