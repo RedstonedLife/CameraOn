@@ -13,7 +13,7 @@ public class InvalidSeedException extends ProductKeyGenerationException
      */
     public InvalidSeedException()
     {
-        //super("Seed is invalid.");
+        super("Seed is invalid.");
     }
 
 }
