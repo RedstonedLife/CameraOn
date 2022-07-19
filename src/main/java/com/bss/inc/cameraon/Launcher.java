@@ -126,8 +126,8 @@ public class Launcher {
             if(j_.getString("valueNotAvailable").equals("")) {j_.put("valueNotAvailable", "[n/a]");}
         }
         if(!j_.has("valueNotScanned")) {
-            Logger.getLogger("BNC").info("Could not find 'valueNotScanned' in column 'scanResultDisplay' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'valueNotScanned' value to [n/s]");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","valueNotScanned","scanResultDisplay"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","valueNotScanned","[n/s]"));
             j_.put("valueNotScanned", "[n/s]");
             if(j_.getString("valueNotScanned").equals("")) {j_.put("valueNotScanned", "[n/s]");}
         }
