@@ -112,20 +112,30 @@ public class Launcher {
         if(SettingsContainer.getValue("scanResultDisplay")==null) {SettingsContainer.setValue("scanResultDisplay",new JSONObject("{}"));}
         j_ = (JSONObject) SettingsContainer.getValue("scanResultDisplay");
         if(!j_.has("displayResult")) {
+            Logger.getLogger("BNC").info("Could not find 'displayResult' in column 'scanResultDisplay' in app.settings.json");
+            Logger.getLogger("BNC").info("Updating to default 'displayResult' value to ALL");
             j_.put("displayResult", "ALL");
         }
         if(!j_.has("valueNotAvailable")) {
+            Logger.getLogger("BNC").info("Could not find 'valueNotAvailable' in column 'scanResultDisplay' in app.settings.json");
+            Logger.getLogger("BNC").info("Updating to default 'valueNotAvailable' value to [n/a]");
             j_.put("valueNotAvailable", "[n/a]");
             if(j_.getString("valueNotAvailable").equals("")) {j_.put("valueNotAvailable", "[n/a]");}
         }
         if(!j_.has("valueNotScanned")) {
+            Logger.getLogger("BNC").info("Could not find 'valueNotScanned' in column 'scanResultDisplay' in app.settings.json");
+            Logger.getLogger("BNC").info("Updating to default 'valueNotScanned' value to [n/s]");
             j_.put("valueNotScanned", "[n/s]");
             if(j_.getString("valueNotScanned").equals("")) {j_.put("valueNotScanned", "[n/s]");}
         }
         if(!j_.has("askConfirmationBeforeScan")) {
+            Logger.getLogger("BNC").info("Could not find 'askConfirmationBeforeScan' in column 'scanResultDisplay' in app.settings.json");
+            Logger.getLogger("BNC").info("Updating to default 'askConfirmationBeforeScan' value to false");
             j_.put("askConfirmationBeforeScan", false);
         }
         if(!j_.has("showInfoDialogAfterScan")) {
+            Logger.getLogger("BNC").info("Could not find 'showInfoDialogAfterScan' in column 'scanResultDisplay' in app.settings.json");
+            Logger.getLogger("BNC").info("Updating to default 'showInfoDialogAfterScan' value to false");
             j_.put("showInfoDialogAfterScan", false);
         }
         SettingsContainer.setValue("scanResultDisplay", j_);
