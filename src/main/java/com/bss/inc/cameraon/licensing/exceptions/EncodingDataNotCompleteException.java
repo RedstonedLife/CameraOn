@@ -10,6 +10,6 @@ public class EncodingDataNotCompleteException extends ProductKeyGenerationExcept
      */
     public EncodingDataNotCompleteException()
     {
-        super("Encoding-data must be complete for generating product-keys.");
+        //super("Encoding-data must be complete for generating product-keys.");
     }
 }
