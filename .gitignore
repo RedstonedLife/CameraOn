@@ -102,6 +102,7 @@ $RECYCLE.BIN/
 *.msi
 *.msix
 *.msm
+*.mp4
 *.msp
 
 # Windows shortcuts
