@@ -173,6 +173,8 @@ public class ScannerConfig {
             j_.put("adaptPortTimeout", preferences.getBoolean("adaptPortTimeout", true));
         } // Adapt Port Timeout   adaptPortTimeout      (Default true)              (bool)
         if(j_.has("minPortTimeout")) {
+            Logger.getLogger("BNC").info(tl("scannerconfig.found1","minPortTimeout","scanSettings"));
+            Logger.getLogger("BNC").info(tl("scannerconfig.found2","minPortTimeout"));
             j_.put("minPortTimeout", preferences.getInt("minPortTimeout", 100));
         } // Min Port Timeout     minPortTimeout        (Default 100 MS, 0.1s)      (int)
         if(j_.has("portString")) {
