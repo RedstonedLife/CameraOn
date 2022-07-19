@@ -153,6 +153,8 @@ public class ScannerConfig {
             j_.put("pingTimeout", preferences.getInt("pingTimeout", 20));
         } // Ping Timeout         pingTimeout           (Default 20 MS)             (int)
         if(j_.has("pingCount")) {
+            Logger.getLogger("BNC").info(tl("scannerconfig.found1","pingCount","scanSettings"));
+            Logger.getLogger("BNC").info(tl("scannerconfig.found2","pingCount"));
             j_.put("pingCount", preferences.getInt("pingCount", 3));
         } // Ping Count           pingCount             (Default 3 Probes/Packets)  (int)
         if(j_.has("skipBroadcastAddress")) {
