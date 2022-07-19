@@ -163,6 +163,8 @@ public class ScannerConfig {
             j_.put("skipBroadcastAddress", preferences.getBoolean("skipBroadcastAddress", true));
         } // Skip Broadcast IP    skipBroadcastAddress  (Default true)              (bool)
         if(j_.has("portTimeout")) {
+            Logger.getLogger("BNC").info(tl("scannerconfig.found1","portTimeout","scanSettings"));
+            Logger.getLogger("BNC").info(tl("scannerconfig.found2","portTimeout"));
             j_.put("portTimeout", preferences.getInt("portTimeout", 2000));
         } // Port Timeout         portTimeout           (Default 2000 MS, 2s)       (int)
         if(j_.has("adaptPortTimeout")) {
