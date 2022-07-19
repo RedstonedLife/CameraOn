@@ -62,8 +62,6 @@ public class Launcher {
             j_.put("maxThreads", 255);
         } // Max Threads          maxThreads            (Default 255 Threads)       (int)
         if(!j_.has("scanDeadHosts")) {
-            Logger.getLogger("BNC").info("Could not find 'scanDeadHosts' in column 'scanSettings' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'scanDeadHosts' value to true");
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","scanDeadHosts","cameraSettings"));
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","scanDEadHosts","true"));
             j_.put("scanDeadHosts", true);
@@ -74,8 +72,6 @@ public class Launcher {
             j_.put("selectedPinger", "pinger.arp");
         } // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
         if(!j_.has("pingTimeout")) {
-            Logger.getLogger("BNC").info("Could not find 'pingTimeout' in column 'scanSettings' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'pingTimeout' value 20 MS");
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","pingTimeout","cameraSettings"));
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","pingTimeout","20 MS"));
             j_.put("pingTimeout", 20);
