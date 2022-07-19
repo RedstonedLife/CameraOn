@@ -1,6 +1,7 @@
 package com.bss.inc.cameraon.display;
 
 import com.bss.inc.cameraon.MainClass;
+import com.bss.inc.cameraon.logging.Logger;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -18,11 +19,19 @@ public class DialogManager {
         for(Dialog dial : dialogs) {dialogsMap.put(dial.getDialogName(),dial);}
     }
 
-    public void openDialog(String name) {dialogsMap.get(name).openDialog();}
-    public void closeDialog(String name) {dialogsMap.get(name).closeDialog();}
-    public void minimizeDialog(String name) {dialogsMap.get(name).minimize();}
+    public void openDialog(String name) {
+        Logger.getLogger("BNC").info("Opening Dialog-"+name);
+        dialogsMap.get(name).openDialog();}
+    public void closeDialog(String name) {
+        Logger.getLogger("BNC").info("Closing Dialog-"+name);
+        dialogsMap.get(name).closeDialog();}
+    public void minimizeDialog(String name) {
+        Logger.getLogger("BNC").info("Minimizing Dialog-"+name);
+        dialogsMap.get(name).minimize();}
     public void closeDialogs() {for(Dialog dialog : dialogsMap.values()) {dialog.closeDialog();}}
-    public void changeDialogScene(String dialogName, URL sceneLoc) {dialogsMap.get(dialogName).changeScene(sceneLoc);}
+    public void changeDialogScene(String dialogName, URL sceneLoc) {
+        Logger.getLogger("BNC").info("Changing dialog-"+dialogName+" scene to " + sceneLoc.toString());
+        dialogsMap.get(dialogName).changeScene(sceneLoc);}
     public Dialog getDialog(String name) {return dialogsMap.get(name);}
     public HashMap<String, Dialog> getDialogs() {return dialogsMap;}
     public int getCurrentLanguage() {return this.currentLanguage;}
