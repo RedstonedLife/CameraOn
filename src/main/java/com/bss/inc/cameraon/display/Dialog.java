@@ -82,6 +82,8 @@ public class Dialog {
     public void openDialog() {this.isEnabled=true;this.parent.show();}
     public void closeDialog() {this.isEnabled=false;this.parent.close();}
     public void changeScene(URL file) {
+        Logger.getLogger("BNC")
+                .info("Changing dialog-"+this.dialogName +" scene to " + file.toString());
         currentScene = scenes.get(file);
         parent.setScene(scenes.get(file));
     }
