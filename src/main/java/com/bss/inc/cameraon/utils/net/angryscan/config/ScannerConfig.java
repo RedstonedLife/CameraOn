@@ -133,6 +133,8 @@ public class ScannerConfig {
             j_.put("threadDelay", preferences.getInt("threadDelay", 20));
         } // Thread Delay         threadDelay           (Default 20 MS)             (int)
         if(j_.has("maxThreads")) {
+            Logger.getLogger("BNC").info(tl("scannerconfig.found1","maxThreads","scanSettings"));
+            Logger.getLogger("BNC").info(tl("scannerconfig.found2","maxThreads"));
             j_.put("maxThreads", preferences.getInt("maxThreads", 255));
         } // Max Threads          maxThreads            (Default 255 Threads)       (int)
         if(j_.has("scanDeadHosts")) {
