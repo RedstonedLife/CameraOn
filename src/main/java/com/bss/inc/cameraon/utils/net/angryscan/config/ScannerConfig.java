@@ -183,11 +183,15 @@ public class ScannerConfig {
             j_.put("portString", preferences.get("portString", "80,443,8080"));
         } // Port String          portString            (Default "80,443,8080")     (string)
         if(j_.has("useRequestedPorts")) {
+            Logger.getLogger("BNC").info(tl("scannerconfig.found1","useRequestedPorts","scanSettings"));
+            Logger.getLogger("BNC").info(tl("scannerconfig.found2","useRequestedPorts"));
             j_.put("useRequestedPorts", preferences.getBoolean("useRequestedPorts", true));
         } // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
         Launcher.SettingsContainer.setValue("scanSettings", j_);
         j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanResultDisplay");
         if(j_.has("displayResult")) {
+            Logger.getLogger("BNC").info(tl("scannerconfig.found1","displayResult","scanResultDisplay"));
+            Logger.getLogger("BNC").info(tl("scannerconfig.found2","displayResult"));
             j_.put("displayResult", preferences.get("displayResult", "ALL"));
         }
         if(j_.has("valueNotAvailable")) {
