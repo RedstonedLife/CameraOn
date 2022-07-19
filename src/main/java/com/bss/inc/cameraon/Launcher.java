@@ -52,97 +52,93 @@ public class Launcher {
         SettingsContainer.setValue("cameraSettings",j_);
         j_ = (JSONObject) SettingsContainer.getValue("scanSettings");
         if(!j_.has("threadDelay")) {
-            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","threadDelay","cameraSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","threadDelay","scanSettings"));
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","threadDelay","20 MS"));
             j_.put("threadDelay", 20);
         } // Thread Delay         threadDelay           (Default 20 MS)             (int)
         if(!j_.has("maxThreads")) {
-            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","maxThreads","cameraSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","maxThreads","scanSettings"));
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","maxTheads","255 Threads"));
             j_.put("maxThreads", 255);
         } // Max Threads          maxThreads            (Default 255 Threads)       (int)
         if(!j_.has("scanDeadHosts")) {
-            Logger.getLogger("BNC").info("Could not find 'scanDeadHosts' in column 'scanSettings' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'scanDeadHosts' value to true");
-            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","scanDeadHosts","cameraSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","scanDeadHosts","scanSettings"));
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","scanDEadHosts","true"));
             j_.put("scanDeadHosts", true);
         } // Scan Dead Hosts      scanDeadHosts         (Default true)             (bool)
         if(!j_.has("selectedPinger")) {
-            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","selectPinger","cameraSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","selectPinger","scanSettings"));
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","selectPinger","pinger.arp"));
             j_.put("selectedPinger", "pinger.arp");
         } // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
         if(!j_.has("pingTimeout")) {
-            Logger.getLogger("BNC").info("Could not find 'pingTimeout' in column 'scanSettings' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'pingTimeout' value 20 MS");
-            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","pingTimeout","cameraSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","pingTimeout","scanSettings"));
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","pingTimeout","20 MS"));
             j_.put("pingTimeout", 20);
         } // Ping Timeout         pingTimeout           (Default 20 MS)             (int)
         if(!j_.has("pingCount")) {
-            Logger.getLogger("BNC").info("Could not find 'pingCount' in column 'scanSettings' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'pingCount' value to 3 Packets");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","pingCount","scanSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","pingCount","3 Packets"));
             j_.put("pingCount", 3);
         } // Ping Count           pingCount             (Default 3 Probes/Packets)  (int)
         if(!j_.has("skipBroadcastAddress")) {
-            Logger.getLogger("BNC").info("Could not find 'skipBroadcastAddress' in column 'scanSettings' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'skipBroadcastAddress' value to true");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","skipBroadcastAddress","scanSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","skipBroadcastAddress","true"));
             j_.put("skipBroadcastAddress", true);
         } // Skip Broadcast IP    skipBroadcastAddress  (Default true)              (bool)
         if(!j_.has("portTimeout")) {
-            Logger.getLogger("BNC").info("Could not find 'portTimeout' in column 'scanSettings' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'portTimeout' value to 2000 MS (2 seconds)");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","portTimeout","scanSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","portTimeout","2000 MS (2 Seconds)"));
             j_.put("portTimeout", 2000);
         } // Port Timeout         portTimeout           (Default 2000 MS, 2s)       (int)
         if(!j_.has("adaptPortTimeout")) {
-            Logger.getLogger("BNC").info("Could not find 'adaptPortTimeout' in column 'scanSettings' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'adaptPortTimeout' value to true");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","adaptPortTimeout","scanSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","adaptPortTimeout","true"));
             j_.put("adaptPortTimeout", true);
         } // Adapt Port Timeout   adaptPortTimeout      (Default true)              (bool)
         if(!j_.has("minPortTimeout")) {
-            Logger.getLogger("BNC").info("Could not find 'minPortTimeout' in column 'scanSettings' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'minPortTimeout' value to 100 MS (0.1 seconds)");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","minPortTimeout","scanSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","minPortTimeout","100 MS (0.1 Seconds)"));
             j_.put("minPortTimeout", 100);
         } // Min Port Timeout     minPortTimeout        (Default 100 MS, 0.1s)      (int)
         if(!j_.has("portString")) {
-            Logger.getLogger("BNC").info("Could not find 'portString' in column 'scanSettings' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'portString' value to '80,433,8080'");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","portString","scanSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","portString","80,443,8080"));
             j_.put("portString", "80,443,8080");
         } // Port String          portString            (Default "80,443,8080")     (string)
         if(!j_.has("useRequestedPorts")) {
-            Logger.getLogger("BNC").info("Could not find 'userRequestedPorts' in column 'scanSettings' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'userRequestedPorts' value to true");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","useRequestedPorts","scanSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","useRequestedPorts","true"));
             j_.put("useRequestedPorts", true);
         } // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
         SettingsContainer.setValue("scanSettings", j_);
         if(SettingsContainer.getValue("scanResultDisplay")==null) {SettingsContainer.setValue("scanResultDisplay",new JSONObject("{}"));}
         j_ = (JSONObject) SettingsContainer.getValue("scanResultDisplay");
         if(!j_.has("displayResult")) {
-            Logger.getLogger("BNC").info("Could not find 'displayResult' in column 'scanResultDisplay' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'displayResult' value to ALL");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","displayResult","scanResultDisplay"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","displayResult","all"));
             j_.put("displayResult", "ALL");
         }
         if(!j_.has("valueNotAvailable")) {
-            Logger.getLogger("BNC").info("Could not find 'valueNotAvailable' in column 'scanResultDisplay' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'valueNotAvailable' value to [n/a]");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","valueNotAvailable","scanResultDisplay"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","valueNotAvailable","[n/a]"));
             j_.put("valueNotAvailable", "[n/a]");
             if(j_.getString("valueNotAvailable").equals("")) {j_.put("valueNotAvailable", "[n/a]");}
         }
         if(!j_.has("valueNotScanned")) {
-            Logger.getLogger("BNC").info("Could not find 'valueNotScanned' in column 'scanResultDisplay' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'valueNotScanned' value to [n/s]");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","valueNotScanned","scanResultDisplay"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","valueNotScanned","[n/s]"));
             j_.put("valueNotScanned", "[n/s]");
             if(j_.getString("valueNotScanned").equals("")) {j_.put("valueNotScanned", "[n/s]");}
         }
         if(!j_.has("askConfirmationBeforeScan")) {
-            Logger.getLogger("BNC").info("Could not find 'askConfirmationBeforeScan' in column 'scanResultDisplay' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'askConfirmationBeforeScan' value to false");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","askConfirmationBeforeScan","scanResultDisplay"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","askConfirmationBeforeScan","false"));
             j_.put("askConfirmationBeforeScan", false);
         }
         if(!j_.has("showInfoDialogAfterScan")) {
-            Logger.getLogger("BNC").info("Could not find 'showInfoDialogAfterScan' in column 'scanResultDisplay' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'showInfoDialogAfterScan' value to false");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","showInfoDialogAfterScan","scanResultDisplay"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","showInfoDialogAfterScan","false"));
             j_.put("showInfoDialogAfterScan", false);
         }
         SettingsContainer.setValue("scanResultDisplay", j_);
