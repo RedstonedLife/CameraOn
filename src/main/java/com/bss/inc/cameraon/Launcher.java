@@ -82,8 +82,8 @@ public class Launcher {
             j_.put("pingCount", 3);
         } // Ping Count           pingCount             (Default 3 Probes/Packets)  (int)
         if(!j_.has("skipBroadcastAddress")) {
-            Logger.getLogger("BNC").info("Could not find 'skipBroadcastAddress' in column 'scanSettings' in app.settings.json");
-            Logger.getLogger("BNC").info("Updating to default 'skipBroadcastAddress' value to true");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","skipBroadcastAddress","cameraSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","skipBroadcastAddress","true"));
             j_.put("skipBroadcastAddress", true);
         } // Skip Broadcast IP    skipBroadcastAddress  (Default true)              (bool)
         if(!j_.has("portTimeout")) {
