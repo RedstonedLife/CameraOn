@@ -1,7 +1,6 @@
 package com.bss.inc.cameraon.i18n;
 
 import com.bss.inc.cameraon.Launcher;
-import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.constants.FrontendPaths;
 import com.bss.inc.cameraon.utils.FileResClassLoader;
 
@@ -19,7 +18,7 @@ public class I18n implements II18n {
     private transient ResourceBundle localeBundle;
     private transient Map<String, MessageFormat> messageFormatCache = new HashMap<>();
 
-    public I18n(final Launcher instance) {
+    public I18n(final Class<Launcher> instance) {
         this._i = instance;
         defaultBundle = ResourceBundle.getBundle(FrontendPaths.MESSAGES, currentLocale);
         localeBundle = defaultBundle;
