@@ -129,7 +129,7 @@ public class ScannerConfig {
         JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
         if(j_.has("threadDelay")) {
             Logger.getLogger("BNC").info(tl("scannerconfig.found1","threadDelay","scanSettings"));
-            Logger.getLogger("BNC").info(tl("scannerconfig.found2","theadDelay"));
+            Logger.getLogger("BNC").info(tl("scannerconfig.found2","threadDelay"));
             j_.put("threadDelay", preferences.getInt("threadDelay", 20));
         } // Thread Delay         threadDelay           (Default 20 MS)             (int)
         if(j_.has("maxThreads")) {
