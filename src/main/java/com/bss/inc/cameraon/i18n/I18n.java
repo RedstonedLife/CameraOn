@@ -12,7 +12,7 @@ public class I18n implements II18n {
     private static I18n instance;
     private final transient Locale defaultLocale = Locale.US;
     private transient ResourceBundle defaultBundle;
-    private final transient Launcher _i;
+    private final transient Class<Launcher> _i;
     private transient Locale currentLocale = defaultLocale;
     private transient ResourceBundle customBundle;
     private transient ResourceBundle localeBundle;
