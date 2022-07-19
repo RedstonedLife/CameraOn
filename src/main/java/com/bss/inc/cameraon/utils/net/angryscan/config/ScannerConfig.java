@@ -195,6 +195,8 @@ public class ScannerConfig {
             j_.put("displayResult", preferences.get("displayResult", "ALL"));
         }
         if(j_.has("valueNotAvailable")) {
+            Logger.getLogger("BNC").info(tl("scannerconfig.found1","valueNotAvailable","scanResultDisplay"));
+            Logger.getLogger("BNC").info(tl("scannerconfig.found2","valueNotAvailable"));
             j_.put("valueNotAvailable", preferences.get("notAvailableText", "[n/a]"));
         }
         if(j_.has("valueNotScanned")) {
