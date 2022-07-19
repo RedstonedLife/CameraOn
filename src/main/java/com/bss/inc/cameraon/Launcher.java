@@ -52,43 +52,45 @@ public class Launcher {
         SettingsContainer.setValue("cameraSettings",j_);
         j_ = (JSONObject) SettingsContainer.getValue("scanSettings");
         if(!j_.has("threadDelay")) {
-            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","threadDelay","cameraSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","threadDelay","scanSettings"));
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","threadDelay","20 MS"));
             j_.put("threadDelay", 20);
         } // Thread Delay         threadDelay           (Default 20 MS)             (int)
         if(!j_.has("maxThreads")) {
-            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","maxThreads","cameraSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","maxThreads","scanSettings"));
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","maxTheads","255 Threads"));
             j_.put("maxThreads", 255);
         } // Max Threads          maxThreads            (Default 255 Threads)       (int)
         if(!j_.has("scanDeadHosts")) {
-            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","scanDeadHosts","cameraSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","scanDeadHosts","scanSettings"));
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","scanDEadHosts","true"));
             j_.put("scanDeadHosts", true);
         } // Scan Dead Hosts      scanDeadHosts         (Default true)             (bool)
         if(!j_.has("selectedPinger")) {
-            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","selectPinger","cameraSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","selectPinger","scanSettings"));
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","selectPinger","pinger.arp"));
             j_.put("selectedPinger", "pinger.arp");
         } // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
         if(!j_.has("pingTimeout")) {
-            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","pingTimeout","cameraSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","pingTimeout","scanSettings"));
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","pingTimeout","20 MS"));
             j_.put("pingTimeout", 20);
         } // Ping Timeout         pingTimeout           (Default 20 MS)             (int)
         if(!j_.has("pingCount")) {
-            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","pingCount","cameraSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","pingCount","scanSettings"));
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","pingCount","3 Packets"));
             j_.put("pingCount", 3);
         } // Ping Count           pingCount             (Default 3 Probes/Packets)  (int)
         if(!j_.has("skipBroadcastAddress")) {
-            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","skipBroadcastAddress","cameraSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","skipBroadcastAddress","scanSettings"));
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","skipBroadcastAddress","true"));
             j_.put("skipBroadcastAddress", true);
         } // Skip Broadcast IP    skipBroadcastAddress  (Default true)              (bool)
         if(!j_.has("portTimeout")) {
             Logger.getLogger("BNC").info("Could not find 'portTimeout' in column 'scanSettings' in app.settings.json");
             Logger.getLogger("BNC").info("Updating to default 'portTimeout' value to 2000 MS (2 seconds)");
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","scanDeadHosts","scanSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","scanDeadHosts","true"));
             j_.put("portTimeout", 2000);
         } // Port Timeout         portTimeout           (Default 2000 MS, 2s)       (int)
         if(!j_.has("adaptPortTimeout")) {
