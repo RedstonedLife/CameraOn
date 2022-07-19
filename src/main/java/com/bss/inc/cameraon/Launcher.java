@@ -67,8 +67,8 @@ public class Launcher {
             j_.put("scanDeadHosts", true);
         } // Scan Dead Hosts      scanDeadHosts         (Default true)             (bool)
         if(!j_.has("selectedPinger")) {
-            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","selectPinger","scanSettings"));
-            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","selectPinger","pinger.arp"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","selectedPinger","scanSettings"));
+            Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","selectedPinger","pinger.arp"));
             j_.put("selectedPinger", "pinger.arp");
         } // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
         if(!j_.has("pingTimeout")) {
