@@ -50,7 +50,8 @@ public class ScannerConfig {
             useDefault = true;
         }
         if (!useDefault) {
-            Logger.getLogger("BNC").info("Columns 'scanResultDisplay' and 'scanSettings' ");
+            Logger.getLogger("BNC").info("Columns 'scanResultDisplay' and 'scanSettings' found in app.settings.json");
+            Logger.getLogger("BNC").info("resorting to app.settings.json values in the ScannerConfig preferences");
             data = LoadFromFile();
         }
 
