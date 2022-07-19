@@ -11,6 +11,8 @@ import java.io.FileNotFoundException;
 import java.time.LocalDateTime;
 import java.util.Set;
 
+import static com.bss.inc.cameraon.i18n.I18n.tl;
+
 public class Launcher {
     private static LogManager LM;
     private static I18n _i18n = new I18n(Launcher.class);
@@ -32,7 +34,7 @@ public class Launcher {
         JSONObject j_ = (JSONObject) SettingsContainer.getValue("cameraSettings");
         if(SettingsContainer.getValue("scanSettings")==null) {SettingsContainer.setValue("scanSettings",new JSONObject("{}"));}
         if(!j_.has("frameRate")) {
-            Logger.getLogger("BNC").info(tl());
+            Logger.getLogger("BNC").info(tl(""));
             Logger.getLogger("BNC").info("Updating to default 'frameRate' value of 30 frames per second");
             j_.put("frameRate",30);}
         if(!j_.has("resolution")) {
