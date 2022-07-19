@@ -97,7 +97,10 @@ public class Settings implements ISettings {
         reader = null;
         for(String k : settings.keySet()) {
             if(values.containsKey(k)) {values.replace(k, settings.get(k));}
-            else {values.putIfAbsent(k, settings.get(k));}
+            else {
+                
+                values.putIfAbsent(k, settings.get(k));
+            }
         }
     }
 
