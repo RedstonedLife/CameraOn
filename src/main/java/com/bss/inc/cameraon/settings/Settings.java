@@ -88,6 +88,7 @@ public class Settings implements ISettings {
 
     @Override
     public void Load() throws FileNotFoundException, JSONException {
+        logger.info("Starting load process on " + name +".json");
         StringBuilder builder = new StringBuilder();
         Scanner reader = new Scanner(file);
         while (reader.hasNextLine()) {builder.append(reader.nextLine());}
