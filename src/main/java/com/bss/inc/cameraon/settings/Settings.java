@@ -82,7 +82,7 @@ public class Settings implements ISettings {
         pw.close();
         pw = null;
         settings = null;
-        logger.info("");
+        logger.info(name+".json successfully saved");
     }
 
     @Override
