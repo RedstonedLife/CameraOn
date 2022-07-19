@@ -6,6 +6,7 @@ import com.bss.inc.cameraon.utils.FileResClassLoader;
 
 import java.text.MessageFormat;
 import java.util.*;
+import java.util.logging.Logger;
 
 public class I18n implements II18n {
     private static I18n instance;
@@ -38,8 +39,16 @@ public class I18n implements II18n {
     private String translate(final String string) {
         try {
             try {return customBundle.getString(string);}
-            catch (final MissingResourceException ex) {return localeBundle.getString(string);}
-        } catch(final MissingResourceException ex) {return defaultBundle.getString(string);}
+            catch (final MissingResourceException ex) {
+                Logger.getLogger("BNC").warning("MissingResourceException: Could not find translated string-"+string+" in custom bundle");
+                Logger.getLogger("BNC").warning("MissingResourceException: Resorting to localeBundle");
+                Logger.getLogger("BNC").warning(ex.getMessage());
+                return localeBundle.getString(string);}
+        } catch(final MissingResourceException ex) {
+            Logger.getLogger("BNC").warning("MissingResourceException: Could not find translated string-"+string+" in custom bundle");
+            Logger.getLogger("BNC").warning("MissingResourceException: Resorting to defaultBundle");
+            Logger.getLogger("BNC").warning(ex.getMessage());
+            return defaultBundle.getString(string);}
     }
 
     public String format(final String string, final Object... objects) {
