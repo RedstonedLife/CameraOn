@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 public class I18n implements II18n {
     private static I18n instance;
-    private final transient Locale defaultLocale = Locale.getDefault();
+    private final transient Locale defaultLocale = Locale.US;
     private transient ResourceBundle defaultBundle;
     private final transient MainClass _i;
     private transient Locale currentLocale = defaultLocale;
