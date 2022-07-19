@@ -195,7 +195,8 @@ public class LogFileManager implements ErrorHandler, WarnHandler, InfoHandler, D
         try {
             Files.write(currentLogFile.toPath(), (line+"\n").getBytes(), StandardOpenOption.APPEND);
         } catch (IOException e) {
-            e.printStackTrace();
+            new LogFileManager().error("Could not append line to log ", e); // WTF? WHY?!
+            System.exit(Integer.MIN_VALUE);
         }
     }
 
