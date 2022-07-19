@@ -82,6 +82,7 @@ public class Settings implements ISettings {
         pw.close();
         pw = null;
         settings = null;
+        logger.info("");
     }
 
     @Override
