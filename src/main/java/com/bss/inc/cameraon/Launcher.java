@@ -59,33 +59,53 @@ public class Launcher {
             j_.put("maxThreads", 255);
         } // Max Threads          maxThreads            (Default 255 Threads)       (int)
         if(!j_.has("scanDeadHosts")) {
+            Logger.getLogger("BNC").info("Could not find 'scanDeadHosts' in column 'scanSettings' in app.settings.json");
+            Logger.getLogger("BNC").info("Updating to default 'scanDeadHosts' value to false");
             j_.put("scanDeadHosts", true);
         } // Scan Dead Hosts      scanDeadHosts         (Default false)             (bool)
         if(!j_.has("selectedPinger")) {
+            Logger.getLogger("BNC").info("Could not find 'selectedPinger' in column 'scanSettings' in app.settings.json");
+            Logger.getLogger("BNC").info("Updating to default 'selectedPinger' value to 'pinger.arp'");
             j_.put("selectedPinger", "pinger.arp");
         } // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
         if(!j_.has("pingTimeout")) {
+            Logger.getLogger("BNC").info("Could not find 'pingTimeout' in column 'scanSettings' in app.settings.json");
+            Logger.getLogger("BNC").info("Updating to default 'pingTimeout' value 20 MS");
             j_.put("pingTimeout", 20);
         } // Ping Timeout         pingTimeout           (Default 20 MS)             (int)
         if(!j_.has("pingCount")) {
+            Logger.getLogger("BNC").info("Could not find 'pingCount' in column 'scanSettings' in app.settings.json");
+            Logger.getLogger("BNC").info("Updating to default 'pingCount' value to 3 Packets");
             j_.put("pingCount", 3);
         } // Ping Count           pingCount             (Default 3 Probes/Packets)  (int)
         if(!j_.has("skipBroadcastAddress")) {
+            Logger.getLogger("BNC").info("Could not find 'skipBroadcastAddress' in column 'scanSettings' in app.settings.json");
+            Logger.getLogger("BNC").info("Updating to default 'skipBroadcastAddress' value to true");
             j_.put("skipBroadcastAddress", true);
         } // Skip Broadcast IP    skipBroadcastAddress  (Default true)              (bool)
         if(!j_.has("portTimeout")) {
+            Logger.getLogger("BNC").info("Could not find 'portTimeout' in column 'scanSettings' in app.settings.json");
+            Logger.getLogger("BNC").info("Updating to default 'portTimeout' value to 2000 MS (2 seconds)");
             j_.put("portTimeout", 2000);
         } // Port Timeout         portTimeout           (Default 2000 MS, 2s)       (int)
         if(!j_.has("adaptPortTimeout")) {
+            Logger.getLogger("BNC").info("Could not find 'adaptPortTimeout' in column 'scanSettings' in app.settings.json");
+            Logger.getLogger("BNC").info("Updating to default 'adaptPortTimeout' value to true");
             j_.put("adaptPortTimeout", true);
         } // Adapt Port Timeout   adaptPortTimeout      (Default true)              (bool)
         if(!j_.has("minPortTimeout")) {
+            Logger.getLogger("BNC").info("Could not find 'minPortTimeout' in column 'scanSettings' in app.settings.json");
+            Logger.getLogger("BNC").info("Updating to default 'minPortTimeout' value to 100 MS (0.1 seconds)");
             j_.put("minPortTimeout", 100);
         } // Min Port Timeout     minPortTimeout        (Default 100 MS, 0.1s)      (int)
         if(!j_.has("portString")) {
+            Logger.getLogger("BNC").info("Could not find 'portString' in column 'scanSettings' in app.settings.json");
+            Logger.getLogger("BNC").info("Updating to default 'portString' value to '80,433,8080'");
             j_.put("portString", "80,443,8080");
         } // Port String          portString            (Default "80,443,8080")     (string)
         if(!j_.has("useRequestedPorts")) {
+            Logger.getLogger("BNC").info("Could not find 'userRequestedPorts' in column 'scanSettings' in app.settings.json");
+            Logger.getLogger("BNC").info("Updating to default 'userRequestedPorts' value to true");
             j_.put("useRequestedPorts", true);
         } // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
         SettingsContainer.setValue("scanSettings", j_);
