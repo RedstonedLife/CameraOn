@@ -143,8 +143,8 @@ public class ScannerConfig {
             j_.put("scanDeadHosts", preferences.getBoolean("scanDeadHosts", true));
         } // Scan Dead Hosts      scanDeadHosts         (Default false)             (bool)
         if(j_.has("selectedPinger")) {
-            Logger.getLogger("BNC").info(tl("scannerconfig.found1","threadDelay","scanSettings"));
-            Logger.getLogger("BNC").info(tl("scannerconfig.found2","threadDelay"));
+            Logger.getLogger("BNC").info(tl("scannerconfig.found1","selectedPinger","scanSettings"));
+            Logger.getLogger("BNC").info(tl("scannerconfig.found2","selectedPinger"));
             j_.put("selectedPinger", preferences.get("selectedPinger", "pinger.arp"));
         } // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
         if(j_.has("pingTimeout")) {
