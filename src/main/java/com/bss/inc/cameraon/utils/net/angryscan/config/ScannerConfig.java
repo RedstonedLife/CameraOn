@@ -38,6 +38,7 @@ public class ScannerConfig {
      * @param preferences
      */
     public ScannerConfig(Preferences preferences) {
+        Logger.getLogger("BNC").info("Initializing ScannerConfig");
         this.preferences = preferences;
         boolean useDefault = false;
         Object[] data = new Object[16];
