@@ -119,7 +119,7 @@ public class Settings implements ISettings {
             values.replace(key, value);}
         else {
             logger.info("Loading key:"+key+" value:"+value.toString());
-            values.putIfAbsent(key, settings.get(k));
+            values.putIfAbsent(key, value);
         }
     }
 }
