@@ -76,6 +76,10 @@ public class HardwareUtils {
             Logger.getLogger("BNC").info(tl("hardwareinfo.storage.volume", sdev.getVolume()));
             Logger.getLogger("BNC").info(tl("hardwareinfo.storage.space", FormatUtil.formatBytes(sdev.getFreeSpace()), FormatUtil.formatBytes(sdev.getTotalSpace()), FormatUtil.formatBytes(sdev.getUsableSpace())));
         }
+        Logger.getLogger("BNC").info(tl("hardwareinfo.firmware.line1"));
+        Logger.getLogger("BNC").info(tl("hardwareinfo.firmware.line2"));
+        Logger.getLogger("BNC").info(tl("hardwareinfo.firmware.line3"));
+
     }
 }
 
