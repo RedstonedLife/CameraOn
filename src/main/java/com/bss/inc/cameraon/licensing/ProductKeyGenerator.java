@@ -27,7 +27,8 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData> {
             if((this.productKeyEncodingData != null) && (this.productKeyEncodingData.length >0)) {
                 if(this.getProductKeySectionWorker() != null) {
                     try {
-                        long seed = Long.parseLong(cleanedProductKey.substring(0, this.getSeedCharLength()))
+                        long seed = Long.parseLong(cleanedProductKey.substring(0, this.getSeedCharLength()), 16);
+                        
                     }
                 }
             }
