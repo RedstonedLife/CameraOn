@@ -14,8 +14,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class LicenseWindow implements Initializable {
-    @FXML
-    private Text TitleTxt, SubTitleTxt;
+    @FXML private Text TitleTxt, SubTitleTxt;
     @FXML private TextField ACtf1,ACtf2,ACtf3,ACtf4;
     @FXML private Button HelpBtn, ActivateBtn, btnMinimize, btnClose;
 
