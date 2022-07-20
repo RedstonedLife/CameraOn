@@ -78,12 +78,7 @@ public class HardwareUtils {
         return devices.stream().toList();
     }
 
-    public static class CPU extends com.bss.inc.cameraon.utils.HardwareUtils.CPU {
-        public CPU(CentralProcessor.ProcessorIdentifier identifier) {
-            super(identifier);
-        }
-    }
-
+    public static class CPUInfo extends CPU { public CPUInfo(CentralProcessor.ProcessorIdentifier identifier) {super(identifier);}}
     public static class OSInfo extends OS { public OSInfo(OperatingSystem OS, OperatingSystem.OSVersionInfo OS_Info) {super(OS, OS_Info);}}
     public static class FirmInfo extends FirmwareInfo { public FirmInfo(Firmware firmware) {super(firmware);}}
     public static class CompInfo extends ComputerInfo { public CompInfo(ComputerSystem cs) {super(cs);}}
