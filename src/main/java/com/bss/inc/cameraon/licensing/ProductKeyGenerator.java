@@ -1,7 +1,6 @@
 package com.bss.inc.cameraon.licensing;
 
 import com.bss.inc.cameraon.licensing.impl.beans.ProductKeyEncodingData;
-import com.bss.inc.cameraon.licensing.impl.workers.ChecksumWorker;
 import com.bss.inc.cameraon.licensing.impl.workers.ProductKeySectionWorker;
 import com.bss.inc.cameraon.licensing.interfaces.IBlacklistWorker;
 import com.bss.inc.cameraon.licensing.interfaces.IChecksumWorker;
