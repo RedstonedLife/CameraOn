@@ -29,7 +29,12 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData> {
                     try {
                         long seed = Long.parseLong(cleanedProductKey.substring(0, this.getSeedCharLength()), 16);
                         int currentKeyCharIndex = this.getSeedCharLength();
-                        
+                        String tmpKeySection;
+                        for(int n=0;n<this.productKeyEncodingData.length;n++) {
+                            if(this.productKeyEncodingData[n] != null) {
+
+                            }
+                        }
                     }
                 }
             }
