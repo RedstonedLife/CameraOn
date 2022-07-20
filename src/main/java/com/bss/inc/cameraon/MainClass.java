@@ -37,7 +37,7 @@ public class MainClass extends Application {
 
     @Override
     public void start(Stage stage) {
-        stage.getIcons().add(new Image(MainClass.class.getResourceAsStream("/../")))
+        stage.getIcons().add(new Image(MainClass.class.getResourceAsStream("/../bnc.png")));
         try {WindowManager = new DialogManager(new Dialog[] {
                 new Dialog(stage, FrontendPaths.HEIGHT, FrontendPaths.WIDTH, "mainWindow", new URL[]{ // MainWindow URL[] Start
                         clazz.getResource(FrontendPaths.SETTINGS_FXML),
