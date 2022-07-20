@@ -328,12 +328,12 @@ public class $UI$01 {
         textFields[2].textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
             if((newValue.length() < 4)) {
-                textFields[1].setFocusTraversable(false);textFields[2].requestFocus();textFields[1].setText(oldValue);}
+                textFields[2].setFocusTraversable(false);textFields[3].requestFocus();textFields[2].setText(oldValue);}
         });
         textFields[3].textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
             if((newValue.length() < 4)) {
-                textFields[1].setFocusTraversable(false);textFields[2].requestFocus();textFields[1].setText(oldValue);}
+                textFields[3].setText(oldValue);}
         });
     }
 
