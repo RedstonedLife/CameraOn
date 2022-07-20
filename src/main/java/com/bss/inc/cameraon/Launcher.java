@@ -19,7 +19,7 @@ public class Launcher {
     private static I18n _i18n = new I18n(MainClass.class);
     public static final LocalDateTime _INIT_TIME = LocalDateTime.now();
     public static final Settings SettingsContainer;
-    private static HardwareUtils = new HardwareUtils();
+    private static HardwareUtils hu = new HardwareUtils();
 
     static {
         try {
