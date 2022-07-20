@@ -32,7 +32,8 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData> {
                         String tmpKeySection;
                         for(int n=0;n<this.productKeyEncodingData.length;n++) {
                             if(this.productKeyEncodingData[n] != null) {
-                                tmpKeySection=cleanedProductKey.substring()
+                                tmpKeySection=cleanedProductKey.substring(currentKeyCharIndex,currentKeyCharIndex+2);
+                                
                             }
                         }
                     }
