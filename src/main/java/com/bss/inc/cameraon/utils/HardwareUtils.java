@@ -7,10 +7,76 @@ import oshi.hardware.*;
 import oshi.software.os.OSFileStore;
 import oshi.software.os.OperatingSystem;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class HardwareUtils {
     private final SystemInfo systemInfo;
     public HardwareUtils() {this.systemInfo = new SystemInfo();}
-    public HardwareAbstractionLayer getHardware() {return this.systemInfo.getHardware();}
+    public HardwareAbstractionLayer getHardware() {
+        return this.systemInfo.getHardware();
+    }
+
+    public ComputerSystem getComputerSystem() {
+        return getHardware().getComputerSystem();
+    }
+
+    public Baseboard getBaseboard() {
+        return getComputerSystem().getBaseboard();
+    } /* Motherboard */
+
+    public Firmware getFirmware() {
+        return getComputerSystem().getFirmware();
+    } /* Computer Firmware/BIOS */
+
+    public GlobalMemory getMemory() {
+        return getHardware().getMemory();
+    }
+
+    public CentralProcessor getProcessor() {
+        return getHardware().getProcessor();
+    }
+
+    public CentralProcessor.ProcessorIdentifier getProcIdentifier() {
+        return getProcessor().getProcessorIdentifier();
+    }
+
+    public OperatingSystem getOperatingSystem() {
+        return systemInfo.getOperatingSystem();
+    }
+
+    public OperatingSystem.OSVersionInfo getOperatingSystemInfo() {
+        return getOperatingSystem().getVersionInfo();
+    }
+
+    public FileSystem getFileSystem() {
+        return getOperatingSystem().getFileSystem();
+    }
+
+    public List<OSFileStore> getFileStores() {
+        return getFileSystem().getFileStores();
+    }
+
+    public CPU getCPU() {
+        return new CPU(getProcIdentifier());
+    }
+
+    public OS getOS() {
+        return new OS(getOperatingSystem(), getOperatingSystemInfo());
+    }
+
+    public FirmwareInfo getFirmwareInfo() {
+        return new FirmwareInfo(getFirmware());
+    }
+
+    public ComputerInfo getComputerInfo() {return new ComputerInfo(getComputerSystem());}
+    public BaseboardInfo getBaseboardInfo() {return new BaseboardInfo(getBaseboard());}
+
+    public List<StorageDevice> getStorageDevices() {
+        ArrayList<StorageDevice> devices = new ArrayList<StorageDevice>();
+        for (OSFileStore file : getFileStores()) {devices.add(new StorageDevice(file));}
+        return devices.stream().toList();
+    }
 
     public static class CPU extends com.bss.inc.cameraon.utils.HardwareUtils.CPU {
         public CPU(CentralProcessor.ProcessorIdentifier identifier) {
@@ -53,7 +119,7 @@ public class HardwareUtils {
     Class Linkers linking outside local class to inner-class HardwareUtils
     @TODO Test every class except CPU
  */
-class FirmwareInfo {
+abstract class FirmwareInfo {
     String Description, Manufacturer, Name, ReleaseDate, Version;
 
     public FirmwareInfo(Firmware firmware) {
