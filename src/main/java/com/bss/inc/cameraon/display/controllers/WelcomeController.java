@@ -1,6 +1,7 @@
 package com.bss.inc.cameraon.display.controllers;
 
 import com.bss.inc.cameraon.Launcher;
+import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.utils.$UI$01;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -21,7 +22,7 @@ public class WelcomeController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         HelpBtn.setCancelButton(true);
-        ActivateBtn.setOnAction(e -> );
+        ActivateBtn.setOnAction(e -> MainClass.getWindowManager().changeDialogScene(""));
         $UI$01.u_10$1$1(btnClose);
         $UI$01.u_10$1$2(btnMinimize,"welcomeWindow");
     }
