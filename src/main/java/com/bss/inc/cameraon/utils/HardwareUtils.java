@@ -89,7 +89,7 @@ public class HardwareUtils {
     public static class CompInfo extends ComputerInfo { public CompInfo(ComputerSystem cs) {super(cs);}}
     public static class BoardInfo extends BaseboardInfo { public BoardInfo(Baseboard board) {super(board);}}
 
-    public static class Stor extends StorageDevice {
+    public static class StorageDevice extends StorageDevice {
         public StorageDevice(OSFileStore fileStore) {
             super(fileStore);
         }
