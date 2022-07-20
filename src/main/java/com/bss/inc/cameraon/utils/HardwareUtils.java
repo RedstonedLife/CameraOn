@@ -119,7 +119,7 @@ public class HardwareUtils {
     Class Linkers linking outside local class to inner-class HardwareUtils
     @TODO Test every class except CPU
  */
-abstract class FirmwareInfo {
+class FirmwareInfo {
     String Description, Manufacturer, Name, ReleaseDate, Version;
 
     public FirmwareInfo(Firmware firmware) {
