@@ -84,31 +84,12 @@ public class HardwareUtils {
         }
     }
 
-    public static class OS extends com.bss.inc.cameraon.utils.HardwareUtils.OS {
-        public OS(OperatingSystem OS, OperatingSystem.OSVersionInfo OS_Info) {
-            super(OS, OS_Info);
-        }
-    }
+    public static class OSInfo extends OS { public OSInfo(OperatingSystem OS, OperatingSystem.OSVersionInfo OS_Info) {super(OS, OS_Info);}}
+    public static class FirmInfo extends FirmwareInfo { public FirmInfo(Firmware firmware) {super(firmware);}}
+    public static class CompInfo extends ComputerInfo { public CompInfo(ComputerSystem cs) {super(cs);}}
+    public static class BoardInfo extends BaseboardInfo { public BoardInfo(Baseboard board) {super(board);}}
 
-    public static class FirmwareInfo extends FirmwareInfo {
-        public FirmwareInfo(Firmware firmware) {
-            super(firmware);
-        }
-    }
-
-    public static class ComputerInfo extends com.bss.inc.cameraon.utils.HardwareUtils.ComputerInfo {
-        public ComputerInfo(ComputerSystem cs) {
-            super(cs);
-        }
-    }
-
-    public static class BaseboardInfo extends com.bss.inc.cameraon.utils.HardwareUtils.BaseboardInfo {
-        public BaseboardInfo(Baseboard board) {
-            super(board);
-        }
-    }
-
-    public static class StorageDevice extends com.bss.inc.cameraon.utils.HardwareUtils.StorageDevice {
+    public static class StorageDevice extends StorageDevice {
         public StorageDevice(OSFileStore fileStore) {
             super(fileStore);
         }
