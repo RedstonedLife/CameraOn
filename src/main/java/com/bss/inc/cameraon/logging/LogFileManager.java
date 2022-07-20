@@ -64,7 +64,6 @@ public class LogFileManager implements ErrorHandler, WarnHandler, InfoHandler, D
         } else {
             currentLogFile = _createLog(LoggingConstants.LOG_LATEST);
         }
-        System.out.println(getCurrentTimestamp());
     }
 
     private static boolean _fileExists(String filename) {
