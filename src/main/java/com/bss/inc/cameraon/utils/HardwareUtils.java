@@ -456,3 +456,4 @@ class CPU {
     public String getVendorGFreqSTR() {
         return String.valueOf(vendorGFreq);
     }
+}
