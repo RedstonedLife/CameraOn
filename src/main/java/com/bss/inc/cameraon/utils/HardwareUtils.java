@@ -8,6 +8,7 @@ import oshi.hardware.*;
 import oshi.software.os.FileSystem;
 import oshi.software.os.OSFileStore;
 import oshi.software.os.OperatingSystem;
+import oshi.util.FormatUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,7 +74,7 @@ public class HardwareUtils {
             Logger.getLogger("BNC").info(tl("hardwareinfo.storage.type", sdev.getType()));
             Logger.getLogger("BNC").info(tl("hardwareinfo.storage.uuid", sdev.getUUID()));
             Logger.getLogger("BNC").info(tl("hardwareinfo.storage.volume", sdev.getVolume()));
-            Logger.getLogger("BNC").info(tl("hardwareinfo.storage.space", sdev.getFreeSpace(),));
+            Logger.getLogger("BNC").info(tl("hardwareinfo.storage.space", FormatUtil.formatBytes()));
         }
     }
 }
