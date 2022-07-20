@@ -41,6 +41,7 @@ public class HardwareUtils {
         List<StorageDevice> storageDevices = getStorageDevices();
         OS os = getOS();
         FirmwareInfo firmwareInfo = getFirmwareInfo();
+        
     }
 }
 
