@@ -70,8 +70,8 @@ public class HardwareUtils {
             Logger.getLogger("BNC").info(tl("hardwareinfo.storage.mount", sdev.getMount()));
             Logger.getLogger("BNC").info(tl("hardwareinfo.storage.name", sdev.getName()));
             Logger.getLogger("BNC").info(tl("hardwareinfo.storage.options", sdev.getOptions()));
+            Logger.getLogger("BNC").info(tl("hardwareinfo.storage.type", sdev.getType()));
             Logger.getLogger("BNC").info(tl("hardwareinfo.storage."));
-            Logger.getLogger("BNC").info(tl("hardwareinfo.line1"));
             Logger.getLogger("BNC").info(tl("hardwareinfo.line1"));
             Logger.getLogger("BNC").info(tl("hardwareinfo.line1"));
         }
