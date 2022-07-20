@@ -322,7 +322,7 @@ public class $UI$01 {
                 if(!u_08$1$3(newValue)) {textFields[finalI].setText(oldValue);}
                 if((newValue.length() > 4)) {textFields[finalI].setText(oldValue);
                     boolean b = finalI <= textFields.length;
-                    
+                    if(b);
                 }
             });
         }
