@@ -4,7 +4,7 @@ import com.bss.inc.cameraon.licensing.interfaces.IProductKeySectionWorker;
 
 public class ProductKeySectionWorker implements IProductKeySectionWorker<ProductKeyEncodingData> {
     @Override
-    public byte buildProductKeySection(final long seed, final BasicProductKeyEncodingData encodingData)
+    public byte buildProductKeySection(final long seed, final ProductKeyEncodingData encodingData)
     {
         byte a = (byte) (((int) encodingData.getA()) % 25);
         byte b = (byte) (((int) encodingData.getB()) % 3);
