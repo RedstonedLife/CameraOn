@@ -31,7 +31,7 @@ public class FrontendPaths {
     public static final double DIVID_POS = 0.25278396436525613d;
     public static final double EPSILON = 0.0000005;
     /* Internationalization (I18n) */
-    public static final String MESSAGES = "messages"; //"messages_en";
+    public static final String MESSAGES = "com/bss/inc/cameraon/messages"; //"messages_en";
     public static final Pattern NODOUBLEMARK = Pattern.compile("''");
     public static final ResourceBundle NULL_BUNDLE = new ResourceBundle() {
         public Enumeration<String> getKeys() {return null;}
