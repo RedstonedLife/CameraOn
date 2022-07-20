@@ -90,7 +90,7 @@ public class HardwareUtils {
         }
     }
 
-    public static class FirmwareInfo extends com.bss.inc.cameraon.utils.HardwareUtils.FirmwareInfo {
+    public static class FirmwareInfo extends FirmwareInfo {
         public FirmwareInfo(Firmware firmware) {
             super(firmware);
         }
