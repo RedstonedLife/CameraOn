@@ -318,7 +318,7 @@ public class $UI$01 {
 
     public static void u_11$1$1(TextField[] textFields) {
         textFields[0].textProperty().addListener((observable, oldValue, newValue) -> {
-            if(isCopyingLicenseKey)
+            if(isCopyingLicenseKey) {return;}
             if(newValue.split("-").length==5 && newValue.split("-") != null) {
                 isCopyingLicenseKey = true;
                 String[] temp = newValue.split("-");
@@ -335,24 +335,28 @@ public class $UI$01 {
                 textFields[1].requestFocus();textFields[0].setText(oldValue);}
         });
         textFields[1].textProperty().addListener((observable, oldValue, newValue) -> {
+            if(isCopyingLicenseKey) {return;}
             if(oldValue == null || oldValue == "") {return;}
             if(newValue == "") {textFields[0].requestFocus();}
             if((newValue.length() == 6)) {
                 textFields[2].requestFocus();textFields[1].setText(oldValue);}
         });
         textFields[2].textProperty().addListener((observable, oldValue, newValue) -> {
+            if(isCopyingLicenseKey) {return;}
             if(oldValue == null || oldValue == "") {return;}
             if(newValue == "") {textFields[1].requestFocus();}
             if((newValue.length() == 7 && oldValue != null)) {
                 textFields[3].requestFocus();textFields[2].setText(oldValue);}
         });
         textFields[3].textProperty().addListener((observable, oldValue, newValue) -> {
+            if(isCopyingLicenseKey) {return;}
             if(oldValue == null || oldValue == "") {return;}
             if(newValue == "") {textFields[2].requestFocus();}
             if((newValue.length() == 7 && oldValue != null)) {
                 textFields[4].requestFocus();textFields[3].setText(oldValue);}
         });
         textFields[4].textProperty().addListener((observable, oldValue, newValue) -> {
+            if(isCopyingLicenseKey) {return;}
             if(oldValue == null || oldValue == "") {return;}
             if(newValue == "") {textFields[3].requestFocus();}
             if((newValue.length() == 7 && oldValue != null)) {
