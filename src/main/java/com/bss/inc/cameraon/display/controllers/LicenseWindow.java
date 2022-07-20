@@ -23,6 +23,7 @@ public class LicenseWindow implements Initializable {
         HelpBtn.setCancelButton(true);
         ActivateBtn.setOnAction(e -> MainClass.getWindowManager().changeDialogScene("licenseWindow", MainClass.class.getResource(FrontendPaths.LICENSE_KEY_FXML)));
         btnClose.setOnAction(e -> MainClass.getWindowManager().changeDialogScene("welcomeWindow", MainClass.class.getResource(FrontendPaths.WELCOME_NA_FXML)));
+        $UI$01.u_11$1$1(new TextField[]{ACtf1,ACtf2,ACtf3,ACtf4});
         $UI$01.u_10$1$2(btnMinimize, "welcomeWindow");
     }
 }
