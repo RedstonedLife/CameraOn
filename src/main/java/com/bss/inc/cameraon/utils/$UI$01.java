@@ -315,16 +315,13 @@ public class $UI$01 {
     }
 
     public static void u_11$1$1(TextField[] textFields) {
-        for (int i=0;i<textFields.length;i++) {
-            int finalI = i;
-            textFields[i].textProperty().addListener((observable, oldValue, newValue) -> {
-                if(oldValue == null || oldValue == "") {return;}
-                if((newValue.length() < 4)) {
-                    boolean b = finalI < textFields.length;
-                    if(b){return;}
-                    else {textFields[finalI].setFocusTraversable(false);textFields[finalI+1].requestFocus();textFields[finalI].setText(oldValue);}}
-            });
-        }
+        textFields[0].textProperty().addListener((observable, oldValue, newValue) -> {
+            if(oldValue == null || oldValue == "") {return;}
+            if((newValue.length() < 4)) {
+                boolean b = finalI < textFields.length;
+                if(b){return;}
+                else {textFields[finalI].setFocusTraversable(false);textFields[finalI+1].requestFocus();textFields[finalI].setText(oldValue);}}
+        });
     }
 
 }
