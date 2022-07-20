@@ -62,7 +62,7 @@ public class HardwareUtils {
         Logger.getLogger("BNC").info(tl("hardwareinfo.storage.line1"));
         Logger.getLogger("BNC").info(tl("hardwareinfo.storage.line2"));
         Logger.getLogger("BNC").info(tl("hardwareinfo.storage.line3"));
-        Logger.getLogger("BNC").info(tl("hardwareinfo."));
+        for(StorageDevice)
     }
 }
 
