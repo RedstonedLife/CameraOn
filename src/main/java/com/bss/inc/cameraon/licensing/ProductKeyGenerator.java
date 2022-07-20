@@ -1,9 +1,7 @@
 package com.bss.inc.cameraon.licensing;
 
 import com.bss.inc.cameraon.licensing.enums.ProductKeyState;
-import com.bss.inc.cameraon.licensing.exceptions.EncodingDataNotCompleteException;
-import com.bss.inc.cameraon.licensing.exceptions.InvalidSeedException;
-import com.bss.inc.cameraon.licensing.exceptions.ProductKeyEncoderNotDefinedException;
+import com.bss.inc.cameraon.licensing.exceptions.*;
 import com.bss.inc.cameraon.licensing.impl.beans.ProductKeyEncodingData;
 import com.bss.inc.cameraon.licensing.interfaces.*;
 import com.bss.inc.cameraon.licensing.utils.ProductKeyUtils;
@@ -56,17 +54,11 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData> {
     {
         // Build the HEXADECIMAL string representing the seed.
         String seedHex = ProductKeyUtils.buildHexStr(this.getSeedCharLength(), seed);
-
-        try
-        {
+        try {
             // Try to parse the HEXADECIMAL string representing the seed and use that for the seed.
             seed = Long.parseLong(seedHex, 16);
-
-            if ((this.productKeyEncodingData != null) && (this.productKeyEncodingData.length > 0))
-            {
-                if (this.getProductKeySectionWorker() != null)
-                {
-                    final StringBuilder keySb = new StringBuilder();
+            if ((this.productKeyEncodingData != null) && (this.productKeyEncodingData.length > 0)) {if (this.getProductKeySectionWorker() != null) {
+                final StringBuilder keySb = new StringBuilder();
 
                     seedHex = ProductKeyUtils.buildHexStr(this.getSeedCharLength(), seed);
 
