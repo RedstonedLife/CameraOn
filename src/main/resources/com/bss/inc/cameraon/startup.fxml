@@ -62,7 +62,7 @@
             <Line endX="-63.0" endY="228.0" layoutX="495.0" layoutY="142.0" startX="-63.0" startY="-142.0" stroke="#2c2c2c" />
             <ImageView fitHeight="345.0" fitWidth="354.0" layoutX="433.0" layoutY="26.0" opacity="0.23" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@bnc.png" />
+                  <Image url="@bncUP2.png" />
                </image>
                <effect>
                   <Glow level="0.5" />
