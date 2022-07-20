@@ -18,6 +18,7 @@ import java.util.regex.Pattern;
 public class $UI$01 {
     public static final Pattern digitPattern;
     public static final Pattern licensePattern;
+    private static boolean 
     static TextField[] tfs,tfs2;
     static CheckBox[] chkbs, chkbs2;
     static RadioButton[] rbs;
@@ -318,7 +319,7 @@ public class $UI$01 {
     public static void u_11$1$1(TextField[] textFields) {
         textFields[0].textProperty().addListener((observable, oldValue, newValue) -> {
             if(newValue.split("-").length==5 && newValue.split("-") != null) {
-                
+
             }
             if(oldValue == null || oldValue == "") {return;}
             if((newValue.length() == 8 && oldValue != null)) {
