@@ -6,6 +6,7 @@ public class Logger implements ErrorHandler, WarnHandler, InfoHandler, DebugHand
      * The fully qualified name of the Logger class
      */
     private static final String FQCN = Logger.class.getName();
+    private boolean stampEnabled
     private static String LOGGER_NAME;
 
     public Logger(String name) {
