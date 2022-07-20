@@ -56,7 +56,9 @@ public class MainClass extends Application {
                 new Dialog(500d, 200d, "licenseWindow", new URL[] { // licenseWindow URL[] Start
                         clazz.getResource(FrontendPaths.LICENSE_KEY_FXML)
                 }), // licenseWindow URL[] End
-                new Dialog(800d,450d, "welcomeWindow",)
+                new Dialog(800d,450d, "welcomeWindow", new URL[] { // welcomeWindow URL[] Start
+
+                })
         });}
         catch (IOException e) {logger.error("Error occurred while initializing the WindowManager", e);e.printStackTrace();}
         WindowManager.changeDialogScene("mainWindow",clazz.getResource(FrontendPaths.SETTINGS_FXML));
