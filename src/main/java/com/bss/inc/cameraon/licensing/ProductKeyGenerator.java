@@ -10,5 +10,6 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData> {
     private final ED[] productKeyEncodingData;
     private IProductKeySectionWorker<ED> productKeySectionWorker = null;
     private IChecksumWorker checksumWorker = null;
-    private IBlacklistWorker
+    private IBlacklistWorker blacklistWorker = null;
+    
 }
