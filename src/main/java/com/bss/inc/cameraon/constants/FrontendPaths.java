@@ -26,7 +26,7 @@ public class FrontendPaths {
     public static final String HELP_FXML = "help.fxml";
     public static final String CONFIRMATION_FXML = "confirmation.fxml";
     public static final String LANG_CONFIRMATION_FXML = "langconfirmation.fxml";
-    public static final String LICENSE_KEY_FXML = "license"
+    public static final String LICENSE_KEY_FXML = "licensekey.fxml"
     public static final double HEIGHT = 900d;
     public static final double WIDTH = 600d;
     public static final double DIVID_POS = 0.25278396436525613d;
