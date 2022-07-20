@@ -88,7 +88,7 @@ public class HardwareUtils {
         Logger.getLogger("BNC").info(tl("hardwareinfo.firmware.oscodename",os.getCodename()));
         Logger.getLogger("BNC").info(tl("hardwareinfo.firmware.osbuildnumber", os.getBuild_Number()));
         Logger.getLogger("BNC").info(tl("hardwareinfo.firmware.bios"));
-        Logger.getLogger("BNC").info(tl("hardwareinfo.biosmanufacturer", firmwareInfo));
+        Logger.getLogger("BNC").info(tl("hardwareinfo.firmware.biosmanufacturer", firmwareInfo));
     }
 }
 
