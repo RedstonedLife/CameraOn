@@ -6,10 +6,10 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane minHeight="200" minWidth="500" prefHeight="200.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bss.inc.cameraon.display.controllers.LicenseWindow">
+<AnchorPane minHeight="200" minWidth="500" prefHeight="200.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bss.inc.cameraon.display.controllers.LicenseWindow">
     <children>
         <HBox layoutX="832.0" layoutY="1.0" prefHeight="27.0" prefWidth="28.0" />
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2b2b2b" height="28.0" layoutX="27.0" stroke="#2b2b2b" strokeType="INSIDE" width="405.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2b2b2b" height="28.0" layoutX="27.0" stroke="#2b2b2b" strokeType="INSIDE" width="570.0" />
         <HBox layoutY="1.0" prefHeight="27.0" prefWidth="25.0">
             <children>
                 <Button fx:id="HelpBtn" mnemonicParsing="false" prefHeight="23.0" prefWidth="28.0" text="?" textFill="WHITE">
@@ -20,12 +20,12 @@
             </children>
         </HBox>
         <Text fill="#7c7c7c" layoutX="215.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="camera - on" wrappingWidth="86.853515625" />
-          <Button fx:id="btnMinimize" layoutX="432.0" layoutY="1.0" maxHeight="23.0" maxWidth="30.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="30.0" text="➖" textFill="#b8ff00">
+          <Button fx:id="btnMinimize" layoutX="529.0" layoutY="2.0" maxHeight="23.0" maxWidth="30.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="30.0" text="➖" textFill="#b8ff00">
               <font>
                   <Font name="System Bold" size="12.0" />
               </font>
       </Button>
-          <Button fx:id="btnClose" layoutX="466.0" layoutY="1.0" maxHeight="23.0" maxWidth="30.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="30.0" text="✖" textFill="#ff4d4d" />
+          <Button fx:id="btnClose" layoutX="563.0" layoutY="2.0" maxHeight="23.0" maxWidth="30.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="30.0" text="✖" textFill="#ff4d4d" />
       <Text fx:id="TitleTxt" fill="#ebebeb" layoutX="28.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter License Key">
          <font>
             <Font size="24.0" />
