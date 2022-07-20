@@ -39,8 +39,7 @@ public class MainClass extends Application {
     public void start(Stage stage) {
         try {WindowManager = new DialogManager(new Dialog[] {
                 new Dialog(stage, FrontendPaths.HEIGHT, FrontendPaths.WIDTH, "mainWindow", new URL[]{ // MainWindow URL[] Start
-                        clazz.getResource(FrontendPaths.SETTINGS_FXML),
-                        clazz.getResource(FrontendPaths.WELCOME_FXML), clazz.getResource(FrontendPaths.CAM_SETTINGS),
+                        clazz.getResource(FrontendPaths.SETTINGS_FXML), clazz.getResource(FrontendPaths.CAM_SETTINGS),
                         clazz.getResource(FrontendPaths.SCAN_FXML), clazz.getResource(FrontendPaths.APPLY_FXML),
                 }), // MainWindow URL[] End
                 new Dialog(300d, 200d, "confirmationDialog", new URL[]{ // ConfirmationDialog URL[] Start
