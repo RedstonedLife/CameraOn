@@ -342,19 +342,19 @@ public class $UI$01 {
         textFields[2].textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
             if(newValue == "") {textFields[1].requestFocus();}
-            if((newValue.length() == 7)) {
+            if((newValue.length() == 7 && oldValue != null)) {
                 textFields[3].requestFocus();textFields[2].setText(oldValue);}
         });
         textFields[3].textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
             if(newValue == "") {textFields[2].requestFocus();}
-            if((newValue.length() == 7)) {
+            if((newValue.length() == 7 && oldValue != null)) {
                 textFields[4].requestFocus();textFields[3].setText(oldValue);}
         });
         textFields[4].textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
             if(newValue == "") {textFields[3].requestFocus();}
-            if((newValue.length() == 7)) {
+            if((newValue.length() == 7 && oldValue != null)) {
                 textFields[4].setText(oldValue);}
         });
     }
