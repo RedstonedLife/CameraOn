@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="450" minWidth="800" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.HelloController">
+    <children>
+        <HBox layoutX="832.0" layoutY="1.0" prefHeight="27.0" prefWidth="28.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3c3c3c" height="370.0" layoutX="5.0" layoutY="57.0" stroke="TRANSPARENT" strokeType="INSIDE" width="789.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2b2b2b" height="28.0" layoutX="27.0" stroke="#2b2b2b" strokeType="INSIDE" width="708.0" />
+          <CheckBox fx:id="showChkB" mnemonicParsing="false" />
+          <Text fx:id="showTxt" fill="#e4e4e4" strokeType="OUTSIDE" strokeWidth="0.0" text="Show Welcome Screen">
+              <font>
+                  <Font name="Consolas" size="11.0" />
+              </font>
+          </Text>
+        <Text fx:id="licensetxt" fill="#9e9e9e" layoutX="7.0" layoutY="439.0" strokeType="OUTSIDE" strokeWidth="0.0" text="License text">
+            <font>
+                <Font size="8.0" />
+            </font>
+        </Text>
+        <Text fx:id="versiontxt" fill="#9e9e9e" layoutX="732.0" layoutY="439.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Build and Version">
+            <font>
+                <Font size="8.0" />
+            </font>
+        </Text>
+        <HBox layoutY="1.0" prefHeight="27.0" prefWidth="25.0">
+            <children>
+                <Button fx:id="HelpBtn" mnemonicParsing="false" prefHeight="23.0" prefWidth="28.0" text="?" textFill="WHITE">
+                    <font>
+                        <Font name="Consolas Bold" size="12.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+        <Text fill="#7c7c7c" layoutX="356.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="camera - on" wrappingWidth="86.853515625" />
+      <AnchorPane layoutX="5.0" layoutY="57.0" prefHeight="370.0" prefWidth="789.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#36363600" height="61.0" layoutX="5.0" layoutY="48.0" stroke="TRANSPARENT" strokeType="INSIDE" width="420.0" />
+                <Text fx:id="bodyTxt" fill="#e8e8e8" layoutX="10.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Camera On is a program created to ensure a fast and an easy way to locate a free IP Adress whilst setting up a new camera" textAlignment="CENTER" wrappingWidth="408.15625">
+               <effect>
+                  <DropShadow height="7.65" radius="1.4125" spread="0.69" width="0.0">
+                     <color>
+                        <Color red="0.14473684132099152" green="0.14473684132099152" blue="0.14473684132099152" />
+                     </color>
+                  </DropShadow>
+               </effect></Text>
+                <Text fx:id="titleTxt" fill="#eeeeee" layoutX="115.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Camera On">
+                    <font>
+                        <Font name="Consolas" size="40.0" />
+                    </font>
+                </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff150000" height="1.0" layoutX="65.0" layoutY="51.0" stroke="TRANSPARENT" strokeType="INSIDE" width="280.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8150000" height="1.0" layoutX="65.0" layoutY="118.0" stroke="TRANSPARENT" strokeType="INSIDE" width="280.0" />
+            <Text fx:id="bodyTxt11" fill="#e8e8e8" layoutX="90.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="More info at: www.website.com" textAlignment="CENTER" wrappingWidth="249.15625" />
+            <Line endX="-63.0" endY="228.0" layoutX="495.0" layoutY="142.0" startX="-63.0" startY="-142.0" stroke="#2c2c2c" />
+            <ImageView fitHeight="345.0" fitWidth="354.0" layoutX="433.0" layoutY="26.0" opacity="0.23" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@bncUP2.png" />
+               </image>
+               <effect>
+                  <Glow level="0.5" />
+               </effect>
+            </ImageView>
+            <Button fx:id="StartBtn" layoutX="112.0" layoutY="165.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="198.0" text="Start" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow height="35.83" radius="15.932499999999997" width="29.9">
+                     <color>
+                        <Color red="0.4868420958518982" green="0.4868420958518982" blue="0.4868420958518982" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <CheckBox layoutX="10.0" layoutY="336.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="146.0" selected="true" text="Show on startup" textFill="#fff6f6">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </CheckBox>
+         </children>
+      </AnchorPane>
+          <Button fx:id="btnMinimize" layoutX="735.0" layoutY="1.0" maxHeight="23.0" maxWidth="30.0" mnemonicParsing="false" onAction="#minimizeApp" prefHeight="24.0" prefWidth="30.0" text="➖" textFill="#b8ff00">
+              <font>
+                  <Font name="System Bold" size="12.0" />
+              </font>
+      </Button>
+          <Button fx:id="btnClose" layoutX="769.0" layoutY="1.0" maxHeight="23.0" maxWidth="30.0" mnemonicParsing="false" onAction="#closeApp" prefHeight="24.0" prefWidth="30.0" text="✖" textFill="#ff4d4d" />
+    </children>
+    <stylesheets>
+        <URL value="@app.css" />
+    </stylesheets>
+</AnchorPane>
