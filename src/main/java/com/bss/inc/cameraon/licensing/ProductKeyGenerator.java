@@ -17,7 +17,9 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData> {
     public ProductKeyState verifyProductKey(final String productKey) {
         if((productKey != null) && (productKey.trim().length() > 0)) {
             final String cleanedProductKey;
-            if(this.getProdu)
+            if(this.getProductKeyStylingWorker() != null) {
+                cleanedProductKey = this.getProductKeyStylingWorker().removeStyling(productKey).toUpperCase();
+            }
         }
     }
 }
