@@ -12,37 +12,37 @@ public class HardwareUtils {
     public HardwareUtils() {this.systemInfo = new SystemInfo();}
     public HardwareAbstractionLayer getHardware() {return this.systemInfo.getHardware();}
 
-    public static class CPU extends com.redsoftware.ltd.bnc.utils.CPU {
+    public static class CPU extends com.bss.inc.cameraon.utils.HardwareUtils.CPU {
         public CPU(CentralProcessor.ProcessorIdentifier identifier) {
             super(identifier);
         }
     }
 
-    public static class OS extends com.redsoftware.ltd.bnc.utils.OS {
+    public static class OS extends com.bss.inc.cameraon.utils.HardwareUtils.OS {
         public OS(OperatingSystem OS, OperatingSystem.OSVersionInfo OS_Info) {
             super(OS, OS_Info);
         }
     }
 
-    public static class FirmwareInfo extends com.redsoftware.ltd.bnc.utils.FirmwareInfo {
+    public static class FirmwareInfo extends com.bss.inc.cameraon.utils.HardwareUtils.FirmwareInfo {
         public FirmwareInfo(Firmware firmware) {
             super(firmware);
         }
     }
 
-    public static class ComputerInfo extends com.redsoftware.ltd.bnc.utils.ComputerInfo {
+    public static class ComputerInfo extends com.bss.inc.cameraon.utils.HardwareUtils.ComputerInfo {
         public ComputerInfo(ComputerSystem cs) {
             super(cs);
         }
     }
 
-    public static class BaseboardInfo extends BaseboardInfo {
+    public static class BaseboardInfo extends com.bss.inc.cameraon.utils.HardwareUtils.BaseboardInfo {
         public BaseboardInfo(Baseboard board) {
             super(board);
         }
     }
 
-    public static class StorageDevice extends com.redsoftware.ltd.bnc.utils.StorageDevice {
+    public static class StorageDevice extends com.bss.inc.cameraon.utils.HardwareUtils.StorageDevice {
         public StorageDevice(OSFileStore fileStore) {
             super(fileStore);
         }
