@@ -30,11 +30,13 @@ public class HardwareUtils {
     public FirmwareInfo getFirmwareInfo() {return new FirmwareInfo(getFirmware());}
     public ComputerInfo getComputerInfo() {return new ComputerInfo(getComputerSystem());}
     public BaseboardInfo getBaseboardInfo() {return new BaseboardInfo(getBaseboard());}
-
     public List<StorageDevice> getStorageDevices() {
         ArrayList<StorageDevice> devices = new ArrayList<StorageDevice>();
         for (OSFileStore file : getFileStores()) {devices.add(new StorageDevice(file));}
         return devices.stream().toList();
+    }
+    public void LogInfo() {
+        
     }
 }
 
