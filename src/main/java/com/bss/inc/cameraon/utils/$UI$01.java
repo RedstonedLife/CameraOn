@@ -327,6 +327,7 @@ public class $UI$01 {
                 textFields[2].setText(temp[2]);
                 textFields[3].setText(temp[3]);
                 textFields[4].setText(temp[4]);
+                textFields[4].requestFocus();
                 isCopyingLicenseKey = false;
                 return;
             }
