@@ -16,7 +16,8 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData> {
     public int getSeedCharLength() {return this.seedCharLength;}
     public ProductKeyState verifyProductKey(final String productKey) {
         if((productKey != null) && (productKey.trim().length() > 0)) {
-            
+            final String cleanedProductKey;
+            if(this.getProdu)
         }
     }
 }
