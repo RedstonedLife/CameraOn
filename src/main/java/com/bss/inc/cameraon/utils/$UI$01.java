@@ -317,25 +317,25 @@ public class $UI$01 {
     public static void u_11$1$1(TextField[] textFields) {
         textFields[0].textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
-            if((newValue.length() >= 5)) {
+            if((newValue.length() >= 9)) {
                 textFields[1].requestFocus();textFields[0].setText(oldValue);}
         });
         textFields[1].textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
             if(newValue == "") {textFields[0].requestFocus();}
-            if((newValue.length() >= 5)) {
+            if((newValue.length() >= 7)) {
                 textFields[2].requestFocus();textFields[1].setText(oldValue);}
         });
         textFields[2].textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
             if(newValue == "") {textFields[1].requestFocus();}
-            if((newValue.length() >= 5)) {
+            if((newValue.length() >= 7)) {
                 textFields[3].requestFocus();textFields[2].setText(oldValue);}
         });
         textFields[3].textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
             if(newValue == "") {textFields[1].requestFocus();}
-            if((newValue.length() >= 5)) {
+            if((newValue.length() >= 7)) {
                 textFields[4].requestFocus();textFields[3].setText(oldValue);}
         });
         textFields[4].textProperty().addListener((observable, oldValue, newValue) -> {
