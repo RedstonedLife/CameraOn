@@ -9,6 +9,7 @@ import com.bss.inc.cameraon.utils.net.angryscan.enums.DisplayResultType;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import org.json.JSONObject;
+import oshi.SystemInfo;
 
 import java.io.FileNotFoundException;
 import java.util.Map;
@@ -318,7 +319,9 @@ public class $UI$01 {
         textFields[0].textProperty().addListener((observable, oldValue, newValue) -> {
             if(newValue.split("-").length==5 && newValue.split("-") != null) {
                 String[] temp = newValue.split("-");
-                
+                for(String tem : temp) {
+                    System.out.println(tem);
+                }
                 textFields[0].setText(temp[0]);
                 textFields[1].setText(temp[1]);
                 textFields[2].setText(temp[2]);
