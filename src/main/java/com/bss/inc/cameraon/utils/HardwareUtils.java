@@ -38,7 +38,9 @@ public class HardwareUtils {
     public void LogInfo() {
         CPU cpu = getCPU();
         BaseboardInfo baseboardInfo = getBaseboardInfo();
-        
+        List<StorageDevice> storageDevices = getStorageDevices();
+        OS os = getOS();
+        FirmwareInfo firmwareInfo = getFirmwareInfo();
     }
 }
 
