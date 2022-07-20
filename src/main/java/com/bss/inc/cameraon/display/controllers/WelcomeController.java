@@ -20,13 +20,7 @@ public class WelcomeController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        langCb.getItems().addAll(tl("language.english"),tl("language.russian"),tl("language.hebrew"),tl("language.german"),tl("language.spanish"),tl("language.ukrainian"),
-                tl("language.arabic"),tl("language.french"),tl("language.polish"),tl("language.portuguese"),tl("language.czech"),tl("language.italian"),tl("language.romanian"),tl("language.greek"));
-        langCb.setValue(langCb.getItems().get(Integer.valueOf(Launcher.SettingsContainer.getValue("appLanguage").toString())));
-        langCb.setDisable(true);
-        $UI$01.u_01$1$1(cmainsplit,new Button[]{settingsSceneBtn,cctvSceneBtn,applySceneBtn,scanSceneBtn,HelpBtn});
         $UI$01.u_10$1$1(btnClose);
-        $UI$01.u_10$1$2(btnMinimize,"mainWindow");
-        initializeLanguage();
+        $UI$01.u_10$1$2(btnMinimize,"welcomeWindow");
     }
 }
