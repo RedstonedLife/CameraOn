@@ -54,21 +54,10 @@ public class HardwareUtils {
     }
 
     public List<OSFileStore> getFileStores() {
-        return getFileSystem().getFileStores();
-    }
-
-    public CPU getCPU() {
-        return new CPU(getProcIdentifier());
-    }
-
-    public OS getOS() {
-        return new OS(getOperatingSystem(), getOperatingSystemInfo());
-    }
-
-    public FirmwareInfo getFirmwareInfo() {
-        return new FirmwareInfo(getFirmware());
-    }
-
+        return getFileSystem().getFileStores();}
+    public CPU getCPU() {return new CPU(getProcIdentifier());}
+    public OS getOS() {return new OS(getOperatingSystem(), getOperatingSystemInfo());}
+    public FirmwareInfo getFirmwareInfo() {return new FirmwareInfo(getFirmware());}
     public ComputerInfo getComputerInfo() {return new ComputerInfo(getComputerSystem());}
     public BaseboardInfo getBaseboardInfo() {return new BaseboardInfo(getBaseboard());}
 
@@ -77,13 +66,6 @@ public class HardwareUtils {
         for (OSFileStore file : getFileStores()) {devices.add(new StorageDevice(file));}
         return devices.stream().toList();
     }
-
-    public static class CPUInfo extends CPU { public CPUInfo(CentralProcessor.ProcessorIdentifier identifier) {super(identifier);}}
-    public static class OSInfo extends OS { public OSInfo(OperatingSystem OS, OperatingSystem.OSVersionInfo OS_Info) {super(OS, OS_Info);}}
-    public static class FirmInfo extends FirmwareInfo { public FirmInfo(Firmware firmware) {super(firmware);}}
-    public static class CompInfo extends ComputerInfo { public CompInfo(ComputerSystem cs) {super(cs);}}
-    public static class BoardInfo extends BaseboardInfo { public BoardInfo(Baseboard board) {super(board);}}
-    public static class StorageDeviceInfo extends StorageDevice { public StorageDeviceInfo(OSFileStore fileStore) {super(fileStore);}}
 }
 
 /*
