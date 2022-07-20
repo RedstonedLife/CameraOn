@@ -127,7 +127,7 @@ public class $UI$01 {
      * @return boolean (true if matches) (false if not)
      */
     public static boolean u_08$1$3(String i) {return digitPattern.matcher(i).matches();}
-    public static boolean u_08$1$5
+    public static boolean u_08$1$
 
     /**
      * Validates a port pattern i.e 3-50,5,600-8000
