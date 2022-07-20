@@ -388,61 +388,20 @@ class CPU {
         setVendorGFreq(identifier.getVendorFreq() / ab.GIGAHERTZ);
     }
 
-    @Deprecated(since = "27/02/2022", forRemoval = true)
-    public CPU getParsed() {
-        return this;
-    }
-
-    public String getVendor() {
-        return vendor;
-    }
-
-    public void setVendor(String vendor) {
-        this.vendor = vendor;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getIdentifier() {
-        return identifier;
-    }
-
-    public void setIdentifier(String identifier) {
-        this.identifier = identifier;
-    }
-
-    public String getMca() {
-        return mca;
-    }
-
-    public void setMca(String mca) {
-        this.mca = mca;
-    }
-
-    public long getVendorFreq() {
-        return vendorFreq;
-    }
-
-    public void setVendorFreq(long vendorFreq) {
-        this.vendorFreq = vendorFreq;
-    }
-
+    @Deprecated(since = "27/02/2022", forRemoval = true) public CPU getParsed() {return this;}
+    public String getVendor() {return vendor;}
+    public void setVendor(String vendor) {this.vendor = vendor;}
+    public String getName() {return name;}
+    public void setName(String name) {this.name = name;}
+    public String getId() {return id;}
+    public void setId(String id) {this.id = id;}
+    public String getIdentifier() {return identifier;}
+    public void setIdentifier(String identifier) {this.identifier = identifier;}
+    public String getMca() {return mca;}
+    public void setMca(String mca) {this.mca = mca;}
+    public long getVendorFreq() {return vendorFreq;}
+    public void setVendorFreq(long vendorFreq) {this.vendorFreq = vendorFreq;}
     public String getVendorFreqSTR() {return String.valueOf(vendorFreq);}
-
     public long getVendorGFreq() {return vendorGFreq;}
     public void setVendorGFreq(long vendorGFreq) {this.vendorGFreq = vendorGFreq;}
     public String getVendorGFreqSTR() {return String.valueOf(vendorGFreq);}
