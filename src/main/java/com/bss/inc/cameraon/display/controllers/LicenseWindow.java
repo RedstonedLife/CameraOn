@@ -14,13 +14,15 @@ import java.util.ResourceBundle;
 
 public class LicenseWindow implements Initializable {
     @FXML
-    private Text TitleTxt,SubTitleTxt;
-    @FXML private Button HelpBtn,ActivateBtn,btnMinimize,btnClose;
+    private Text TitleTxt, SubTitleTxt;
+    @FXML
+    private Button HelpBtn, ActivateBtn, btnMinimize, btnClose;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         HelpBtn.setCancelButton(true);
         ActivateBtn.setOnAction(e -> MainClass.getWindowManager().changeDialogScene("licenseWindow", MainClass.class.getResource(FrontendPaths.LICENSE_KEY_FXML)));
         $UI$01.u_10$1$1(btnClose);
-        $UI$01.u_10$1$2(btnMinimize,"welcomeWindow");
+        $UI$01.u_10$1$2(btnMinimize, "welcomeWindow");
     }
+}
