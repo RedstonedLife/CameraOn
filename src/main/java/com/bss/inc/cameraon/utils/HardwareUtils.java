@@ -37,7 +37,8 @@ public class HardwareUtils {
     }
     public void LogInfo() {
         CPU cpu = getCPU();
-        BaseboardInfo 
+        BaseboardInfo baseboardInfo = getBaseboardInfo();
+        
     }
 }
 
