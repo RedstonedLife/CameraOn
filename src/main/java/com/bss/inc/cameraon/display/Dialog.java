@@ -1,10 +1,12 @@
 package com.bss.inc.cameraon.display;
 
+import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.constants.FrontendPaths;
 import com.bss.inc.cameraon.logging.Level;
 import com.bss.inc.cameraon.logging.Logger;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -24,6 +26,7 @@ public class Dialog {
     private HashMap<URL, Scene> scenes = new HashMap<URL, Scene>();
 
     public Dialog(double w, double h, String name, URL[] files) {
+        parent.getIcons().add(new Image(MainClass.class.getResourceAsStream("bnc.png")));
         parent.setResizable(false);
         parent.initStyle(StageStyle.UNDECORATED);
         this.width = w;
