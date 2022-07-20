@@ -16,6 +16,7 @@ import java.util.regex.Pattern;
 
 public class $UI$01 {
     public static final Pattern digitPattern;
+    public static final Pattern 
     static TextField[] tfs,tfs2;
     static CheckBox[] chkbs, chkbs2;
     static RadioButton[] rbs;
