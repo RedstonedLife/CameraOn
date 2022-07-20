@@ -93,6 +93,7 @@ public class HardwareUtils {
         Logger.getLogger("BNC").stamplessInfo(tl("hardwareinfo.firmware.biosname", firmwareInfo.getName()));
         Logger.getLogger("BNC").stamplessInfo(tl("hardwareinfo.firmware.biosreleasedate", firmwareInfo.getReleaseDate()));
         Logger.getLogger("BNC").stamplessInfo(tl("hardwareinfo.firmware.biosversion", firmwareInfo.getVersion()));
+        Logger.getLogger("BNC").stamplessInfo("##################################");
     }
 }
 
