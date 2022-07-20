@@ -18,15 +18,10 @@ public class Launcher {
     private static LogManager LM;
     private static I18n _i18n = new I18n(MainClass.class);
     public static final LocalDateTime _INIT_TIME = LocalDateTime.now();
-    public static final Settings SettingsContainer;
+    public static Settings SettingsContainer;
     private static HardwareUtils hu = new HardwareUtils();
 
     static {
-        try {
-            SettingsContainer = new Settings("app.settings","{\"appLanguage\":0,\"cameraSettings\":{},\"scanSettings\":{},\"scanResultDisplay\":{}}");
-        } catch (UnknownOS e) {
-            throw new RuntimeException(e);
-        }
         LM = new LogManager();
         LogManager.addLogger("BNC", new Logger("BNC"));
     }
@@ -151,6 +146,11 @@ public class Launcher {
         _i18n.OnStart();
         _i18n.updateLocale("en");
         hu.LogInfo();
+        try {
+            SettingsContainer = new Settings("app.settings","{\"appLanguage\":0,\"cameraSettings\":{},\"scanSettings\":{},\"scanResultDisplay\":{}}");
+        } catch (UnknownOS e) {
+            throw new RuntimeException(e);
+        }
         setSettings();
         MainClass.main(args);
     }
