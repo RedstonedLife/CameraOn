@@ -36,7 +36,6 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData> {
                                 tmpKeySection=cleanedProductKey.substring(currentKeyCharIndex,currentKeyCharIndex+2);
                                 if(!tmpKeySection.equals(ProductKeyUtils.buildHexStr(2, this.getProductKeySectionWorker().buildProductKeySection(seed, this.productKeyEncodingData[n])))) return ProductKeyState.KEY_PHONY;
                             }
-                            
                         }
                     }
                 }
