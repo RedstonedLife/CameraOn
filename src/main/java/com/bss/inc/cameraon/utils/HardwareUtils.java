@@ -56,9 +56,10 @@ public class HardwareUtils {
         Logger.getLogger("BNC").info(tl("hardwareinfo.cpu.operatingfrequency", cpu.getVendorGFreqSTR()));
         Logger.getLogger("BNC").info(tl("hardwareinfo.baseboard"));
         Logger.getLogger("BNC").info(tl("hardwareinfo.baseboard.manufacturer", baseboardInfo.getManufacturer()));
-        Logger.getLogger("BNC").info(tl("hardwareinfo.baseboard.model"));
-        Logger.getLogger("BNC").info(tl("hardwareinfo.baseboard.serial"));
-        Logger.getLogger("BNC").info(tl("hardwareinfo.baseboard.version"));
+        Logger.getLogger("BNC").info(tl("hardwareinfo.baseboard.model", baseboardInfo.getModel()));
+        Logger.getLogger("BNC").info(tl("hardwareinfo.baseboard.serial", baseboardInfo.getSerial()));
+        Logger.getLogger("BNC").info(tl("hardwareinfo.baseboard.version", baseboardInfo.getVersion()));
+        
     }
 }
 
