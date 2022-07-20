@@ -332,6 +332,7 @@ public class $UI$01 {
         });
         textFields[3].textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
+            if(newValue == "") {
             if((newValue.length() >= 5)) {
                 textFields[3].setText(oldValue);}
         });
