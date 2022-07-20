@@ -318,6 +318,7 @@ public class $UI$01 {
 
     public static void u_11$1$1(TextField[] textFields) {
         textFields[0].textProperty().addListener((observable, oldValue, newValue) -> {
+            if(isCopyingLicenseKey)
             if(newValue.split("-").length==5 && newValue.split("-") != null) {
                 isCopyingLicenseKey = true;
                 String[] temp = newValue.split("-");
