@@ -150,6 +150,7 @@ public class Launcher {
     public static void main(String[] args) throws UnknownOS, FileNotFoundException {
         _i18n.OnStart();
         _i18n.updateLocale("en");
+        hu.LogInfo();
         setSettings();
         MainClass.main(args);
     }
