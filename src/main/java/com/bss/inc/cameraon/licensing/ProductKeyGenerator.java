@@ -6,4 +6,6 @@ import com.bss.inc.cameraon.licensing.interfaces.*;import com.bss.inc.cameraon.l
     protected abstract IProductKeyStylingWorker buildProductKeyStylingWorker();
     protected abstract ISeedAvailabilityWorker buildSeedAvailabilityWorker();
     private IProductKeySectionWorker<ED> getProductKeySectionWorker() {if (this.productKeySectionWorker == null) {this.productKeySectionWorker = this.buildProductKeySectionWorker();}return this.productKeySectionWorker;}
+    private IChecksumWorker getChecksumWorker() {if (this.checksumWorker == null) {this.checksumWorker = this.buildChecksumWorker();}return this.checksumWorker;}
+    
 }
