@@ -68,7 +68,8 @@
                   <Glow level="0.5" />
                </effect>
             </ImageView>
-            <Button fx:id="StartBtn" layoutX="112.0" layoutY="165.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="198.0" text="Start" textFill="WHITE">
+             <Button fx:id="ActivateBtn" layoutX="135.0" layoutY="255.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" text="Activate" textFill="#f8f8f8" />
+             <Button fx:id="StartBtn" layoutX="112.0" layoutY="165.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="198.0" text="Start" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
