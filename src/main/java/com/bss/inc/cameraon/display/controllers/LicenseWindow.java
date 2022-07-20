@@ -15,7 +15,7 @@ import java.util.ResourceBundle;
 public class LicenseWindow implements Initializable {
     @FXML
     private Text TitleTxt,SubTitleTxt;
-    @FXML private Button HelpBtn,StartBtn,ActivateBtn,btnMinimize,btnClose;
+    @FXML private Button HelpBtn,ActivateBtn,btnMinimize,btnClose;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
