@@ -3,5 +3,6 @@ import com.bss.inc.cameraon.licensing.interfaces.*;import com.bss.inc.cameraon.l
     protected abstract IProductKeySectionWorker<ED> buildProductKeySectionWorker();
     protected abstract IChecksumWorker buildChecksumWorker();
     protected abstract IBlacklistWorker buildBlacklistWorker();
+    protected abstract IProductKeyStylingWorker buildProductKeyStylingWorker();
 
 }
