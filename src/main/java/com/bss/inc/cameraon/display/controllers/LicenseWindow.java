@@ -14,8 +14,7 @@ import java.util.ResourceBundle;
 
 public class LicenseWindow implements Initializable {
     @FXML
-    private Text TitleTxt,versiontxt,showTxt;
-    @FXML private CheckBox showChkB;
+    private Text TitleTxt,SubTitleTxt;
     @FXML private Button HelpBtn,StartBtn,ActivateBtn,btnMinimize,btnClose;
 
     @Override
