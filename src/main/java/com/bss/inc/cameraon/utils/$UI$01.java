@@ -316,7 +316,7 @@ public class $UI$01 {
 
     public static void u_11$1$1(TextField[] textFields) {
         textFields[0].textProperty().addListener((observable, oldValue, newValue) -> {
-            if(newValue.split("-").length==5) {
+            if(newValue.split("-").length==5 && !newValue.split("-") == null) {
                 String[] temp = newValue.split("-");
                 textFields[0].setText(temp[0]);
                 textFields[1].setText(temp[1]);
