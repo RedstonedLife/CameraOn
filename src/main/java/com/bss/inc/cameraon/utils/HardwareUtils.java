@@ -88,12 +88,7 @@ public class HardwareUtils {
     public static class FirmInfo extends FirmwareInfo { public FirmInfo(Firmware firmware) {super(firmware);}}
     public static class CompInfo extends ComputerInfo { public CompInfo(ComputerSystem cs) {super(cs);}}
     public static class BoardInfo extends BaseboardInfo { public BoardInfo(Baseboard board) {super(board);}}
-
-    public static class StorageDevice extends StorageDevice {
-        public StorageDevice(OSFileStore fileStore) {
-            super(fileStore);
-        }
-    }
+    public static class StorageDeviceInfo extends StorageDevice { public StorageDeviceInfo(OSFileStore fileStore) {super(fileStore);}}
 }
 
 /*
