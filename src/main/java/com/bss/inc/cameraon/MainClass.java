@@ -10,6 +10,7 @@ import com.bss.inc.cameraon.utils.net.angryscan.di.Injector;
 import com.bss.inc.cameraon.utils.net.angryscan.enums.DisplayResultType;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateMachine;
 import javafx.application.Application;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import org.json.JSONObject;
 
@@ -36,6 +37,7 @@ public class MainClass extends Application {
 
     @Override
     public void start(Stage stage) {
+        stage.getIcons().add(new Image(MainClass))
         try {WindowManager = new DialogManager(new Dialog[] {
                 new Dialog(stage, FrontendPaths.HEIGHT, FrontendPaths.WIDTH, "mainWindow", new URL[]{ // MainWindow URL[] Start
                         clazz.getResource(FrontendPaths.SETTINGS_FXML),
