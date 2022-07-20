@@ -44,7 +44,7 @@ public class HardwareUtils {
         List<StorageDevice> storageDevices = getStorageDevices();
         OS os = getOS();
         FirmwareInfo firmwareInfo = getFirmwareInfo();
-        Logger.getLogger("BNC").info(tl())
+        Logger.getLogger("BNC").info(tl("hardwareinfo.line1"));
     }
 }
 
