@@ -1,2 +1,4 @@
-package com.bss.inc.cameraon.licensing.interfaces;public class IProductKeySectionWorker {
+package com.bss.inc.cameraon.licensing.interfaces;
+
+public class IProductKeySectionWorker <ED{
 }
