@@ -26,7 +26,7 @@ public class $UI$01 {
 
     static {
         digitPattern = Pattern.compile("\\d+");
-        licensePattern = Pattern.compile("[A-Z\\d]");
+        licensePattern = Pattern.compile("[A-Z\\d]{4}\\-|[A-Z\\d]{4}");
     }
 
     public static void u_00$1$1(SplitPane csplitpane) {csplitpane.getDividers().get(0).positionProperty().addListener((observableValue, number, t1) -> csplitpane.getDividers().get(0).setPosition(FrontendPaths.DIVID_POS));}
