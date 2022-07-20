@@ -53,7 +53,7 @@ public class HardwareUtils {
         Logger.getLogger("BNC").info(tl("hardwareinfo.cpu.id", cpu.getId()));
         Logger.getLogger("BNC").info(tl("hardwareinfo.cpu.identifier", cpu.getIdentifier()));
         Logger.getLogger("BNC").info(tl("hardwareinfo.cpu.microarchitecture", cpu.getMca()));
-        Logger.getLogger("BNC").info(tl("hardwareinfo.cpu."));
+        Logger.getLogger("BNC").info(tl("hardwareinfo.cpu.operatingfrequency"));
     }
 }
 
