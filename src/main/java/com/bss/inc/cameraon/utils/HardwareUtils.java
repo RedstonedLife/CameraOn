@@ -36,7 +36,8 @@ public class HardwareUtils {
         return devices.stream().toList();
     }
     public void LogInfo() {
-        
+        CPU cpu = getCPU();
+        BaseboardInfo 
     }
 }
 
