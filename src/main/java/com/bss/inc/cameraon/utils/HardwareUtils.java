@@ -48,7 +48,8 @@ public class HardwareUtils {
         Logger.getLogger("BNC").info(tl("hardwareinfo.line2"));
         Logger.getLogger("BNC").info(tl("hardwareinfo.line3"));
         Logger.getLogger("BNC").info(tl("hardwareinfo.cpu"));
-        Logger.getLogger("BNC").info(tl("hardwareinfo.cpu.vendor",));
+        Logger.getLogger("BNC").info(tl("hardwareinfo.cpu.vendor", cpu.getVendor()));
+        
     }
 }
 
