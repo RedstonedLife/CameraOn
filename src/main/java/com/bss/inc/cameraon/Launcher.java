@@ -152,6 +152,7 @@ public class Launcher {
         } catch (UnknownOS e) {
             throw new RuntimeException(e);
         }
+        Logger.getLogger("BNC").enableStamp();
         setSettings();
         MainClass.main(args);
     }
