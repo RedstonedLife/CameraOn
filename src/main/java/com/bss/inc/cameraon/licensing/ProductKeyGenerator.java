@@ -22,7 +22,7 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData> {
             // Verify Product Key format is valid
             if((this.getChecksumWorker() != null) && ( !this.getChecksumWorker().verifyProductKeyChecksum(cleanedProductKey))) {return ProductKeyState.KEY_INVALID;}
             // Test against blacklist (No. 1, Elizabeth Keen) (Totally not a "the Blacklist" reference, not at all ;) )
-            
+            if((this.getBlacklistWorker() != null) && this.getBlacklistWorker().isKeyBlackListed(cleanedProductKey)) {return ProductKeyState.KEY_BLACKLISTED;}
         }
     }
 }
