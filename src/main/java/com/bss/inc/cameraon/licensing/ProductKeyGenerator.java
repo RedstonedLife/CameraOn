@@ -1,6 +1,9 @@
 package com.bss.inc.cameraon.licensing;
 
 import com.bss.inc.cameraon.licensing.enums.ProductKeyState;
+import com.bss.inc.cameraon.licensing.exceptions.EncodingDataNotCompleteException;
+import com.bss.inc.cameraon.licensing.exceptions.InvalidSeedException;
+import com.bss.inc.cameraon.licensing.exceptions.ProductKeyEncoderNotDefinedException;
 import com.bss.inc.cameraon.licensing.impl.beans.ProductKeyEncodingData;
 import com.bss.inc.cameraon.licensing.interfaces.*;
 import com.bss.inc.cameraon.licensing.utils.ProductKeyUtils;
@@ -47,5 +50,77 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData> {
             }
         }
         return ProductKeyState.KEY_PHONY;
+    }
+
+    public String generateProductKey(long seed) throws ProductKeyGenerationException
+    {
+        // Build the HEXADECIMAL string representing the seed.
+        String seedHex = ProductKeyUtils.buildHexStr(this.getSeedCharLength(), seed);
+
+        try
+        {
+            // Try to parse the HEXADECIMAL string representing the seed and use that for the seed.
+            seed = Long.parseLong(seedHex, 16);
+
+            if ((this.productKeyEncodingData != null) && (this.productKeyEncodingData.length > 0))
+            {
+                if (this.getProductKeySectionWorker() != null)
+                {
+                    final StringBuilder keySb = new StringBuilder();
+
+                    seedHex = ProductKeyUtils.buildHexStr(this.getSeedCharLength(), seed);
+
+                    if ((this.getBlacklistWorker() != null) && (this.getBlacklistWorker().isSeedBlackListed(seedHex)))
+                    {
+                        throw new SeedIsBlacklistedException();
+                    }
+
+                    if ((this.getSeedAvailabilityWorker() != null) && ( !this.getSeedAvailabilityWorker().isSeedAvailable(seedHex)))
+                    {
+                        throw new SeedAlreadyTakenException();
+                    }
+
+                    // The key string begins with a HEXADECIMAL string of the seed.
+                    keySb.append(seedHex);
+
+                    // Build the byte for the key-section derived from the seed.
+                    for (int n = 0; n < this.productKeyEncodingData.length; n++ )
+                    {
+                        if (this.productKeyEncodingData[n] == null)
+                        {
+                            throw new EncodingDataNotCompleteException();
+                        }
+
+                        keySb.append(ProductKeyUtils.buildHexStr(2, this.getProductKeySectionWorker().buildProductKeySection(seed, this.productKeyEncodingData[n])));
+                    }
+
+                    // Add checksum to key string.
+                    if (this.getChecksumWorker() != null)
+                    {
+                        keySb.append(this.getChecksumWorker().buildProductKeyChecksum(keySb.toString()));
+                    }
+
+                    // Add dashes to the product-key and return it.
+                    if (this.getProductKeyStylingWorker() != null)
+                    {
+                        return this.getProductKeyStylingWorker().addStyling(keySb.toString());
+                    }
+
+                    return keySb.toString();
+                }
+                else
+                {
+                    throw new ProductKeyEncoderNotDefinedException();
+                }
+            }
+            else
+            {
+                throw new EncodingDataNotCompleteException();
+            }
+        }
+        catch (NumberFormatException nfe)
+        {
+            throw new InvalidSeedException();
+        }
     }
 }
