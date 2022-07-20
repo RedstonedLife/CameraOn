@@ -41,7 +41,7 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData> {
                         }
                         return ProductKeyState.KEY_GOOD;
                     } catch (NumberFormatException nfe) {
-                        Logger.getLogger("BNC").error("Exception caught");
+                        Logger.getLogger("BNC").error("Exception caught", nfe);
                     }
                 }
             }
