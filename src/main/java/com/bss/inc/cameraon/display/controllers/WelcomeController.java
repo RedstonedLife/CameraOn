@@ -1,6 +1,5 @@
 package com.bss.inc.cameraon.display.controllers;
 
-import com.bss.inc.cameraon.Launcher;
 import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.constants.FrontendPaths;
 import com.bss.inc.cameraon.utils.$UI$01;
