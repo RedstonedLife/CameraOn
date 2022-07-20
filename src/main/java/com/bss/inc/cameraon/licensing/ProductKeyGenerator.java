@@ -4,6 +4,7 @@ import com.bss.inc.cameraon.licensing.enums.ProductKeyState;
 import com.bss.inc.cameraon.licensing.impl.beans.ProductKeyEncodingData;
 import com.bss.inc.cameraon.licensing.interfaces.*;
 import com.bss.inc.cameraon.licensing.utils.ProductKeyUtils;
+import com.bss.inc.cameraon.logging.Logger;
 
 public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData> {
     private final int seedCharLength;
@@ -39,6 +40,8 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData> {
                             currentKeyCharIndex += 2;
                         }
                         return ProductKeyState.KEY_GOOD;
+                    } catch (NumberFormatException nfe) {
+                        Logger.getLogger("BNC").error("Exception caught");
                     }
                 }
             }
