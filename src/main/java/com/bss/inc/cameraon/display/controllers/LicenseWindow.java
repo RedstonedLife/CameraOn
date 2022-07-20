@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
 import java.net.URL;
@@ -15,8 +16,8 @@ import java.util.ResourceBundle;
 public class LicenseWindow implements Initializable {
     @FXML
     private Text TitleTxt, SubTitleTxt;
-    @FXML
-    private Button HelpBtn, ActivateBtn, btnMinimize, btnClose;
+    @FXML private TextField ACtf1,ACtf2,ACtf3,ACtf4;
+    @FXML private Button HelpBtn, ActivateBtn, btnMinimize, btnClose;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
