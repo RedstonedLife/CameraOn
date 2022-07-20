@@ -319,7 +319,7 @@ public class $UI$01 {
             int finalI = i;
             textFields[i].textProperty().addListener((observable, oldValue, newValue) -> {
                 if(oldValue == null || oldValue == "") {return;}
-                if((newValue.length() > 4)) {
+                if((newValue.length() < 4)) {
                     boolean b = finalI < textFields.length;
                     if(b){return;}
                     else {textFields[finalI].setFocusTraversable(false);textFields[finalI+1].requestFocus();textFields[finalI].setText(oldValue);}}
