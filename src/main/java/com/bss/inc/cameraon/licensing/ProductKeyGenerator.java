@@ -44,8 +44,8 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData> {
                         Logger.getLogger("BNC").error("Exception caught", nfe);
                     }
                 }
-                return ProductKeyState.KEY_PHONY;
             }
         }
+        return ProductKeyState.KEY_PHONY;
     }
 }
