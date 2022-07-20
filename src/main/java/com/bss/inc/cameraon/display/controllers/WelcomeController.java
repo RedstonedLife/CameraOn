@@ -7,5 +7,5 @@ import javafx.scene.text.Text;
 
 public class WelcomeController implements Initializable {
     @FXML private Text licensetxt,versiontxt,showTxt;
-    @FXML private CheckBox showChkB
+    @FXML private CheckBox showChkB;
 }
