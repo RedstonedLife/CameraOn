@@ -24,5 +24,7 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData> {
             // Test against blacklist (No. 1, Elizabeth Keen) (Totally not a "the Blacklist" reference, not at all ;) )
             if((this.getBlacklistWorker() != null) && this.getBlacklistWorker().isKeyBlackListed(cleanedProductKey)) {return ProductKeyState.KEY_BLACKLISTED;}
         }
+        // If the product-key section bytes are present and valid in length, then verify the product-key sections
+        
     }
 }
