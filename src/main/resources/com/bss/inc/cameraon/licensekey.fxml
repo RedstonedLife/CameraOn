@@ -20,7 +20,7 @@
             </children>
         </HBox>
         <Text fill="#7c7c7c" layoutX="215.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="camera - on" wrappingWidth="86.853515625" />
-          <Button fx:id="btnMinimize" layoutX="432.0" layoutY="1.0" maxHeight="23.0" maxWidth="30.0" mnemonicParsing="false" onAction="#minimizeApp" prefHeight="24.0" prefWidth="30.0" text="➖" textFill="#b8ff00">
+          <Button fx:id="btnMinimize" layoutX="432.0" layoutY="1.0" maxHeight="23.0" maxWidth="30.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="30.0" text="➖" textFill="#b8ff00">
               <font>
                   <Font name="System Bold" size="12.0" />
               </font>
