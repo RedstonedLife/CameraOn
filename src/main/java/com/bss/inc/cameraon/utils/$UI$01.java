@@ -318,16 +318,7 @@ public class $UI$01 {
     public static void u_11$1$1(TextField[] textFields) {
         textFields[0].textProperty().addListener((observable, oldValue, newValue) -> {
             if(newValue.split("-").length==5 && newValue.split("-") != null) {
-                String[] temp = newValue.split("-");
-                for(String tem : temp) {
-                    System.out.println(tem);
-                }
-                textFields[0].setText(temp[0]);
-                textFields[1].setText(temp[1]);
-                textFields[2].setText(temp[2]);
-                textFields[3].setText(temp[3]);
-                textFields[4].setText(temp[4]);
-                return;
+                
             }
             if(oldValue == null || oldValue == "") {return;}
             if((newValue.length() == 8 && oldValue != null)) {
