@@ -317,13 +317,13 @@ public class $UI$01 {
     public static void u_11$1$1(TextField[] textFields) {
         textFields[0].textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
-            if((newValue.length() >= 9)) {
+            if((newValue.length() == 8)) {
                 textFields[1].requestFocus();textFields[0].setText(oldValue);}
         });
         textFields[1].textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
             if(newValue == "") {textFields[0].requestFocus();}
-            if((newValue.length() >= 7)) {
+            if((newValue.length() == 6)) {
                 textFields[2].requestFocus();textFields[1].setText(oldValue);}
         });
         textFields[2].textProperty().addListener((observable, oldValue, newValue) -> {
