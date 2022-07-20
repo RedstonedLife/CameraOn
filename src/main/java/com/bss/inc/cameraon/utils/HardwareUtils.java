@@ -4,6 +4,7 @@ import com.bss.inc.cameraon.constants.FilePaths;
 import com.bss.inc.cameraon.constants.FrontendPaths;
 import oshi.SystemInfo;
 import oshi.hardware.*;
+import oshi.software.os.FileSystem;
 import oshi.software.os.OSFileStore;
 import oshi.software.os.OperatingSystem;
 
@@ -21,40 +22,15 @@ public class HardwareUtils {
         return getHardware().getComputerSystem();
     }
 
-    public Baseboard getBaseboard() {
-        return getComputerSystem().getBaseboard();
-    } /* Motherboard */
-
-    public Firmware getFirmware() {
-        return getComputerSystem().getFirmware();
-    } /* Computer Firmware/BIOS */
-
-    public GlobalMemory getMemory() {
-        return getHardware().getMemory();
-    }
-
-    public CentralProcessor getProcessor() {
-        return getHardware().getProcessor();
-    }
-
-    public CentralProcessor.ProcessorIdentifier getProcIdentifier() {
-        return getProcessor().getProcessorIdentifier();
-    }
-
-    public OperatingSystem getOperatingSystem() {
-        return systemInfo.getOperatingSystem();
-    }
-
-    public OperatingSystem.OSVersionInfo getOperatingSystemInfo() {
-        return getOperatingSystem().getVersionInfo();
-    }
-
-    public FileSystem getFileSystem() {
-        return getOperatingSystem().getFileSystem();
-    }
-
-    public List<OSFileStore> getFileStores() {
-        return getFileSystem().getFileStores();}
+    public Baseboard getBaseboard() {return getComputerSystem().getBaseboard();} /* Motherboard */
+    public Firmware getFirmware() {return getComputerSystem().getFirmware();} /* Computer Firmware/BIOS */
+    public GlobalMemory getMemory() {return getHardware().getMemory();}
+    public CentralProcessor getProcessor() {return getHardware().getProcessor();}
+    public CentralProcessor.ProcessorIdentifier getProcIdentifier() {return getProcessor().getProcessorIdentifier();}
+    public OperatingSystem getOperatingSystem() {return systemInfo.getOperatingSystem();}
+    public OperatingSystem.OSVersionInfo getOperatingSystemInfo() {return getOperatingSystem().getVersionInfo();}
+    public FileSystem getFileSystem() {return getOperatingSystem().getFileSystem();}
+    public List<OSFileStore> getFileStores() {return getFileSystem().getFileStores();}
     public CPU getCPU() {return new CPU(getProcIdentifier());}
     public OS getOS() {return new OS(getOperatingSystem(), getOperatingSystemInfo());}
     public FirmwareInfo getFirmwareInfo() {return new FirmwareInfo(getFirmware());}
