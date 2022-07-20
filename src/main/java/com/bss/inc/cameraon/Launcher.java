@@ -145,6 +145,7 @@ public class Launcher {
     public static void main(String[] args) throws UnknownOS, FileNotFoundException {
         _i18n.OnStart();
         _i18n.updateLocale("en");
+        Logger.getLogger("BNC").disableStamp();
         hu.LogInfo();
         try {
             SettingsContainer = new Settings("app.settings","{\"appLanguage\":0,\"cameraSettings\":{},\"scanSettings\":{},\"scanResultDisplay\":{}}");
