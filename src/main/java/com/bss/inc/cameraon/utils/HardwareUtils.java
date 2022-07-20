@@ -91,8 +91,8 @@ public class HardwareUtils {
         Logger.getLogger("BNC").info(tl("hardwareinfo.firmware.biosdescription", firmwareInfo.getDescription()));
         Logger.getLogger("BNC").info(tl("hardwareinfo.firmware.biosmanufacturer", firmwareInfo.getManufacturer()));
         Logger.getLogger("BNC").info(tl("hardwareinfo.firmware.biosname", firmwareInfo.getName()));
-        Logger.getLogger("BNC").info(tl("hardwareinfo.firmware.biosreleasedate", firmwareInfo.getManufacturer()));
-        Logger.getLogger("BNC").info(tl("hardwareinfo.firmware.biosmanufacturer", firmwareInfo.getManufacturer()));
+        Logger.getLogger("BNC").info(tl("hardwareinfo.firmware.biosreleasedate", firmwareInfo.getReleaseDate()));
+        Logger.getLogger("BNC").info(tl("hardwareinfo.firmware.biosversion", firmwareInfo.getVersion()));
 
     }
 }
