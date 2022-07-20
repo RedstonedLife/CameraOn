@@ -5,5 +5,5 @@ import javafx.fxml.Initializable;
 import javafx.scene.text.Text;
 
 public class WelcomeController implements Initializable {
-    @FXML private Text
+    @FXML private Text licensetxt,versiontxt
 }
