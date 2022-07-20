@@ -1,4 +1,7 @@
 package com.bss.inc.cameraon.licensing;
 
-public abstract class ProductKeyGenerator {
+import com.bss.inc.cameraon.licensing.impl.beans.ProductKeyEncodingData;
+
+public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData> {
+    
 }
