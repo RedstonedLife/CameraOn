@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils;
 
+import com.bss.inc.cameraon.constants.FilePaths;
 import com.bss.inc.cameraon.constants.FrontendPaths;
 import oshi.SystemInfo;
 import oshi.hardware.CentralProcessor;
@@ -387,7 +388,7 @@ class CPU {
         setIdentifier(identifier.getIdentifier());
         setMca(identifier.getMicroarchitecture());
         setVendorFreq(identifier.getVendorFreq());
-        setVendorGFreq(identifier.getVendorFreq() / .GIGAHERTZ);
+        setVendorGFreq(identifier.getVendorFreq() / FilePaths.GIGAHERTZ);
     }
 
     @Deprecated(since = "27/02/2022", forRemoval = true) public CPU getParsed() {return this;}
