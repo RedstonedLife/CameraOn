@@ -34,7 +34,7 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData> {
                         for(int n=0;n<this.productKeyEncodingData.length;n++) {
                             if(this.productKeyEncodingData[n] != null) {
                                 tmpKeySection=cleanedProductKey.substring(currentKeyCharIndex,currentKeyCharIndex+2);
-                                if(!tmpKeySection.equals(ProductKeyUtils.buildHexStr(2, this.getProductKeySectionWorker().buildProductKeySection)))
+                                if(!tmpKeySection.equals(ProductKeyUtils.buildHexStr(2, this.getProductKeySectionWorker().buildProductKeySection(seed, this.productKeyEncodingData))))
                             }
                         }
                     }
