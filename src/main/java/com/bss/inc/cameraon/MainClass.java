@@ -52,7 +52,7 @@ public class MainClass extends Application {
                         clazz.getResource(FrontendPaths.POP_FAQ_FXML),clazz.getResource(FrontendPaths.POP_TPL_FXML),
                         clazz.getResource(FrontendPaths.POP_HELP_FXML)
                 }), // PopUpWindow URL[] End
-                new Dialog(500d, 200d, "licenseWindow", new URL[] { // licenseWindow URL[] Start
+                new Dialog(597d, 200d, "licenseWindow", new URL[] { // licenseWindow URL[] Start
                         clazz.getResource(FrontendPaths.LICENSE_KEY_FXML)
                 }), // licenseWindow URL[] End
                 new Dialog(800d,450d, "welcomeWindow", new URL[] { // welcomeWindow URL[] Start
