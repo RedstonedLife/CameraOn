@@ -319,7 +319,7 @@ public class $UI$01 {
             int finalI = i;
             textFields[i].textProperty().addListener((observable, oldValue, newValue) -> {
                 if(oldValue == null || oldValue == "") {return;}
-                if((newValue.length() > ))
+                if((newValue.length() > 4))
                 if((newValue.length() > 4)) {textFields[finalI].setText(oldValue);
                 }
             });
