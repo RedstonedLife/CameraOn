@@ -2,6 +2,7 @@ package com.bss.inc.cameraon.utils;
 
 import com.bss.inc.cameraon.constants.FilePaths;
 import com.bss.inc.cameraon.constants.FrontendPaths;
+import com.bss.inc.cameraon.logging.Logger;
 import oshi.SystemInfo;
 import oshi.hardware.*;
 import oshi.software.os.FileSystem;
@@ -10,6 +11,8 @@ import oshi.software.os.OperatingSystem;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.bss.inc.cameraon.i18n.I18n.tl;
 
 public class HardwareUtils {
     private final SystemInfo systemInfo;
@@ -41,7 +44,7 @@ public class HardwareUtils {
         List<StorageDevice> storageDevices = getStorageDevices();
         OS os = getOS();
         FirmwareInfo firmwareInfo = getFirmwareInfo();
-        
+        Logger.getLogger("BNC").info(tl())
     }
 }
 
