@@ -10,6 +10,6 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData> {
     private final int seedCharLength;
     private final ED[] productKeyEncodingData;
     private ProductKeySectionWorker<ED> productKeySectionWorker = null;
-    private IChecksumWorkerChecksumWorker checksumWorker = null;
+    private IChecksumWorker checksumWorker = null;
     private IBlacklistWorker
 }
