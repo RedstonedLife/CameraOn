@@ -21,7 +21,7 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData> {
             else {cleanedProductKey = productKey.toUpperCase();}
             // Verify Product Key format is valid
             if((this.getChecksumWorker() != null) && ( !this.getChecksumWorker().verifyProductKeyChecksum(cleanedProductKey))) {return ProductKeyState.KEY_INVALID;}
-            // Test against blacklist (No. 66
+            // Test against blacklist (No. 1
         }
     }
 }
