@@ -4,6 +4,7 @@ import com.bss.inc.cameraon.constants.FilePaths;
 import com.bss.inc.cameraon.constants.FrontendPaths;
 import oshi.SystemInfo;
 import oshi.hardware.CentralProcessor;
+import oshi.hardware.ComputerSystem;
 import oshi.hardware.HardwareAbstractionLayer;
 import oshi.software.os.OSFileStore;
 import oshi.software.os.OperatingSystem;
@@ -144,9 +145,7 @@ class BaseboardInfo {
         return Version;
     }
 
-    public void setVersion(String version) {
-        Version = version;
-    }
+    public void setVersion(String version) {Version = version;}
 }
 
 class ComputerInfo {
@@ -159,16 +158,9 @@ class ComputerInfo {
         setSerial(cs.getSerialNumber());
     }
 
-    public String getUUID() {
-        return UUID;
-    }
-
-    public void setUUID(String UUID) {
-        this.UUID = UUID;
-    }
-
-    public String getManufacturer() {
-        return Manufacturer;}
+    public String getUUID() {return UUID;}
+    public void setUUID(String UUID) {this.UUID = UUID;}
+    public String getManufacturer() {return Manufacturer;}
     public void setManufacturer(String manufacturer) {Manufacturer = manufacturer;}
     public String getModel() {return Model;}
     public void setModel(String model) {Model = model;}
