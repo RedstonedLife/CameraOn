@@ -60,8 +60,8 @@ public class MainClass extends Application {
                 }) // welcomeWindow URL[] End
         });}
         catch (IOException e) {logger.error("Error occurred while initializing the WindowManager", e);e.printStackTrace();}
-        WindowManager.changeDialogScene("mainWindow",clazz.getResource(FrontendPaths.SETTINGS_FXML));
-        WindowManager.openDialog("mainWindow");
+        WindowManager.changeDialogScene("welcomeWindow",clazz.getResource(FrontendPaths.WELCOME_FXML));
+        WindowManager.openDialog("welcomeWindow");
         //WindowManager.changeDialogScene("mainWindow", clazz.getResource(FrontendPaths.SETTINGS_FXML));
         //WindowManager.openDialog("mainWindow");
     }
