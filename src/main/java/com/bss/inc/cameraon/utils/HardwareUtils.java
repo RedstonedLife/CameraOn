@@ -441,18 +441,9 @@ class CPU {
         this.vendorFreq = vendorFreq;
     }
 
-    public String getVendorFreqSTR() {
-        return String.valueOf(vendorFreq);
-    }
+    public String getVendorFreqSTR() {return String.valueOf(vendorFreq);}
 
-    public long getVendorGFreq() {
-        return vendorGFreq;
-    }
-
-    public void setVendorGFreq(long vendorGFreq) {
-        this.vendorGFreq = vendorGFreq;
-    }
-
-    public String getVendorGFreqSTR() {
-        return String.valueOf(vendorGFreq);}
+    public long getVendorGFreq() {return vendorGFreq;}
+    public void setVendorGFreq(long vendorGFreq) {this.vendorGFreq = vendorGFreq;}
+    public String getVendorGFreqSTR() {return String.valueOf(vendorGFreq);}
 }
