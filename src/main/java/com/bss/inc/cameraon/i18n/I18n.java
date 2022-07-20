@@ -41,7 +41,6 @@ public class I18n implements II18n {
             try {return customBundle.getString(string);}
             catch (final MissingResourceException ex) {
                 Logger.getLogger("BNC").info("MissingResourceException: Could not find translated string-"+string+" in custom bundle");
-                Logger.getLogger("BNC").info("MissingResourceException: Resorting to localeBundle");
                 return localeBundle.getString(string);}
         } catch(final MissingResourceException ex) {
             Logger.getLogger("BNC").info("MissingResourceException: Could not find translated string-"+string+" in custom bundle");
