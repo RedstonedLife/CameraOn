@@ -117,7 +117,7 @@ public class $UI$01 {
         cbs[0].setOnAction(e -> {_j.put("videnc", cbs[0].getItems().indexOf(cbs[0].getValue()));try {Launcher.SettingsContainer.setValue("cameraSettings",_j);Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}});
         cbs[1].setOnAction(e -> {_j.put("resolution", cbs[1].getItems().indexOf(cbs[1].getValue()));try {Launcher.SettingsContainer.setValue("cameraSettings",_j);Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}});
         cbs[2].setOnAction(e -> {_j.put("bitrate", cbs[2].getItems().indexOf(cbs[2].getValue()));try {Launcher.SettingsContainer.setValue("cameraSettings",_j);Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}});
-    } // Fixed CCTV Settings being broken when switching to H.265, or H.264, or 480p or 
+    } // Fixed CCTV Settings being broken when switching to H.265, or H.264, or 480p or 20
 
     /**
      * u_08$1$3 Validates if a string contains any digit
