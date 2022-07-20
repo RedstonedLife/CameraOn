@@ -4,6 +4,7 @@ import com.bss.inc.cameraon.Launcher;
 import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.constants.FrontendPaths;
 import com.bss.inc.cameraon.utils.FileResClassLoader;
+import org.apache.tools.ant.Main;
 
 import java.text.MessageFormat;
 import java.util.*;
@@ -13,7 +14,7 @@ public class I18n implements II18n {
     private static I18n instance;
     private final transient Locale defaultLocale = Locale.US;
     private transient ResourceBundle defaultBundle;
-    private final transient Class<Launcher> _i;
+    private final transient Class<MainClass> _i;
     private transient Locale currentLocale = defaultLocale;
     private transient ResourceBundle customBundle;
     private transient ResourceBundle localeBundle;
