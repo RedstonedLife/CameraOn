@@ -5,6 +5,7 @@ import com.bss.inc.cameraon.i18n.I18n;
 import com.bss.inc.cameraon.logging.LogManager;
 import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.settings.Settings;
+import com.bss.inc.cameraon.utils.HardwareUtils;
 import org.json.JSONObject;
 
 import java.io.FileNotFoundException;
@@ -18,7 +19,7 @@ public class Launcher {
     private static I18n _i18n = new I18n(MainClass.class);
     public static final LocalDateTime _INIT_TIME = LocalDateTime.now();
     public static final Settings SettingsContainer;
-    private static 
+    private static HardwareUtils = new HardwareUtils();
 
     static {
         try {
