@@ -11,7 +11,6 @@ public class FrontendPaths {
     /* Visual */
     public static final String ABOUTUS_FXML = "cctvsettings.fxml";
     public static final String SETTINGS_FXML = "settings.fxml";
-    public static final String WELCOME_FXML = "welcome.fxml";
     public static final String CAM_SETTINGS = "cctvsettings.fxml";
     public static final String GETSTARTED_FXML = "getstarted.fxml";
     public static final String SCAN_FXML = "scan.fxml";
