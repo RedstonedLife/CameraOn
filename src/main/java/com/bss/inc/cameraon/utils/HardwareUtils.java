@@ -3,9 +3,7 @@ package com.bss.inc.cameraon.utils;
 import com.bss.inc.cameraon.constants.FilePaths;
 import com.bss.inc.cameraon.constants.FrontendPaths;
 import oshi.SystemInfo;
-import oshi.hardware.CentralProcessor;
-import oshi.hardware.ComputerSystem;
-import oshi.hardware.HardwareAbstractionLayer;
+import oshi.hardware.*;
 import oshi.software.os.OSFileStore;
 import oshi.software.os.OperatingSystem;
 
@@ -66,45 +64,16 @@ class FirmwareInfo {
         setVersion(firmware.getVersion());
     }
 
-    public String getDescription() {
-        return Description;
-    }
-
-    public void setDescription(String description) {
-        Description = description;
-    }
-
-    public String getManufacturer() {
-        return Manufacturer;
-    }
-
-    public void setManufacturer(String manufacturer) {
-        Manufacturer = manufacturer;
-    }
-
-    public String getName() {
-        return Name;
-    }
-
-    public void setName(String name) {
-        Name = name;
-    }
-
-    public String getReleaseDate() {
-        return ReleaseDate;
-    }
-
-    public void setReleaseDate(String releaseDate) {
-        ReleaseDate = releaseDate;
-    }
-
-    public String getVersion() {
-        return Version;
-    }
-
-    public void setVersion(String version) {
-        Version = version;
-    }
+    public String getDescription() {return Description;}
+    public void setDescription(String description) {Description = description;}
+    public String getManufacturer() {return Manufacturer;}
+    public void setManufacturer(String manufacturer) {Manufacturer = manufacturer;}
+    public String getName() {return Name;}
+    public void setName(String name) {Name = name;}
+    public String getReleaseDate() {return ReleaseDate;}
+    public void setReleaseDate(String releaseDate) {ReleaseDate = releaseDate;}
+    public String getVersion() {return Version;}
+    public void setVersion(String version) {Version = version;}
 }
 
 class BaseboardInfo {
@@ -117,34 +86,13 @@ class BaseboardInfo {
         setVersion(board.getVersion());
     }
 
-    public String getManufacturer() {
-        return Manufacturer;
-    }
-
-    public void setManufacturer(String manufacturer) {
-        Manufacturer = manufacturer;
-    }
-
-    public String getModel() {
-        return Model;
-    }
-
-    public void setModel(String model) {
-        Model = model;
-    }
-
-    public String getSerial() {
-        return Serial;
-    }
-
-    public void setSerial(String serial) {
-        Serial = serial;
-    }
-
-    public String getVersion() {
-        return Version;
-    }
-
+    public String getManufacturer() {return Manufacturer;}
+    public void setManufacturer(String manufacturer) {Manufacturer = manufacturer;}
+    public String getModel() {return Model;}
+    public void setModel(String model) {Model = model;}
+    public String getSerial() {return Serial;}
+    public void setSerial(String serial) {Serial = serial;}
+    public String getVersion() {return Version;}
     public void setVersion(String version) {Version = version;}
 }
 
