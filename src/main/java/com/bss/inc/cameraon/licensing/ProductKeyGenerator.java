@@ -19,6 +19,7 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData> {
             final String cleanedProductKey;
             if(this.getProductKeyStylingWorker() != null) {cleanedProductKey = this.getProductKeyStylingWorker().removeStyling(productKey).toUpperCase();}
             else {cleanedProductKey = productKey.toUpperCase();}
+            
         }
     }
 }
