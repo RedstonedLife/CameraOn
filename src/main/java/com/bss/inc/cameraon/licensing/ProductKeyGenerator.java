@@ -38,7 +38,7 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData> {
                             }
                             currentKeyCharIndex += 2;
                         }
-
+                        return ProductKeyState.KEY_GOOD;
                     }
                 }
             }
