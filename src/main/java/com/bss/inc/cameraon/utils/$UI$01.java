@@ -318,9 +318,22 @@ public class $UI$01 {
         textFields[0].textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
             if((newValue.length() < 4)) {
-                boolean b = finalI < textFields.length;
-                if(b){return;}
-                else {textFields[finalI].setFocusTraversable(false);textFields[finalI+1].requestFocus();textFields[finalI].setText(oldValue);}}
+                textFields[0].setFocusTraversable(false);textFields[1].requestFocus();textFields[0].setText(oldValue);}
+        });
+        textFields[1].textProperty().addListener((observable, oldValue, newValue) -> {
+            if(oldValue == null || oldValue == "") {return;}
+            if((newValue.length() < 4)) {
+                textFields[1].setFocusTraversable(false);textFields[2].requestFocus();textFields[1].setText(oldValue);}
+        });
+        textFields[2].textProperty().addListener((observable, oldValue, newValue) -> {
+            if(oldValue == null || oldValue == "") {return;}
+            if((newValue.length() < 4)) {
+                textFields[1].setFocusTraversable(false);textFields[2].requestFocus();textFields[1].setText(oldValue);}
+        });
+        textFields[3].textProperty().addListener((observable, oldValue, newValue) -> {
+            if(oldValue == null || oldValue == "") {return;}
+            if((newValue.length() < 4)) {
+                textFields[1].setFocusTraversable(false);textFields[2].requestFocus();textFields[1].setText(oldValue);}
         });
     }
 
