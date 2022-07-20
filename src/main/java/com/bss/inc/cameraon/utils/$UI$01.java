@@ -331,9 +331,7 @@ public class $UI$01 {
                 textFields[2].setFocusTraversable(false);textFields[3].requestFocus();textFields[2].setText(oldValue);}
         });
         textFields[3].textProperty().addListener((observable, oldValue, newValue) -> {
-            if(oldValue == null || oldValue == "") {
-                
-            }
+            if(oldValue == null || oldValue == "") {}
             if((newValue.length() >= 5)) {
                 textFields[3].setText(oldValue);}
         });
