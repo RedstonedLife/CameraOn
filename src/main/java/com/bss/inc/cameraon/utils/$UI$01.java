@@ -18,7 +18,7 @@ import java.util.regex.Pattern;
 public class $UI$01 {
     public static final Pattern digitPattern;
     public static final Pattern licensePattern;
-    private static boolean 
+    private static boolean isCopyingLicenseKey = false;
     static TextField[] tfs,tfs2;
     static CheckBox[] chkbs, chkbs2;
     static RadioButton[] rbs;
