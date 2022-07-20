@@ -322,7 +322,7 @@ public class $UI$01 {
                 if((newValue.length() > 4)) {
                     boolean b = finalI < textFields.length;
                     if(b){return;}
-                    else {textFields[finalI].setFocusTraversable(false);textFields[finalI+1].setFocusTraversable(true);textFields[finalI].setText(oldValue);}}
+                    else {textFields[finalI].setFocusTraversable(false);textFields[finalI+1].requestFocus();textFields[finalI].setText(oldValue);}}
             });
         }
     }
