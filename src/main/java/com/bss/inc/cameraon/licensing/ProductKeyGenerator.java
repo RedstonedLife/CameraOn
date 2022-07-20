@@ -12,5 +12,7 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData> {
     private IProductKeyStylingWorker productKeyStylingWorker = null;
     private ISeedAvailabilityWorker seedAvailabilityWorker = null;
     @SafeVarargs
-    public ProductKeyGenerator(final int seedCharLength, final ED...)
+    public ProductKeyGenerator(final int seedCharLength, final ED...productKeyEncodingData) {
+        this.seedCharLength = ((seedCharLength > 0) && (seedCharLength <= 15)) ? seedCharLength : 10;
+    }
 }
