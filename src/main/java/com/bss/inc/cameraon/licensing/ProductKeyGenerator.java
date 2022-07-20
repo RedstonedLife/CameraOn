@@ -8,5 +8,6 @@ import com.bss.inc.cameraon.licensing.interfaces.*;import com.bss.inc.cameraon.l
     private IProductKeySectionWorker<ED> getProductKeySectionWorker() {if (this.productKeySectionWorker == null) {this.productKeySectionWorker = this.buildProductKeySectionWorker();}return this.productKeySectionWorker;}
     private IChecksumWorker getChecksumWorker() {if (this.checksumWorker == null) {this.checksumWorker = this.buildChecksumWorker();}return this.checksumWorker;}
     private IBlacklistWorker getBlacklistWorker() {if (this.blacklistWorker == null) {this.blacklistWorker = this.buildBlacklistWorker();}return this.blacklistWorker;}
+    private IProductKeyStylingWorker getProductKeyStylingWorker() {if (this.productKeyStylingWorker == null) {this.productKeyStylingWorker = this.buildProductKeyStylingWorker();}return this.productKeyStylingWorker;}
     
 }
