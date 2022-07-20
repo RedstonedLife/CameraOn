@@ -45,6 +45,9 @@ public class HardwareUtils {
         OS os = getOS();
         FirmwareInfo firmwareInfo = getFirmwareInfo();
         Logger.getLogger("BNC").info(tl("hardwareinfo.line1"));
+        Logger.getLogger("BNC").info(tl("hardwareinfo.line2"));
+        Logger.getLogger("BNC").info(tl("hardwareinfo.line3"));
+        Logger.getLogger("BNC").info(tl("hardwareinfo.line1"));
     }
 }
 
