@@ -5,6 +5,7 @@ import com.bss.inc.cameraon.constants.FrontendPaths;
 import oshi.SystemInfo;
 import oshi.hardware.CentralProcessor;
 import oshi.hardware.HardwareAbstractionLayer;
+import oshi.software.os.OSFileStore;
 import oshi.software.os.OperatingSystem;
 
 public class HardwareUtils {
@@ -167,28 +168,12 @@ class ComputerInfo {
     }
 
     public String getManufacturer() {
-        return Manufacturer;
-    }
-
-    public void setManufacturer(String manufacturer) {
-        Manufacturer = manufacturer;
-    }
-
-    public String getModel() {
-        return Model;
-    }
-
-    public void setModel(String model) {
-        Model = model;
-    }
-
-    public String getSerial() {
-        return Serial;
-    }
-
-    public void setSerial(String serial) {
-        Serial = serial;
-    }
+        return Manufacturer;}
+    public void setManufacturer(String manufacturer) {Manufacturer = manufacturer;}
+    public String getModel() {return Model;}
+    public void setModel(String model) {Model = model;}
+    public String getSerial() {return Serial;}
+    public void setSerial(String serial) {Serial = serial;}
 }
 
 class StorageDevice {
@@ -210,78 +195,24 @@ class StorageDevice {
         setUsableSpace(fileStore.getUsableSpace());
     }
 
-    public String getDescription() {
-        return Description;
-    }
-
-    public void setDescription(String description) {
-        Description = description;
-    }
-
-    public String getLabel() {
-        return Label;
-    }
-
-    public void setLabel(String label) {
-        Label = label;
-    }
-
-    public String getLogicalVolume() {
-        return LogicalVolume;
-    }
-
-    public void setLogicalVolume(String logicalVolume) {
-        LogicalVolume = logicalVolume;
-    }
-
-    public String getMount() {
-        return Mount;
-    }
-
-    public void setMount(String mount) {
-        Mount = mount;
-    }
-
-    public String getName() {
-        return Name;
-    }
-
-    public void setName(String name) {
-        Name = name;
-    }
-
-    public String getOptions() {
-        return Options;
-    }
-
-    public void setOptions(String options) {
-        Options = options;
-    }
-
-    public String getType() {
-        return Type;
-    }
-
-    public void setType(String type) {
-        Type = type;
-    }
-
-    public String getUUID() {
-        return UUID;
-    }
-
-    public void setUUID(String UUID) {
-        this.UUID = UUID;
-    }
-
-    public String getVolume() {
-        return Volume;
-    }
-
-    public void setVolume(String volume) {
-        Volume = volume;
-    }
-
+    public String getDescription() {return Description;}
+    public void setDescription(String description) {Description = description;}
+    public String getLabel() {return Label;}
+    public void setLabel(String label) {Label = label;}
+    public String getLogicalVolume() {return LogicalVolume;}
+    public void setLogicalVolume(String logicalVolume) {LogicalVolume = logicalVolume;}
+    public String getMount() {return Mount;}
+    public void setMount(String mount) {Mount = mount;}
+    public String getName() {return Name;}
+    public void setName(String name) {Name = name;}
+    public String getOptions() {return Options;}
+    public void setOptions(String options) {Options = options;}
+    public String getType() {return Type;}
+    public void setType(String type) {Type = type;}
+    public String getUUID() {return UUID;}
+    public void setUUID(String UUID) {this.UUID = UUID;}
+    public String getVolume() {return Volume;}
+    public void setVolume(String volume) {Volume = volume;}
     public long getFreeSpace() {return freeSpace;}
     public void setFreeSpace(long freeSpace) {this.freeSpace = freeSpace;}
     public long getTotalSpace() {return totalSpace;}
