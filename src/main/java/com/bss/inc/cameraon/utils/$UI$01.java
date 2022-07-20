@@ -315,7 +315,7 @@ public class $UI$01 {
     }
 
     public static void u_11$1$1(TextField[] textFields) {
-        for (TextField textField: textFields) {
+        for (int i=0; i<textFields.length) {
             textField.textProperty().addListener((observable, oldValue, newValue) -> {
                 if(oldValue == null || oldValue == "") {return;}
                 if(!u_08$1$3(newValue)) {textField.setText(oldValue);}
