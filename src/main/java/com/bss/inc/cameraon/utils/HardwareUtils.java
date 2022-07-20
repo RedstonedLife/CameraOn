@@ -58,7 +58,7 @@ public class HardwareUtils {
         Logger.getLogger("BNC").info(tl("hardwareinfo.baseboard.manufacturer", baseboardInfo.getManufacturer()));
         Logger.getLogger("BNC").info(tl("hardwareinfo.baseboard.model"));
         Logger.getLogger("BNC").info(tl("hardwareinfo.baseboard.serial"));
-        Logger.getLogger("BNC").info(tl("hardwareinfo.line1"));
+        Logger.getLogger("BNC").info(tl("hardwareinfo.baseboard."));
     }
 }
 
