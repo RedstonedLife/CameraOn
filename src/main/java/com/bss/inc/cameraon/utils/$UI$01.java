@@ -319,7 +319,6 @@ public class $UI$01 {
             int finalI = i;
             textFields[i].textProperty().addListener((observable, oldValue, newValue) -> {
                 if(oldValue == null || oldValue == "") {return;}
-                if(!u_08$1$7(newValue)) {textFields[finalI].setText(oldValue);}
                 if((newValue.length() > 4)) {textFields[finalI].setText(oldValue);
                     boolean b = finalI <= textFields.length;
                     if(b){return;}
