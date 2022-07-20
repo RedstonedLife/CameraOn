@@ -1,4 +1,7 @@
 package com.bss.inc.cameraon.display.controllers;
 
-public class WelcomeController {
+import javafx.fxml.Initializable;
+
+public class WelcomeController implements Initializable {
+    
 }
