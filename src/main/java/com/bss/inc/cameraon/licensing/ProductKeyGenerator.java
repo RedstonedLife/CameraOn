@@ -57,19 +57,7 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData> {
         try {
             // Try to parse the HEXADECIMAL string representing the seed and use that for the seed.
             seed = Long.parseLong(seedHex, 16);
-            if ((this.productKeyEncodingData != null) && (this.productKeyEncodingData.length > 0)) {if (this.getProductKeySectionWorker() != null) {
-                final StringBuilder keySb = new StringBuilder();
-
-                    seedHex = ProductKeyUtils.buildHexStr(this.getSeedCharLength(), seed);
-
-                    if ((this.getBlacklistWorker() != null) && (this.getBlacklistWorker().isSeedBlackListed(seedHex)))
-                    {
-                        throw new SeedIsBlacklistedException();
-                    }
-
-                    if ((this.getSeedAvailabilityWorker() != null) && ( !this.getSeedAvailabilityWorker().isSeedAvailable(seedHex)))
-                    {
-                        throw new SeedAlreadyTakenException();
+            if ((this.productKeyEncodingData != null) && (this.productKeyEncodingData.length > 0)) {if (this.getProductKeySectionWorker() != null) {final StringBuilder keySb = new StringBuilder();seedHex = ProductKeyUtils.buildHexStr(this.getSeedCharLength(), seed);if ((this.getBlacklistWorker() != null) && (this.getBlacklistWorker().isSeedBlackListed(seedHex))) {throw new SeedIsBlacklistedException();}if ((this.getSeedAvailabilityWorker() != null) && ( !this.getSeedAvailabilityWorker().isSeedAvailable(seedHex))) throw new SeedAlreadyTakenException();
                     }
 
                     // The key string begins with a HEXADECIMAL string of the seed.
