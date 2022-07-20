@@ -22,7 +22,7 @@ public class LicenseWindow implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         HelpBtn.setCancelButton(true);
         ActivateBtn.setOnAction(e -> MainClass.getWindowManager().changeDialogScene("licenseWindow", MainClass.class.getResource(FrontendPaths.LICENSE_KEY_FXML)));
-        $UI$01.u_10$1$1(btnClose);
+        btnClose.setOnAction(e -> MainClass.getWindowManager().changeDialogScene("licenseWindow", MainClass.class.getResource(FrontendPaths.WELCOME_NA_FXML)));
         $UI$01.u_10$1$2(btnMinimize, "welcomeWindow");
     }
 }
