@@ -52,7 +52,8 @@ public class MainClass extends Application {
                 new Dialog(350d, 500d, "popUpWindow", new URL[] { // PopUpWindow URL[] Start
                         clazz.getResource(FrontendPaths.POP_FAQ_FXML),clazz.getResource(FrontendPaths.POP_TPL_FXML),
                         clazz.getResource(FrontendPaths.POP_HELP_FXML)
-                }) // PopUpWindow URL[] End
+                }), // PopUpWindow URL[] End
+                new Dialog()
         });}
         catch (IOException e) {logger.error("Error occurred while initializing the WindowManager", e);e.printStackTrace();}
         WindowManager.changeDialogScene("mainWindow",clazz.getResource(FrontendPaths.SETTINGS_FXML));
