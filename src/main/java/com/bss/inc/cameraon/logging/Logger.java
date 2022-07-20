@@ -16,10 +16,9 @@ public class Logger implements ErrorHandler, WarnHandler, InfoHandler, DebugHand
     public static Logger getLogger(final String name) {
         return LogManager.getLogger(name);
     }
-    public static void disableStamp() {stampEnabled = false;}
-    public static void enableStamp() {stampEnabled = true;}
 
     public String getName() {return LOGGER_NAME;}
+    public void stamplessInfo(LogManager.getLFM().)
     @Override public void debug(String message, Exception e) {LogManager.getLFM().debug(message, e);}
     @Override public void debug(String message) {LogManager.getLFM().debug(message);}
     @Override public void debug(Exception e) {LogManager.getLFM().debug(e);}
