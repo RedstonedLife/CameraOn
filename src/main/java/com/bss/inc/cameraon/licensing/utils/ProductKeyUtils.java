@@ -5,6 +5,6 @@ public class ProductKeyUtils {
         String hexStr = String.format("%0" + expectedLength + "X", content);
         if (hexStr.length() > expectedLength) hexStr.substring(hexStr.length() - expectedLength);
         while(hexStr.length() < expectedLength) hexStr = "0" + hexStr;
-        
+        return hexStr;
     }
 }
