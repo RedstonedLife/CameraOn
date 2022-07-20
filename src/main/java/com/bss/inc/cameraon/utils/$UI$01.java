@@ -320,7 +320,7 @@ public class $UI$01 {
             textFields[i].textProperty().addListener((observable, oldValue, newValue) -> {
                 if(oldValue == null || oldValue == "") {return;}
                 if(!u_08$1$3(newValue)) {textFields[finalI].setText(oldValue);}
-                if((newValue.length() > 4)) {textFields[finalI].setText(oldValue);(textFields[finalI+1])}
+                if((newValue.length() > 4)) {textFields[finalI].setText(oldValue);(i<)}
             });
         }
     }
