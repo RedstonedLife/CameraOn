@@ -14,14 +14,8 @@ import java.util.List;
 public class HardwareUtils {
     private final SystemInfo systemInfo;
     public HardwareUtils() {this.systemInfo = new SystemInfo();}
-    public HardwareAbstractionLayer getHardware() {
-        return this.systemInfo.getHardware();
-    }
-
-    public ComputerSystem getComputerSystem() {
-        return getHardware().getComputerSystem();
-    }
-
+    public HardwareAbstractionLayer getHardware() {return this.systemInfo.getHardware();}
+    public ComputerSystem getComputerSystem() {return getHardware().getComputerSystem();}
     public Baseboard getBaseboard() {return getComputerSystem().getBaseboard();} /* Motherboard */
     public Firmware getFirmware() {return getComputerSystem().getFirmware();} /* Computer Firmware/BIOS */
     public GlobalMemory getMemory() {return getHardware().getMemory();}
