@@ -341,7 +341,7 @@ public class $UI$01 {
         textFields[4].textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
             if(newValue == "") {textFields[3].requestFocus();}
-            if((newValue.length() >= 5)) {
+            if((newValue.length() >= 7)) {
                 textFields[4].setText(oldValue);}
         });
     }
