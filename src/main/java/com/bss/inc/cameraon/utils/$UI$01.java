@@ -312,7 +312,13 @@ public class $UI$01 {
     }
 
     public static void u_11$1$1(TextField[] textFields) {
-        
+        for (TextField textField: textFields) {
+            textField.textProperty().addListener((observable, oldValue, newValue) -> {
+                if(oldValue == null || oldValue == "") {return;}
+                if(!u_08$1$3(newValue)) {textField.setText(oldValue);}
+                if((newValue.length() > 5)) {textField.setText(oldValue);}
+            });
+        }
     }
 
 }
