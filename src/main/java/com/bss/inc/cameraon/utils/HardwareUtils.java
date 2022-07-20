@@ -1,6 +1,7 @@
 package com.bss.inc.cameraon.utils;
 
 import oshi.SystemInfo;
+import oshi.hardware.CentralProcessor;
 import oshi.hardware.HardwareAbstractionLayer;
 
 public class HardwareUtils {
