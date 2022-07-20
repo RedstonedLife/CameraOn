@@ -5,6 +5,7 @@ import com.bss.inc.cameraon.constants.FrontendPaths;
 import oshi.SystemInfo;
 import oshi.hardware.CentralProcessor;
 import oshi.hardware.HardwareAbstractionLayer;
+import oshi.software.os.OperatingSystem;
 
 public class HardwareUtils {
     private final SystemInfo systemInfo;
@@ -281,29 +282,12 @@ class StorageDevice {
         Volume = volume;
     }
 
-    public long getFreeSpace() {
-        return freeSpace;
-    }
-
-    public void setFreeSpace(long freeSpace) {
-        this.freeSpace = freeSpace;
-    }
-
-    public long getTotalSpace() {
-        return totalSpace;
-    }
-
-    public void setTotalSpace(long totalSpace) {
-        this.totalSpace = totalSpace;
-    }
-
-    public long getUsableSpace() {
-        return usableSpace;
-    }
-
-    public void setUsableSpace(long usableSpace) {
-        this.usableSpace = usableSpace;
-    }
+    public long getFreeSpace() {return freeSpace;}
+    public void setFreeSpace(long freeSpace) {this.freeSpace = freeSpace;}
+    public long getTotalSpace() {return totalSpace;}
+    public void setTotalSpace(long totalSpace) {this.totalSpace = totalSpace;}
+    public long getUsableSpace() {return usableSpace;}
+    public void setUsableSpace(long usableSpace) {this.usableSpace = usableSpace;}
 }
 
 class OS {
@@ -320,67 +304,25 @@ class OS {
         setBuild_Number(OS_Info.getBuildNumber());
     }
 
-    public String getOSF() {
-        return OSF;
-    }
-
-    public void setOSF(String OSF) {
-        this.OSF = OSF;
-    }
-
-    public String getFamily() {
-        return Family;
-    }
-
-    public void setFamily(String family) {
-        Family = family;
-    }
-
-    public String getManufacturer() {
-        return Manufacturer;
-    }
-
-    public void setManufacturer(String manufacturer) {
-        Manufacturer = manufacturer;
-    }
-
-    public int getBits() {
-        return bits;
-    }
-
-    public void setBits(int bits) {
-        bits = bits;
-    }
-
-    public String getVersion() {
-        return Version;
-    }
-
-    public void setVersion(String version) {
-        Version = version;
-    }
-
-    public String getCodename() {
-        return Codename;
-    }
-
-    public void setCodename(String codename) {
-        Codename = codename;
-    }
-
-    public String getBuild_Number() {
-        return Build_Number;
-    }
-
-    public void setBuild_Number(String build_Number) {
-        Build_Number = build_Number;
-    }
+    public String getOSF() {return OSF;}
+    public void setOSF(String OSF) {this.OSF = OSF;}
+    public String getFamily() {return Family;}
+    public void setFamily(String family) {Family = family;}
+    public String getManufacturer() {return Manufacturer;}
+    public void setManufacturer(String manufacturer) {Manufacturer = manufacturer;}
+    public int getBits() {return bits;}
+    public void setBits(int bits) {bits = bits;}
+    public String getVersion() {return Version;}
+    public void setVersion(String version) {Version = version;}
+    public String getCodename() {return Codename;}
+    public void setCodename(String codename) {Codename = codename;}
+    public String getBuild_Number() {return Build_Number;}
+    public void setBuild_Number(String build_Number) {Build_Number = build_Number;}
 }
 
 class CPU {
     String vendor, name, id, identifier, mca;
     long vendorFreq, vendorGFreq;
-
     public CPU(CentralProcessor.ProcessorIdentifier identifier) {
         setVendor(identifier.getVendor());
         setName(identifier.getName());
