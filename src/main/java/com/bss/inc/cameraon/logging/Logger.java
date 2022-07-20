@@ -6,7 +6,7 @@ public class Logger implements ErrorHandler, WarnHandler, InfoHandler, DebugHand
      * The fully qualified name of the Logger class
      */
     private static final String FQCN = Logger.class.getName();
-    private boolean stampEnabled = true;
+    private static boolean stampEnabled = true;
     private static String LOGGER_NAME;
 
     public Logger(String name) {
@@ -16,8 +16,8 @@ public class Logger implements ErrorHandler, WarnHandler, InfoHandler, DebugHand
     public static Logger getLogger(final String name) {
         return LogManager.getLogger(name);
     }
-    public void disableStamp() {this.stampEnabled = false;}
-    public void enableStamp() {this.stampEnabled = true;}
+    public static void disableStamp() {stampEnabled = false;}
+    public static void enableStamp() {stampEnabled = true;}
 
     public String getName() {return LOGGER_NAME;}
     @Override public void debug(String message, Exception e) {LogManager.getLFM().debug(message, e);}
