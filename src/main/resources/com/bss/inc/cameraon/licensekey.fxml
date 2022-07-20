@@ -19,7 +19,7 @@
                 </Button>
             </children>
         </HBox>
-        <Text fill="#7c7c7c" layoutX="215.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="camera - on" wrappingWidth="86.853515625" />
+        <Text fill="#7c7c7c" layoutX="269.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="camera - on" wrappingWidth="86.853515625" />
           <Button fx:id="btnMinimize" layoutX="529.0" layoutY="2.0" maxHeight="23.0" maxWidth="30.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="30.0" text="➖" textFill="#b8ff00">
               <font>
                   <Font name="System Bold" size="12.0" />
@@ -33,14 +33,14 @@
       </Text>
       <Text fx:id="SubTitleTxt" fill="#e8e8e8" layoutX="28.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="~BACKEND CHANGE~" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1fdeff" height="32.0" layoutX="16.0" layoutY="55.0" stroke="TRANSPARENT" strokeType="INSIDE" width="2.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#404040" height="1.0" layoutX="29.0" layoutY="140.0" stroke="TRANSPARENT" strokeType="INSIDE" width="344.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#404040" layoutX="29.0" layoutY="140.0" stroke="TRANSPARENT" strokeType="INSIDE" width="344.0" />
       <TextField fx:id="ACtf1" layoutX="27.0" layoutY="125.0" prefHeight="29.0" prefWidth="82.0" />
-      <Button fx:id="ActivateBtn" layoutX="401.0" layoutY="125.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="82.0" text="Activate" textFill="#e8e8e8" />
+      <Button fx:id="ActivateBtn" layoutX="482.0" layoutY="125.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="82.0" text="Activate" textFill="#e8e8e8" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#21ff63" height="29.0" layoutX="482.0" layoutY="125.0" stroke="TRANSPARENT" strokeType="INSIDE" width="2.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#21ff63" height="29.0" layoutX="400.0" layoutY="125.0" stroke="TRANSPARENT" strokeType="INSIDE" width="2.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#21ff63" height="29.0" layoutX="563.0" layoutY="127.0" stroke="TRANSPARENT" strokeType="INSIDE" width="2.0" />
       <TextField fx:id="ACtf2" layoutX="119.0" layoutY="125.0" prefHeight="29.0" prefWidth="82.0" />
       <TextField fx:id="ACtf3" layoutX="210.0" layoutY="125.0" prefHeight="29.0" prefWidth="82.0" />
-      <TextField fx:id="ACtf4" layoutX="301.0" layoutY="125.0" prefHeight="29.0" prefWidth="82.0" />
+      <TextField fx:id="ACtf4" layoutX="388.0" layoutY="125.0" prefHeight="29.0" prefWidth="82.0" />
       <Text fill="#5e5e5e" layoutX="26.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Example: 1AAA - 1AAA - 1AAA - 1AAA" />
     </children>
     <stylesheets>
