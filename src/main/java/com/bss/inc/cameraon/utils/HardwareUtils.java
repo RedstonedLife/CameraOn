@@ -36,7 +36,7 @@ public class HardwareUtils {
         }
     }
 
-    public static class BaseboardInfo extends com.redsoftware.ltd.bnc.utils.BaseboardInfo {
+    public static class BaseboardInfo extends BaseboardInfo {
         public BaseboardInfo(Baseboard board) {
             super(board);
         }
