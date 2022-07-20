@@ -311,4 +311,8 @@ public class $UI$01 {
         button.setOnAction(e -> {MainClass.getWindowManager().minimizeDialog(name);});
     }
 
+    public static void u_11$1$1(TextField[] textFields) {
+        
+    }
+
 }
