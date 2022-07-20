@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane minHeight="450" minWidth="800" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bss.inc.cameraon.display.controllers">
+<AnchorPane minHeight="450" minWidth="800" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bss.inc.cameraon.display.controllers.LicenseWindow">
     <children>
         <HBox layoutX="832.0" layoutY="1.0" prefHeight="27.0" prefWidth="28.0" />
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3c3c3c" height="370.0" layoutX="5.0" layoutY="57.0" stroke="TRANSPARENT" strokeType="INSIDE" width="789.0" />
