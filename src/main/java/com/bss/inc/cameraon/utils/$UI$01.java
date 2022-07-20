@@ -114,9 +114,9 @@ public class $UI$01 {
 
         int[] cbt = new int[]{_j.getInt("videnc"),_j.getInt("resolution"),_j.getInt("bitrate")};
 
-        cbs[0].setOnAction(e -> {_j.put("videnc", cbs[0].getItems().indexOf(cbs[0].getValue())+1);try {Launcher.SettingsContainer.setValue("cameraSettings",_j);Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}});
-        cbs[1].setOnAction(e -> {_j.put("resolution", cbs[1].getItems().indexOf(cbs[1].getValue())+1);try {Launcher.SettingsContainer.setValue("cameraSettings",_j);Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}});
-        cbs[2].setOnAction(e -> {_j.put("bitrate", cbs[2].getItems().indexOf(cbs[2].getValue())+1);try {Launcher.SettingsContainer.setValue("cameraSettings",_j);Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}});
+        cbs[0].setOnAction(e -> {_j.put("videnc", cbs[0].getItems().indexOf(cbs[0].getValue()));try {Launcher.SettingsContainer.setValue("cameraSettings",_j);Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}});
+        cbs[1].setOnAction(e -> {_j.put("resolution", cbs[1].getItems().indexOf(cbs[1].getValue()));try {Launcher.SettingsContainer.setValue("cameraSettings",_j);Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}});
+        cbs[2].setOnAction(e -> {_j.put("bitrate", cbs[2].getItems().indexOf(cbs[2].getValue()));try {Launcher.SettingsContainer.setValue("cameraSettings",_j);Launcher.SettingsContainer.Save();} catch (FileNotFoundException ex) {ex.printStackTrace();}});
     }
 
     /**
