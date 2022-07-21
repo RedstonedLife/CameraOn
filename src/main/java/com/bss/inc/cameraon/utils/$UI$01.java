@@ -439,7 +439,7 @@ public class $UI$01 {
         if(licenseHandler.verifyProductKey($UI$01.u_11$1$2(textFields)) != ProductKeyState.KEY_GOOD) {
             u_11$1$3(rectangles);
         } else if(licenseHandler.verifyProductKey($UI$01.u_11$1$2(textFields)) == ProductKeyState.KEY_GOOD) {
-            WinRegistry.writeStringValue(WinRegistry.HKEY_LOCAL_MACHINE,);
+            WinRegistry.writeStringValue(WinRegistry.HKEY_LOCAL_MACHINE, "SOFTWARE\\BSS\\CMON");
             for(Rectangle rect : rectangles) {
                 rect.setFill(Color.color(0.1294117647058824d,1.0d,0.3882352941176471d));
             }
