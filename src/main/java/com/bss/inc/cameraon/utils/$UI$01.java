@@ -444,6 +444,8 @@ public class $UI$01 {
             try{
                 if(MainClass.getRegi().get("isAT", null) == null) {
                     MainClass.getRegi().put("isAT", SHA512.getSecureSHA("true&&"+Launcher.getHu().getFileStores().get(0).getUUID(),MainClass.getRegi().get("ST", null).getBytes()));
+                } else {
+                    
                 }
             } catch (Exception e) {
 
