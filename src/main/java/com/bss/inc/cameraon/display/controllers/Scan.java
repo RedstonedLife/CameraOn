@@ -23,7 +23,7 @@ public class Scan implements Initializable {
     @FXML private Text taskslefttxt,backendtxt,scanningalgotxt,scanstatustxt,versiontxt,licensetxt,iprangeTxt,iprangetoTxt;
     @FXML private TextField iprangetoTf,iprangefromTf;
     @FXML private ProgressBar tasksLeftScan;
-    private $UI$02
+    private $UI$02 $UI$02;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         $UI$01.u_05$1$1(scanAlgCb,0,new String[]{"AngryScan","IB-Scan","CB-Scan"});
