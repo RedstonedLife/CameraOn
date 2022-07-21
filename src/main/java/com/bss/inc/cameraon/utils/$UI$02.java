@@ -54,6 +54,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                     stateMachine.startScanning();
                 } catch (RuntimeException e) {
                     stateMachine.reset();
+                    throw e;
                 }
             }
         }
