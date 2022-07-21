@@ -77,7 +77,7 @@ public class MainClass extends Application {
 
     public static void main(String[] args) {
         launch(args);
-        Preferences.systemRoot().node("SOFTWARE").node("BSS");
+        Preferences.systemRoot().node("SOFTWARE").node("BSS").node("CMON");
         try {
             WinRegistry.writeStringValue(WinRegistry.HKEY_LOCAL_MACHINE, "SOFTWARE\\BSS\\CMON", "ST", SHA512.getSalt().toString(), WinRegistry.KEY_WOW64_64KEY);}
         catch (IllegalAccessException e) {throw new RuntimeException(e);}
