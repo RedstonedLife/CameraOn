@@ -29,11 +29,12 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     private String startIpAddress,endIpAddress;
 
     public $UI$02(ScannerDispatcherThreadFactory scannerThreadFactory, StateMachine stateMachine,
-                  ProgressBar progressBar, PingerRegistry pingerRegistry, Button startStopButton) {
+                  ProgressBar progressBar, PingerRegistry pingerRegistry, Button startStopButton, ScannerConfig scannerConfig) {
         this.scannerThreadFactory = scannerThreadFactory;
         this.progressBar = progressBar;
         this.pingerRegistry = pingerRegistry;
         this.button = startStopButton;
+        this.scannerConfig = scannerConfig;
         this.stateMachine = stateMachine;
 
         // add listeners to all state changes
