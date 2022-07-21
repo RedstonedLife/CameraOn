@@ -73,7 +73,7 @@ public class MainClass extends Application {
         } else if(regi.get("ST", null) != null && regi.get("isAT", null) != null) {
             System.out.println(regi.get("isAT", null));
             System.out.println(SHA512.getSecureSHA("true&&"+Launcher.getHu().getFileStores().get(0).getUUID(), regi.get("ST", null).getBytes()));
-            if(regi.get("isAT", null) != SHA512.getSecureSHA("true&&"+Launcher.getHu().getFileStores().get(0).getUUID(), regi.get("ST", null).getBytes())) {
+            if(!regi.get("isAT", null).equals(SHA512.getSecureSHA("true&&"+Launcher.getHu().getFileStores().get(0).getUUID(), regi.get("ST", null).getBytes()))) {
                 WindowManager.changeDialogScene("welcomeWindow", clazz.getResource(FrontendPaths.WELCOME_NA_FXML));
             } else {
                 WindowManager.changeDialogScene("welcomeWindow", clazz.getResource(FrontendPaths.WELCOME_FXML));
