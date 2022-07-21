@@ -56,6 +56,14 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         this.button = startStopButton;
     }
 
+    public void setStartIpAddress(String ip) {
+        this.startIpAddress = ip;
+    }
+
+    public void setEndIpAddress(String ip) {
+        this.endIpAddress = ip;
+    }
+
     public void transitionTo(final ScanningState state, final StateMachine.Transition transition) {
         if(transition == StateMachine.Transition.INIT)
             return;
