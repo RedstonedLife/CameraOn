@@ -43,7 +43,7 @@ public class Scan implements Initializable {
             UI02.setStartIpAddress(iprangefromTf.getText());
             UI02.setEndIpAddress(iprangetoTf.getText());
             switch (MainClass.getStateMachine().getState()) {
-                case SCANNING -> {break;}
+                case SCANNING -> {MainClass.getStateMachine().stop();break;}
                 case STOPPING -> {break;}
                 case KILLING -> {break;}
                 case RESTARTING -> {break;}
