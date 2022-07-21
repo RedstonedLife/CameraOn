@@ -263,7 +263,7 @@ public class WinRegistry {
             throws IllegalArgumentException, IllegalAccessException, InvocationTargetException
     {
         int[] handles = (int[]) regOpenKey.invoke(root, new Object[] {
-                Integer.valueOf(hkey), toCstr(key), new Integer(KEY_ALL_ACCESS | wow64)
+                Integer.valueOf(hkey), toCstr(key), Integer.valueOf(KEY_ALL_ACCESS | wow64)
         });
         if (handles[1] != REG_SUCCESS) {
             return handles[1];  // can be REG_NOTFOUND, REG_ACCESSDENIED
