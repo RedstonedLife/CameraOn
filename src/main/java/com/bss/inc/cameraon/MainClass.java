@@ -82,6 +82,8 @@ public class MainClass extends Application {
         launch(args);
     }
 
+    public static Preferences getRegi() {return regi;}
+
     public static DialogManager getWindowManager() {
         return WindowManager;
     }
