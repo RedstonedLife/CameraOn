@@ -482,7 +482,7 @@ public class $UI$01 {
                     if(finalI!=textFields.length-1) {
                         textFields[finalI+1].requestFocus();
                     }
-                    return;}
+                    return;} else {return;}
             });
         }
     }
