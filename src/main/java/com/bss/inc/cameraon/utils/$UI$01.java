@@ -436,7 +436,7 @@ public class $UI$01 {
 
     public static void u_11$1$4(TextField[] textFields, Rectangle[] rectangles) {
         if(licenseHandler.verifyProductKey($UI$01.u_11$1$2(textFields)) != ProductKeyState.KEY_GOOD) {
-
+            
         }
     }
 
