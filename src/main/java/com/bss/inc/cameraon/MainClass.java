@@ -72,7 +72,6 @@ public class MainClass extends Application {
             WindowManager.changeDialogScene("welcomeWindow", clazz.getResource(FrontendPaths.WELCOME_NA_FXML));
         } else if(regi.get("ST", null) != null && regi.get("isAT", null) != null) {
             if(regi.get("isAT", null) != SHA512.getSecureSHA("true&&"+Launcher.getHu().getFileStores().get(0).getUUID(), regi.get("ST", null).getBytes())) {
-                regi.remove("isAT");
                 WindowManager.changeDialogScene("welcomeWindow", clazz.getResource(FrontendPaths.WELCOME_NA_FXML));
             } else {
                 WindowManager.changeDialogScene("welcomeWindow", clazz.getResource(FrontendPaths.WELCOME_FXML));
