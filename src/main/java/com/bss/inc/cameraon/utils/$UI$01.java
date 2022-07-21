@@ -321,7 +321,7 @@ public class $UI$01 {
         button.setOnAction(e -> {MainClass.getWindowManager().minimizeDialog(name);});
     }
 
-    public static void u_11$1$1(TextField[] textFields) {
+    public static void u_11$1$1(TextField[] textFields, Button activateButton) {
         textFields[0].textProperty().addListener((observable, oldValue, newValue) -> {
             if(isCopyingLicenseKey) {return;}
             if(newValue.split("-").length==5 && newValue.split("-") != null) {
