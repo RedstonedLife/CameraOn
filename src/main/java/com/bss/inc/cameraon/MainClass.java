@@ -55,7 +55,7 @@ public class MainClass extends Application {
         scanningResults = new ScanningResultList(stateMachine);
         scanner = new Scanner();
         scannerDispatcherThreadFactory = new ScannerDispatcherThreadFactory(scanningResults,scanner,stateMachine,config.forScanner());
-        ui02 = new $UI$02(scannerDispatcherThreadFactory,);
+        ui02 = new $UI$02(scannerDispatcherThreadFactory,stateMachine);
 
     }
 
