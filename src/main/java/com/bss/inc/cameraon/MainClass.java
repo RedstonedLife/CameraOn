@@ -50,6 +50,7 @@ public class MainClass extends Application {
 
     static {
         DisplayType = DisplayResultType.valueOf(((JSONObject)Launcher.SettingsContainer.getValue("scanResultDisplay")).getString("displayResult"));
+        scannerDispatcherThreadFactory = new ScannerDispatcherThreadFactory()
         scanningResults = new ScanningResultList(stateMachine);
         ui02 = new $UI$02();
 
