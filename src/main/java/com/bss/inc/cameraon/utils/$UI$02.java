@@ -52,7 +52,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                 try {
                     scannerThread = scannerThreadFactory.createScannerThread(new RangeFeeder(startIpAddress, endIpAddress), $UI$02.this, createResultCallback(state));
                     stateMachine.startScanning();
-                } 
+                }
             }
         }
     }
