@@ -57,7 +57,7 @@ public class MainClass extends Application {
         scanningResults = new ScanningResultList(stateMachine);
         scanner = new Scanner();
         injector = new Injector();
-        pingerRegistry = new PingerRegistry(config.forScanner(), injector);
+        try {pingerRegistry = new PingerRegistry(config.forScanner(), injector);} catch (ClassNotFoundException e) {throw new RuntimeException(e);}
         scannerDispatcherThreadFactory = new ScannerDispatcherThreadFactory(scanningResults,scanner,stateMachine,config.forScanner());
         ui02 = new $UI$02(scannerDispatcherThreadFactory,stateMachine,);
 
