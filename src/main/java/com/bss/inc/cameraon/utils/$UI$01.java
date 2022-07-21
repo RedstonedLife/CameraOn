@@ -16,6 +16,7 @@ import oshi.SystemInfo;
 
 import java.io.FileNotFoundException;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 
 public class $UI$01 {
@@ -424,8 +425,9 @@ public class $UI$01 {
 
     public static String u_11$1$3(Rectangle[] rectangles) {
         for(Rectangle rect : rectangles) {
-            rect.setFill(Color.color());
+            rect.setFill(Color.color(253,19,19));
         }
+        TimeUnit.SECONDS.sleep();
     }
 
 }
