@@ -4,6 +4,7 @@ import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.constants.FrontendPaths;
 import com.bss.inc.cameraon.utils.$UI$01;
 import com.bss.inc.cameraon.utils.licenseHandler;
+import com.weilerhaus.productKeys.enums.ProductKeyState;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -27,7 +28,7 @@ public class LicenseWindow implements Initializable {
         btnClose.setOnAction(e -> MainClass.getWindowManager().changeDialogScene("welcomeWindow", MainClass.class.getResource(FrontendPaths.WELCOME_NA_FXML)));
         $UI$01.u_11$1$1(new TextField[]{ACtf1,ACtf2,ACtf3,ACtf4,ACtf5});
         ActivateBtn.setOnAction(e -> {
-            if(licenseHandler.verifyProductKey($UI$01.u_11$1$2(new TextField[]{ACtf1,ACtf2,ACtf3,ACtf4,ACtf5}))) {
+            if(licenseHandler.verifyProductKey($UI$01.u_11$1$2(new TextField[]{ACtf1,ACtf2,ACtf3,ACtf4,ACtf5})) != ProductKeyState.KEY_GOOD) {
 
             }
         });
