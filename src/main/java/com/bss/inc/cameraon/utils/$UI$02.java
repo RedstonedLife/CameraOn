@@ -1,6 +1,7 @@
 package com.bss.inc.cameraon.utils;
 
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningResult;
+import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
 import com.bss.inc.cameraon.utils.net.angryscan.core.ScannerDispatcherThread;
 import com.bss.inc.cameraon.utils.net.angryscan.core.ScannerDispatcherThreadFactory;
 import com.bss.inc.cameraon.utils.net.angryscan.core.ScanningProgressCallback;
@@ -24,6 +25,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     private ProgressBar progressBar;
     private StateMachine stateMachine;
     private Button button;
+    private ScannerConfig scannerConfig;
     private String startIpAddress,endIpAddress;
 
     public $UI$02(ScannerDispatcherThreadFactory scannerThreadFactory, StateMachine stateMachine,
