@@ -11,6 +11,7 @@ public class SHA512 {
             MessageDigest md = MessageDigest.getInstance("SHA-512");
             md.update(salt);
             byte[] bytes = md.digest(string.getBytes(StandardCharsets.UTF_8));
+            StringBuilder sb = new StringBuilder();
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
