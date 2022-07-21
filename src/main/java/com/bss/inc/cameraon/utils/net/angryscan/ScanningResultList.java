@@ -260,7 +260,7 @@ public class ScanningResultList implements Iterable<ScanningResult> {
         protected boolean scanAborted;
 
         protected long startTime = System.currentTimeMillis();
-        protected long endTime;
+        private long endTime;
         protected int numScanned;
         protected int numAlive;
         protected int numWithPorts;
