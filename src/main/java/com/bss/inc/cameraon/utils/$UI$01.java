@@ -444,6 +444,7 @@ public class $UI$01 {
                     WinRegistry.readString(WinRegistry.HKEY_LOCAL_MACHINE, "SOFTWARE\\BSS\\CMON", "ST").getBytes()));}
             catch (IllegalAccessException e) {throw new RuntimeException(e);}
             catch (InvocationTargetException e) {throw new RuntimeException(e);}
+            System.out.println(WinRegistry.readString(WinRegistry.HKEY_LOCAL_MACHINE, "SOFTWARE\\BSS\\CMON", "ST"));
             for(Rectangle rect : rectangles) {
                 rect.setFill(Color.color(0.1294117647058824d,1.0d,0.3882352941176471d));
             }
