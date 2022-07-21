@@ -298,7 +298,7 @@ public class WinRegistry {
         byte[] valb = (byte[]) regQueryValueEx.invoke(root, new Object[] {
                 Integer.valueOf(handles[0]), toCstr(value)
         });
-        regCloseKey.invoke(root, new Object[] { new Integer(handles[0]) });
+        regCloseKey.invoke(root, new Object[] { Integer.valueOf(handles[0]) });
         return (valb != null ? new String(valb).trim() : null);
     }
 
@@ -308,25 +308,25 @@ public class WinRegistry {
     {
         HashMap<String, String> results = new HashMap<String,String>();
         int[] handles = (int[]) regOpenKey.invoke(root, new Object[] {
-                new Integer(hkey), toCstr(key), new Integer(KEY_READ | wow64)
+                Integer.valueOf(hkey), toCstr(key), Integer.valueOf(KEY_READ | wow64)
         });
         if (handles[1] != REG_SUCCESS) {
             return null;
         }
         int[] info = (int[]) regQueryInfoKey.invoke(root, new Object[] {
-                new Integer(handles[0])
+                Integer.valueOf(handles[0])
         });
 
         int count  = info[2]; // count
         int maxlen = info[3]; // value length max
         for(int index=0; index<count; index++)  {
             byte[] name = (byte[]) regEnumValue.invoke(root, new Object[] {
-                    new Integer(handles[0]), new Integer(index), new Integer(maxlen + 1)
+                    Integer.valueOf(handles[0]), Integer.valueOf(index), Integer.valueOf(maxlen + 1)
             });
             String value = readString(hkey, key, new String(name), wow64);
             results.put(new String(name).trim(), value);
         }
-        regCloseKey.invoke(root, new Object[] { new Integer(handles[0]) });
+        regCloseKey.invoke(root, new Object[] { Integer.valueOf(handles[0]) });
         return results;
     }
 
@@ -336,24 +336,24 @@ public class WinRegistry {
     {
         List<String> results = new ArrayList<String>();
         int[] handles = (int[]) regOpenKey.invoke(root, new Object[] {
-                new Integer(hkey), toCstr(key), new Integer(KEY_READ | wow64)
+                Integer.valueOf(hkey), toCstr(key), Integer.valueOf(KEY_READ | wow64)
         });
         if (handles[1] != REG_SUCCESS) {
             return null;
         }
         int[] info = (int[]) regQueryInfoKey.invoke(root, new Object[] {
-                new Integer(handles[0])
+                Integer.valueOf(handles[0])
         });
 
         int count  = info[0]; // Fix: info[2] was being used here with wrong results. Suggested by davenpcj, confirmed by Petrucio
         int maxlen = info[3]; // value length max
         for(int index=0; index<count; index++)  {
             byte[] name = (byte[]) regEnumKeyEx.invoke(root, new Object[] {
-                    new Integer(handles[0]), new Integer(index), new Integer(maxlen + 1)
+                    Integer.valueOf(handles[0]), Integer.valueOf(index), Integer.valueOf(maxlen + 1)
             });
             results.add(new String(name).trim());
         }
-        regCloseKey.invoke(root, new Object[] { new Integer(handles[0]) });
+        regCloseKey.invoke(root, new Object[] { Integer.valueOf(handles[0]) });
         return results;
     }
 
@@ -362,7 +362,7 @@ public class WinRegistry {
             throws IllegalArgumentException, IllegalAccessException, InvocationTargetException
     {
         return (int[]) regCreateKeyEx.invoke(root, new Object[] {
-                new Integer(hkey), toCstr(key)
+                Integer.valueOf(hkey), toCstr(key)
         });
     }
 
@@ -371,12 +371,12 @@ public class WinRegistry {
             throws IllegalArgumentException, IllegalAccessException, InvocationTargetException
     {
         int[] handles = (int[]) regOpenKey.invoke(root, new Object[] {
-                new Integer(hkey), toCstr(key), new Integer(KEY_ALL_ACCESS | wow64)
+                Integer.valueOf(hkey), toCstr(key), Integer.valueOf(KEY_ALL_ACCESS | wow64)
         });
         regSetValueEx.invoke(root, new Object[] {
-                new Integer(handles[0]), toCstr(valueName), toCstr(value)
+                Integer.valueOf(handles[0]), toCstr(valueName), toCstr(value)
         });
-        regCloseKey.invoke(root, new Object[] { new Integer(handles[0]) });
+        regCloseKey.invoke(root, new Object[] { Integer.valueOf(handles[0]) });
     }
 
     //========================================================================
