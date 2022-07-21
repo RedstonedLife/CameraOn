@@ -1,5 +1,8 @@
 package com.bss.inc.cameraon.utils.net.angryscan.fetchers;
 
+import com.bss.inc.cameraon.MainClass;
+import org.apache.tools.ant.Main;
+
 import java.util.*;
 
 public class FetcherRegistry {
@@ -13,7 +16,7 @@ public class FetcherRegistry {
     private List<FetcherRegistryUpdateListener> updateListeners = new ArrayList<>();
 
     public FetcherRegistry() {
-        createFetchersMap(List.of(new IPFetcher(), new PortsFetcher(),));
+        createFetchersMap(List.of(new IPFetcher(), new PortsFetcher(MainClass.getConfig().forScanner()), new HostnameFetcher()));
         loadSelectedFetchers();
     }
 
