@@ -42,7 +42,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         this.pingerRegistry = pingerRegistry;
         this.button = startStopButton;
         this.scannerConfig = scannerConfig;
-        this.resultTable = new ResultTable(new ScanningResultList(stateMachine),stateMachine)
+        this.resultTable = new ResultTable(new ScanningResultList(stateMachine),stateMachine);
         this.stateMachine = stateMachine;
 
         // add listeners to all state changes
