@@ -442,7 +442,7 @@ public class $UI$01 {
             u_11$1$3(rectangles);
         } else if(licenseHandler.verifyProductKey($UI$01.u_11$1$2(textFields)) == ProductKeyState.KEY_GOOD) {
             try{
-                if(MainClass.getRegi().get("isAT", null) == null || !MainClass.getRegi().get("isAT").equals(SHA512.getSecureSHA("true&&"+Launcher.getHu().getFileStores().get(0).getUUID(),MainClass.getRegi().get("ST", null).getBytes()))) {
+                if(MainClass.getRegi().get("isAT", null) == null || !MainClass.getRegi().get("isAT", null).equals(SHA512.getSecureSHA("true&&"+Launcher.getHu().getFileStores().get(0).getUUID(),MainClass.getRegi().get("ST", null).getBytes()))) {
                     MainClass.getRegi().put("isAT", SHA512.getSecureSHA("true&&"+Launcher.getHu().getFileStores().get(0).getUUID(),MainClass.getRegi().get("ST", null).getBytes()));
                     System.out.println(MainClass.getRegi().get("isAT", null));
                 } else {
