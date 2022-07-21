@@ -180,7 +180,7 @@ public class ScanningResultList implements Iterable<ScanningResult> {
      * @param indices a sorted list of indices to remove
      */
     public synchronized void remove(int[] indices) {
-        // this rebuild is faster then a number of calls to remove()
+        // this rebuild is faster than a number of calls to remove()
         // however, a further speedup may be obtained by using a Set instead of binarySearch()
         List<ScanningResult> newList = new ArrayList<>(RESULT_LIST_INITIAL_SIZE);
         Map<InetAddress, Integer> newMap = new HashMap<>(RESULT_LIST_INITIAL_SIZE);
