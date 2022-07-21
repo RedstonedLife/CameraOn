@@ -4,6 +4,7 @@ import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.exceptions.HALT_AND_CATCH_FIRE;
 import com.bss.inc.cameraon.utils.$UI$01;
 import com.bss.inc.cameraon.utils.$UI$02;
+import com.bss.inc.cameraon.utils.net.angryscan.core.ScannerDispatcherThreadFactory;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -32,7 +33,7 @@ public class Scan implements Initializable {
         $UI$01.u_04$1$1(prefBtn);
         $UI$01.u_10$1$1(btnClose);
         $UI$01.u_10$1$2(btnMinimize,"mainWindow");
-        UI02 = new $UI$02()
+        UI02 = new $UI$02(new ScannerDispatcherThreadFactory())
         //BNC.getStateMachine().addTransitionListener(this);
         // I18n
         $UI$01.u_02$1$1(Map.ofEntries(
