@@ -14,6 +14,7 @@ import com.bss.inc.cameraon.utils.net.angryscan.config.Config;
 import com.bss.inc.cameraon.utils.net.angryscan.core.ScannerDispatcherThreadFactory;
 import com.bss.inc.cameraon.utils.net.angryscan.di.Injector;
 import com.bss.inc.cameraon.utils.net.angryscan.enums.DisplayResultType;
+import com.bss.inc.cameraon.utils.net.angryscan.state.PingerRegistry;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateMachine;
 import javafx.application.Application;
 import javafx.scene.image.Image;
@@ -41,6 +42,7 @@ public class MainClass extends Application {
     private static StateMachine stateMachine = new StateMachine();
     private static ScanningResultList scanningResults;
     private static Scanner scanner;
+    private static PingerRegistry pingerRegistry;
     private static ScannerDispatcherThreadFactory scannerDispatcherThreadFactory;
     private static Config config = new Config();
 
