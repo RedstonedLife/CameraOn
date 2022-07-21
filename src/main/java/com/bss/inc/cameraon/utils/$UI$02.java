@@ -6,6 +6,7 @@ import com.bss.inc.cameraon.utils.net.angryscan.core.ScannerDispatcherThread;
 import com.bss.inc.cameraon.utils.net.angryscan.core.ScannerDispatcherThreadFactory;
 import com.bss.inc.cameraon.utils.net.angryscan.core.ScanningProgressCallback;
 import com.bss.inc.cameraon.utils.net.angryscan.core.ScanningResultCallback;
+import com.bss.inc.cameraon.utils.net.angryscan.enums.DisplayResultType;
 import com.bss.inc.cameraon.utils.net.angryscan.feeders.RangeFeeder;
 import com.bss.inc.cameraon.utils.net.angryscan.state.PingerRegistry;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.ScanningState;
@@ -91,7 +92,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
 
     private ScanningResultCallback createResultsCallback(ScanningState state) {
         // rescanning must follow the same strategy of displaying all hosts (even the dead ones), because the results are already in the list
-        if (.displayMethod == DisplayMethod.ALL || state == RESTARTING) {
+        if (scannerConfig.displayResultType == DisplayResultType.ALL || state == RESTARTING) {
             return new ScanningResultCallback() {
                 public void prepareForResults(ScanningResult result) {
                     resultTable.addOrUpdateResultRow(result);
