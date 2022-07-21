@@ -112,6 +112,6 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                 }
             };
         }
-        throw new UnsupportedOperationException(guiConfig.displayMethod.toString());
+        throw new UnsupportedOperationException(scannerConfig.displayResultType.toString());
     }
 }
