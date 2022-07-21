@@ -1,6 +1,7 @@
 package com.bss.inc.cameraon.utils;
 
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningResult;
+import com.bss.inc.cameraon.utils.net.angryscan.ScanningResultList;
 import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
 import com.bss.inc.cameraon.utils.net.angryscan.core.ScannerDispatcherThread;
 import com.bss.inc.cameraon.utils.net.angryscan.core.ScannerDispatcherThreadFactory;
@@ -119,10 +120,11 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     }
 }
 
-class ResultTable implements StateTransitionListener  {
+class ResultTable implements StateTransitionListener {
     private List<ScanningResult> results = new ArrayList<ScanningResult>();
+    private ScanningResultList scanningResults;
 
     public ResultTable() {
-
+        
     }
 }
