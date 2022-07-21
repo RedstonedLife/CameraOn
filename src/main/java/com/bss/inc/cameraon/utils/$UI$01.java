@@ -25,6 +25,7 @@ import java.util.regex.Pattern;
 public class $UI$01 {
     public static final Pattern digitPattern;
     public static final Pattern licensePattern;
+    public static final Pattern ipaddressPattern;
     private static boolean isCopyingLicenseKey = false;
     static TextField[] tfs,tfs2;
     static CheckBox[] chkbs, chkbs2;
@@ -36,6 +37,7 @@ public class $UI$01 {
     static {
         digitPattern = Pattern.compile("\\d+");
         licensePattern = Pattern.compile("[A-Z\\d]{4}-|[A-Z\\d]{4}");
+        ipaddressPattern
     }
 
     public static void u_00$1$1(SplitPane csplitpane) {csplitpane.getDividers().get(0).positionProperty().addListener((observableValue, number, t1) -> csplitpane.getDividers().get(0).setPosition(FrontendPaths.DIVID_POS));}
