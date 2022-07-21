@@ -156,4 +156,6 @@ public class Launcher {
         setSettings();
         MainClass.main(args);
     }
+
+    public static HardwareUtils getHu() {return hu;}
 }
