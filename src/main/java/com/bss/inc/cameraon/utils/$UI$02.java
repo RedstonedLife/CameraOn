@@ -112,16 +112,6 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                 }
             };
         }
-        if (scannerConfig.displayResultType == DisplayResultType.PORTS) {
-            return new ScanningResultCallback() {
-                public void prepareForResults(ScanningResult result) {
-                }
-                public void consumeResults(ScanningResult result) {
-                    if (result.getType() == ResultType.WITH_PORTS)
-                        resultTable.addOrUpdateResultRow(result);
-                }
-            };
-        }
         throw new UnsupportedOperationException(guiConfig.displayMethod.toString());
     }
 }
