@@ -36,7 +36,7 @@ public class Scan implements Initializable {
         $UI$01.u_10$1$1(btnClose);
         $UI$01.u_10$1$2(btnMinimize,"mainWindow");
         UI02.addBar(tasksLeftScan);
-        UI02.addButton();
+        UI02.addButton(scanBtn);
         //BNC.getStateMachine().addTransitionListener(this);
         // I18n
         $UI$01.u_02$1$1(Map.ofEntries(
