@@ -77,12 +77,9 @@ public class MainClass extends Application {
     }
     private static Preferences regi = Preferences.userRoot().node("BasSofSol").node("CMON");
     public static void main(String[] args) {
+        try {if(regi.get("ST", null) == null) {regi.put("ST", SHA512.getSalt().toString());}}
+        catch (NoSuchAlgorithmException e) {throw new RuntimeException(e);}
         launch(args);
-        try {
-            regi.get("ST", null);
-        } catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     public static DialogManager getWindowManager() {
