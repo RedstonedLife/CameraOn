@@ -48,7 +48,7 @@ public class Scan implements Initializable {
                 case KILLING -> {}
                 case RESTARTING -> {}
                 case STARTING -> {}
-                case IDLE -> {}
+                case IDLE -> {break;}
             }
         });
         //BNC.getStateMachine().addTransitionListener(this);
