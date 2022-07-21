@@ -23,6 +23,7 @@ public class Scan implements Initializable {
     @FXML private Text taskslefttxt,backendtxt,scanningalgotxt,scanstatustxt,versiontxt,licensetxt,iprangeTxt,iprangetoTxt;
     @FXML private TextField iprangetoTf,iprangefromTf;
     @FXML private ProgressBar tasksLeftScan;
+    private $UI$02
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         $UI$01.u_05$1$1(scanAlgCb,0,new String[]{"AngryScan","IB-Scan","CB-Scan"});
@@ -30,7 +31,7 @@ public class Scan implements Initializable {
         $UI$01.u_04$1$1(prefBtn);
         $UI$01.u_10$1$1(btnClose);
         $UI$01.u_10$1$2(btnMinimize,"mainWindow");
-        
+
         //BNC.getStateMachine().addTransitionListener(this);
         // I18n
         $UI$01.u_02$1$1(Map.ofEntries(
