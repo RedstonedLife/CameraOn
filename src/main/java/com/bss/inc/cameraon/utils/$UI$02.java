@@ -126,8 +126,6 @@ class ResultTable {
 
     public ResultTable(ScanningResultList scanningResults, StateMachine stateMachine) {
         this.scanningResults = scanningResults;
-
-        stateMachine.addTransitionListener(this);
     }
 
     /**
