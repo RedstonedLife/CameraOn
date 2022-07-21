@@ -477,7 +477,7 @@ public class $UI$01 {
         for(TextField textField : textFields) {
             textField.textProperty().addListener((observable, oldValue, newValue) -> {
                 if(oldValue == null || oldValue == "") {return;}
-                if()
+                if(!u_12$1$1())
             });
         }
     }
