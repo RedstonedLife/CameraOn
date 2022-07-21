@@ -6,9 +6,11 @@ import com.bss.inc.cameraon.logging.LogManager;
 import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.settings.Settings;
 import com.bss.inc.cameraon.utils.HardwareUtils;
+import com.bss.inc.cameraon.utils.SHA512;
 import org.json.JSONObject;
 
 import java.io.FileNotFoundException;
+import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
 import java.util.Set;
 
@@ -151,7 +153,11 @@ public class Launcher {
         } catch (UnknownOS e) {
             throw new RuntimeException(e);
         }
-        
+        try {
+            System.out.println(SHA512.getSalt());
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        }
         //setSettings();
         //MainClass.main(args);
     }
