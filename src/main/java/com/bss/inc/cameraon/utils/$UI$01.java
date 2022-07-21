@@ -459,15 +459,13 @@ public class $UI$01 {
     }
 
     public static void u_11$1$5() {
-        if(regi.get("ST", null) == null || regi.get("isAT", null) == null) {
+        if(MainClass.getRegi().get("ST", null) == null || MainClass.getRegi().get("isAT", null) == null) {
             MainClass.getWindowManager().changeDialogScene("welcomeWindow", MainClass.class.getResource(FrontendPaths.WELCOME_NA_FXML));
-        } else if(regi.get("ST", null) != null && regi.get("isAT", null) != null) {
-            System.out.println(regi.get("isAT", null));
-            System.out.println(SHA512.getSecureSHA("true&&"+Launcher.getHu().getFileStores().get(0).getUUID(), regi.get("ST", null).getBytes()));
-            if(!regi.get("isAT", null).equals(SHA512.getSecureSHA("true&&"+Launcher.getHu().getFileStores().get(0).getUUID(), regi.get("ST", null).getBytes()))) {
-                WindowManager.changeDialogScene("welcomeWindow", clazz.getResource(FrontendPaths.WELCOME_NA_FXML));
+        } else if(MainClass.getRegi().get("ST", null) != null && MainClass.getRegi().get("isAT", null) != null) {
+            if(!MainClass.getRegi().get("isAT", null).equals(SHA512.getSecureSHA("true&&"+Launcher.getHu().getFileStores().get(0).getUUID(), MainClass.getRegi().get("ST", null).getBytes()))) {
+                MainClass.getWindowManager().changeDialogScene("welcomeWindow", MainClass.class.getResource(FrontendPaths.WELCOME_NA_FXML));
             } else {
-                WindowManager.changeDialogScene("welcomeWindow", clazz.getResource(FrontendPaths.WELCOME_FXML));
+                MainClass.getWindowManager().changeDialogScene("welcomeWindow", MainClass.class.getResource(FrontendPaths.WELCOME_FXML));
             }
         }
     }
