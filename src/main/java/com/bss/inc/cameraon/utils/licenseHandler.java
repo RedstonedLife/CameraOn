@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils;
 
+import com.weilerhaus.productKeys.enums.ProductKeyState;
 import com.weilerhaus.productKeys.impl.BasicProductKeyGenerator;
 import com.weilerhaus.productKeys.impl.beans.BasicProductKeyEncodingData;
 
@@ -17,5 +18,7 @@ public class licenseHandler {
             null
     );
 
-    public static 
+    public static ProductKeyState verifyProductKey(final String s) {
+        
+    }
 }
