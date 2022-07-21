@@ -151,7 +151,8 @@ public class Launcher {
         } catch (UnknownOS e) {
             throw new RuntimeException(e);
         }
-        setSettings();
-        MainClass.main(args);
+        
+        //setSettings();
+        //MainClass.main(args);
     }
 }
