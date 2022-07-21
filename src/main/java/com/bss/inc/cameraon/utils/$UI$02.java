@@ -124,7 +124,7 @@ class ResultTable implements StateTransitionListener {
     private List<ScanningResult> results = new ArrayList<ScanningResult>();
     private ScanningResultList scanningResults;
 
-    public ResultTable(ScanningResultList scanningResults, StateMachine stateMachine,) {
-
+    public ResultTable(ScanningResultList scanningResults, StateMachine stateMachine) {
+        
     }
 }
