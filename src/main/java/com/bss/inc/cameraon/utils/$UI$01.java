@@ -429,7 +429,7 @@ public class $UI$01 {
         }
         try {TimeUnit.SECONDS.sleep(1);} catch (InterruptedException e) {throw new RuntimeException(e);}
         for(Rectangle rect : rectangles) {
-            rect.setFill(Color.color(253,19,19));
+            rect.setFill(Color.color(33,255,99));
         }
     }
 
