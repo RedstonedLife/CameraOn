@@ -107,7 +107,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                 }
             };
         }
-        if (scannerConfig.displayResultType == DisplayResultType.ALIVE) {
+        if (scannerConfig.displayResultType == DisplayResultType.ALIVE || ) {
             return new ScanningResultCallback() {
                 public void prepareForResults(ScanningResult result) {
                 }
