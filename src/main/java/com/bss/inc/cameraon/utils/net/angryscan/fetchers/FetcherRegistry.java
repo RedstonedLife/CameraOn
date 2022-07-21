@@ -13,8 +13,8 @@ public class FetcherRegistry {
     private List<FetcherRegistryUpdateListener> updateListeners = new ArrayList<>();
 
     public FetcherRegistry() {
-        
         loadSelectedFetchers();
+        createFetchersMap(selectedFetchers.values().stream().toList());
     }
 
     private Map<String, Fetcher> createFetchersMap(List<Fetcher> fetchers) {
