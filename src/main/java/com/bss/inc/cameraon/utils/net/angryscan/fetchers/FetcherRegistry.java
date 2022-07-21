@@ -5,6 +5,8 @@ import org.apache.tools.ant.Main;
 
 import java.util.*;
 
+import static java.util.Arrays.asList;
+
 public class FetcherRegistry {
 
     private Fetcher ipFetcher;
@@ -22,10 +24,10 @@ public class FetcherRegistry {
 
     public FetcherRegistry() {
         ipFetcher = new IPFetcher();
-        pingFetcher = new PingFetcher(null, null);
+        pingFetcher = new PingFetcher(, null);
         hostnameFetcher = new HostnameFetcher();
         portsFetcher = new PortsFetcher(null);
-        createFetchersMap(List.of(new IPFetcher(), new PortsFetcher(MainClass.getConfig().forScanner()), new HostnameFetcher()));
+        createFetchersMap(asList(ipFetcher, pingFetcher, hostnameFetcher, portsFetcher));
         loadSelectedFetchers();
     }
 
