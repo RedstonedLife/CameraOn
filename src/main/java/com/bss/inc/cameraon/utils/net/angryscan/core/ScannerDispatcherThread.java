@@ -84,6 +84,7 @@ public class ScannerDispatcherThread extends Thread implements ThreadFactory, St
                             continue;
 
                         ScanningResult result = scanningResultList.createResult(subject.getAddress());
+                        System.out.println(result.getAddress() + " | ");
                         resultsCallback.prepareForResults(result);
 
                         // scan each IP in parallel, in a separate thread
