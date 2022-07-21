@@ -34,8 +34,8 @@ public class ScanningResultList implements Iterable<ScanningResult> {
 
     private ScanningResultComparator resultsComparator = new ScanningResultComparator();
 
-    public ScanningResultList(FetcherRegistry fetcherRegistry) {
-        this.fetcherRegistry = fetcherRegistry;
+    public ScanningResultList() {
+        this.fetcherRegistry = new FetcherRegistry();
     }
 
     public ScanningResultList(FetcherRegistry fetcherRegistry, StateMachine stateMachine) {
