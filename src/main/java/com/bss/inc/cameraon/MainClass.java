@@ -39,6 +39,7 @@ public class MainClass extends Application {
     private Injector injector;
     private static StateMachine stateMachine = new StateMachine();
     private static ScanningResultList scanningResults;
+    private static Scanner scanner;
     private static ScannerDispatcherThreadFactory scannerDispatcherThreadFactory;
     private static Config config = new Config();
 
