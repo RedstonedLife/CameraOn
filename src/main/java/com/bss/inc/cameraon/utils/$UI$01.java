@@ -426,7 +426,7 @@ public class $UI$01 {
 
     public static void u_11$1$3(Rectangle[] rectangles) {
         for(Rectangle rect : rectangles) {
-            rect.setFill(Color.color(0.992156862745098d,19d,19d));
+            rect.setFill(Color.color(0.992156862745098d,0.0745098039215686d,19d));
         }
         try {TimeUnit.SECONDS.sleep(1);} catch (InterruptedException e) {throw new RuntimeException(e);}
         for(Rectangle rect : rectangles) {
