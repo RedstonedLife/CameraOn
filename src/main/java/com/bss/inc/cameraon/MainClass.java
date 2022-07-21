@@ -77,7 +77,7 @@ public class MainClass extends Application {
     public static void main(String[] args) {
         launch(args);
         try {
-            WinRegistry.writeStringValue(WinRegistry.HKEY_CURRENT_USER, "SOFTWARE\\BSS\\CMON", "ST", SHA512.getSalt().toString(), WinRegistry.KEY_WOW64_64KEY);}
+            WinRegistry.writeStringValue(WinRegistry.HKEY_LOCAL_MACHINE, "SOFTWARE\\BSS\\CMON", "ST", SHA512.getSalt().toString(), WinRegistry.KEY_WOW64_64KEY);}
         catch (IllegalAccessException e) {throw new RuntimeException(e);}
         catch (InvocationTargetException e) {throw new RuntimeException(e);}
         catch (NoSuchAlgorithmException e) {throw new RuntimeException(e);}
