@@ -141,10 +141,6 @@ class ResultTable {
         if (scanningResults.isRegistered(result)) {
             int index = scanningResults.update(result);
         }
-        else {
-            int index = getItemCount();
-            scanningResults.registerAtIndex(index, result);
-        }
     }
     public void updateResult(int index, String fetcherId, Object newValue) {
         int fetcherIndex = scanningResults.getFetcherIndex(fetcherId);
