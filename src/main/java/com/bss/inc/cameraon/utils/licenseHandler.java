@@ -4,7 +4,7 @@ import com.weilerhaus.productKeys.impl.BasicProductKeyGenerator;
 import com.weilerhaus.productKeys.impl.beans.BasicProductKeyEncodingData;
 
 public class licenseHandler {
-    private static BasicProductKeyGenerator basicProductKeyGenerator = new BasicProductKeyGenerator(
+    private static BasicProductKeyGenerator kgen = new BasicProductKeyGenerator(
             null,
             new BasicProductKeyEncodingData((byte) 15, (byte) 211, (byte) 68),
             null,
