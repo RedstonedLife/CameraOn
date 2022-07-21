@@ -140,7 +140,6 @@ class ResultTable {
     public void addOrUpdateResultRow(final ScanningResult result) {
         if (scanningResults.isRegistered(result)) {
             int index = scanningResults.update(result);
-            clear(index);
         }
         else {
             int index = getItemCount();
