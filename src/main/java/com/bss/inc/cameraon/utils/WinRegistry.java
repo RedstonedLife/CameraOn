@@ -269,9 +269,9 @@ public class WinRegistry {
             return handles[1];  // can be REG_NOTFOUND, REG_ACCESSDENIED
         }
         int rc =((Integer) regDeleteValue.invoke(root, new Object[] {
-                new Integer(handles[0]), toCstr(value)
+                Integer.valueOf(handles[0]), toCstr(value)
         })).intValue();
-        regCloseKey.invoke(root, new Object[] { new Integer(handles[0]) });
+        regCloseKey.invoke(root, new Object[] { Integer.valueOf(handles[0]) });
         return rc;
     }
 
@@ -280,7 +280,7 @@ public class WinRegistry {
             throws IllegalArgumentException, IllegalAccessException, InvocationTargetException
     {
         int rc =((Integer) regDeleteKey.invoke(root, new Object[] {
-                new Integer(hkey), toCstr(key)
+                Integer.valueOf(hkey), toCstr(key)
         })).intValue();
         return rc;  // can REG_NOTFOUND, REG_ACCESSDENIED, REG_SUCCESS
     }
@@ -290,7 +290,7 @@ public class WinRegistry {
             throws IllegalArgumentException, IllegalAccessException, InvocationTargetException
     {
         int[] handles = (int[]) regOpenKey.invoke(root, new Object[] {
-                new Integer(hkey), toCstr(key), new Integer(KEY_READ | wow64)
+                Integer.valueOf(hkey), toCstr(key), Integer.valueOf(KEY_READ | wow64)
         });
         if (handles[1] != REG_SUCCESS) {
             return null;
