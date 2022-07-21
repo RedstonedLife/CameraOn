@@ -296,7 +296,7 @@ public class WinRegistry {
             return null;
         }
         byte[] valb = (byte[]) regQueryValueEx.invoke(root, new Object[] {
-                new Integer(handles[0]), toCstr(value)
+                Integer.valueOf(handles[0]), toCstr(value)
         });
         regCloseKey.invoke(root, new Object[] { new Integer(handles[0]) });
         return (valb != null ? new String(valb).trim() : null);
