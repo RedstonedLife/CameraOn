@@ -5,6 +5,7 @@ import com.bss.inc.cameraon.display.Dialog;
 import com.bss.inc.cameraon.display.DialogManager;
 import com.bss.inc.cameraon.i18n.I18n;
 import com.bss.inc.cameraon.logging.Logger;
+import com.bss.inc.cameraon.utils.$UI$02;
 import com.bss.inc.cameraon.utils.SHA512;
 import com.bss.inc.cameraon.utils.WinRegistry;
 import com.bss.inc.cameraon.utils.net.angryscan.config.Config;
@@ -40,7 +41,7 @@ public class MainClass extends Application {
     public static StateMachine getStateMachine() {return stateMachine;}
     public static Config getConfig() {return config;}
     public static DisplayResultType DisplayType;
-    private static 
+    private static $UI$02 ui02;
 
     static {DisplayType = DisplayResultType.valueOf(((JSONObject)Launcher.SettingsContainer.getValue("scanResultDisplay")).getString("displayResult"));}
 
