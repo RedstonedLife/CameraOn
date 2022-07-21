@@ -125,6 +125,6 @@ class ResultTable implements StateTransitionListener {
     private ScanningResultList scanningResults;
 
     public ResultTable() {
-        
+
     }
 }
