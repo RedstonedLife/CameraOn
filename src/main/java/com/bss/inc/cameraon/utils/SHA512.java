@@ -19,6 +19,6 @@ public class SHA512 {
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
-        return null;
+        return temp;
     }
 }
