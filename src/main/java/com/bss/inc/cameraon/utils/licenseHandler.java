@@ -8,7 +8,7 @@ public class licenseHandler {
     private static BasicProductKeyGenerator kgen;
 
     static {
-        new BasicProductKeyGenerator(
+        kgen = new BasicProductKeyGenerator(
                 null,
                 new BasicProductKeyEncodingData((byte) 15, (byte) 211, (byte) 68),
                 null,
