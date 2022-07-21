@@ -7,6 +7,7 @@ import com.bss.inc.cameraon.utils.$UI$02;
 import com.bss.inc.cameraon.utils.net.angryscan.Scanner;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningResultList;
 import com.bss.inc.cameraon.utils.net.angryscan.core.ScannerDispatcherThreadFactory;
+import com.bss.inc.cameraon.utils.net.angryscan.state.state.ScanningState;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -36,7 +37,7 @@ public class Scan implements Initializable {
         $UI$01.u_10$1$1(btnClose);
         $UI$01.u_10$1$2(btnMinimize,"mainWindow");
         scanBtn.setOnAction(e -> {
-            UI02.transitionTo();
+            UI02.transitionTo(ScanningState.STARTING);
         });
         UI02.addBar(tasksLeftScan);
         UI02.addButton(scanBtn);
