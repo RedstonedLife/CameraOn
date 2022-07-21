@@ -438,7 +438,7 @@ public class $UI$01 {
         if(licenseHandler.verifyProductKey($UI$01.u_11$1$2(textFields)) != ProductKeyState.KEY_GOOD) {
             u_11$1$3(rectangles);
         } else if(licenseHandler.verifyProductKey($UI$01.u_11$1$2(textFields)) == ProductKeyState.KEY_GOOD) {
-            
+            System.out.println("KEY IS GOOD, DO SOME SHIT");
         }
     }
 
