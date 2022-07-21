@@ -473,7 +473,7 @@ public class $UI$01 {
     }
 
     public static boolean u_12$1$1(String ip) {return ipaddressPattern.matcher(ip).matches();}
-    public static boolean u_12$1$3(String in) {return Pattern.compile("[A-za-z]*.").matcher(in).matches()}
+    public static boolean u_12$1$3(String in) {return Pattern.compile("[A-za-z]*.").matcher(in).matches();}
     public static void u_12$1$2(TextField[] textFields) {
         for(int i=0; i< textFields.length; i++) {
             int finalI = i;
