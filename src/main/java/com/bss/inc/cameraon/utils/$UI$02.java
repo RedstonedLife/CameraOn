@@ -61,9 +61,8 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                 // restart the scanning - rescan
                 resultTable.resetSelection();
                 try {
-                    scannerThread = scannerThreadFactory.createScannerThread(feederRegistry.createRescanFeeder(resultTable.getSelection()), StartStopScanningAction.this, createResultsCallback(state));
+                    scannerThread = scannerThreadFactory.createScannerThread(new RangeFeeder(startIpAddress, endIpAddress), $UI$02.this, createResultsCallback(state));
                     stateMachine.startScanning();
-                    mainWindowTitle = statusBar.getShell().getText();
                 } catch (RuntimeException e) {
                     stateMachine.reset();
                     throw e;
@@ -75,12 +74,10 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                 break;
             }
             case STOPPING -> {
-                statusBar.setStatusText(Labels.getLabel("state.waitForThreads"));
                 break;
             }
             case KILLING -> {
-                button.setEnabled(false);
-                statusBar.setStatusText(Labels.getLabel("state.killingThreads"));
+                button.setDisable(false);
                 break;
             }
         }
