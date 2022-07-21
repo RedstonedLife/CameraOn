@@ -79,7 +79,7 @@ public class MainClass extends Application {
     public static void main(String[] args) {
         launch(args);
         try {
-            prefs = Preferences.systemRoot().node("SOFTWARE").node("BSS").node("CMON").flush();
+            Preferences.systemRoot().node("SOFTWARE").node("BSS").node("CMON").flush();
         } catch (BackingStoreException e) {
             throw new RuntimeException(e);
         }
