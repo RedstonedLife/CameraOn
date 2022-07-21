@@ -88,7 +88,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
 
     private ScanningResultCallback createResultsCallback(ScanningState state) {
         // rescanning must follow the same strategy of displaying all hosts (even the dead ones), because the results are already in the list
-        if (guiConfig.displayMethod == DisplayMethod.ALL || state == RESTARTING) {
+        if (.displayMethod == DisplayMethod.ALL || state == RESTARTING) {
             return new ScanningResultCallback() {
                 public void prepareForResults(ScanningResult result) {
                     resultTable.addOrUpdateResultRow(result);
