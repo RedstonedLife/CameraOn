@@ -139,6 +139,7 @@ public class $UI$01 {
      */
     public static boolean u_08$1$3(String i) {return digitPattern.matcher(i).matches();}
     public static boolean u_08$1$7(String i) {return licensePattern.matcher(i).matches();}
+    public static boolean u_0
 
     /**
      * Validates a port pattern i.e 3-50,5,600-8000
