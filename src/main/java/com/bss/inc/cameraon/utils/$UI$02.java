@@ -126,7 +126,34 @@ class ResultTable implements StateTransitionListener {
 
     public ResultTable(ScanningResultList scanningResults, StateMachine stateMachine) {
         this.scanningResults = scanningResults;
-        
+
         stateMachine.addTransitionListener(this);
+    }
+
+    /**
+     * Adds the specified results holder to the table and registers it
+     * in the ScanningResultList instance or just redraws the corresponding row
+     * if the result is already present.
+     * <p/>
+     * Note: this method may be called from any thread.
+     *
+     * @param result
+     */
+    public void addOrUpdateResultRow(final ScanningResult result) {
+            if (isDisposed())
+                return;
+
+            if (scanningResults.isRegistered(result)) {
+                // just redraw the item
+                int index = scanningResults.update(result);
+                clear(index);
+            }
+            else {
+                // first register, then add - otherwise first redraw may fail (the table is virtual)
+                int index = getItemCount();
+                scanningResults.registerAtIndex(index, result);
+                // setItemCount(index+1) - this seems to rebuild TableItems inside, so is slower
+                new TableItem(ResultTable.this, SWT.NONE);
+            }
     }
 }
