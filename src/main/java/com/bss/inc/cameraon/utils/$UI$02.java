@@ -140,7 +140,8 @@ class ResultTable {
     public void addOrUpdateResultRow(final ScanningResult result) {
         if (scanningResults.isRegistered(result)) {
             int index = scanningResults.update(result);
-            scanningResults.remove(index);
+            scanningResults.remove(new int[]{index});
+            
         }
     }
     public void updateResult(int index, String fetcherId, Object newValue) {
