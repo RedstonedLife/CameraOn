@@ -15,6 +15,9 @@ import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateTransitionListe
 import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static com.bss.inc.cameraon.utils.net.angryscan.state.state.ScanningState.RESTARTING;
 
 public class $UI$02 implements StateTransitionListener, ScanningProgressCallback {
@@ -114,4 +117,10 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         }
         throw new UnsupportedOperationException(scannerConfig.displayResultType.toString());
     }
+}
+
+class ResultTable {
+    private List<ScanningResult> results = new ArrayList<ScanningResult>();
+
+    public 
 }
