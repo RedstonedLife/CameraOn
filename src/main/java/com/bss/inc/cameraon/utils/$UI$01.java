@@ -12,6 +12,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
+import org.apache.tools.ant.Main;
 import org.json.JSONObject;
 import oshi.SystemInfo;
 
@@ -442,7 +443,7 @@ public class $UI$01 {
         } else if(licenseHandler.verifyProductKey($UI$01.u_11$1$2(textFields)) == ProductKeyState.KEY_GOOD) {
             try{
                 if(MainClass.getRegi().get("isAT", null) == null) {
-                    
+                    MainClass.getRegi().put("isAT", );
                 }
             } catch (Exception e) {
 
