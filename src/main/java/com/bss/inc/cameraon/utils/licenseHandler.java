@@ -16,4 +16,6 @@ public class licenseHandler {
             new BasicProductKeyEncodingData((byte) 302, (byte) 109, (byte) 308),
             null
     );
+
+    public static 
 }
