@@ -475,9 +475,10 @@ public class $UI$01 {
     public static boolean u_12$1$1(String ip) {return ipaddressPattern.matcher(ip).matches();}
     public static void u_12$1$2(TextField[] textFields) {
         for(int i=0; i< textFields.length; i++) {
+            int finalI = i;
             textFields[i].textProperty().addListener((observable, oldValue, newValue) -> {
                 if(oldValue == null || oldValue == "") {return;}
-                if(u_12$1$1(newValue)) {textFields[i].setText(newValue);return;}
+                if(u_12$1$1(newValue)) {textFields[finalI].setText(newValue);textFields[finalI+return;}
             });
         }
     }
