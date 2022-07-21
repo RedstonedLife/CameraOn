@@ -34,7 +34,7 @@
       <Text fx:id="SubTitleTxt" fill="#e8e8e8" layoutX="28.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="~BACKEND CHANGE~" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1fdeff" height="32.0" layoutX="16.0" layoutY="55.0" stroke="TRANSPARENT" strokeType="INSIDE" width="2.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#404040" height="1.0" layoutX="29.0" layoutY="140.0" stroke="TRANSPARENT" strokeType="INSIDE" width="400.0" />
-      <TextField fx:id="ACtf1" layoutX="27.0" layoutY="125.0" prefHeight="29.0" prefWidth="89.0" />
+      <TextField fx:id="ACtf1" layoutX="27.0" layoutY="125.0" prefHeight="29.0" prefWidth="90.0" />
       <Button fx:id="ActivateBtn" layoutX="482.0" layoutY="125.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="82.0" text="Activate" textFill="#e8e8e8" />
       <Rectangle fx:id="btnLED1" arcHeight="5.0" arcWidth="5.0" fill="#21ff63" height="29.0" layoutX="482.0" layoutY="125.0" stroke="TRANSPARENT" strokeType="INSIDE" width="2.0" />
       <Rectangle fx:id="btnLED2" arcHeight="5.0" arcWidth="5.0" fill="#21ff63" height="29.0" layoutX="563.0" layoutY="127.0" stroke="TRANSPARENT" strokeType="INSIDE" width="2.0" />
