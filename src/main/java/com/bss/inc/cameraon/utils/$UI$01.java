@@ -416,6 +416,7 @@ public class $UI$01 {
     public static String u_11$1$2(TextField[] textFields) {
         StringBuilder temp = new StringBuilder();
         for(TextField textField : textFields) {temp.append(textField.getText());}
+        return temp.toString();
     }
 
 }
