@@ -6,6 +6,7 @@ import com.bss.inc.cameraon.constants.FrontendPaths;
 import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
 import com.bss.inc.cameraon.utils.net.angryscan.enums.DisplayResultType;
+import com.weilerhaus.productKeys.enums.ProductKeyState;
 import javafx.scene.control.*;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
@@ -430,6 +431,12 @@ public class $UI$01 {
         try {TimeUnit.SECONDS.sleep(1);} catch (InterruptedException e) {throw new RuntimeException(e);}
         for(Rectangle rect : rectangles) {
             rect.setFill(Color.color(33,255,99));
+        }
+    }
+
+    public static void u_11$1$4(TextField[] textFields, Rectangle[] rectangles) {
+        if(licenseHandler.verifyProductKey($UI$01.u_11$1$2(new TextField[]{ACtf1,ACtf2,ACtf3,ACtf4,ACtf5})) != ProductKeyState.KEY_GOOD) {
+
         }
     }
 
