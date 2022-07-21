@@ -1,7 +1,5 @@
 package com.bss.inc.cameraon.utils.net.angryscan.fetchers;
 
-import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
-
 import java.util.*;
 
 public class FetcherRegistry {
@@ -15,12 +13,7 @@ public class FetcherRegistry {
     private List<FetcherRegistryUpdateListener> updateListeners = new ArrayList<>();
 
     public FetcherRegistry() {
-        createFetchersMap(List.of(new IPFetcher(), new MACFetcher() {
-            @Override
-            protected String resolveMAC(ScanningSubject subject) {
-                return null;
-            }
-        }));
+        createFetchersMap(List.of(new IPFetcher(), MACFetcher));
         loadSelectedFetchers();
     }
 
