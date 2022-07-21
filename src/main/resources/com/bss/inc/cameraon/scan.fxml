@@ -92,7 +92,7 @@
                                 </Text>
                                 <HBox layoutX="439.0" layoutY="174.0" prefHeight="39.0" prefWidth="200.0">
                                     <children>
-                                        <Button fx:id="scanBtn" mnemonicParsing="false" onAction="#doScan" prefHeight="39.0" prefWidth="200.0" text="Scan" textFill="#e0e2e4">
+                                        <Button fx:id="scanBtn" mnemonicParsing="false" prefHeight="39.0" prefWidth="200.0" text="Scan" textFill="#e0e2e4">
                                             <font>
                                                 <Font name="Consolas" size="15.0" />
                                             </font>
