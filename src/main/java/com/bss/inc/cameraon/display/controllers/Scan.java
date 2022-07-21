@@ -42,7 +42,14 @@ public class Scan implements Initializable {
         scanBtn.setOnAction(e -> {
             UI02.setStartIpAddress(iprangefromTf.getText());
             UI02.setEndIpAddress(iprangetoTf.getText());
-            MainClass.getStateMachine().transitionToNext();
+            switch (MainClass.getStateMachine().getState()) {
+                case SCANNING -> {}
+                case STOPPING -> {}
+                case KILLING -> {}
+                case RESTARTING -> {}
+                case STARTING -> {}
+                case IDLE -> {}
+            }
         });
         //BNC.getStateMachine().addTransitionListener(this);
         // I18n
