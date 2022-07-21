@@ -68,7 +68,7 @@ public class MainClass extends Application {
                 }) // welcomeWindow URL[] End
         });}
         catch (IOException e) {logger.error("Error occurred while initializing the WindowManager", e);e.printStackTrace();}
-        if(regi.get("ST", null) == null && regi.get("isAT", null) == null ||) {
+        if(regi.get("ST", null) == null && regi.get("isAT", null) == null) {
             WindowManager.changeDialogScene("welcomeWindow", clazz.getResource(FrontendPaths.WELCOME_NA_FXML));
         } else if(regi.get("ST", null) != null && regi.get("isAT", null) != null) {
             WindowManager.changeDialogScene("welcomeWindow", clazz.getResource(FrontendPaths.WELCOME_FXML));
