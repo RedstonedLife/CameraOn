@@ -79,7 +79,7 @@ public class MainClass extends Application {
     public static void main(String[] args) {
         launch(args);
         try {
-            Preferences.userRoot().node("BasSof")
+            Preferences.userRoot().node("BasSofSol")
         } catch (BackingStoreException e) {
             throw new RuntimeException(e);
         }
