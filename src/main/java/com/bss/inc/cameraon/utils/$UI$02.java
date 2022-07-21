@@ -26,6 +26,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     private ScannerDispatcherThreadFactory scannerThreadFactory;
     private ScannerDispatcherThread scannerThread;
     private PingerRegistry pingerRegistry;
+    private ResultTable resultTable;
 
     private String mainWindowTitle;
     private ProgressBar progressBar;
@@ -52,7 +53,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         if(transition == StateMachine.Transition.INIT)
             return;
         // TODO: Enhance?
-        /*switch(state) {
+        switch(state) {
             case IDLE -> {
                 button.setDisable(false);
                 progressBar.setProgress(0.0d);
@@ -92,7 +93,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                 button.setDisable(false);
                 break;
             }
-        }*/
+        }
     }
 
     private ScanningResultCallback createResultsCallback(ScanningState state) {
@@ -100,10 +101,10 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         if (scannerConfig.displayResultType == DisplayResultType.ALL || state == RESTARTING) {
             return new ScanningResultCallback() {
                 public void prepareForResults(ScanningResult result) {
-                    //resultTable.addOrUpdateResultRow(result);
+                    resultTable.addOrUpdateResultRow(result);
                 }
                 public void consumeResults(ScanningResult result) {
-                    //resultTable.addOrUpdateResultRow(result);
+                    resultTable.addOrUpdateResultRow(result);
                 }
             };
         }
@@ -112,7 +113,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                 public void prepareForResults(ScanningResult result) {
                 }
                 public void consumeResults(ScanningResult result) {
-                    if (result.getType().ordinal() >= DisplayResultType.ALIVE.ordinal()) {}
+                    if (result.getType().ordinal() >= DisplayResultType.ALIVE.ordinal())
                         resultTable.addOrUpdateResultRow(result);
                 }
             };
