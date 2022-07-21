@@ -37,7 +37,7 @@ public class MainClass extends Application {
 
     private Injector injector;
     private static StateMachine stateMachine = new StateMachine();
-    private static ScanningResultList scanningResults = new ScanningResultList()
+    private static ScanningResultList scanningResults;
     private static Config config = new Config();
 
     public static StateMachine getStateMachine() {return stateMachine;}
@@ -48,6 +48,7 @@ public class MainClass extends Application {
 
     static {
         DisplayType = DisplayResultType.valueOf(((JSONObject)Launcher.SettingsContainer.getValue("scanResultDisplay")).getString("displayResult"));
+        scanningResults = new ScanningResultList(stateMachine);
         ui02 = new $UI$02();
 
     }
