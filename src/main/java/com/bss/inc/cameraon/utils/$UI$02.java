@@ -157,7 +157,6 @@ class ResultTable {
     public void removeAll() {
         // remove all items from the real storage first
         scanningResults.clear();
-        removeAll();
     }
 
     public ScanningResultList getScanningResults() {
