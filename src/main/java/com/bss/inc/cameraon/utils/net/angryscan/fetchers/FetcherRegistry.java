@@ -27,7 +27,7 @@ public class FetcherRegistry {
         pingFetcher = new PingFetcher(MainClass.getPingerRegistry(), MainClass.getConfig().forScanner());
         hostnameFetcher = new HostnameFetcher();
         portsFetcher = new PortsFetcher(MainClass.getConfig().forScanner());
-        createFetchersMap(asList(ipFetcher, pingFetcher, hostnameFetcher, portsFetcher));
+        registeredFetchers = createFetchersMap(asList(ipFetcher, pingFetcher, hostnameFetcher, portsFetcher));
         loadSelectedFetchers();
     }
 
