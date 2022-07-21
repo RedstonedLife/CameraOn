@@ -54,8 +54,8 @@ public class MainClass extends Application {
         DisplayType = DisplayResultType.valueOf(((JSONObject)Launcher.SettingsContainer.getValue("scanResultDisplay")).getString("displayResult"));
         scanningResults = new ScanningResultList(stateMachine);
         scanner = new Scanner();
-        scannerDispatcherThreadFactory = new ScannerDispatcherThreadFactory(scanningResults,scanner,stateMachine,config.forScanner())
-        ui02 = new $UI$02();
+        scannerDispatcherThreadFactory = new ScannerDispatcherThreadFactory(scanningResults,scanner,stateMachine,config.forScanner());
+        ui02 = new $UI$02(scannerDispatcherThreadFactory,);
 
     }
 
