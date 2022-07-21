@@ -171,4 +171,8 @@ class ResultTable implements StateTransitionListener {
         scanningResults.clear();
         removeAll();
     }
+
+    public ScanningResultList getScanningResults() {
+        return scanningResults;
+    }
 }
