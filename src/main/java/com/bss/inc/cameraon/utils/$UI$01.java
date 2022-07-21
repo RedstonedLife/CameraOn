@@ -444,7 +444,9 @@ public class $UI$01 {
             try{
                 if(MainClass.getRegi().get("isAT", null) == null) {
                     MainClass.getRegi().put("isAT", SHA512.getSecureSHA("true&&"+Launcher.getHu().getFileStores().get(0).getUUID(),MainClass.getRegi().get("ST", null).getBytes()));
+                    System.out.println(MainClass.getRegi().get("isAT", null));
                 } else {
+                    System.out.println(MainClass.getRegi().get("isAT", null));
                     for(Rectangle rect : rectangles) {
                         rect.setFill(Color.color(0.1294117647058824d,1.0d,0.3882352941176471d));
                     }
@@ -452,8 +454,6 @@ public class $UI$01 {
                     return;
                 }
             } catch (Exception e) {}
-            System.out.println(WinRegistry.readString(WinRegistry.HKEY_CURRENT_USER, "SOFTWARE\\BSS\\CMON", "isAT",  WinRegistry.KEY_WOW64_64KEY));
-
             for(Rectangle rect : rectangles) {
                 rect.setFill(Color.color(0.1294117647058824d,1.0d,0.3882352941176471d));
             }
