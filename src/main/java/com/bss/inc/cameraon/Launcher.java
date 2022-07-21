@@ -156,7 +156,7 @@ public class Launcher {
         try {
             byte[] salt = SHA512.getSalt();
             System.out.println(salt.toString());
-            
+            byte[] test = "[B@5e82df6a".getBytes();
         } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException(e);
         }
