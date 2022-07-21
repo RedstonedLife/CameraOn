@@ -40,6 +40,7 @@ public class Scan implements Initializable {
         UI02.addBar(tasksLeftScan);
         UI02.addButton(scanBtn);
         scanBtn.setOnAction(e -> {
+            UI02
             UI02.transitionTo(ScanningState.STARTING, StateMachine.Transition.START);
         });
         //BNC.getStateMachine().addTransitionListener(this);
