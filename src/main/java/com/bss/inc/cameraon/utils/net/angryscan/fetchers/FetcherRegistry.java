@@ -12,10 +12,8 @@ public class FetcherRegistry {
     /** A collection of update listeners - observers of FetcherRegistry */
     private List<FetcherRegistryUpdateListener> updateListeners = new ArrayList<>();
 
-    public FetcherRegistry(List<Fetcher> fetchers) {
-        registeredFetchers = createFetchersMap(fetchers);
-
-        // now load the preferences to init selected fetchers
+    public FetcherRegistry() {
+        
         loadSelectedFetchers();
     }
 
