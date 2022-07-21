@@ -17,8 +17,8 @@ public class Scanner {
     private FetcherRegistry fetcherRegistry;
     private Map<Long, Fetcher> activeFetchers = new ConcurrentHashMap<>();
 
-    public Scanner(FetcherRegistry fetcherRegistry) {
-        this.fetcherRegistry = fetcherRegistry;
+    public Scanner() {
+        this.fetcherRegistry = new FetcherRegistry();
     }
 
     /**
