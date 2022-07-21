@@ -13,7 +13,7 @@ public class FetcherRegistry {
     private List<FetcherRegistryUpdateListener> updateListeners = new ArrayList<>();
 
     public FetcherRegistry() {
-        
+        createFetchersMap()
         loadSelectedFetchers();
     }
 
