@@ -7,6 +7,7 @@ import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
 import com.bss.inc.cameraon.utils.net.angryscan.enums.DisplayResultType;
 import javafx.scene.control.*;
+import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import org.json.JSONObject;
@@ -421,7 +422,9 @@ public class $UI$01 {
     }
 
     public static String u_11$1$3(Rectangle[] rectangles) {
-        
+        for(Rectangle rect : rectangles) {
+            rect.setFill(new Paint());
+        }
     }
 
 }
