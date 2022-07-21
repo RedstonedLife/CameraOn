@@ -7,6 +7,7 @@ import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
 import com.bss.inc.cameraon.utils.net.angryscan.enums.DisplayResultType;
 import javafx.scene.control.*;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import org.json.JSONObject;
 import oshi.SystemInfo;
@@ -418,5 +419,7 @@ public class $UI$01 {
         for(TextField textField : textFields) {temp.append(textField.getText());}
         return temp.toString();
     }
+
+    public static String u_11$1$3(Rectangle[])
 
 }
