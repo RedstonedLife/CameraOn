@@ -442,7 +442,7 @@ public class $UI$01 {
         } else if(licenseHandler.verifyProductKey($UI$01.u_11$1$2(textFields)) == ProductKeyState.KEY_GOOD) {
             try{
                 if(MainClass.getRegi().get("isAT", null) == null) {
-
+                    
                 }
             } catch (Exception e) {
 
