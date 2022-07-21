@@ -30,8 +30,6 @@ public class PingerRegistry {
         this.injector = injector;
 
         pingers = new LinkedHashMap<>();
-        if (Platform.WINDOWS)
-            pingers.put("pinger.windows", (Class<Pinger>) Class.forName(getClass().getPackage().getName() + ".WindowsPinger"));
         pingers.put("pinger.udp", UDPPinger.class);
         pingers.put("pinger.tcp", TCPPinger.class);
         pingers.put("pinger.combined", CombinedUnprivilegedPinger.class);
