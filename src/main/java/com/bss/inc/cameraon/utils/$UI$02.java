@@ -149,4 +149,13 @@ class ResultTable implements StateTransitionListener {
             scanningResults.registerAtIndex(index, result);
         }
     }
+    public void updateResult(int index, String fetcherId, Object newValue) {
+        int fetcherIndex = scanningResults.getFetcherIndex(fetcherId);
+        if (fetcherIndex >= 0) {
+            // update the value in the results
+            scanningResults.getResult(index).setValue(fetcherIndex, newValue);
+            // update visual representation
+            clear(index);
+        }
+    }
 }
