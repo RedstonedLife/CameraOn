@@ -28,6 +28,8 @@ import java.util.prefs.Preferences;
 public class MainClass extends Application {
 
     private static Logger logger = Logger.getLogger("BNC");
+    private static Preferences regi = Preferences.userRoot().node("bss").node("cmon");
+
     private static DialogManager WindowManager;
     private static Class<MainClass> clazz = MainClass.class;
 
