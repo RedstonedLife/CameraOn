@@ -42,7 +42,7 @@ public class Scan implements Initializable {
         scanBtn.setOnAction(e -> {
             UI02.setStartIpAddress(iprangefromTf.getText());
             UI02.setEndIpAddress(iprangetoTf.getText());
-            MainClass.getStateMachine().startScanning();
+            MainClass.getStateMachine().transitionToNext();
         });
         //BNC.getStateMachine().addTransitionListener(this);
         // I18n
