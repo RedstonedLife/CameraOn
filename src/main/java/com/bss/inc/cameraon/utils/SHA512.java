@@ -13,7 +13,7 @@ public class SHA512 {
             byte[] bytes = md.digest(string.getBytes(StandardCharsets.UTF_8));
             StringBuilder sb = new StringBuilder();
             for(int i=0; i< bytes.length; i++) {
-                sb.append(Integer.toString())
+                sb.append(Integer.toString((bytes[i])))
             }
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
