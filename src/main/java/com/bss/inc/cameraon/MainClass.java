@@ -5,6 +5,7 @@ import com.bss.inc.cameraon.display.Dialog;
 import com.bss.inc.cameraon.display.DialogManager;
 import com.bss.inc.cameraon.i18n.I18n;
 import com.bss.inc.cameraon.logging.Logger;
+import com.bss.inc.cameraon.utils.SHA512;
 import com.bss.inc.cameraon.utils.WinRegistry;
 import com.bss.inc.cameraon.utils.net.angryscan.config.Config;
 import com.bss.inc.cameraon.utils.net.angryscan.di.Injector;
@@ -19,6 +20,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
+import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
 
 public class MainClass extends Application {
@@ -75,9 +77,10 @@ public class MainClass extends Application {
     public static void main(String[] args) {
         launch(args);
         try {
-            WinRegistry.writeStringValue(WinRegistry.HKEY_LOCAL_MACHINE, "SOFTWARE\\BSS\\CMON", "ST", );}
+            WinRegistry.writeStringValue(WinRegistry.HKEY_LOCAL_MACHINE, "SOFTWARE\\BSS\\CMON", "ST", SHA512.getSalt().toString());}
         catch (IllegalAccessException e) {throw new RuntimeException(e);}
         catch (InvocationTargetException e) {throw new RuntimeException(e);}
+        catch (NoSuchAlgorithmException e) {throw new RuntimeException(e);}
     }
 
     public static DialogManager getWindowManager() {
