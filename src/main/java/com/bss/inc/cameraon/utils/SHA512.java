@@ -3,6 +3,7 @@ package com.bss.inc.cameraon.utils;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 
 public class SHA512 {
     public static String getSecureSHA(final String string, final byte[] salt) {
@@ -22,5 +23,10 @@ public class SHA512 {
         return temp;
     }
 
-    
+    public static byte[] getSalt() throws NoSuchAlgorithmException {
+        SecureRandom random = new SecureRandom();
+        byte[] salt = new byte[16];
+        random.nextBytes(salt);
+        return salt;
+    }
 }
