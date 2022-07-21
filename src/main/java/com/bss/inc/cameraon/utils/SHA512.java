@@ -8,6 +8,7 @@ public class SHA512 {
         String temp = null;
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-512");
+            
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
