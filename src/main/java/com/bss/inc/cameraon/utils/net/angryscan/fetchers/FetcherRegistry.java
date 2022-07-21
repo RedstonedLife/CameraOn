@@ -24,10 +24,9 @@ public class FetcherRegistry {
 
     public FetcherRegistry() {
         ipFetcher = new IPFetcher();
-        pingFetcher = new PingFetcher(MainClass.getPingerRegistry(), MainClass.getConfig().forScanner());
         hostnameFetcher = new HostnameFetcher();
         portsFetcher = new PortsFetcher(MainClass.getConfig().forScanner());
-        registeredFetchers = createFetchersMap(asList(ipFetcher, pingFetcher, hostnameFetcher, portsFetcher));
+        registeredFetchers = createFetchersMap(asList(ipFetcher, hostnameFetcher, portsFetcher));
         loadSelectedFetchers();
     }
 
@@ -42,7 +41,6 @@ public class FetcherRegistry {
     private void loadSelectedFetchers() {
             selectedFetchers = new LinkedHashMap<>();
             selectedFetchers.put(IPFetcher.ID, registeredFetchers.get(IPFetcher.ID));
-            selectedFetchers.put(PingFetcher.ID, registeredFetchers.get(PingFetcher.ID));
             selectedFetchers.put(HostnameFetcher.ID, registeredFetchers.get(HostnameFetcher.ID));
             selectedFetchers.put(PortsFetcher.ID, registeredFetchers.get(PortsFetcher.ID));
     }
