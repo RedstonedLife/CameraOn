@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils;
 
+import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -9,7 +10,7 @@ public class SHA512 {
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-512");
             md.update(salt);
-            byte[] bytes = md.digest(
+            byte[] bytes = md.digest(string.getBytes(StandardCharsets.UTF_8));
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
