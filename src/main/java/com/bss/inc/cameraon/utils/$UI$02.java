@@ -11,7 +11,7 @@ import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateTransitionListe
 import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
 
-public class $UI$02 implements StateTransitionListener {
+public class $UI$02 implements StateTransitionListener, ScanningProgressCallback {
     private ScannerDispatcherThreadFactory scannerThreadFactory;
     private ScannerDispatcherThread scannerThread;
     private PingerRegistry pingerRegistry;
