@@ -10,6 +10,7 @@ import com.bss.inc.cameraon.utils.SHA512;
 import com.bss.inc.cameraon.utils.WinRegistry;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningResultList;
 import com.bss.inc.cameraon.utils.net.angryscan.config.Config;
+import com.bss.inc.cameraon.utils.net.angryscan.core.ScannerDispatcherThreadFactory;
 import com.bss.inc.cameraon.utils.net.angryscan.di.Injector;
 import com.bss.inc.cameraon.utils.net.angryscan.enums.DisplayResultType;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateMachine;
@@ -38,6 +39,7 @@ public class MainClass extends Application {
     private Injector injector;
     private static StateMachine stateMachine = new StateMachine();
     private static ScanningResultList scanningResults;
+    private static ScannerDispatcherThreadFactory scannerDispatcherThreadFactory;
     private static Config config = new Config();
 
     public static StateMachine getStateMachine() {return stateMachine;}
