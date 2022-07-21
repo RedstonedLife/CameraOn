@@ -3,6 +3,7 @@ package com.bss.inc.cameraon.utils;
 import com.bss.inc.cameraon.utils.net.angryscan.core.ScannerDispatcherThread;
 import com.bss.inc.cameraon.utils.net.angryscan.core.ScannerDispatcherThreadFactory;
 import com.bss.inc.cameraon.utils.net.angryscan.core.ScanningProgressCallback;
+import com.bss.inc.cameraon.utils.net.angryscan.feeders.RangeFeeder;
 import com.bss.inc.cameraon.utils.net.angryscan.state.PingerRegistry;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.ScanningState;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateMachine;
@@ -48,9 +49,9 @@ public class $UI$02 implements StateTransitionListener {
                 if(transition != StateMachine.Transition.CONTINUE) {
                     // Remove All Results
                 }
-                /*try {
-                    scannerThread = scannerThreadFactory.createScannerThread()
-                }*/
+                try {
+                    scannerThread = scannerThreadFactory.createScannerThread(new RangeFeeder())
+                }
             }
         }
     }
