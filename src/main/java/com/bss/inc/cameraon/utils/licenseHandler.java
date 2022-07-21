@@ -19,6 +19,6 @@ public class licenseHandler {
     );
 
     public static ProductKeyState verifyProductKey(final String s) {
-        
+        return kgen.verifyProductKey(s);
     }
 }
