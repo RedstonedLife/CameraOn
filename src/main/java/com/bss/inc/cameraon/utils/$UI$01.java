@@ -451,9 +451,7 @@ public class $UI$01 {
                     /* SEND TO MAIN PROGRAM */
                     return;
                 }
-            } catch (Exception e) {
-
-            }
+            } catch (Exception e) {}
             System.out.println(WinRegistry.readString(WinRegistry.HKEY_CURRENT_USER, "SOFTWARE\\BSS\\CMON", "isAT",  WinRegistry.KEY_WOW64_64KEY));
 
             for(Rectangle rect : rectangles) {
