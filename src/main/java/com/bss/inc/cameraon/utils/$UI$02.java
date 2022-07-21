@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils;
 
+import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningResult;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningResultList;
 import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
@@ -40,7 +41,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         this.scannerThreadFactory = scannerThreadFactory;
         this.pingerRegistry = pingerRegistry;
         this.scannerConfig = scannerConfig;
-        this.resultTable = new ResultTable(new ScanningResultList(stateMachine),stateMachine);
+        this.resultTable = new ResultTable(MainClass.get,stateMachine);
         this.stateMachine = stateMachine;
 
         // add listeners to all state changes
