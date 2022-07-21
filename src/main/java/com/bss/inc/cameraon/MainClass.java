@@ -66,8 +66,9 @@ public class MainClass extends Application {
                 }) // welcomeWindow URL[] End
         });}
         catch (IOException e) {logger.error("Error occurred while initializing the WindowManager", e);e.printStackTrace();}
-        if(regi.get("ST", null) == null &&)
-        WindowManager.changeDialogScene("welcomeWindow",clazz.getResource(FrontendPaths.WELCOME_NA_FXML));
+        if(regi.get("ST", null) == null && regi.get("isAT", null) == null) {
+            WindowManager.changeDialogScene("welcomeWindow", clazz.getResource(FrontendPaths.WELCOME_NA_FXML));
+        }
         WindowManager.openDialog("welcomeWindow");
         //WindowManager.changeDialogScene("mainWindow", clazz.getResource(FrontendPaths.SETTINGS_FXML));
         //WindowManager.openDialog("mainWindow");
@@ -76,7 +77,6 @@ public class MainClass extends Application {
     public void stop() throws FileNotFoundException {
         config.onExit();
     }
-    private static Preferences regi = Preferences.userRoot().node("bss").node("cmon");
     public static void main(String[] args) {
         try {if(regi.get("ST", null) == null) {regi.put("ST", SHA512.getSalt().toString());}}
         catch (NoSuchAlgorithmException e) {throw new RuntimeException(e);}
