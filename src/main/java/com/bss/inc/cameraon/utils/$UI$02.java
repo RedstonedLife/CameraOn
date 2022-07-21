@@ -120,7 +120,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     }
 }
 
-class ResultTable implements StateTransitionListener {
+class ResultTable {
     private List<ScanningResult> results = new ArrayList<ScanningResult>();
     private ScanningResultList scanningResults;
 
