@@ -165,4 +165,10 @@ class ResultTable implements StateTransitionListener {
         remove(indices);
         // TODO: this is VERY slow if there are a lot of items (eg 300k), due to the Control.sort() that is called inside to sort the indices
     }
+
+    public void removeAll() {
+        // remove all items from the real storage first
+        scanningResults.clear();
+        removeAll();
+    }
 }
