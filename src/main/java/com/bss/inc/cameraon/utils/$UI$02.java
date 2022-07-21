@@ -1,8 +1,10 @@
 package com.bss.inc.cameraon.utils;
 
+import com.bss.inc.cameraon.utils.net.angryscan.ScanningResult;
 import com.bss.inc.cameraon.utils.net.angryscan.core.ScannerDispatcherThread;
 import com.bss.inc.cameraon.utils.net.angryscan.core.ScannerDispatcherThreadFactory;
 import com.bss.inc.cameraon.utils.net.angryscan.core.ScanningProgressCallback;
+import com.bss.inc.cameraon.utils.net.angryscan.core.ScanningResultCallback;
 import com.bss.inc.cameraon.utils.net.angryscan.feeders.RangeFeeder;
 import com.bss.inc.cameraon.utils.net.angryscan.state.PingerRegistry;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.ScanningState;
@@ -10,6 +12,8 @@ import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateMachine;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateTransitionListener;
 import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
+
+import static com.bss.inc.cameraon.utils.net.angryscan.state.state.ScanningState.RESTARTING;
 
 public class $UI$02 implements StateTransitionListener, ScanningProgressCallback {
     private ScannerDispatcherThreadFactory scannerThreadFactory;
@@ -80,5 +84,40 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                 break;
             }
         }
+    }
+
+    private ScanningResultCallback createResultsCallback(ScanningState state) {
+        // rescanning must follow the same strategy of displaying all hosts (even the dead ones), because the results are already in the list
+        if (guiConfig.displayMethod == DisplayMethod.ALL || state == RESTARTING) {
+            return new ScanningResultCallback() {
+                public void prepareForResults(ScanningResult result) {
+                    resultTable.addOrUpdateResultRow(result);
+                }
+                public void consumeResults(ScanningResult result) {
+                    resultTable.addOrUpdateResultRow(result);
+                }
+            };
+        }
+        if (guiConfig.displayMethod == DisplayMethod.ALIVE) {
+            return new ScanningResultCallback() {
+                public void prepareForResults(ScanningResult result) {
+                }
+                public void consumeResults(ScanningResult result) {
+                    if (result.getType().ordinal() >= ResultType.ALIVE.ordinal())
+                        resultTable.addOrUpdateResultRow(result);
+                }
+            };
+        }
+        if (guiConfig.displayMethod == DisplayMethod.PORTS) {
+            return new ScanningResultCallback() {
+                public void prepareForResults(ScanningResult result) {
+                }
+                public void consumeResults(ScanningResult result) {
+                    if (result.getType() == ResultType.WITH_PORTS)
+                        resultTable.addOrUpdateResultRow(result);
+                }
+            };
+        }
+        throw new UnsupportedOperationException(guiConfig.displayMethod.toString());
     }
 }
