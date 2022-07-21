@@ -1,2 +1,4 @@
-package com.bss.inc.cameraon.utils;public class SHA512 {
+package com.bss.inc.cameraon.utils;
+
+public class SHA512 {
 }
