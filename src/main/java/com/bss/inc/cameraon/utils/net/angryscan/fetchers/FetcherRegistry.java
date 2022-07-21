@@ -16,6 +16,11 @@ public class FetcherRegistry {
     private List<FetcherRegistryUpdateListener> updateListeners = new ArrayList<>();
 
     public FetcherRegistry() {
+        ipFetcher = new IPFetcher();
+        pingFetcher = new PingFetcher(null, null);
+        hostnameFetcher = new HostnameFetcher();
+        commentFetcher = new CommentFetcher(null);
+        portsFetcher = new PortsFetcher(null);
         createFetchersMap(List.of(new IPFetcher(), new PortsFetcher(MainClass.getConfig().forScanner()), new HostnameFetcher()));
         loadSelectedFetchers();
     }
