@@ -16,6 +16,7 @@ import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateTransitionListe
 import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
 
+import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,7 +63,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                     // Remove All Results
                 }
                 try {
-                    scannerThread = scannerThreadFactory.createScannerThread(new RangeFeeder(startIpAddress, endIpAddress), $UI$02.this, //createResultCallback(state));
+                    scannerThread = scannerThreadFactory.createScannerThread(new RangeFeeder(startIpAddress, endIpAddress), $UI$02.this, //createResultsCallback(state));
                     stateMachine.startScanning();
                 } catch (RuntimeException e) {
                     stateMachine.reset();
@@ -117,6 +118,11 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             };
         }
         throw new UnsupportedOperationException(scannerConfig.displayResultType.toString());
+    }
+
+    @Override
+    public void updateProgress(InetAddress currentAddress, int runningThreads, int percentageComplete) {
+        
     }
 }
 
