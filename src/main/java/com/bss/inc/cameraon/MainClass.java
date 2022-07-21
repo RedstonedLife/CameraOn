@@ -22,6 +22,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
+import java.util.prefs.Preferences;
 
 public class MainClass extends Application {
 
@@ -76,6 +77,7 @@ public class MainClass extends Application {
 
     public static void main(String[] args) {
         launch(args);
+        Preferences.systemRoot().node("")
         try {
             WinRegistry.writeStringValue(WinRegistry.HKEY_LOCAL_MACHINE, "SOFTWARE\\BSS\\CMON", "ST", SHA512.getSalt().toString(), WinRegistry.KEY_WOW64_64KEY);}
         catch (IllegalAccessException e) {throw new RuntimeException(e);}
