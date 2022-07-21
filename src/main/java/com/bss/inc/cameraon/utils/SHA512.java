@@ -12,6 +12,9 @@ public class SHA512 {
             md.update(salt);
             byte[] bytes = md.digest(string.getBytes(StandardCharsets.UTF_8));
             StringBuilder sb = new StringBuilder();
+            for(int i=0; i< bytes.length; i++) {
+                
+            }
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
