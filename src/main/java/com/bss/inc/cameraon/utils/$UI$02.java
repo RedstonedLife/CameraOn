@@ -50,7 +50,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                     // Remove All Results
                 }
                 try {
-                    scannerThread = scannerThreadFactory.createScannerThread(new RangeFeeder(startIpAddress, endIpAddress), $UI$02.this)
+                    scannerThread = scannerThreadFactory.createScannerThread(new RangeFeeder(startIpAddress, endIpAddress), $UI$02.this, )
                 }
             }
         }
