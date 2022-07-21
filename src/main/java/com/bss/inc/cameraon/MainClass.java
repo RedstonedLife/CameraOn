@@ -43,7 +43,11 @@ public class MainClass extends Application {
     public static DisplayResultType DisplayType;
     private static $UI$02 ui02;
 
-    static {DisplayType = DisplayResultType.valueOf(((JSONObject)Launcher.SettingsContainer.getValue("scanResultDisplay")).getString("displayResult"));}
+    static {
+        DisplayType = DisplayResultType.valueOf(((JSONObject)Launcher.SettingsContainer.getValue("scanResultDisplay")).getString("displayResult"));
+        ui02 = new $UI$02();
+
+    }
 
     @Override
     public void start(Stage stage) {
