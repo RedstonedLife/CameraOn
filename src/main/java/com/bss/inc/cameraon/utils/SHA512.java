@@ -9,6 +9,7 @@ public class SHA512 {
         try {
             MessageDigest md = MessageDigest.getInstance("SHA-512");
             md.update(salt);
+            
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
