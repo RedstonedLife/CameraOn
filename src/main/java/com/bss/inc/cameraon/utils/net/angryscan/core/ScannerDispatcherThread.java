@@ -92,11 +92,11 @@ public class ScannerDispatcherThread extends Thread implements ThreadFactory, St
                     }
 
                     // notify listeners of the progress we are doing (limiting the update rate)
-                    //long now = System.currentTimeMillis();
-                    /*if (now - lastNotifyTime >= UI_UPDATE_INTERVAL_MS && subject != null) {
+                    long now = System.currentTimeMillis();
+                    if (now - lastNotifyTime >= UI_UPDATE_INTERVAL_MS && subject != null) {
                         lastNotifyTime = now;
                         progressCallback.updateProgress(subject.getAddress(), numActiveThreads.intValue(), feeder.percentageComplete());
-                    }*/
+                    }
                 }
             }
             catch (InterruptedException e) {
