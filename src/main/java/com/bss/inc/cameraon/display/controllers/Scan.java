@@ -36,7 +36,7 @@ public class Scan implements Initializable {
         $UI$01.u_10$1$1(btnClose);
         $UI$01.u_10$1$2(btnMinimize,"mainWindow");
         scanBtn.setOnAction(e -> {
-            
+            UI02.transitionTo();
         });
         UI02.addBar(tasksLeftScan);
         UI02.addButton(scanBtn);
