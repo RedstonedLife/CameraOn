@@ -40,11 +40,14 @@ public class MainClass extends Application {
     public static StateMachine getStateMachine() {return stateMachine;}
     public static Config getConfig() {return config;}
     public static DisplayResultType DisplayType;
+    private static 
 
     static {DisplayType = DisplayResultType.valueOf(((JSONObject)Launcher.SettingsContainer.getValue("scanResultDisplay")).getString("displayResult"));}
 
     @Override
     public void start(Stage stage) {
+
+
         try {WindowManager = new DialogManager(new Dialog[] {
                 new Dialog(stage, FrontendPaths.HEIGHT, FrontendPaths.WIDTH, "mainWindow", new URL[]{ // MainWindow URL[] Start
                         clazz.getResource(FrontendPaths.SETTINGS_FXML), clazz.getResource(FrontendPaths.CAM_SETTINGS),
