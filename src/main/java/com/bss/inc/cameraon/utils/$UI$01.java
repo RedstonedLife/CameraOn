@@ -440,12 +440,12 @@ public class $UI$01 {
         if(licenseHandler.verifyProductKey($UI$01.u_11$1$2(textFields)) != ProductKeyState.KEY_GOOD) {
             u_11$1$3(rectangles);
         } else if(licenseHandler.verifyProductKey($UI$01.u_11$1$2(textFields)) == ProductKeyState.KEY_GOOD) {
-            try {WinRegistry.writeStringValue(WinRegistry.HKEY_LOCAL_MACHINE, "SOFTWARE\\BSS\\CMON", "isAT", SHA512.getSecureSHA("true&&"+Launcher.getHu().getFileStores().get(0).getUUID(),
-                    WinRegistry.readString(WinRegistry.HKEY_LOCAL_MACHINE, "SOFTWARE\\BSS\\CMON", "ST").getBytes()));}
+            try {WinRegistry.writeStringValue(WinRegistry.HKEY_CURRENT_USER, "SOFTWARE\\BSS\\CMON", "isAT", SHA512.getSecureSHA("true&&"+Launcher.getHu().getFileStores().get(0).getUUID(),
+                    WinRegistry.readString(WinRegistry.HKEY_CURRENT_USER, "SOFTWARE\\BSS\\CMON", "ST").getBytes()));}
             catch (IllegalAccessException e) {throw new RuntimeException(e);}
             catch (InvocationTargetException e) {throw new RuntimeException(e);}
             try {
-                System.out.println(WinRegistry.readString(WinRegistry.HKEY_LOCAL_MACHINE, "SOFTWARE\\BSS\\CMON", "isAT"));
+                System.out.println(WinRegistry.readString(WinRegistry.HKEY_CURRENT_USER, "SOFTWARE\\BSS\\CMON", "isAT"));
             } catch (IllegalAccessException e) {
                 throw new RuntimeException(e);
             } catch (InvocationTargetException e) {
