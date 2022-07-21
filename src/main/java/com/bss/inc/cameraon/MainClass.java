@@ -115,6 +115,7 @@ public class MainClass extends Application {
 
     public static Preferences getRegi() {return regi;}
     public static $UI$02 getUi02() {return ui02;}
+    public static PingerRegistry getPingerRegistry() {return pingerRegistry;}
     public static DialogManager getWindowManager() {
         return WindowManager;
     }
