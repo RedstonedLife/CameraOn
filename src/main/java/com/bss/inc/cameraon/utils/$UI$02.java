@@ -141,16 +141,12 @@ class ResultTable implements StateTransitionListener {
      */
     public void addOrUpdateResultRow(final ScanningResult result) {
         if (scanningResults.isRegistered(result)) {
-            // just redraw the item
             int index = scanningResults.update(result);
             clear(index);
         }
         else {
-            // first register, then add - otherwise first redraw may fail (the table is virtual)
             int index = getItemCount();
             scanningResults.registerAtIndex(index, result);
-            // setItemCount(index+1) - this seems to rebuild TableItems inside, so is slower
-            new TableItem(ResultTable.this, SWT.NONE);
         }
     }
 }
