@@ -420,6 +420,8 @@ public class $UI$01 {
         return temp.toString();
     }
 
-    public static String u_11$1$3(Rectangle[])
+    public static String u_11$1$3(Rectangle[] rectangles) {
+        
+    }
 
 }
