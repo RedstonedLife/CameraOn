@@ -479,11 +479,7 @@ public class $UI$01 {
             int finalI = i;
             textFields[i].textProperty().addListener((observable, oldValue, newValue) -> {
                 if(oldValue == null || oldValue == "") {return;}
-                if(u_12$1$1(newValue)) {textFields[finalI].setText(newValue);
-                    if(finalI!=textFields.length-1) {
-                        textFields[finalI+1].requestFocus();
-                    }
-                    return;} else {return;}
+                if(u_12$1$1(newValue) && !u_12$1$3()) {textFields[finalI].setText(newValue);return;}
             });
         }
     }
