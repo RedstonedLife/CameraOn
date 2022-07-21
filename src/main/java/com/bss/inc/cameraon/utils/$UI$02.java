@@ -59,7 +59,6 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             }
             case RESTARTING -> {
                 // restart the scanning - rescan
-                resultTable.resetSelection();
                 try {
                     scannerThread = scannerThreadFactory.createScannerThread(new RangeFeeder(startIpAddress, endIpAddress), $UI$02.this, createResultsCallback(state));
                     stateMachine.startScanning();
