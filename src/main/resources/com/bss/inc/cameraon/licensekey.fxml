@@ -42,7 +42,7 @@
       <TextField fx:id="ACtf3" layoutX="210.0" layoutY="125.0" prefHeight="29.0" prefWidth="82.0" />
       <TextField fx:id="ACtf4" layoutX="299.0" layoutY="125.0" prefHeight="29.0" prefWidth="82.0" />
       <TextField fx:id="ACtf5" layoutX="388.0" layoutY="125.0" prefHeight="29.0" prefWidth="82.0" />
-      <Text fill="#5e5e5e" layoutX="26.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Example: 1AAA - 1AAA - 1AAA - 1AAA - 1AAA" />
+      <Text fill="#5e5e5e" layoutX="26.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Example: AAAAAAAA - AA7B89-53DBD4-743ACD-7C8735" />
     </children>
     <stylesheets>
         <URL value="@app.css" />
