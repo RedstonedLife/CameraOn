@@ -445,22 +445,17 @@ public class $UI$01 {
                 if(MainClass.getRegi().get("isAT", null) == null) {
                     MainClass.getRegi().put("isAT", SHA512.getSecureSHA("true&&"+Launcher.getHu().getFileStores().get(0).getUUID(),MainClass.getRegi().get("ST", null).getBytes()));
                 } else {
-                    
+                    for(Rectangle rect : rectangles) {
+                        rect.setFill(Color.color(0.1294117647058824d,1.0d,0.3882352941176471d));
+                    }
+                    /* SEND TO MAIN PROGRAM */
+                    return;
                 }
             } catch (Exception e) {
 
             }
-            try {WinRegistry.writeStringValue(WinRegistry.HKEY_CURRENT_USER, "SOFTWARE\\BSS\\CMON", "isAT", SHA512.getSecureSHA("true&&"+Launcher.getHu().getFileStores().get(0).getUUID(),
-                    WinRegistry.readString(WinRegistry.HKEY_CURRENT_USER, "SOFTWARE\\BSS\\CMON", "ST",  WinRegistry.KEY_WOW64_64KEY).getBytes()), WinRegistry.KEY_WOW64_64KEY);}
-            catch (IllegalAccessException e) {throw new RuntimeException(e);}
-            catch (InvocationTargetException e) {throw new RuntimeException(e);}
-            try {
-                System.out.println(WinRegistry.readString(WinRegistry.HKEY_CURRENT_USER, "SOFTWARE\\BSS\\CMON", "isAT",  WinRegistry.KEY_WOW64_64KEY));
-            } catch (IllegalAccessException e) {
-                throw new RuntimeException(e);
-            } catch (InvocationTargetException e) {
-                throw new RuntimeException(e);
-            }
+            System.out.println(WinRegistry.readString(WinRegistry.HKEY_CURRENT_USER, "SOFTWARE\\BSS\\CMON", "isAT",  WinRegistry.KEY_WOW64_64KEY));
+
             for(Rectangle rect : rectangles) {
                 rect.setFill(Color.color(0.1294117647058824d,1.0d,0.3882352941176471d));
             }
