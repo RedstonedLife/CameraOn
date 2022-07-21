@@ -43,11 +43,11 @@ public class Scan implements Initializable {
             UI02.setStartIpAddress(iprangefromTf.getText());
             UI02.setEndIpAddress(iprangetoTf.getText());
             switch (MainClass.getStateMachine().getState()) {
-                case SCANNING -> {}
-                case STOPPING -> {}
-                case KILLING -> {}
-                case RESTARTING -> {}
-                case STARTING -> {}
+                case SCANNING -> {scanBtn.setDisable(true);break;}
+                case STOPPING -> {scanBtn.setDisable(true);break;}
+                case KILLING -> {scanBtn.setDisable(true);break;}
+                case RESTARTING -> {scanBtn.setDisable(true);break;}
+                case STARTING -> {scanBtn.setDisable(true);break;}
                 case IDLE -> {break;}
             }
         });
