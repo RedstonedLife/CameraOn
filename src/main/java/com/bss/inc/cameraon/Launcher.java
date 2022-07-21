@@ -153,15 +153,7 @@ public class Launcher {
         } catch (UnknownOS e) {
             throw new RuntimeException(e);
         }
-        try {
-            byte[] salt = SHA512.getSalt();
-            System.out.println(salt.toString());
-            byte[] test = "[B@5e82df6a".getBytes();
-            System.out.println(test.toString());
-        } catch (NoSuchAlgorithmException e) {
-            throw new RuntimeException(e);
-        }
-        //setSettings();
-        //MainClass.main(args);
+        setSettings();
+        MainClass.main(args);
     }
 }
