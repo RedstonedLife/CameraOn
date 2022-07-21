@@ -22,6 +22,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
+import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
 
 public class MainClass extends Application {
@@ -77,7 +78,11 @@ public class MainClass extends Application {
     private static Preferences prefs;
     public static void main(String[] args) {
         launch(args);
-        prefs = Preferences.systemRoot().node("SOFTWARE").node("BSS").node("CMON").flush();
+        try {
+            prefs = Preferences.systemRoot().node("SOFTWARE").node("BSS").node("CMON").flush();
+        } catch (BackingStoreException e) {
+            throw new RuntimeException(e);
+        }
         try {
             WinRegistry.writeStringValue(WinRegistry.HKEY_LOCAL_MACHINE, "SOFTWARE\\BSS\\CMON", "ST", SHA512.getSalt().toString(), WinRegistry.KEY_WOW64_64KEY);}
         catch (IllegalAccessException e) {throw new RuntimeException(e);}
