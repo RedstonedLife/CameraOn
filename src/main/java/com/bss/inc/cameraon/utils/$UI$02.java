@@ -52,7 +52,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         if(transition == StateMachine.Transition.INIT)
             return;
         // TODO: Enhance?
-        switch(state) {
+        /*switch(state) {
             case IDLE -> {
                 button.setDisable(false);
                 progressBar.setProgress(0.0d);
@@ -63,7 +63,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                     // Remove All Results
                 }
                 try {
-                    scannerThread = scannerThreadFactory.createScannerThread(new RangeFeeder(startIpAddress, endIpAddress), $UI$02.this, //createResultsCallback(state));
+                    scannerThread = scannerThreadFactory.createScannerThread(new RangeFeeder(startIpAddress, endIpAddress), $UI$02.this, createResultsCallback(state));
                     stateMachine.startScanning();
                 } catch (RuntimeException e) {
                     stateMachine.reset();
@@ -92,7 +92,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                 button.setDisable(false);
                 break;
             }
-        }
+        }*/
     }
 
     private ScanningResultCallback createResultsCallback(ScanningState state) {
