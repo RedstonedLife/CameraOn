@@ -70,6 +70,8 @@ public class MainClass extends Application {
         catch (IOException e) {logger.error("Error occurred while initializing the WindowManager", e);e.printStackTrace();}
         if(regi.get("ST", null) == null && regi.get("isAT", null) == null) {
             WindowManager.changeDialogScene("welcomeWindow", clazz.getResource(FrontendPaths.WELCOME_NA_FXML));
+        } else {
+            
         }
         WindowManager.openDialog("welcomeWindow");
         //WindowManager.changeDialogScene("mainWindow", clazz.getResource(FrontendPaths.SETTINGS_FXML));
