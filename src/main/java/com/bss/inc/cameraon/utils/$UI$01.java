@@ -480,7 +480,7 @@ public class $UI$01 {
                 if(oldValue == null || oldValue == "") {return;}
                 if(u_12$1$1(newValue)) {textFields[finalI].setText(newValue);
                     if(finalI!=textFields.length-1) {
-                        textFields[]
+                        textFields[finalI+1].requestFocus();
                     }
                     return;}
             });
