@@ -423,11 +423,14 @@ public class $UI$01 {
         return temp.toString();
     }
 
-    public static String u_11$1$3(Rectangle[] rectangles) {
+    public static void u_11$1$3(Rectangle[] rectangles) {
         for(Rectangle rect : rectangles) {
             rect.setFill(Color.color(253,19,19));
         }
-        TimeUnit.SECONDS.sleep();
+        try {TimeUnit.SECONDS.sleep(1);} catch (InterruptedException e) {throw new RuntimeException(e);}
+        for(Rectangle rect : rectangles) {
+            rect.setFill(Color.color(253,19,19));
+        }
     }
 
 }
