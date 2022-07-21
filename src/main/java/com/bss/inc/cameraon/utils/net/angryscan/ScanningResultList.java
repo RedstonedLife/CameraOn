@@ -38,7 +38,7 @@ public class ScanningResultList implements Iterable<ScanningResult> {
         this.fetcherRegistry = new FetcherRegistry();
     }
 
-    public ScanningResultList(FetcherRegistry fetcherRegistry, StateMachine stateMachine) {
+    public ScanningResultList(StateMachine stateMachine) {
         this();
         stateMachine.addTransitionListener(new StopScanningListener());
     }
