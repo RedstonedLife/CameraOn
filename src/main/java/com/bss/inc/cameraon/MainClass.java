@@ -75,7 +75,7 @@ public class MainClass extends Application {
     public void stop() throws FileNotFoundException {
         config.onExit();
     }
-    private static Preferences prefs;
+    private static Preferences regi = Preferences.userRoot().node("BasSofSol").node("CMON");
     public static void main(String[] args) {
         launch(args);
 
