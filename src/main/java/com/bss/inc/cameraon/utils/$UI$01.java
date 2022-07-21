@@ -356,6 +356,18 @@ public class $UI$01 {
         });
         textFields[2].textProperty().addListener((observable, oldValue, newValue) -> {
             if(isCopyingLicenseKey) {return;}
+            if(newValue.split("-").length==5 && newValue.split("-") != null) {
+                isCopyingLicenseKey = true;
+                String[] temp = newValue.split("-");
+                textFields[0].setText(temp[0]);
+                textFields[1].setText(temp[1]);
+                textFields[2].setText(temp[2]);
+                textFields[3].setText(temp[3]);
+                textFields[4].setText(temp[4]);
+                textFields[4].requestFocus();
+                isCopyingLicenseKey = false;
+                return;
+            }
             if(oldValue == null || oldValue == "") {return;}
             if(newValue == "") {textFields[1].requestFocus();}
             if((newValue.length() == 7 && oldValue != null)) {
@@ -363,6 +375,18 @@ public class $UI$01 {
         });
         textFields[3].textProperty().addListener((observable, oldValue, newValue) -> {
             if(isCopyingLicenseKey) {return;}
+            if(newValue.split("-").length==5 && newValue.split("-") != null) {
+                isCopyingLicenseKey = true;
+                String[] temp = newValue.split("-");
+                textFields[0].setText(temp[0]);
+                textFields[1].setText(temp[1]);
+                textFields[2].setText(temp[2]);
+                textFields[3].setText(temp[3]);
+                textFields[4].setText(temp[4]);
+                textFields[4].requestFocus();
+                isCopyingLicenseKey = false;
+                return;
+            }
             if(oldValue == null || oldValue == "") {return;}
             if(newValue == "") {textFields[2].requestFocus();}
             if((newValue.length() == 7 && oldValue != null)) {
@@ -370,6 +394,18 @@ public class $UI$01 {
         });
         textFields[4].textProperty().addListener((observable, oldValue, newValue) -> {
             if(isCopyingLicenseKey) {return;}
+            if(newValue.split("-").length==5 && newValue.split("-") != null) {
+                isCopyingLicenseKey = true;
+                String[] temp = newValue.split("-");
+                textFields[0].setText(temp[0]);
+                textFields[1].setText(temp[1]);
+                textFields[2].setText(temp[2]);
+                textFields[3].setText(temp[3]);
+                textFields[4].setText(temp[4]);
+                textFields[4].requestFocus();
+                isCopyingLicenseKey = false;
+                return;
+            }
             if(oldValue == null || oldValue == "") {return;}
             if(newValue == "") {textFields[3].requestFocus();}
             if((newValue.length() == 7 && oldValue != null)) {
