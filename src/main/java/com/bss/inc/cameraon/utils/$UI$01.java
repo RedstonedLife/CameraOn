@@ -474,7 +474,11 @@ public class $UI$01 {
 
     public static boolean u_12$1$1(String ip) {return ipaddressPattern.matcher(ip).matches();}
     public static void u_12$1$2(TextField[] textFields) {
-        
+        for(TextField textField : textFields) {
+            textField.textProperty().addListener((observable, oldValue, newValue) -> {
+                
+            }
+        }
     }
 
 }
