@@ -36,11 +36,9 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     private String startIpAddress,endIpAddress;
 
     public $UI$02(ScannerDispatcherThreadFactory scannerThreadFactory, StateMachine stateMachine,
-                  ProgressBar progressBar, PingerRegistry pingerRegistry, Button startStopButton, ScannerConfig scannerConfig) {
+                  PingerRegistry pingerRegistry, ScannerConfig scannerConfig) {
         this.scannerThreadFactory = scannerThreadFactory;
-        this.progressBar = progressBar;
         this.pingerRegistry = pingerRegistry;
-        this.button = startStopButton;
         this.scannerConfig = scannerConfig;
         this.resultTable = new ResultTable(new ScanningResultList(stateMachine),stateMachine);
         this.stateMachine = stateMachine;
@@ -48,6 +46,14 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         // add listeners to all state changes
         stateMachine.addTransitionListener(this);
         ScanningState state = stateMachine.getState();
+    }
+
+    public void addBar(ProgressBar progressBar) {
+        this.progressBar = progressBar;
+    }
+
+    public void addButton(Button startStopButton) {
+        this.button = startStopButton;
     }
 
     public void transitionTo(final ScanningState state, final StateMachine.Transition transition) {
