@@ -57,29 +57,32 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                     throw e;
                 }
             }
-            case RESTARTING -> {}
+            case RESTARTING -> {
                 // restart the scanning - rescan
                 resultTable.resetSelection();
                 try {
                     scannerThread = scannerThreadFactory.createScannerThread(feederRegistry.createRescanFeeder(resultTable.getSelection()), StartStopScanningAction.this, createResultsCallback(state));
                     stateMachine.startScanning();
                     mainWindowTitle = statusBar.getShell().getText();
-                }
-                catch (RuntimeException e) {
+                } catch (RuntimeException e) {
                     stateMachine.reset();
                     throw e;
                 }
                 break;
-            case SCANNING:
+            }
+            case SCANNING -> {
                 scannerThread.start();
                 break;
-            case STOPPING:
+            }
+            case STOPPING -> {
                 statusBar.setStatusText(Labels.getLabel("state.waitForThreads"));
                 break;
-            case KILLING:
+            }
+            case KILLING -> {
                 button.setEnabled(false);
                 statusBar.setStatusText(Labels.getLabel("state.killingThreads"));
                 break;
+            }
         }
     }
 }
