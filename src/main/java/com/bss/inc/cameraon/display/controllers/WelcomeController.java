@@ -23,7 +23,7 @@ public class WelcomeController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         HelpBtn.setCancelButton(true);
         ActivateBtn.setOnAction(e -> MainClass.getWindowManager().changeDialogScene("licenseWindow", MainClass.class.getResource(FrontendPaths.LICENSE_KEY_FXML)));
-        StartBtn.setOnAction(e -> MainClass.getWindowManager().changeDialogScene(""));
+        StartBtn.setOnAction(e -> MainClass.getWindowManager().changeDialogScene("mainWindow", MainClass.class.getResource(FrontendPaths.SETTINGS_FXML)));
         $UI$01.u_10$1$1(btnClose);
         $UI$01.u_10$1$2(btnMinimize,"welcomeWindow");
     }
