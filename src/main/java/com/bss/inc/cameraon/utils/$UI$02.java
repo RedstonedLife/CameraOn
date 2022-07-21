@@ -62,7 +62,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                     // Remove All Results
                 }
                 try {
-                    scannerThread = scannerThreadFactory.createScannerThread(new RangeFeeder(startIpAddress, endIpAddress), $UI$02.this, createResultCallback(state));
+                    scannerThread = scannerThreadFactory.createScannerThread(new RangeFeeder(startIpAddress, endIpAddress), $UI$02.this, //createResultCallback(state));
                     stateMachine.startScanning();
                 } catch (RuntimeException e) {
                     stateMachine.reset();
@@ -99,10 +99,10 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         if (scannerConfig.displayResultType == DisplayResultType.ALL || state == RESTARTING) {
             return new ScanningResultCallback() {
                 public void prepareForResults(ScanningResult result) {
-                    resultTable.addOrUpdateResultRow(result);
+                    //resultTable.addOrUpdateResultRow(result);
                 }
                 public void consumeResults(ScanningResult result) {
-                    resultTable.addOrUpdateResultRow(result);
+                    //resultTable.addOrUpdateResultRow(result);
                 }
             };
         }
@@ -111,8 +111,8 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                 public void prepareForResults(ScanningResult result) {
                 }
                 public void consumeResults(ScanningResult result) {
-                    if (result.getType().ordinal() >= DisplayResultType.ALIVE.ordinal())
-                        resultTable.addOrUpdateResultRow(result);
+                    if (result.getType().ordinal() >= DisplayResultType.ALIVE.ordinal()) {}
+                        //resultTable.addOrUpdateResultRow(result);
                 }
             };
         }
