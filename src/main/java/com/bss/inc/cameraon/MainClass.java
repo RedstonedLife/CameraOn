@@ -8,6 +8,7 @@ import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.utils.$UI$02;
 import com.bss.inc.cameraon.utils.SHA512;
 import com.bss.inc.cameraon.utils.WinRegistry;
+import com.bss.inc.cameraon.utils.net.angryscan.Scanner;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningResultList;
 import com.bss.inc.cameraon.utils.net.angryscan.config.Config;
 import com.bss.inc.cameraon.utils.net.angryscan.core.ScannerDispatcherThreadFactory;
@@ -52,7 +53,8 @@ public class MainClass extends Application {
     static {
         DisplayType = DisplayResultType.valueOf(((JSONObject)Launcher.SettingsContainer.getValue("scanResultDisplay")).getString("displayResult"));
         scanningResults = new ScanningResultList(stateMachine);
-        scannerDispatcherThreadFactory = new ScannerDispatcherThreadFactory(scanningResults,)
+        scanner = new Scanner();
+        scannerDispatcherThreadFactory = new ScannerDispatcherThreadFactory(scanningResults,scanner,)
         ui02 = new $UI$02();
 
     }
