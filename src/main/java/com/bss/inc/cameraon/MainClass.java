@@ -75,7 +75,7 @@ public class MainClass extends Application {
     public void stop() throws FileNotFoundException {
         config.onExit();
     }
-    private static Preferences regi = Preferences.systemRoot().node("SOFTWARE").node("bss").node("cmon");
+    private static Preferences regi = Preferences.userRoot().node("bss").node("cmon");
     public static void main(String[] args) {
         try {if(regi.get("ST", null) == null) {regi.put("ST", SHA512.getSalt().toString());}}
         catch (NoSuchAlgorithmException e) {throw new RuntimeException(e);}
