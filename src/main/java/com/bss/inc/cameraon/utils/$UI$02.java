@@ -126,6 +126,7 @@ class ResultTable implements StateTransitionListener {
 
     public ResultTable(ScanningResultList scanningResults, StateMachine stateMachine) {
         this.scanningResults = scanningResults;
-        this.
+        
+        stateMachine.addTransitionListener(this);
     }
 }
