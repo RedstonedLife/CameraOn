@@ -80,6 +80,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                     // Remove All Results
                 }
                 try {
+                    progressBar.setProgress(1.0d);
                     scannerThread = scannerThreadFactory.createScannerThread(new RangeFeeder(startIpAddress, endIpAddress), this, createResultsCallback(state));
                     stateMachine.startScanning();
                 } catch (RuntimeException e) {
