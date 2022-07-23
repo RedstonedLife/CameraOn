@@ -43,6 +43,7 @@ public class RangeFeeder extends AbstractFeeder {
             this.endIP = InetAddressUtils.decrement(InetAddressUtils
                     .decrement(this.endIP));
         }
+        initPercentageIncrement();
         this.endIP = InetAddressUtils.increment(this.endIP);
     }
 
