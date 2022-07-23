@@ -73,7 +73,9 @@ public class PingerRegistry {
                 Constructor<? extends Pinger> constructor = pingerClass.getConstructor(int.class);
                 System.out.println("1");
                 Pinger pinger = constructor.newInstance(timeout);
+                System.out.println("2");
                 injector.register((Class<Pinger>) pingerClass, pinger);
+                System.out.println("3");
                 return pinger;
             }
             catch (Exception e) {
