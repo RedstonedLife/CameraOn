@@ -188,7 +188,7 @@ public class ScanFileManager {
         try {
             Files.write(currentScanFile.toPath(), (line+"\n").getBytes(), StandardOpenOption.APPEND);
         } catch (IOException e) {
-            Logger.getLogger("BNC").error("Could not append line to log ", e); // WTF? WHY?!
+            Logger.getLogger("BNC").error("Could not append line to scan ", e); // WTF? WHY?!
         }
     }
 
