@@ -247,7 +247,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                 throw new RuntimeException(e);
             }
         }
-        
+        subBarTitle
     }
 
     @Override
