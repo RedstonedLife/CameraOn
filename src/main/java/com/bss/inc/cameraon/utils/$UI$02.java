@@ -211,7 +211,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             subBarTitle.setText("Parsing Results ("+i+"/"+(resultTable.getResults().size()-1)+")");
             subBar.setProgress(subBar.getProgress()+perInc);
             try {
-                TimeUnit.MILLISECONDS.sleep(15);
+                TimeUnit.MILLISECONDS.sleep(20);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -227,11 +227,11 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         subBarTitle.setText("Parsing Results To Cache (0/"+(resultTable.getResults().size()-1)+")");
         double perInc = Math.abs(1.0 / (resultTable.getResults().size()+1));
         for(int i=0; i<resultTable.getResults().size(); i++) {
-            subBarTitle.setText("Parsing Results ("+i+"/"+(resultTable.getResults().size()-1)+")");
+            subBarTitle.setText("Parsing Results To Cache ("+i+"/"+(resultTable.getResults().size()-1)+")");
             results.add(resultTable.getResults().get(i));
             subBar.setProgress(subBar.getProgress()+perInc);
             try {
-                TimeUnit.MILLISECONDS.sleep(15);
+                TimeUnit.MILLISECONDS.sleep(20);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -242,7 +242,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             subBar.setProgress(subBar.getProgress()+perInc);
             resultTable.getResults().remove(i);
             try {
-                TimeUnit.MILLISECONDS.sleep(15);
+                TimeUnit.MILLISECONDS.sleep(20);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
