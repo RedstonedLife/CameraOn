@@ -25,6 +25,7 @@ import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import static com.bss.inc.cameraon.utils.net.angryscan.state.state.ScanningState.RESTARTING;
 
@@ -209,6 +210,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             status.appendText(sb.toString()+"\n");
             subBarTitle.setText("Parsing Results ("+i+"/"+resultTable.getScanningResults().getScanInfo().getHostCount()+")");
             subBar.setProgress(subBar.getProgress()+perInc);
+            TimeUnit.MILLISECONDS.sleep();
         }
     }
 
