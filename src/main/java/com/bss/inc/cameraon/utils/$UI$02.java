@@ -25,6 +25,7 @@ import java.net.InetAddress;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 import static com.bss.inc.cameraon.utils.net.angryscan.state.state.ScanningState.RESTARTING;
@@ -200,7 +201,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             List<Fetcher> fetchers = resultTable.getScanningResults().getFetchers();
             for (int j = 0; iterator.hasNext(); j++) {
                 String fetcherName = fetchers.get(j).getName();
-                sb.append(fetcherName.toUpperCase()).append("-");
+                sb.append(fetcherName.toUpperCase(Locale.ENGLISH)).append("-");
                 Object value = iterator.next();
                 sb.append(value != null ? value : "");
                 sb.append(":");
