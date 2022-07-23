@@ -149,6 +149,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                         ((currentAddress == null) ? "N/A" : currentAddress.getHostAddress().toString()) +
                         " | Running Threads: " + String.valueOf(runningThreads) + " | Percent Complete: " +
                         ("%.2f".formatted(percentageComplete*100)) + "%\n");}
+        else {
         progressBar.setProgress(percentageComplete);
     }
 }
