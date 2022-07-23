@@ -81,7 +81,7 @@ public class RangeFeeder extends AbstractFeeder {
         rawEndIP = rawEndIP >= 0 ? rawEndIP : rawEndIP + Integer.MAX_VALUE;
         rawStartIP = rawStartIP >= 0 ? rawStartIP : rawStartIP + Integer.MAX_VALUE;
         // compute 1% of the whole range
-        percentageIncrement = Math.abs(100.0 / (rawEndIP - rawStartIP + 1));
+        percentageIncrement = Math.abs(1.0 / (rawEndIP - rawStartIP + 1));
         percentageComplete = 0;
     }
 
