@@ -185,7 +185,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         barTitle.setText("Tasks Left 3/4 (Parsing Results) | Current State: " + stateMachine.getState().toString());
         Bar.setProgress(0.75d);
         subBar.setProgress(0.0d);
-        subBarTitle.setText("Pa");
+        subBarTitle.setText("Parsing Results");
     }
 }
 
