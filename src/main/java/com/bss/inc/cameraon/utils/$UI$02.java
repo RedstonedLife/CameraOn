@@ -161,7 +161,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     @Override
     public void updateProgress(InetAddress currentAddress, int runningThreads, double percentageComplete) {
         if(currentAddress!=null) {
-            barTitle.setText("Tasks Left 1/4 (Scanning) | Current State: " + stateMachine.getState().toString())
+            barTitle.setText("Tasks Left 1/4 (Scanning) | Current State: " + stateMachine.getState().toString());
             subBarTitle.setText("Scanning ("+((currentAddress == null) ? "N/A" : currentAddress.getHostAddress().toString())+")");
             status.appendText(
                 "Trying " +
@@ -172,6 +172,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             Bar.setProgress(.25d);
         }
         else {
+            barTitle.setText("Tasks Left 2/4 (Stopping Threads) | Current State: " + stateMachine.getState().toString());
             subBarTitle.setText("Closing Threads ("+runningThreads+" Threads Left)");
             status.appendText("Closing Threads | Threads Left: " + runningThreads + "\n");
             Bar.setProgress(.5d);
