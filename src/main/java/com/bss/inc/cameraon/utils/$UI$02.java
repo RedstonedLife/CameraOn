@@ -144,7 +144,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
 
     @Override
     public void updateProgress(InetAddress currentAddress, int runningThreads, double percentageComplete) {
-        try{if (currentAddress != null) this.status.setText(this.status.getText()+"\nTrying " + ((currentAddress == null) ? "N/A" : currentAddress.getHostAddress().toString()) + " | Running Threads: " + String.valueOf(runningThreads) + " | Percent Complete: " + String.valueOf(percentageComplete*100) + "%");progressBar.setProgress(0.0001d);}catch (ArithmeticException ignored) {progressBar.setProgress(0.0001d);}
+        if (currentAddress != null) this.status.setText(this.status.getText()+"\nTrying " + ((currentAddress == null) ? "N/A" : currentAddress.getHostAddress().toString()) + " | Running Threads: " + String.valueOf(runningThreads) + " | Percent Complete: " + String.valueOf(percentageComplete*100) + "%");
         progressBar.setProgress(percentageComplete);
     }
 }
