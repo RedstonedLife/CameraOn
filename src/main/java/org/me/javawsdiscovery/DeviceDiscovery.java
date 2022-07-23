@@ -1,9 +1,12 @@
 package org.me.javawsdiscovery;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.security.SecureRandom;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.Random;
+import java.util.TreeSet;
 
 public class DeviceDiscovery {
     public static int WS_DISCOVERY_TIMEOUT = 4000;
@@ -18,6 +21,25 @@ public class DeviceDiscovery {
     }
 
     public static Collection<URL> discoverWsDevicesAsUrls(String regxpProtocol, String regexpPath) {
-        
+        Collection<URL> urls = new TreeSet<>(new Comparator<URL>() {
+            public int compare(URL o1, URL o2) {
+                return o1.toString().compareTo(o2.toString());
+            }
+        });
+        for (String key : discoverWsDevices()) {
+            try {
+                URL url = new URL(key);
+                boolean ok = true;
+                if (regexpProtocol.length() > 0 && !url.getProtocol().matches(regexpProtocol))
+                    ok = false;
+                if (regexpPath.length() > 0 && !url.getPath().matches(regexpPath))
+                    ok = false;
+                if (ok)
+                    urls.add(url);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
+        }
+        return urls;
     }
 }
