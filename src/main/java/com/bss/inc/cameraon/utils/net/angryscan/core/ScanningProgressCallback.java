@@ -1,5 +1,7 @@
 package com.bss.inc.cameraon.utils.net.angryscan.core;
 
+import javafx.scene.control.TextArea;
+
 import java.net.InetAddress;
 
 public interface ScanningProgressCallback {
@@ -17,4 +19,6 @@ public interface ScanningProgressCallback {
     void updateProgress(InetAddress currentAddress, int runningThreads, double percentageComplete);
 
     void returnResults();
+
+    TextArea getStatus();
 }
