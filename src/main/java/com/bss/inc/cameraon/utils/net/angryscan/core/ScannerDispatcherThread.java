@@ -102,7 +102,7 @@ public class ScannerDispatcherThread extends Thread implements ThreadFactory, St
             catch (InterruptedException e) {
                 // interrupt - end the loop
             }
-
+            progressCallback.getStatus().setText("");
             // inform that no more addresses left
             stateMachine.stop();
 
