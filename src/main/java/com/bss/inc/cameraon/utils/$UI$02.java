@@ -43,7 +43,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     private Button button;
     private ScannerConfig scannerConfig;
     private String startIpAddress,endIpAddress;
-    private List<String> results = new ArrayList<>();
+    private List<ScanningResult> results = new ArrayList<>();
     private ScanFileManager sfm;
 
     public $UI$02(ScannerDispatcherThreadFactory scannerThreadFactory, StateMachine stateMachine,
@@ -146,7 +146,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                     resultTable.addOrUpdateResultRow(result);
                 }
                 public void consumeResults(ScanningResult result) {
-                    resultTable.addOrUpdateResultRow(result);results.add(result.toString());
+                    resultTable.addOrUpdateResultRow(result);results.add(result);
                 }
             };
         }
