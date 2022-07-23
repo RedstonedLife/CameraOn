@@ -124,7 +124,7 @@ public class ScannerDispatcherThread extends Thread implements ThreadFactory, St
 
             // finally, the scanning is complete
             stateMachine.complete();
-
+            progressCallback.getStatus().setText("");
             progressCallback.returnResults();
         }
         finally {
