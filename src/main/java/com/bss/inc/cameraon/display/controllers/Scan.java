@@ -42,7 +42,7 @@ public class Scan implements Initializable {
         $UI$01.u_10$1$1(btnClose);
         $UI$01.u_10$1$2(btnMinimize,"mainWindow");
         UI02.addTextArea(ssblTA);
-        UI02.addSubBar();
+        UI02.addSubBar(backendBarScan);
         UI02.addBar(tasksLeftScan);
         UI02.addButton(scanBtn);
         scanBtn.setOnAction(e -> {
