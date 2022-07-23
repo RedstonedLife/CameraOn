@@ -234,9 +234,9 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                 throw new RuntimeException(e);
             }
         }
-        subBarTitle.setText("Parsing Results (0/"+(resultTable.getResults().size()-1)+")");
+        subBarTitle.setText("Clearing Results (0/"+(resultTable.getResults().size()-1)+")");
         for(int i=resultTable.getResults().size(); i>resultTable.getResults().size(); i--) {
-            subBarTitle.setText("Parsing Results ("+i+"/"+(resultTable.getResults().size()-1)+")");
+            subBarTitle.setText("Clearing Results ("+i+")");
             results.add(resultTable.getResults().get(i));
             subBar.setProgress(subBar.getProgress()+perInc);
             try {
