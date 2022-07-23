@@ -143,10 +143,10 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         if (scannerConfig.displayResultType == DisplayResultType.ALL || state == RESTARTING) {
             return new ScanningResultCallback() {
                 public void prepareForResults(ScanningResult result) {
-                    resultTable.addOrUpdateResultRow(result);
+                    resultTable.addOrUpdateResultRow(result);results.add(result.toString());
                 }
                 public void consumeResults(ScanningResult result) {
-                    resultTable.addOrUpdateResultRow(result);
+                    resultTable.addOrUpdateResultRow(result);results.add(result.toString());
                 }
             };
         }
@@ -156,7 +156,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                 }
                 public void consumeResults(ScanningResult result) {
                     if (result.getType().ordinal() >= DisplayResultType.ALIVE.ordinal())
-                    {resultTable.addOrUpdateResultRow(result);results.add(result.toString())}
+                    {resultTable.addOrUpdateResultRow(result);results.add(result.toString());}
                 }
             };
         }
