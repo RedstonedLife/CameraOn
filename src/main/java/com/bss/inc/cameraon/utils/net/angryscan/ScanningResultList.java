@@ -87,7 +87,7 @@ public class ScanningResultList implements Iterable<ScanningResult> {
         info.numScanned++;
         Integer index = resultIndexes.get(address);
         if (index == null) {
-            return new ScanningResult(address, fetcherRegistry.getSelectedFetchers().size());
+            return new ScanningResult(address, fetcherRegistry.getSelectedFetchers().size(), this);
         }
         return resultList.get(index);
     }
