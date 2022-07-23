@@ -106,7 +106,7 @@
                                     </children></HBox>
                                 <HBox layoutX="230.0" layoutY="174.0" prefHeight="39.0" prefWidth="200.0">
                                     <children>
-                                        <ChoiceBox fx:id="scanAlgCb" prefHeight="38.0" prefWidth="200.0" />
+                                        <ChoiceBox fx:id="scanAlgCb" disable="true" prefHeight="38.0" prefWidth="200.0" />
                                     </children>
                                 </HBox>
                                 <Text fx:id="scanningalgotxt" fill="#e0e2e4" layoutX="230.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scanning Algorithm" />
