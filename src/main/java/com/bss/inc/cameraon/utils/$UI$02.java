@@ -201,7 +201,6 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                 details.append(fetcherName).append(":\t");
                 Object value = iterator.next();
                 details.append(value != null ? value : "");
-                details.append(newLine);
             }
             details.append("Type: \t");
             details.append(this.type.toString());
