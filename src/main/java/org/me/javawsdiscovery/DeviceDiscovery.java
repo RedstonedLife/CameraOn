@@ -89,4 +89,32 @@ public class DeviceDiscovery {
         }
         return addresses;
     }
+
+    private static Collection<Node> getNodeMatching(Node body, String regexp) {
+        Collection<Node> nodes = new ArrayList<>();
+        if (body.getNodeName().matches(regexp))
+            nodes.add(body);
+        if (body.getChildNodes().getLength() == 0)
+            return nodes;
+        NodeList returnList = body.getChildNodes();
+        for (int k = 0; k < returnList.getLength(); k++) {
+            Node node = returnList.item(k);
+            nodes.addAll(getNodeMatching(node, regexp));
+        }
+        return nodes;
+    }
+
+    private static Collection<String> parseSoapResponseForUrls(byte[] data) throws SOAPException, IOException {
+        Collection<String> urls = new ArrayList<>();
+        MessageFactory factory = MessageFactory.newInstance("SOAP 1.2 Protocol");
+        MimeHeaders headers = new MimeHeaders();
+        headers.addHeader("Content-type", "application/soap+xml");
+        SOAPMessage message = factory.createMessage(headers, new ByteArrayInputStream(data));
+        SOAPBody body = message.getSOAPBody();
+        for (Node node : getNodeMatching((Node)body, ".*:XAddrs")) {
+            if (node.getTextContent().length() > 0)
+                urls.addAll(Arrays.asList(node.getTextContent().split(" ")));
+        }
+        return urls;
+    }
 }
