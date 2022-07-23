@@ -192,5 +192,6 @@ public class ScanFileManager {
         }
     }
 
+    public void append(String line) {append(line);}
 
 }
