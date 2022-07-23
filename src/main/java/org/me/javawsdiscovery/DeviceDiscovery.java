@@ -1,5 +1,11 @@
 package org.me.javawsdiscovery;
 
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import javax.xml.soap.MessageFactory;
+import javax.xml.soap.SOAPException;
+import java.io.IOException;
 import java.net.*;
 import java.security.SecureRandom;
 import java.util.*;
