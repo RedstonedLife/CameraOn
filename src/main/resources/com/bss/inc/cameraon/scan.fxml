@@ -5,7 +5,6 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<?import java.net.URL?>
 <AnchorPane minHeight="600" minWidth="900" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bss.inc.cameraon.display.controllers.Scan">
     <children>
         <HBox layoutX="832.0" layoutY="1.0" prefHeight="27.0" prefWidth="28.0">
@@ -82,7 +81,10 @@
                                 </HBox>
                                 <ScrollPane fx:id="scanSp" layoutX="7.0" layoutY="284.0" prefHeight="193.0" prefWidth="648.0">
                                     <content>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="284.0" prefWidth="200.0" />
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="284.0" prefWidth="200.0">
+                                 <children>
+                                    <TextFlow prefHeight="200.0" prefWidth="200.0" />
+                                 </children></AnchorPane>
                                     </content>
                                 </ScrollPane>
                                 <Text fx:id="scanstatustxt" fill="#e0e2e4" layoutX="6.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scan status">
