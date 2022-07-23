@@ -17,5 +17,7 @@ public class DeviceDiscovery {
         return discoverWsDevicesAsUrls("","");
     }
 
-    public static
+    public static Collection<URL> discoverWsDevicesAsUrls(String regxpProtocol, String regexpPath) {
+        
+    }
 }
