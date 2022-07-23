@@ -78,7 +78,7 @@ public class PingerRegistry {
             catch (Exception e) {
                 Throwable t = e instanceof InvocationTargetException ? e.getCause() : e;
                 String message = "Unable to create pinger: " + pingerClass.getSimpleName();
-                LOG.log(Level.FATAL, message, t);
+                LOG.log(Level.FATAL, message, e);
                 if (t instanceof RuntimeException) throw (RuntimeException) t;
                 throw new FetcherException("pingerCreateFailure");
             }
