@@ -105,7 +105,8 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             }
             case STARTING -> {
                 if(transition != StateMachine.Transition.CONTINUE) {
-                    // Remove All Results
+                    sfm.wipe();
+                    resultTable.removeAll();
                 }
                 try {
                     scannerThread = scannerThreadFactory.createScannerThread(new RangeFeeder(startIpAddress, endIpAddress), this, createResultsCallback(state));
