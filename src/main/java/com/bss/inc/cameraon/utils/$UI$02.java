@@ -192,7 +192,8 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         subBar.setProgress(0.0d);
         subBarTitle.setText("Parsing Results (0/"+resultTable.getScanningResults().getScanInfo().getHostCount()+")");
         double perInc = Math.abs(1.0 / (resultTable.getScanningResults().getScanInfo().getHostCount()+1));
-        while(resultTable.getScanningResults().iterator().hasNext()) {
+        Iterator<?> iterator = resultTable.getScanningResults().iterator();
+        while(iterator.hasNext()) {
             StringBuilder details = new StringBuilder(1024);
             Iterator<?> iterator = resultTable.getScanningResults().iterator();
             List<Fetcher> fetchers = resultTable.getScanningResults().getFetchers();
