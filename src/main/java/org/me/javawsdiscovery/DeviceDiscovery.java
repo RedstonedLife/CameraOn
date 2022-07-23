@@ -24,7 +24,7 @@ public class DeviceDiscovery {
         return discoverWsDevicesAsUrls("","");
     }
 
-    public static Collection<URL> discoverWsDevicesAsUrls(String regxpProtocol, String regexpPath) {
+    public static Collection<URL> discoverWsDevicesAsUrls(String regexpProtocol, String regexpPath) {
         Collection<URL> urls = new TreeSet<>(new Comparator<URL>() {
             public int compare(URL o1, URL o2) {
                 return o1.toString().compareTo(o2.toString());
