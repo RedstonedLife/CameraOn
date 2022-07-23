@@ -39,7 +39,7 @@ public class Scan implements Initializable {
         $UI$01.u_10$1$1(btnClose);
         $UI$01.u_10$1$2(btnMinimize,"mainWindow");
         for(int i=0; i<500; i++) {
-            ssblTA.setText(ssblTA.getText()+"\nThis is a test line-");
+            ssblTA.setText(ssblTA.getText()+"\nThis is a test line #"+String.valueOf(i));
         }
         UI02.addBar(tasksLeftScan);
         UI02.addButton(scanBtn);
