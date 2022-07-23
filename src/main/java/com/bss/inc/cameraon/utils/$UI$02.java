@@ -87,7 +87,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     }
 
     public void transitionTo(final ScanningState state, final StateMachine.Transition transition) {
-        barTitle.setText("Tasks");
+        barTitle.setText("Tasks Left");
         if(transition == StateMachine.Transition.INIT)
             return;
         // TODO: Enhance?
