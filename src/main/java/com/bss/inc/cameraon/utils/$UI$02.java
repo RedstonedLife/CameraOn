@@ -120,7 +120,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                     resultTable.addOrUpdateResultRow(result);
                 }
                 public void consumeResults(ScanningResult result) {
-                    System.out.println("");
+                    System.out.println("RESULT");
                     resultTable.addOrUpdateResultRow(result);
                 }
             };
