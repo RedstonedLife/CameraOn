@@ -144,7 +144,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         if (MainClass.getScanningResults().isInfoAvailable()) {
             System.out.println("Scanning took: " + String.valueOf(MainClass.getScanningResults().getScanInfo().getScanTime())+"s");
         }
-        try{progressBar.setProgress(100/percentageComplete);}catch (ArithmeticException ignored) {progressBar.setProgress(0.00);
+        try{progressBar.setProgress(100/percentageComplete);}catch (ArithmeticException ignored) {progressBar.setProgress(0.0001d);}
     }
 }
 
