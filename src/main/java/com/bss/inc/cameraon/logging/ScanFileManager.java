@@ -100,7 +100,7 @@ public class ScanFileManager {
         return _f.toArray();
     }
 
-    public void _wipeContents(@NotNull File a) {
+    private void _wipeContents(@NotNull File a) {
         try {
             Files.newBufferedWriter(a.toPath(), StandardOpenOption.TRUNCATE_EXISTING);
         } catch (IOException e) {
