@@ -45,7 +45,7 @@ public class Scan implements Initializable {
         UI02.addSubBar(backendBarScan);
         UI02.addBar(tasksLeftScan);
         UI02.addBarTitle(taskslefttxt);
-        UI02.addSubBarTitle();
+        UI02.addSubBarTitle(backendtxt);
         UI02.addButton(scanBtn);
         scanBtn.setOnAction(e -> {
             UI02.setStartIpAddress(iprangefromTf.getText());
