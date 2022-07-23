@@ -168,7 +168,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         else {
             this.status.appendText("Closing threads\n");
         }
-        Bar.setProgress(percentageComplete);
+        subBar.setProgress(percentageComplete);
     }
 }
 
