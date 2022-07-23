@@ -203,9 +203,9 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                 details.append(value != null ? value : "");
             }
             details.append("Type: \t");
-            details.append(this.type.toString());
+            details.append(iterator..toString());
             sfm.append(details.toString());
-            
+            iterator.next();
         }
     }
 }
