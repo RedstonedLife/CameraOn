@@ -122,7 +122,7 @@ public class ScanningResult {
             details.append(value != null ? value : "");
             details.append(newLine);
         }
-        details.append("")
+        details.append("Type: ")
         return details.toString();
     }
 }
