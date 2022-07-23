@@ -169,7 +169,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             subBar.setProgress(percentageComplete);
         }
         else {
-            double percentage = 
+            double percentage = runningThreads/scannerConfig.maxThreads
             status.appendText();
         }
 
