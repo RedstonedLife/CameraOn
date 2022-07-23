@@ -1,6 +1,7 @@
 package com.bss.inc.cameraon.utils;
 
 import com.bss.inc.cameraon.MainClass;
+import com.bss.inc.cameraon.logging.ScanFileManager;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningResult;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningResultList;
 import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
@@ -40,6 +41,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     private Button button;
     private ScannerConfig scannerConfig;
     private String startIpAddress,endIpAddress;
+    private ScanFileManager sfm;
 
     public $UI$02(ScannerDispatcherThreadFactory scannerThreadFactory, StateMachine stateMachine,
                   PingerRegistry pingerRegistry, ScannerConfig scannerConfig) {
@@ -52,6 +54,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         // add listeners to all state changes
         stateMachine.addTransitionListener(this);
         ScanningState state = stateMachine.getState();
+        this.sfm = new ScanFileManager();
     }
 
     public void addBar(ProgressBar progressBar) {
@@ -188,7 +191,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         subBarTitle.setText("Parsing Results (0/"+resultTable.getScanningResults().getScanInfo().getHostCount()+")");
         double perInc = Math.abs(1.0 / (resultTable.getScanningResults().getScanInfo().getHostCount()+1));
         while(resultTable.getScanningResults().iterator().hasNext()) {
-            
+
         }
     }
 }
