@@ -200,7 +200,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             List<Fetcher> fetchers = resultTable.getScanningResults().getFetchers();
             for (int j = 0; iterator.hasNext(); j++) {
                 String fetcherName = fetchers.get(j).getName();
-                sb.append(fetcherName).append("-\t");
+                sb.append(fetcherName.toUpperCase()).append("-");
                 Object value = iterator.next();
                 sb.append(value != null ? value : "");
                 sb.append(":");
