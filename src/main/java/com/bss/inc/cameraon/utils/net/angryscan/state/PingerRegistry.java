@@ -82,6 +82,30 @@ public class PingerRegistry {
                 if (t instanceof RuntimeException) throw (RuntimeException) t;
                 throw new FetcherException("pingerCreateFailure");
             }
+            try {
+                Pinger pinger = constructor.newInstance(timeout);
+                return pinger;
+            }
+            catch (Exception e) {
+                Throwable t = e instanceof InvocationTargetException ? e.getCause() : e;
+                String message = "Unable to create pinger: " + pingerClass.getSimpleName();
+                LOG.log(Level.FATAL, message, e);
+                if (t instanceof RuntimeException) throw (RuntimeException) t;
+                throw new FetcherException("pingerCreateFailure");
+            }
+            try {
+                Constructor<? extends Pinger> constructor = pingerClass.getConstructor(int.class);
+                Pinger pinger = constructor.newInstance(timeout);
+                injector.register((Class<Pinger>) pingerClass, pinger);
+                return pinger;
+            }
+            catch (Exception e) {
+                Throwable t = e instanceof InvocationTargetException ? e.getCause() : e;
+                String message = "Unable to create pinger: " + pingerClass.getSimpleName();
+                LOG.log(Level.FATAL, message, e);
+                if (t instanceof RuntimeException) throw (RuntimeException) t;
+                throw new FetcherException("pingerCreateFailure");
+            }
         }
     }
 }
