@@ -132,7 +132,6 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                 break;
             }
             case KILLING -> {
-                button.setDisable(false);
                 break;
             }
         }
