@@ -31,7 +31,7 @@ public class Scan implements Initializable {
     @FXML private Text taskslefttxt,backendtxt,scanningalgotxt,scanstatustxt,versiontxt,licensetxt,iprangeTxt,iprangetoTxt;
     @FXML private TextArea ssblTA;
     @FXML private TextField iprangetoTf,iprangefromTf;
-    @FXML private ProgressBar tasksLeftScan;
+    @FXML private ProgressBar tasksLeftScan,backendBarScan;
     private static $UI$02 UI02 = MainClass.getUi02();
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
