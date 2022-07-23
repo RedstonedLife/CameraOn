@@ -34,8 +34,9 @@ public class ScanningResult {
      * provided address
      * @param numberOfFetchers the number of currently available fetchers
      */
-    public ScanningResult(InetAddress address, int numberOfFetchers) {
+    public ScanningResult(InetAddress address, int numberOfFetchers, ScanningResultList resultList) {
         this.address = address;
+        this.resultList = resultList;
         values = new Object[numberOfFetchers];
         values[0] = address.getHostAddress();
         type = ResultType.UNKNOWN;
