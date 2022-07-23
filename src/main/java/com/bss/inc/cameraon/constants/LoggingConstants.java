@@ -13,7 +13,7 @@ public class LoggingConstants {
     public static final String LOG_SUPER_FORMAT = "[%s/%s](%s)->(%s): %s";
     public static final String LOG_NAME_FORMAT = "log-%s.log";
     public static final String LOG_NAME_DUPLICATE_FORMAT = "log-%s-%s.log";
-    public static final String LOG_NAME_DUPLICATE_FORMAT = "scan-%s-%s.scan";
+    public static final String SCAN_NAME_DUPLICATE_FORMAT = "scan-%s-%s.scan";
     public static final DateTimeFormatter LOG_DATE_FORMAT = DateTimeFormatter.ofPattern("dd-MM-yy");
     public static final DateTimeFormatter LOG_TIME_FORMAT = DateTimeFormatter.ofPattern("HH:mm:ss");
     public static final String SETTINGS_LOCATION = OSValidator.IS_WINDOWS ? FilePaths.HOME_LOCATION + FilePaths.WIN_CONFIG_LOCATION + "settings.json" :
