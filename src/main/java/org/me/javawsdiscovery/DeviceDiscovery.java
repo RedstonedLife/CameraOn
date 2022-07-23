@@ -1,12 +1,10 @@
 package org.me.javawsdiscovery;
 
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.net.*;
 import java.security.SecureRandom;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.Random;
-import java.util.TreeSet;
+import java.util.*;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 public class DeviceDiscovery {
     public static int WS_DISCOVERY_TIMEOUT = 4000;
@@ -41,5 +39,54 @@ public class DeviceDiscovery {
             }
         }
         return urls;
+    }
+
+    public static Collection<String> discoverWsDevices() {
+        final Collection<String> addresses = new TreeSet<>();
+        final CountDownLatch serverStarted = new CountDownLatch(1);
+        final CountDownLatch serverFinished = new CountDownLatch(1);
+        try {
+            String uuid = UUID.randomUUID().toString();
+            WS_DISCOVERY_PROBE_MESSAGE = WS_DISCOVERY_PROBE_MESSAGE.replaceAll("<wsa:MessageID>urn:uuid:.*</wsa:MessageID>", "<wsa:MessageID>urn:uuid:" + uuid + "</wsa:MessageID>");
+            int port = random.nextInt(20000) + 40000;
+            final DatagramSocket server = new DatagramSocket(port);
+            (new Thread() {
+                public void run() {
+                    try {
+                        DatagramPacket packet = new DatagramPacket(new byte[4096], 4096);
+                        server.setSoTimeout(DeviceDiscovery.WS_DISCOVERY_TIMEOUT);
+                        long timerStarted = System.currentTimeMillis();
+                        while (System.currentTimeMillis() - timerStarted < DeviceDiscovery.WS_DISCOVERY_TIMEOUT) {
+                            serverStarted.countDown();
+                            server.receive(packet);
+                            Collection<String> collection = DeviceDiscovery.parseSoapResponseForUrls(Arrays.copyOf(packet.getData(), packet.getLength()));
+                            for (String key : collection)
+                                addresses.add(key);
+                        }
+                    } catch (SocketTimeoutException ignored) {
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    } finally {
+                        serverFinished.countDown();
+                        server.close();
+                    }
+                }
+            }).start();
+            try {
+                serverStarted.await(1000L, TimeUnit.MILLISECONDS);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            server.send(new DatagramPacket(WS_DISCOVERY_PROBE_MESSAGE.getBytes(), WS_DISCOVERY_PROBE_MESSAGE.length(), InetAddress.getByName(WS_DISCOVERY_ADDRESS_IPv4), WS_DISCOVERY_PORT));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            serverFinished.await(WS_DISCOVERY_TIMEOUT, TimeUnit.MILLISECONDS);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return addresses;
     }
 }
