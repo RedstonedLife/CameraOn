@@ -19,7 +19,7 @@ public interface Feeder extends Plugin {
     /**
      * @return value from 0 to 100, describing the amount of work already done
      */
-    double percentageComplete();
+    int percentageComplete();
 
     /**
      * @return information about feeder's current settings.
