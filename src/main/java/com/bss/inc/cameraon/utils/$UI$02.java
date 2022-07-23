@@ -219,7 +219,10 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     }
 
     public void copyResultsToCache() {
-
+        barTitle.setText("Tasks Left 4/4 (Copying To Cache) | Current State: " + stateMachine.getState().toString());
+        Bar.setProgress(1d);
+        subBar.setProgress(0.0d);
+        subBarTitle.setText("Parsing Results (0/"+(resultTable.getResults().size()-1)+")");
     }
 
     @Override
