@@ -184,7 +184,7 @@ public class ScanFileManager {
         return "%sT%s".formatted(LocalDateTime.now().format(LoggingConstants.SCAN_DATE_FORMAT), LocalDateTime.now().format(LoggingConstants.LOG_TIME_FORMAT));
     }
 
-    private void append(String line) {
+    private void _append(String line) {
         try {
             Files.write(currentScanFile.toPath(), (line+"\n").getBytes(), StandardOpenOption.APPEND);
         } catch (IOException e) {
@@ -192,6 +192,6 @@ public class ScanFileManager {
         }
     }
 
-    public void append(String line) {append(line);}
+    public void append(String line) {_append(line);}
 
 }
