@@ -14,6 +14,6 @@ public class DeviceDiscovery {
     private static final Random random = new SecureRandom();
 
     public static Collection<URL> discoverWsDevicesAsUrls() {
-        return discoverWsDevicesAsUrls()
+        return discoverWsDevicesAsUrls("","");
     }
 }
