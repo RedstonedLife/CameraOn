@@ -33,6 +33,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     private String mainWindowTitle;
     private ProgressBar progressBar;
     private StateMachine stateMachine;
+    private TextArea status;
     private Button button;
     private ScannerConfig scannerConfig;
     private String startIpAddress,endIpAddress;
