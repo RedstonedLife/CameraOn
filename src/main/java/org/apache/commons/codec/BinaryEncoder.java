@@ -1,4 +1,0 @@
-package org.apache.commons.codec;
-
-public class BinaryEncoder {
-}
