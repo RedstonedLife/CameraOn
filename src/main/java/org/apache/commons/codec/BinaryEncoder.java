@@ -1,2 +1,4 @@
-package org.apache.commons.codec;public class BinaryEncoder {
+package org.apache.commons.codec;
+
+public class BinaryEncoder {
 }
