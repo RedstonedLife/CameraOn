@@ -58,9 +58,15 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         this.Bar = progressBar;
     }
 
+    public void addBarTitle(Text text) {
+        this.barTitle = text;
+    }
+
     public void addSubBar(ProgressBar progressBar) {
         this.subBar = progressBar;
     }
+
+    public void addSub
 
     public void addButton(Button startStopButton) {
         this.button = startStopButton;
