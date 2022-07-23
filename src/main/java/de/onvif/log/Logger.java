@@ -2,19 +2,19 @@
 /*    */ 
 /*    */ public class Logger {
 /*    */   public void debug(String text) {
-/*  5 */     System.out.println(text);
+/*  5 */     com.bss.inc.cameraon.logging.Logger.getLogger("BNC").debug(text);
 /*    */   }
 /*    */   
 /*    */   public void info(String text) {
-/*  9 */     System.out.println(text);
+/*  9 */     com.bss.inc.cameraon.logging.Logger.getLogger("BNC").info(text);
 /*    */   }
 /*    */   
 /*    */   public void warn(String text) {
-/* 13 */     System.err.println(text);
+/* 13 */     com.bss.inc.cameraon.logging.Logger.getLogger("BNC").warn(text);
 /*    */   }
 /*    */   
 /*    */   public void error(String text) {
-/* 17 */     System.err.println(text);
+/* 17 */     com.bss.inc.cameraon.logging.Logger.getLogger("BNC").error(text);
 /*    */   }
 /*    */ }
 
