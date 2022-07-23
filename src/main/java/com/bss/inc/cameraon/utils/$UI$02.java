@@ -200,7 +200,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             for (int i = 0; iterator.hasNext(); i++) {
                 String fetcherName = fetchers.get(i).getName();
                 details.append(fetcherName).append(":\t");
-                Object value = iterator.next();
+                Object value = r.get
                 details.append(value != null ? value : "");
             }
             details.append("Type: \t");
