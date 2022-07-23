@@ -100,6 +100,7 @@ public class MainClass extends Application {
             }
         }
         WindowManager.openDialog("welcomeWindow");
+        stateMachine.init();
         //WindowManager.changeDialogScene("mainWindow", clazz.getResource(FrontendPaths.SETTINGS_FXML));
         //WindowManager.openDialog("mainWindow");
     }
