@@ -196,6 +196,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         Iterator<ScanningResult> iterator = resultTable.getScanningResults().iterator();
         while(iterator.hasNext()) {
             sfm.append(iterator.next().toString());
+            status.appendText(iterator.next().toString()+"\n");
             subBarTitle.setText("Parsing Results ("+c+"/"+resultTable.getScanningResults().getScanInfo().getHostCount()+")");
             subBar.setProgress(subBar.getProgress()+perInc);
             iterator.next();

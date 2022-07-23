@@ -109,9 +109,6 @@ public class ScanningResult {
      * @return human-friendly text representation of results
      */
     public String toString() {
-        // cross-platform newline :-)
-        String newLine = System.getProperty("line.separator");
-
         StringBuilder details = new StringBuilder(1024);
         Iterator<?> iterator = getValues().iterator();
         List<Fetcher> fetchers = resultList.getFetchers();
@@ -120,7 +117,6 @@ public class ScanningResult {
             details.append(fetcherName).append(":\t");
             Object value = iterator.next();
             details.append(value != null ? value : "");
-            details.append(newLine);
         }
         details.append("Type: \t");
         details.append(this.type.toString());
