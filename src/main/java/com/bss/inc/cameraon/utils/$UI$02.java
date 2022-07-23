@@ -195,7 +195,14 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         for(int i=0; i<resultTable.getResults().size(); i++) {
             StringBuilder sb = new StringBuilder(1024);
             sb.append("IP-"+resultTable.getResults().get(i).getAddress().getHostAddress()+":");
-
+            Iterator<?> iterator = resultTable.getResults().get(i)().iterator();
+            List<Fetcher> fetchers = resultList.getFetchers();
+            for (int i = 0; iterator.hasNext(); i++) {
+                String fetcherName = fetchers.get(i).getName();
+                details.append(fetcherName).append(":\t");
+                Object value = iterator.next();
+                details.append(value != null ? value : "");
+            }
             status.appendText(results.get(i)+"\n");
             subBarTitle.setText("Parsing Results ("+i+"/"+resultTable.getScanningResults().getScanInfo().getHostCount()+")");
             subBar.setProgress(subBar.getProgress()+perInc);
