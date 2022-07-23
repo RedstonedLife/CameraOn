@@ -247,7 +247,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                 throw new RuntimeException(e);
             }
         }
-        barTitle.setText("Scanning Status: DONE | Current Scanner State:");
+        barTitle.setText("Scanning Status: DONE | Current Scanner State: " + );
         subBarTitle.setText("");
         subBar.setProgress(1.0d);
     }
