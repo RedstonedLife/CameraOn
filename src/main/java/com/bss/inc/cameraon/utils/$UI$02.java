@@ -248,6 +248,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             }
         }
         subBarTitle.setText("");
+        
     }
 
     @Override
