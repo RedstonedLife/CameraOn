@@ -251,4 +251,8 @@ class ResultTable {
     public ScanningResultList getScanningResults() {
         return scanningResults;
     }
+
+    public List<ScanningResult> getResults() {
+        return results;
+    }
 }
