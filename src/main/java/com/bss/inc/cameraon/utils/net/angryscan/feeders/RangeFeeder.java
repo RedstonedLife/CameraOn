@@ -6,6 +6,8 @@ import com.bss.inc.cameraon.utils.net.angryscan.utils.InetAddressUtils;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
+import static com.bss.inc.cameraon.utils.net.angryscan.utils.OctetConverter.octetsToInt;
+
 public class RangeFeeder extends AbstractFeeder {
 
     private InetAddress startIP;
