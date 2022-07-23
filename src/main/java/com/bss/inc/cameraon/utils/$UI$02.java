@@ -194,7 +194,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         double perInc = Math.abs(1.0 / (resultTable.getScanningResults().getScanInfo().getHostCount()+1));
         Iterator<ScanningResult> iterator = resultTable.getScanningResults().iterator();
         while(iterator.hasNext()) {
-            sfm.append(details.toString());
+            sfm.append(iterator.next().toString());
             iterator.next();
         }
     }
