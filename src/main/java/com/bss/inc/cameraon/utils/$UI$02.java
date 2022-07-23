@@ -40,7 +40,6 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     private Button button;
     private ScannerConfig scannerConfig;
     private String startIpAddress,endIpAddress;
-    private double perInc;
 
     public $UI$02(ScannerDispatcherThreadFactory scannerThreadFactory, StateMachine stateMachine,
                   PingerRegistry pingerRegistry, ScannerConfig scannerConfig) {
@@ -53,7 +52,6 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         // add listeners to all state changes
         stateMachine.addTransitionListener(this);
         ScanningState state = stateMachine.getState();
-        this.perInc = Math.abs(1.0 / (scannerConfig.maxThreads + 1));
     }
 
     public void addBar(ProgressBar progressBar) {
@@ -173,7 +171,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         }
         else {
             subBarTitle.setText("Closing Threads ("+runningThreads+" Threads Left)");
-            status.appendText("Closing Threads | Threads Left: " + runningThreads + " | Percent Complete: ");
+            status.appendText("Closing Threads | Threads Left: " + runningThreads + "\n");
             Bar.setProgress(.5d);
         }
 
