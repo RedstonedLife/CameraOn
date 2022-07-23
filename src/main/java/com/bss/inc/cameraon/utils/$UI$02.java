@@ -72,7 +72,6 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         switch(state) {
             case IDLE -> {
                 button.setDisable(false);
-                progressBar.setProgress(1.0d);
                 break;
             }
             case STARTING -> {
