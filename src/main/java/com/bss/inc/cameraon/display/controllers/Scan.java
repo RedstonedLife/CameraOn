@@ -9,6 +9,8 @@ import com.bss.inc.cameraon.utils.net.angryscan.ScanningResultList;
 import com.bss.inc.cameraon.utils.net.angryscan.core.ScannerDispatcherThreadFactory;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.ScanningState;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateMachine;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -33,6 +35,7 @@ public class Scan implements Initializable {
     private static $UI$02 UI02 = MainClass.getUi02();
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        ssblTA.textProperty().addListener(new ChangeListener<Object>() {@Override public void changed(ObservableValue<?> observable, Object oldValue, Object newValue) {ssblTA.setScrollTop(Double.MAX_VALUE);}});
         $UI$01.u_05$1$1(scanAlgCb,0,new String[]{"AngryScan","IB-Scan","CB-Scan"});
         $UI$01.u_01$1$1(cmainsplit,new Button[]{settingsSceneBtn,cctvSceneBtn,applySceneBtn,scanSceneBtn,HelpBtn});
         $UI$01.u_04$1$1(prefBtn);
