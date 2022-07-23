@@ -11,6 +11,7 @@ import com.bss.inc.cameraon.utils.net.angryscan.core.ScanningProgressCallback;
 import com.bss.inc.cameraon.utils.net.angryscan.core.ScanningResultCallback;
 import com.bss.inc.cameraon.utils.net.angryscan.enums.DisplayResultType;
 import com.bss.inc.cameraon.utils.net.angryscan.feeders.RangeFeeder;
+import com.bss.inc.cameraon.utils.net.angryscan.fetchers.Fetcher;
 import com.bss.inc.cameraon.utils.net.angryscan.state.PingerRegistry;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.ScanningState;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateMachine;
@@ -22,6 +23,7 @@ import javafx.scene.text.Text;
 
 import java.net.InetAddress;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import static com.bss.inc.cameraon.utils.net.angryscan.state.state.ScanningState.RESTARTING;
@@ -191,9 +193,17 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         subBarTitle.setText("Parsing Results (0/"+resultTable.getScanningResults().getScanInfo().getHostCount()+")");
         double perInc = Math.abs(1.0 / (resultTable.getScanningResults().getScanInfo().getHostCount()+1));
         while(resultTable.getScanningResults().iterator().hasNext()) {
-            ScanningResult result = resultTable.getScanningResults().iterator().next();
-            StringBuilder sb = new StringBuilder();
-            sb.append(
+            Iterator<?> iterator = getValues().iterator();
+            List<Fetcher> fetchers = resultList.getFetchers();
+            for (int i = 0; iterator.hasNext(); i++) {
+                String fetcherName = fetchers.get(i).getName();
+                details.append(fetcherName).append(":\t");
+                Object value = iterator.next();
+                details.append(value != null ? value : "");
+                details.append(newLine);
+            }
+            details.append("Type: \t");
+            details.append(this.type.toString());
         }
     }
 }
