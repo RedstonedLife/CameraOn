@@ -43,7 +43,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     private Button button;
     private ScannerConfig scannerConfig;
     private String startIpAddress,endIpAddress;
-    private List<String> 
+    private List<String> results = 
     private ScanFileManager sfm;
 
     public $UI$02(ScannerDispatcherThreadFactory scannerThreadFactory, StateMachine stateMachine,
