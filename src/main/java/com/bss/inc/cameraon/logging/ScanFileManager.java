@@ -39,7 +39,7 @@ public class ScanFileManager {
         /* COPY LATEST TO ITS OWN FILE */
         if (_LATEST_EXISTS) {
             File latest = new File(_folder, LoggingConstants.SCAN_LATEST);
-            if (_sameDayScan(_ScanCreationDateFormatted(LoggingConstants.LOG_LATEST)) >= 1) {
+            if (_sameDayScan(_ScanCreationDateFormatted(LoggingConstants.SCAN_LATEST)) >= 1) {
                 currentScanFile = _createScan(LoggingConstants.SCAN_NAME_DUPLICATE_FORMAT.formatted(
                         _ScanCreationDateFormatted(LoggingConstants.SCAN_LATEST),
                         String.valueOf(_sameDayScan(_ScanCreationDateFormatted(LoggingConstants.SCAN_LATEST)))
