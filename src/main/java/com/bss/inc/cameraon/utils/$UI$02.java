@@ -142,7 +142,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     public void updateProgress(InetAddress currentAddress, int runningThreads, int percentageComplete) {
         if (currentAddress != null) System.out.println("Trying " + ((currentAddress == null) ? "N/A" : currentAddress.getHostAddress().toString()) + " | Running Threads: " + String.valueOf(runningThreads) + " | Percent Complete: " + String.valueOf(percentageComplete) + "%");
         if (MainClass.getScanningResults().isInfoAvailable()) {
-            System.out.println(MainClass.getScanningResults().getScanInfo().getScanTime());
+            System.out.println("Scanning took: " + String.valueOf(MainClass.getScanningResults().getScanInfo().getScanTime())+"s");
         }
     }
 }
