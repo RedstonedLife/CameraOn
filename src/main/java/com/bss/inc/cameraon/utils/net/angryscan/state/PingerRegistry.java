@@ -83,5 +83,6 @@ public class PingerRegistry {
                 //throw new FetcherException("pingerCreateFailure");
             }
         }
+        return null;
     }
 }
