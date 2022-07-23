@@ -122,6 +122,7 @@ public class ScanningResult {
             details.append(value != null ? value : "");
             details.append(newLine);
         }
+        details.append()
         return details.toString();
     }
 }
