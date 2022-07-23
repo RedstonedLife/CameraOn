@@ -170,7 +170,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         }
         else {
             double percentage = runningThreads/scannerConfig.maxThreads;
-            status.appendText("Closing Threads | Threads Left: " + String.valueOf());
+            status.appendText("Closing Threads | Threads Left: " + String.valueOf(runningThreads) + "| ");
         }
 
     }
