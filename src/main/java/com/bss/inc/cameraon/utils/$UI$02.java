@@ -229,7 +229,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             results.add(resultTable.getResults().get(i));
             subBar.setProgress(subBar.getProgress()+perInc);
             try {
-                TimeUnit.MILLISECONDS.sleep(150);
+                TimeUnit.MILLISECONDS.sleep(5);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -240,7 +240,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             subBar.setProgress(subBar.getProgress()+perInc);
             resultTable.getResults().remove(i);
             try {
-                TimeUnit.MILLISECONDS.sleep(150);
+                TimeUnit.MILLISECONDS.sleep(5);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
