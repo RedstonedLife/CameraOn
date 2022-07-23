@@ -143,7 +143,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         if (scannerConfig.displayResultType == DisplayResultType.ALL || state == RESTARTING) {
             return new ScanningResultCallback() {
                 public void prepareForResults(ScanningResult result) {
-                    resultTable.addOrUpdateResultRow(result);results.add(result.toString());
+                    resultTable.addOrUpdateResultRow(result);
                 }
                 public void consumeResults(ScanningResult result) {
                     resultTable.addOrUpdateResultRow(result);results.add(result.toString());
