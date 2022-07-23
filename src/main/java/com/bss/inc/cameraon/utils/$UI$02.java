@@ -228,7 +228,7 @@ class ResultTable {
         if(results.contains(result)) {
             results.set(results.indexOf(result), result);
         } else {
-            
+            results.add(result);
         }
     }
     public void updateResult(int index, String fetcherId, Object newValue) {
