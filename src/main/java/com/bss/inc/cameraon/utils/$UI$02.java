@@ -31,7 +31,8 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     private ResultTable resultTable;
 
     private String mainWindowTitle;
-    private ProgressBar progressBar;
+    private ProgressBar Bar;
+    private ProgressBar subBar;
     private StateMachine stateMachine;
     private TextArea status;
     private Button button;
@@ -52,7 +53,11 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     }
 
     public void addBar(ProgressBar progressBar) {
-        this.progressBar = progressBar;
+        this.Bar = progressBar;
+    }
+
+    public void addSubBar(ProgressBar progressBar) {
+        this.subBar = progressBar;
     }
 
     public void addButton(Button startStopButton) {
