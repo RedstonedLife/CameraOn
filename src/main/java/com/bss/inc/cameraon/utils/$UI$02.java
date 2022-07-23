@@ -222,8 +222,18 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         barTitle.setText("Tasks Left 4/4 (Copying To Cache) | Current State: " + stateMachine.getState().toString());
         Bar.setProgress(1d);
         subBar.setProgress(0.0d);
-        subBarTitle.setText("Parsing Results (0/"+(resultTable.getResults().size()-1)+")");
+        subBarTitle.setText("Parsing Results To Cache (0/"+(resultTable.getResults().size()-1)+")");
         double perInc = Math.abs(1.0 / (resultTable.getResults().size()+1));
+        for(int i=0; i<resultTable.getResults().size(); i++) {
+            results.add(resultTable.getResults().get(i));
+            subBar.setProgress(subBar.getProgress()+perInc);
+            try {
+                TimeUnit.MILLISECONDS.sleep(150);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        subBarTitle.setText("Parsing Results (0/"+(resultTable.getResults().size()-1)+")");
         for(int i=0; i<resultTable.getResults().size(); i++) {
             results.add(resultTable.getResults().get(i));
             subBar.setProgress(subBar.getProgress()+perInc);
