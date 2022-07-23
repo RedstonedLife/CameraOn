@@ -168,7 +168,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     @Override
     public void updateProgress(InetAddress currentAddress, int runningThreads, double percentageComplete) {
         if(currentAddress!=null) {
-            barTitle.setText("Tasks Left 1/4 (Scanning) | Current State: " + stateMachine.getState().toString());
+            barTitle.setText("Tasks Left 1/4 (Scanning) | Current Scanner State: " + stateMachine.getState().toString());
             subBarTitle.setText("Scanning ("+((currentAddress == null) ? "N/A" : currentAddress.getHostAddress().toString())+")");
             status.appendText(
                 "Trying " +
@@ -179,7 +179,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             Bar.setProgress(.25d);
         }
         else {
-            barTitle.setText("Tasks Left 2/4 (Stopping Threads) | Current State: " + stateMachine.getState().toString());
+            barTitle.setText("Tasks Left 2/4 (Stopping Threads) | Current Scanner State: " + stateMachine.getState().toString());
             subBarTitle.setText("Closing Threads ("+runningThreads+" Threads Left)");
             status.appendText("Closing Threads | Threads Left: " + runningThreads + "\n");
             Bar.setProgress(.5d);
@@ -189,7 +189,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
 
     @Override
     public void returnResults() {
-        barTitle.setText("Tasks Left 3/4 (Parsing Results) | Current State: " + stateMachine.getState().toString());
+        barTitle.setText("Tasks Left 3/4 (Parsing Results) | Current Scanner State: " + stateMachine.getState().toString());
         Bar.setProgress(0.75d);
         subBar.setProgress(0.0d);
         subBarTitle.setText("Parsing Results (0/"+(resultTable.getResults().size()-1)+")");
@@ -221,7 +221,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
 
 
     public void copyResultsToCache() {
-        barTitle.setText("Tasks Left 4/4 (Copying To Cache) | Current State: " + stateMachine.getState().toString());
+        barTitle.setText("Tasks Left 4/4 (Copying To Cache) | Current Scanner State: " + stateMachine.getState().toString());
         Bar.setProgress(1d);
         subBar.setProgress(0.0d);
         subBarTitle.setText("Parsing Results To Cache (0/"+(resultTable.getResults().size()-1)+")");
@@ -247,7 +247,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                 throw new RuntimeException(e);
             }
         }
-        barTitle.setText("");
+        barTitle.setText("Scanning Status: DONE | Current Scanner State:");
         subBarTitle.setText("");
         subBar.setProgress(1.0d);
     }
