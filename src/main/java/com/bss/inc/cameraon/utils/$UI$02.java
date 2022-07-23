@@ -210,7 +210,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             status.appendText(sb.toString()+"\n");
             subBarTitle.setText("Parsing Results ("+i+"/"+resultTable.getScanningResults().getScanInfo().getHostCount()+")");
             subBar.setProgress(subBar.getProgress()+perInc);
-            TimeUnit.MILLISECONDS.sleep();
+            TimeUnit.MILLISECONDS.sleep(150);
         }
     }
 
