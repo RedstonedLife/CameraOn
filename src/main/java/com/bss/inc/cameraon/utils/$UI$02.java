@@ -195,11 +195,10 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         int c = 0;
         List<ScanningResult> resultList = resultTable.getScanningResults().getResultList();
         for(int i=0; i<resultList.size(); i++) {
-            sfm.append(iterator.next().toString());
-            status.appendText(iterator.next().toString()+"\n");
-            subBarTitle.setText("Parsing Results ("+c+"/"+resultTable.getScanningResults().getScanInfo().getHostCount()+")");
+            sfm.append(resultList.get(i).toString());
+            status.appendText(resultList.get(i).toString()+"\n");
+            subBarTitle.setText("Parsing Results ("+i+"/"+resultTable.getScanningResults().getScanInfo().getHostCount()+")");
             subBar.setProgress(subBar.getProgress()+perInc);
-            iterator.next();
         }
     }
 }
