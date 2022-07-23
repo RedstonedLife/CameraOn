@@ -16,6 +16,7 @@ import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateMachine;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateTransitionListener;
 import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
+import javafx.scene.control.TextArea;
 
 import java.net.InetAddress;
 import java.util.ArrayList;
@@ -55,6 +56,10 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
 
     public void addButton(Button startStopButton) {
         this.button = startStopButton;
+    }
+
+    public void addTextArea(TextArea textArea) {
+        this.status = textArea;
     }
 
     public void setStartIpAddress(String ip) {
