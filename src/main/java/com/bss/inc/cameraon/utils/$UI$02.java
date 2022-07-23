@@ -205,7 +205,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                 sb.append(":");
             }
             sb.append("TYPE-"+resultTable.getResults().get(i).getType().toString());
-            sfm.append("sb.toString()");
+            sfm.append(sb.toString()+"\n");
             status.appendText(sb.toString()+"\n");
             subBarTitle.setText("Parsing Results ("+i+"/"+resultTable.getScanningResults().getScanInfo().getHostCount()+")");
             subBar.setProgress(subBar.getProgress()+perInc);
