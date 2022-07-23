@@ -66,8 +66,8 @@ public class RangeFeeder extends AbstractFeeder {
         return new ScanningSubject(prevIP);
     }
 
-    public int percentageComplete() {
-        return (int)Math.round(percentageComplete);
+    public double percentageComplete() {
+        return percentageIncrement;
     }
 
     /**
