@@ -67,7 +67,7 @@ public class RangeFeeder extends AbstractFeeder {
     }
 
     public double percentageComplete() {
-        return percentageComplete;
+        return Math.round(percentageComplete);
     }
 
     /**
