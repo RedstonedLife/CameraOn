@@ -150,7 +150,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                         " | Running Threads: " + String.valueOf(runningThreads) + " | Percent Complete: " +
                         ("%.2f".formatted(percentageComplete*100)) + "%\n");}
         else {
-            this.status.appendText("Closing threads"
+            this.status.appendText("Closing threads\n");
         }
         progressBar.setProgress(percentageComplete);
     }
