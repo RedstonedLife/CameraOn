@@ -64,7 +64,7 @@ public class RangeFeeder extends AbstractFeeder {
     }
 
     public float percentageComplete() {
-        return (float)percentageComplete);
+        return (float)percentageComplete;
     }
 
     public String getInfo() {
