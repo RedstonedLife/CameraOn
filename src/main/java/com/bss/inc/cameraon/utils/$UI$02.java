@@ -34,7 +34,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     private String mainWindowTitle;
     private ProgressBar Bar;
     private ProgressBar subBar;
-    private Text barTitle;
+    private Text barTitle,subBar;
     private StateMachine stateMachine;
     private TextArea status;
     private Button button;
