@@ -16,4 +16,6 @@ public class DeviceDiscovery {
     public static Collection<URL> discoverWsDevicesAsUrls() {
         return discoverWsDevicesAsUrls("","");
     }
+
+    public static
 }
