@@ -21,7 +21,7 @@ public class ScanningResultList implements Iterable<ScanningResult> {
     // selected fetchers are cached here, because they may be changed in the registry already
     private List<Fetcher> selectedFetchers = Arrays.asList(new HostnameFetcher(), new IPFetcher());
 
-    private List<ScanningResult> resultList = new ArrayList<>(RESULT_LIST_INITIAL_SIZE);
+    public List<ScanningResult> resultList = new ArrayList<>(RESULT_LIST_INITIAL_SIZE);
     private Map<InetAddress, Integer> resultIndexes = new HashMap<>(RESULT_LIST_INITIAL_SIZE);
 
     /** Feeder information that was used for this scan */
