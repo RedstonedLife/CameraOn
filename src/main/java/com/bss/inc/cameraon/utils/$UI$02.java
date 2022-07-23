@@ -186,6 +186,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         Bar.setProgress(0.75d);
         subBar.setProgress(0.0d);
         subBarTitle.setText("Parsing Results (0/"+resultTable.getScanningResults().getScanInfo().getHostCount()+")");
+        while()
     }
 }
 
