@@ -113,7 +113,7 @@ public class ScannerDispatcherThread extends Thread implements ThreadFactory, St
             try {
                 // now wait for all threads, which are still running
                 while (!threadPool.awaitTermination(UI_UPDATE_INTERVAL_MS, MILLISECONDS)) {
-                    progressCallback.updateProgress(null, numActiveThreads.intValue(), 100);
+                    progressCallback.updateProgress(null, numActiveThreads.intValue(), 1);
                 }
             }
             catch (InterruptedException e) {
