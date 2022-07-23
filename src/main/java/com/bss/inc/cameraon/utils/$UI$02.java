@@ -80,7 +80,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                     // Remove All Results
                 }
                 try {
-                    scannerThread = scannerThreadFactory.createScannerThread(new RangeFeeder(startIpAddress, endIpAddress), $UI$02.this, createResultsCallback(state));
+                    scannerThread = scannerThreadFactory.createScannerThread(new RangeFeeder(startIpAddress, endIpAddress), this, createResultsCallback(state));
                     stateMachine.startScanning();
                 } catch (RuntimeException e) {
                     stateMachine.reset();
@@ -90,7 +90,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             case RESTARTING -> {
                 // restart the scanning - rescan
                 try {
-                    scannerThread = scannerThreadFactory.createScannerThread(new RangeFeeder(startIpAddress, endIpAddress), $UI$02.this, createResultsCallback(state));
+                    scannerThread = scannerThreadFactory.createScannerThread(new RangeFeeder(startIpAddress, endIpAddress), this, createResultsCallback(state));
                     stateMachine.startScanning();
                 } catch (RuntimeException e) {
                     stateMachine.reset();
