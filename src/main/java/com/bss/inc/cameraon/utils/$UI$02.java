@@ -156,7 +156,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                 }
                 public void consumeResults(ScanningResult result) {
                     if (result.getType().ordinal() >= DisplayResultType.ALIVE.ordinal())
-                        resultTable.addOrUpdateResultRow(result);
+                    {resultTable.addOrUpdateResultRow(result);results.add(result.toString())}
                 }
             };
         }
