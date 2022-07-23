@@ -67,6 +67,21 @@ public class RangeFeeder extends AbstractFeeder {
         return percentageComplete;
     }
 
+    /**
+     * Initalizes fields, used for computation of percentage of completion.
+     */
+    private void initPercentageIncrement() {
+        byte[] endAddress = this.endIP.getAddress();
+        long rawEndIP = octetsToInt(endAddress, endAddress.length - 4);
+        long rawStartIP = octetsToInt(this.startIP.getAddress(), endAddress.length - 4);
+        // make 32-bit unsigned values
+        rawEndIP = rawEndIP >= 0 ? rawEndIP : rawEndIP + Integer.MAX_VALUE;
+        rawStartIP = rawStartIP >= 0 ? rawStartIP : rawStartIP + Integer.MAX_VALUE;
+        // compute 1% of the whole range
+        percentageIncrement = Math.abs(100.0 / (rawEndIP - rawStartIP + 1));
+        percentageComplete = 0;
+    }
+
     public String getInfo() {
         // let's return the range
         return startIP.getHostAddress() + " - " + originalEndIP.getHostAddress();
