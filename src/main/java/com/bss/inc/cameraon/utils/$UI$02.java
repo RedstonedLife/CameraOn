@@ -199,6 +199,9 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             subBar.setProgress(subBar.getProgress()+perInc);
         }
     }
+
+    @Override
+    public TextArea getStatus() {return status;}
 }
 
 class ResultTable {
