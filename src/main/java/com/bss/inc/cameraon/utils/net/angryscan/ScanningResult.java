@@ -122,7 +122,8 @@ public class ScanningResult {
             details.append(value != null ? value : "");
             details.append(newLine);
         }
-        details.append("Type: ")
+        details.append("Type: \t");
+        details.append(this.type.toString())
         return details.toString();
     }
 }
