@@ -179,6 +179,11 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         }
 
     }
+
+    @Override
+    public void returnResults() {
+        
+    }
 }
 
 class ResultTable {
