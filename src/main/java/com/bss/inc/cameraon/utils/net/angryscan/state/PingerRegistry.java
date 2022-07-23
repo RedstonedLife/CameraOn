@@ -80,7 +80,7 @@ public class PingerRegistry {
                 String message = "Unable to create pinger: " + pingerClass.getSimpleName();
                 LOG.log(Level.FATAL, message, t);
                 if (t instanceof RuntimeException) throw (RuntimeException) t;
-                throw new FetcherException("pingerCreateFailure");
+                //throw new FetcherException("pingerCreateFailure");
             }
         }
     }
