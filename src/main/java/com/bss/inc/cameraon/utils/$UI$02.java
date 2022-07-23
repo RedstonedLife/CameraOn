@@ -247,7 +247,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                 throw new RuntimeException(e);
             }
         }
-        
+        barTitle.setText("");
         subBarTitle.setText("");
         subBar.setProgress(1.0d);
     }
