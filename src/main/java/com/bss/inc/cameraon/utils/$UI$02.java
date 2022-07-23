@@ -120,7 +120,6 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                     resultTable.addOrUpdateResultRow(result);
                 }
                 public void consumeResults(ScanningResult result) {
-                    System.out.println("RESULT (IP): " + result.getAddress() + " | IS ALIVE? " + ((result.getType().equals(ScanningResult.ResultType.ALIVE) ? "True" : "False")) + " | MAC: " + result.getMac());
                     resultTable.addOrUpdateResultRow(result);
                 }
             };
