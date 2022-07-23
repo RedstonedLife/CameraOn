@@ -217,7 +217,9 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         }
     }
 
-    public void 
+    public void copyResultsToCache() {
+        
+    }
 
     @Override
     public TextArea getStatus() {return status;}
