@@ -51,6 +51,7 @@ public class PingerRegistry {
             scannerConfig.selectedPinger = first.getKey();
             pingerClass = first.getValue();
         }
+        System.out.println(scannerConfig.pingTimeout);
         Pinger mainPinger = createPinger(pingerClass, scannerConfig.pingTimeout);
         if (isLAN) return new ARPPinger(injector.require(MACFetcher.class), mainPinger);
         return mainPinger;
