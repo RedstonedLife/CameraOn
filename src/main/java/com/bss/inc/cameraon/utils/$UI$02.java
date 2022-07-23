@@ -195,7 +195,6 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         Iterator<?> iterator = resultTable.getScanningResults().iterator();
         while(iterator.hasNext()) {
             StringBuilder details = new StringBuilder(1024);
-            Iterator<?> iterator = resultTable.getScanningResults().iterator();
             List<Fetcher> fetchers = resultTable.getScanningResults().getFetchers();
             for (int i = 0; iterator.hasNext(); i++) {
                 String fetcherName = fetchers.get(i).getName();
@@ -205,6 +204,8 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             }
             details.append("Type: \t");
             details.append(this.type.toString());
+            sfm.append(details.toString());
+            
         }
     }
 }
