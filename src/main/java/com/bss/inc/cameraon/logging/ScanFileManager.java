@@ -193,5 +193,6 @@ public class ScanFileManager {
     }
 
     public void append(String line) {_append(line);}
+    public void wipe() {_wipeContents(currentScanFile);}
 
 }
