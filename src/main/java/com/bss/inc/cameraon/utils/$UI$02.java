@@ -161,6 +161,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     @Override
     public void updateProgress(InetAddress currentAddress, int runningThreads, double percentageComplete) {
         if(currentAddress!=null) {
+            barTitle.setText("Tasks Left 1/4 (Scanning) | Current State: " + stateMachine.getState().toString())
             subBarTitle.setText("Scanning ("+((currentAddress == null) ? "N/A" : currentAddress.getHostAddress().toString())+")");
             status.appendText(
                 "Trying " +
