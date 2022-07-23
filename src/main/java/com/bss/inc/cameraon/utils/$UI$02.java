@@ -182,7 +182,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
 
     @Override
     public void returnResults() {
-        
+        barTitle.setText("Tasks Left 3/4 (Parsing Results) | Current State: " + stateMachine.getState().toString());
     }
 }
 
