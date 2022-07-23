@@ -194,6 +194,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             ScanningResult result = resultTable.getScanningResults().iterator().next();
             StringBuilder sb = new StringBuilder();
             sb.append(result.getAddress().getHostAddress().toString()+":");
+            sb.append(result.)
         }
     }
 }
