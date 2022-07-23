@@ -17,6 +17,7 @@ import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateTransitionListe
 import javafx.scene.control.Button;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextArea;
+import javafx.scene.text.Text;
 
 import java.net.InetAddress;
 import java.util.ArrayList;
@@ -33,6 +34,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     private String mainWindowTitle;
     private ProgressBar Bar;
     private ProgressBar subBar;
+    private Text 
     private StateMachine stateMachine;
     private TextArea status;
     private Button button;
