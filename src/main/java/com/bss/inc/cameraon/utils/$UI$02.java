@@ -140,7 +140,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     @Override
     public void updateProgress(InetAddress currentAddress, int runningThreads, int percentageComplete) {
         if (currentAddress != null) System.out.println("Trying " + ((currentAddress == null) ? "N/A" : currentAddress.getHostAddress().toString()) + " | Running Threads: " + String.valueOf(runningThreads) + " | Percent Complete: " + String.valueOf(percentageComplete) + "%");
-        try{progressBar.setProgress(100/percentageComplete);}catch (ArithmeticException ignored) {progressBar.setProgress(0.0001d);}
+        try{progressBar.setProgress(percentageComplete/100);}catch (ArithmeticException ignored) {progressBar.setProgress(0.0001d);}
     }
 }
 
