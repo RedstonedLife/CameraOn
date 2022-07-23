@@ -173,8 +173,8 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         }
         else {
             subBarTitle.setText("Closing Threads ("+runningThreads+" Threads Left)");
-            status.appendText("Closing Threads | Threads Left: " + String.valueOf(runningThreads) + " | Percent Complete: ");
-            Bar.setProgress(.25d);
+            status.appendText("Closing Threads | Threads Left: " + runningThreads + " | Percent Complete: ");
+            Bar.setProgress(.5d);
         }
 
     }
