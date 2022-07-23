@@ -3,8 +3,8 @@ package org.me.javawsdiscovery;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import javax.xml.soap.MessageFactory;
-import javax.xml.soap.SOAPException;
+import javax.xml.soap.*;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.net.*;
 import java.security.SecureRandom;
