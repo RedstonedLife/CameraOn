@@ -52,19 +52,19 @@ public class PingerRegistry {
             pingerClass = first.getValue();
         }
         System.out.println(scannerConfig.pingTimeout);
-        Pinger mainPinger = createPinger(pingerClass, scannerConfig.pingTimeout);
+        Pinger mainPinger = createPinger(pingerClass, scannerConfig);
         if (isLAN) return new ARPPinger(injector.require(MACFetcher.class), mainPinger);
         return mainPinger;
     }
 
-    Pinger createPinger(String pingerName, int timeout) throws FetcherException {
+    Pinger createPinger(String pingerName, ScannerConfig timeout) throws FetcherException {
         return createPinger(pingers.get(pingerName), timeout);
     }
 
     /**
      * Creates a specified pinger with specified timeout
      */
-    Pinger createPinger(Class<? extends Pinger> pingerClass, int timeout) throws FetcherException {
+    Pinger createPinger(Class<? extends Pinger> pingerClass, ScannerConfig timeout) throws FetcherException {
         try {
             return injector.require(pingerClass);
         }
