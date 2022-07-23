@@ -6,6 +6,7 @@ import java.time.format.DateTimeFormatter;
 
 public class LoggingConstants {
     public static final String LOG_FOLDER = FilePaths.SETTINGS_FOLDER + "logs/";
+    public static final String SCAN_FOLDER = FilePaths.SETTINGS_FOLDER + "scans/"
     public static final String LOG_LATEST = "latest.log";
     public static final String LOG_CLASSED_FORMAT = "[%s](%s)-%s: %s";
     public static final String LOG_UNCLASSED_FORMAT = "[%s](%s): %s";
