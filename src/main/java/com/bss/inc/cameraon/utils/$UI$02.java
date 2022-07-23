@@ -165,11 +165,13 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
                 "Trying " +
                         ((currentAddress == null) ? "N/A" : currentAddress.getHostAddress().toString()) +
                         " | Running Threads: " + String.valueOf(runningThreads) + " | Percent Complete: " +
-                        ("%.2f".formatted(percentageComplete*100)) + "%\n");}
+                        ("%.2f".formatted(percentageComplete*100)) + "%\n");
+            subBar.setProgress(percentageComplete);
+        }
         else {
             status.appendText("Closing threads\n");
         }
-        subBar.setProgress(percentageComplete);
+
     }
 }
 
