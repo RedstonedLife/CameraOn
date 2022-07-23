@@ -225,6 +225,7 @@ class ResultTable {
         if (scanningResults.isRegistered(result)) {
             scanningResults.update(result);
         }
+        if(results.contains())
     }
     public void updateResult(int index, String fetcherId, Object newValue) {
         int fetcherIndex = scanningResults.getFetcherIndex(fetcherId);
