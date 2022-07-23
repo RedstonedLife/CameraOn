@@ -42,6 +42,7 @@ public class FetcherRegistry {
             selectedFetchers = new LinkedHashMap<>();
             selectedFetchers.put(IPFetcher.ID, registeredFetchers.get(IPFetcher.ID));
             selectedFetchers.put(HostnameFetcher.ID, registeredFetchers.get(HostnameFetcher.ID));
+            selectedFetchers.put(PingFetcher.ID, registeredFetchers.get(PingFetcher.ID));
             selectedFetchers.put(PortsFetcher.ID, registeredFetchers.get(PortsFetcher.ID));
     }
 
