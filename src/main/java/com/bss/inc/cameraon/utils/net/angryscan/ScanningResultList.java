@@ -252,6 +252,10 @@ public class ScanningResultList implements Iterable<ScanningResult> {
         return -1;
     }
 
+    public List<ScanningResult> getResultList() {
+        return resultList;
+    }
+
     /**
      * Additional information about the last scan
      */
