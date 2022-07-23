@@ -17,6 +17,7 @@ public class LoggingConstants {
     public static final String LOG_NAME_DUPLICATE_FORMAT = "log-%s-%s.log";
     public static final String SCAN_NAME_DUPLICATE_FORMAT = "scan-%s-%s.scan";
     public static final DateTimeFormatter LOG_DATE_FORMAT = DateTimeFormatter.ofPattern("dd-MM-yy");
+    public static final DateTimeFormatter SCAN_DATE_FORMAT = DateTimeFormatter.ofPattern("dd-MM-yy");
     public static final DateTimeFormatter LOG_TIME_FORMAT = DateTimeFormatter.ofPattern("HH:mm:ss");
     public static final String SETTINGS_LOCATION = OSValidator.IS_WINDOWS ? FilePaths.HOME_LOCATION + FilePaths.WIN_CONFIG_LOCATION + "settings.json" :
             OSValidator.IS_UNIX ? FilePaths.UNIX_CONFIG_LOCATION + FilePaths.UNIX_CONFIG_LOCATION + "settings.json" : OSValidator.IS_MAC ?
