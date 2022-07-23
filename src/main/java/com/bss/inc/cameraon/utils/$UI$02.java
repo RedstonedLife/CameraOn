@@ -237,7 +237,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             }
         }
         subBarTitle.setText("Clearing Results (0/"+(resultTable.getResults().size()-1)+")");
-        for(int i=resultTable.getResults().size(); i==-1; i--) {
+        for(int i=resultTable.getResults().size() ß; i==-1; i--) {
             subBarTitle.setText("Clearing Results ("+i+")");
             subBar.setProgress(subBar.getProgress()+perInc);
             resultTable.getResults().remove(i);
