@@ -223,6 +223,15 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         Bar.setProgress(1d);
         subBar.setProgress(0.0d);
         subBarTitle.setText("Parsing Results (0/"+(resultTable.getResults().size()-1)+")");
+        double perInc = Math.abs(1.0 / (resultTable.getResults().size()+1));
+        for(int i=0; i<resultTable.getResults().size(); i++) {
+            results.add(resultTable.getResults().get(i));
+            try {
+                TimeUnit.MILLISECONDS.sleep(150);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
     @Override
