@@ -10,8 +10,8 @@ import static com.bss.inc.cameraon.utils.net.angryscan.ScanningResult.ResultType
 
 public class PacketLossFetcher extends PingFetcher {
 
-    public PacketLossFetcher(PingerRegistry pingerRegistry, ScannerConfig scannerConfig) {
-        super(pingerRegistry, scannerConfig);
+    public PacketLossFetcher() {
+        super();
     }
 
     public String getId() {
