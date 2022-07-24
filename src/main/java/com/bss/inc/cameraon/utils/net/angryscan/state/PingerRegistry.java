@@ -7,8 +7,7 @@ import com.bss.inc.cameraon.utils.net.angryscan.config.Platform;
 import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
 import com.bss.inc.cameraon.utils.net.angryscan.di.InjectException;
 import com.bss.inc.cameraon.utils.net.angryscan.di.Injector;
-import com.bss.inc.cameraon.utils.net.angryscan.fetchers.FetcherException;
-import com.bss.inc.cameraon.utils.net.angryscan.fetchers.MACFetcher;
+import com.bss.inc.cameraon.utils.net.angryscan.fetchers.*;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -28,7 +27,25 @@ public class PingerRegistry {
     public PingerRegistry(ScannerConfig scannerConfig, Injector injector) throws ClassNotFoundException {
         this.scannerConfig = scannerConfig;
         this.injector = injector;
-
+        // DARK WOODO MAGIC, IDK WTF I AM DOING
+        injector.register(IPFetcher.class);
+        injector.register(PingFetcher.class);
+        injector.register(PingTTLFetcher.class);
+        injector.register(HostnameFetcher.class);
+        injector.register(PortsFetcher.class);
+        try {
+            injector.register(MACFetcher.class, (MACFetcher) Class.forName(MACFetcher.class.getPackage().getName() +
+                    (Platform.WINDOWS ? ".WinMACFetcher" : Platform.LINUX ? ".LinuxMACFetcher" : ".UnixMACFetcher")).newInstance());
+        } catch (InstantiationException e) {
+            throw new RuntimeException(e);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        injector.register(FilteredPortsFetcher.class, WebDetectFetcher.class, HTTPSenderFetcher.class,
+                NetBIOSInfoFetcher.class, PacketLossFetcher.class, HTTPProxyFetcher.class, MACVendorFetcher.class);
+        //
         pingers = new LinkedHashMap<>();
         pingers.put("pinger.udp", UDPPinger.class);
         pingers.put("pinger.tcp", TCPPinger.class);
