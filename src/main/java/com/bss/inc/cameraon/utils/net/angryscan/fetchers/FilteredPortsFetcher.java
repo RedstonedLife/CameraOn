@@ -9,8 +9,8 @@ import java.util.SortedSet;
 
 public class FilteredPortsFetcher extends PortsFetcher {
 
-    public FilteredPortsFetcher(ScannerConfig scannerConfig) {
-        super(scannerConfig);
+    public FilteredPortsFetcher() {
+        super();
     }
 
     public String getId() {
