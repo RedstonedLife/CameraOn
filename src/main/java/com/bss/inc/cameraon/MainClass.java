@@ -52,7 +52,6 @@ public class MainClass extends Application {
 
     public static Config getConfig() {return config;}
     public static DisplayResultType DisplayType;
-    public static ComponentRegistry componentRegistry;
     private static $UI$02 ui02;
 
     static {
