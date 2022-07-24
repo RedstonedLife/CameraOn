@@ -27,7 +27,7 @@ public class PingerRegistry {
     public PingerRegistry(ScannerConfig scannerConfig, Injector injector) throws ClassNotFoundException {
         this.scannerConfig = scannerConfig;
         this.injector = injector;
-        // DARK WOODO MAGIC, IDK WTF I AM DOING
+        // DARK VOODOO MAGIC, IDK WTF I AM DOING
         injector.register(IPFetcher.class);
         injector.register(PingFetcher.class);
         injector.register(PingTTLFetcher.class);
