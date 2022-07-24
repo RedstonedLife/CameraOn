@@ -13,9 +13,6 @@ public class ComponentRegistry {
     }
 
     public Injector init() throws Exception {
-    }
-
-    public Injector init() throws Exception {
         new ComponentRegistry().register(i);
         return i;
     }
