@@ -8,8 +8,8 @@ import com.bss.inc.cameraon.utils.net.angryscan.state.PingerRegistry;
 
 public class PingTTLFetcher extends PingFetcher {
 
-    public PingTTLFetcher(PingerRegistry pingerRegistry, ScannerConfig scannerConfig) {
-        super(pingerRegistry, scannerConfig);
+    public PingTTLFetcher() {
+        super();
     }
 
     public String getId() {
