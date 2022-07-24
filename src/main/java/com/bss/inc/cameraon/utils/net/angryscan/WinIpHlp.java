@@ -1,13 +1,13 @@
 package com.bss.inc.cameraon.utils.net.angryscan;
 
 import com.bss.inc.cameraon.utils.net.angryscan.WinIpHlpDll.Ip6SockAddrByRef;
-import com.bss.inc.cameraon.utils.net.angryscan.WinIpHlpDll.
+import com.bss.inc.cameraon.utils.net.angryscan.WinIpHlpDll.IpAddrByVal;
 
 import java.net.InetAddress;
 
 public class WinIpHlp {
-    public static WinIpHlpDll.IpAddrByVal toIpAddr(InetAddress address) {
-        WinIpHlpDll.IpAddrByVal addr = new IpAddrByVal();
+    public static IpAddrByVal toIpAddr(InetAddress address) {
+        IpAddrByVal addr = new IpAddrByVal();
         addr.bytes = address.getAddress();
         return addr;
     }
