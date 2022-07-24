@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan.fetchers;
 
+import com.bss.inc.cameraon.logging.Level;
 import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningResult;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
@@ -73,7 +74,7 @@ public class PortTextFetcher extends AbstractFetcher {
                 // connection reset
             }
             catch (IOException e) {
-                LOG.log(Level.FINE, subject.getAddress().toString(), e);
+                LOG.log(Level.INFO, subject.getAddress().toString(), e);
             }
         }
         return null;
