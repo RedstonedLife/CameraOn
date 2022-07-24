@@ -26,7 +26,7 @@ public class PingerRegistry {
     Map<String, Class<? extends Pinger>> pingers;
 
     @SuppressWarnings("unchecked")
-    public PingerRegistry() throws ClassNotFoundException {
+    public PingerRegistry(Injector i) throws ClassNotFoundException {
         this.scannerConfig = MainClass.getConfig().forScanner();
         this.injector = MainClass.getInjector();
         pingers = new LinkedHashMap<>();
