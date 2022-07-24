@@ -2,9 +2,11 @@ package com.bss.inc.cameraon.utils.net.angryscan.config;
 
 import com.bss.inc.cameraon.utils.net.angryscan.di.Injector;
 import com.bss.inc.cameraon.utils.net.angryscan.fetchers.*;
+import com.bss.inc.cameraon.utils.net.angryscan.state.PingerRegistry;
 
 public class ComponentRegistry {
     public void register(Injector i) throws InstantiationException, IllegalAccessException, ClassNotFoundException {
+        i.register(PingerRegistry.class);
         i.register(IPFetcher.class, PingFetcher.class, PingTTLFetcher.class, HostnameFetcher.class, PortsFetcher.class);
         i.register(MACFetcher.class, (MACFetcher) Class.forName(MACFetcher.class.getPackage().getName() +
                 (Platform.WINDOWS ? ".WinMACFetcher" : Platform.LINUX ? ".LinuxMACFetcher" : ".UnixMACFetcher")).newInstance());
