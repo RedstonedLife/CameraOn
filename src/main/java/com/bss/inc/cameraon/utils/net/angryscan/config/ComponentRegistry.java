@@ -13,7 +13,6 @@ public class ComponentRegistry {
     }
 
     public Injector init() throws Exception {
-        return init(true);
     }
 
     public Injector init() throws Exception {
