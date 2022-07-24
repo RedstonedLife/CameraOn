@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan.fetchers;
 
+import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningResult;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
 import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
@@ -32,8 +33,8 @@ public class PortsFetcher extends AbstractFetcher {
     private PortIterator portIteratorPrototype;
     protected boolean displayAsRanges = true;    // TODO: make configurable
 
-    public PortsFetcher(ScannerConfig scannerConfig) {
-        this.config = scannerConfig;
+    public PortsFetcher() {
+        this.config = MainClass.getConfig().forScanner();
     }
 
     public String getId() {
