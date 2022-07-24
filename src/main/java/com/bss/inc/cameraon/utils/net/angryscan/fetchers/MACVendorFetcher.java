@@ -6,6 +6,8 @@ import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MACVendorFetcher extends AbstractFetcher {
     public static final String ID = "fetcher.mac.vendor";
