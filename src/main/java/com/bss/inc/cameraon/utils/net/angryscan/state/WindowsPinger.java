@@ -73,7 +73,7 @@ public class WindowsPinger implements Pinger {
             for (int i = 1; i <= count && !currentThread().isInterrupted(); i++) {
                 int numReplies = dll.Icmp6SendEcho2(handle, null, null, null, anyIp6SourceAddr, toIp6Addr(subject.getAddress()),
                         sendData, (short) sendDataSize, null, replyData, replyDataSize, timeout);
-                Icmp6EchoReply echoReply = new Icmp6EchoReply(replyData);
+                WinIpHlpDll.Icmp6EchoReply echoReply = new WinIpHlpDll.Icmp6EchoReply(replyData);
                 if (numReplies > 0 && echoReply.status == 0 && Arrays.equals(echoReply.addressBytes, ipaddr.bytes)) {
                     result.addReply(echoReply.roundTripTime);
                 }
