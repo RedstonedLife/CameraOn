@@ -16,8 +16,7 @@ public class ComponentRegistry {
         return init(true);
     }
 
-    public Injector init(boolean withGUI) throws Exception {
-        Injector i = new Injector();
+    public Injector init() throws Exception {
         new ComponentRegistry().register(i);
         return i;
     }
