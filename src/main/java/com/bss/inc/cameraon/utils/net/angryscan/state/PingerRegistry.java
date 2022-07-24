@@ -28,11 +28,6 @@ public class PingerRegistry {
         this.scannerConfig = scannerConfig;
         this.injector = injector;
         // DARK VOODOO MAGIC, IDK WTF I AM DOING
-        injector.register(IPFetcher.class);
-        injector.register(PingFetcher.class);
-        injector.register(PingTTLFetcher.class);
-        injector.register(HostnameFetcher.class);
-        injector.register(PortsFetcher.class);
         try {
             injector.register(MACFetcher.class, (MACFetcher) Class.forName(MACFetcher.class.getPackage().getName() +
                     (Platform.WINDOWS ? ".WinMACFetcher" : Platform.LINUX ? ".LinuxMACFetcher" : ".UnixMACFetcher")).newInstance());
