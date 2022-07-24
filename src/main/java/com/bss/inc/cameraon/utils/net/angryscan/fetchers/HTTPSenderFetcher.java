@@ -10,3 +10,4 @@ public class HTTPSenderFetcher extends PortTextFetcher {
     public String getId() {
         return "fetcher.httpSender";
     }
+}
