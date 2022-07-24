@@ -20,10 +20,6 @@ public class ComponentRegistry {
         Injector i = new Injector();
         new ConfigModule().register(i);
         new ComponentRegistry().register(i);
-        if (withGUI) {
-            new GUIRegistry().register(i);
-            new PluginLoader().getClasses().forEach(i::require);
-        }
         return i;
     }
 }
