@@ -12,8 +12,7 @@ public class ComponentRegistry {
                 NetBIOSInfoFetcher.class, PacketLossFetcher.class, HTTPProxyFetcher.class, MACVendorFetcher.class);
     }
 
-    public Injector init() throws Exception {
-        new ComponentRegistry().register(i);
-        return i;
+    public void init(Injector injector) throws Exception {
+        new ComponentRegistry().register(injector);
     }
 }
