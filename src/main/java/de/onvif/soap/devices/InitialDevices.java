@@ -4,7 +4,6 @@
 /*     */ import de.onvif.soap.SOAP;
 /*     */ import java.net.ConnectException;
 /*     */ import java.util.Calendar;
-/*     */ import java.util.Date;
 /*     */ import java.util.GregorianCalendar;
 /*     */ import java.util.List;
 /*     */ import javax.xml.soap.SOAPException;
@@ -33,13 +32,13 @@
 /*     */ import org.onvif.ver10.media.wsdl.GetProfileResponse;
 /*     */ import org.onvif.ver10.media.wsdl.GetProfiles;
 /*     */ import org.onvif.ver10.media.wsdl.GetProfilesResponse;
-/*     */ import org.onvif.ver10.schema.Capabilities;
-/*     */ import org.onvif.ver10.schema.Date;
-/*     */ import org.onvif.ver10.schema.Profile;
-/*     */ import org.onvif.ver10.schema.Scope;
-/*     */ import org.onvif.ver10.schema.Time;
-/*     */ import org.onvif.ver10.schema.User;
-/*     */ 
+import org.onvif.ver10.schema.*;
+/*     */
+/*     */
+/*     */
+/*     */
+
+/*     */
 /*     */ 
 /*     */ 
 /*     */ public class InitialDevices
@@ -52,7 +51,7 @@
 /*  52 */     this.soap = onvifDevice.getSoap();
 /*     */   }
 /*     */   
-/*     */   public Date getDate() {
+/*     */   public java.util.Date getDate() {
 /*  56 */     Calendar cal = null;
 /*     */     
 /*  58 */     GetSystemDateAndTimeResponse response = new GetSystemDateAndTimeResponse();

@@ -115,7 +115,7 @@
 /*     */     
 /* 116 */     Socket socket = null;
 /*     */     try {
-/* 118 */       SocketAddress sockaddr = new InetSocketAddress(ip, (new Integer(port)).intValue());
+/* 118 */       SocketAddress sockaddr = new InetSocketAddress(ip, Integer.valueOf(port).intValue());
 /* 119 */       socket = new Socket();
 /*     */       
 /* 121 */       socket.connect(sockaddr, 5000);
@@ -249,7 +249,7 @@
 /*     */   
 /*     */   public void createNonce() {
 /* 251 */     Random generator = new Random();
-/* 252 */     this.nonce = generator.nextInt();
+/* 252 */     this.nonce = String.valueOf(generator.nextInt());
 /*     */   }
 /*     */   
 /*     */   public String getLastUTCTime() {
