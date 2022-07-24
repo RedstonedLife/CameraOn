@@ -51,7 +51,11 @@ public class MainClass extends Application {
 
     static {
         DisplayType = DisplayResultType.valueOf(((JSONObject)Launcher.SettingsContainer.getValue("scanResultDisplay")).getString("displayResult"));
-        injector = new ComponentRegistry().init();
+        try {
+            injector = new ComponentRegistry().init();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         // DARK VOODOO MAGIC, IDK WTF I AM DOING
 
         try {pingerRegistry = new PingerRegistry(config.forScanner(), injector);} catch (ClassNotFoundException e) {throw new RuntimeException(e);}
