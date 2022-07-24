@@ -99,9 +99,7 @@ public class PortTextFetcher extends AbstractFetcher {
     }
 
     @Override
-    public Class<? extends FetcherPrefs> getPreferencesClass() {
-        return null;
-    }
+    public Class<? extends FetcherPrefs> getPreferencesClass() {return null;}
 
     public String getTextToSend() {
         return textToSend;
