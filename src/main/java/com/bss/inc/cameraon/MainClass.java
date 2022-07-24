@@ -50,9 +50,9 @@ public class MainClass extends Application {
 
     static {
         DisplayType = DisplayResultType.valueOf(((JSONObject)Launcher.SettingsContainer.getValue("scanResultDisplay")).getString("displayResult"));
-        injector = new Injector();
+        injector = new Com
         // DARK VOODOO MAGIC, IDK WTF I AM DOING
-        
+
         try {pingerRegistry = new PingerRegistry(config.forScanner(), injector);} catch (ClassNotFoundException e) {throw new RuntimeException(e);}
         //
         scanner = new Scanner();
