@@ -1,6 +1,7 @@
 package com.bss.inc.cameraon.utils.net.angryscan;
 
-import 
+import com.bss.inc.cameraon.utils.net.angryscan.WinIpHlpDll.Ip6SockAddrByRef;
+import com.bss.inc.cameraon.utils.net.angryscan.WinIpHlpDll.
 
 import java.net.InetAddress;
 
