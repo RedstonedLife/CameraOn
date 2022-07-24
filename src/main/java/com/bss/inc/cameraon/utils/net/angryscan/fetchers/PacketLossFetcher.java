@@ -5,6 +5,9 @@ import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
 import com.bss.inc.cameraon.utils.net.angryscan.state.PingResult;
 import com.bss.inc.cameraon.utils.net.angryscan.state.PingerRegistry;
 
+import static com.bss.inc.cameraon.utils.net.angryscan.ScanningResult.ResultType.ALIVE;
+import static com.bss.inc.cameraon.utils.net.angryscan.ScanningResult.ResultType.DEAD;
+
 public class PacketLossFetcher extends PingFetcher {
 
     public PacketLossFetcher(PingerRegistry pingerRegistry, ScannerConfig scannerConfig) {
