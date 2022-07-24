@@ -18,7 +18,6 @@ public class ComponentRegistry {
 
     public Injector init(boolean withGUI) throws Exception {
         Injector i = new Injector();
-        new ConfigModule().register(i);
         new ComponentRegistry().register(i);
         return i;
     }
