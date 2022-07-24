@@ -27,18 +27,6 @@ public class PingerRegistry {
     public PingerRegistry(ScannerConfig scannerConfig, Injector injector) throws ClassNotFoundException {
         this.scannerConfig = scannerConfig;
         this.injector = injector;
-        // DARK VOODOO MAGIC, IDK WTF I AM DOING
-        try {
-            injector.register(MACFetcher.class, (MACFetcher) Class.forName(MACFetcher.class.getPackage().getName() +
-                    (Platform.WINDOWS ? ".WinMACFetcher" : Platform.LINUX ? ".LinuxMACFetcher" : ".UnixMACFetcher")).newInstance());
-        } catch (InstantiationException e) {
-            throw new RuntimeException(e);
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-        //
         pingers = new LinkedHashMap<>();
         pingers.put("pinger.udp", UDPPinger.class);
         pingers.put("pinger.tcp", TCPPinger.class);
