@@ -58,7 +58,7 @@ public class PortTextFetcher extends AbstractFetcher {
                     Matcher matcher = matchingRegexp.matcher(line);
                     if (matcher.find()) {
                         // mark that additional info is available
-                        subject.setResultType(ScanningResult.ResultType.WITH_PORTS);
+                        subject.setResultType(ResultType.WITH_PORTS);
                         // return the required contents
                         return getResult(matcher, socket.getPort());
                     }
@@ -74,7 +74,7 @@ public class PortTextFetcher extends AbstractFetcher {
                 // connection reset
             }
             catch (IOException e) {
-                LOG.log(Level.INFO, subject.getAddress().toString(), e);
+                LOG.log(Level.FINE, subject.getAddress().toString(), e);
             }
         }
         return null;
@@ -99,7 +99,9 @@ public class PortTextFetcher extends AbstractFetcher {
     }
 
     @Override
-    public Class<? extends FetcherPrefs> getPreferencesClass() {return null;}
+    public Class<? extends FetcherPrefs> getPreferencesClass() {
+        return null;
+    }
 
     public String getTextToSend() {
         return textToSend;
