@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan.state;
 
+import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.logging.Level;
 import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.utils.net.angryscan.config.LoggerFactory;
@@ -8,6 +9,7 @@ import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
 import com.bss.inc.cameraon.utils.net.angryscan.di.InjectException;
 import com.bss.inc.cameraon.utils.net.angryscan.di.Injector;
 import com.bss.inc.cameraon.utils.net.angryscan.fetchers.*;
+import org.apache.tools.ant.Main;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -24,9 +26,9 @@ public class PingerRegistry {
     Map<String, Class<? extends Pinger>> pingers;
 
     @SuppressWarnings("unchecked")
-    public PingerRegistry(ScannerConfig scannerConfig, Injector injector) throws ClassNotFoundException {
-        this.scannerConfig = scannerConfig;
-        this.injector = injector;
+    public PingerRegistry() throws ClassNotFoundException {
+        this.scannerConfig = MainClass.getConfig().forScanner();
+        this.injector = MainClass.getInjector();
         pingers = new LinkedHashMap<>();
         pingers.put("pinger.udp", UDPPinger.class);
         pingers.put("pinger.tcp", TCPPinger.class);
