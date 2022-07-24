@@ -10,6 +10,7 @@ import com.bss.inc.cameraon.utils.SHA512;
 import com.bss.inc.cameraon.utils.WinRegistry;
 import com.bss.inc.cameraon.utils.net.angryscan.Scanner;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningResultList;
+import com.bss.inc.cameraon.utils.net.angryscan.config.ComponentRegistry;
 import com.bss.inc.cameraon.utils.net.angryscan.config.Config;
 import com.bss.inc.cameraon.utils.net.angryscan.core.ScannerDispatcherThreadFactory;
 import com.bss.inc.cameraon.utils.net.angryscan.di.Injector;
@@ -50,11 +51,14 @@ public class MainClass extends Application {
 
     public static Config getConfig() {return config;}
     public static DisplayResultType DisplayType;
+    public static ComponentRegistry componentRegistry;
     private static $UI$02 ui02;
 
     static {
         DisplayType = DisplayResultType.valueOf(((JSONObject)Launcher.SettingsContainer.getValue("scanResultDisplay")).getString("displayResult"));
         injector = new Injector();
+        componentRegistry = new ComponentRegistry();
+        componentRegistry.init(injector);
         try {pingerRegistry = new PingerRegistry(config.forScanner(), injector);} catch (ClassNotFoundException e) {throw new RuntimeException(e);}
         scanner = new Scanner();
         scanningResults = new ScanningResultList(stateMachine);
