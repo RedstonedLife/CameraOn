@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan.fetchers;
 
+import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.logging.Level;
 import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningResult;
@@ -31,9 +32,9 @@ public class PingFetcher extends AbstractFetcher {
     /** The registry used for creation of Pinger instances */
     private PingerRegistry pingerRegistry;
 
-    public PingFetcher(PingerRegistry pingerRegistry, ScannerConfig scannerConfig) {
-        this.pingerRegistry = pingerRegistry;
-        this.config = scannerConfig;
+    public PingFetcher() {
+        this.pingerRegistry = MainClass.getPingerRegistry();
+        this.config = MainClass.getConfig().forScanner();
     }
 
     public String getId() {
