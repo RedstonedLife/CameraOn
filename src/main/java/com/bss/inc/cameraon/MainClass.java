@@ -58,6 +58,18 @@ public class MainClass extends Application {
         DisplayType = DisplayResultType.valueOf(((JSONObject)Launcher.SettingsContainer.getValue("scanResultDisplay")).getString("displayResult"));
         injector = new Injector();
         try {pingerRegistry = new PingerRegistry(config.forScanner(), injector);} catch (ClassNotFoundException e) {throw new RuntimeException(e);}
+        // DARK VOODOO MAGIC, IDK WTF I AM DOING
+        try {
+            injector.register(MACFetcher.class, (MACFetcher) Class.forName(MACFetcher.class.getPackage().getName() +
+                    (Platform.WINDOWS ? ".WinMACFetcher" : Platform.LINUX ? ".LinuxMACFetcher" : ".UnixMACFetcher")).newInstance());
+        } catch (InstantiationException e) {
+            throw new RuntimeException(e);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        //
         scanner = new Scanner();
         scanningResults = new ScanningResultList(stateMachine);
         scannerDispatcherThreadFactory = new ScannerDispatcherThreadFactory(scanningResults,scanner,stateMachine,config.forScanner());
