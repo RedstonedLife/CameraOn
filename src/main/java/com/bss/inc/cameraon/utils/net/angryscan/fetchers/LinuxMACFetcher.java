@@ -6,6 +6,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.stream.Stream;
 
+import static com.bss.inc.cameraon.utils.net.angryscan.fetchers.UnixMACFetcher.getLocalMAC;
+
 public class LinuxMACFetcher {
     private static final Path ARP_TABLE = Path.of("/proc/net/arp");
     private int flagsIndex;
