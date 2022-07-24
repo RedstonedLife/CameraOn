@@ -1,5 +1,11 @@
 package com.bss.inc.cameraon.utils.net.angryscan.fetchers;
 
+import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
+
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.stream.Stream;
+
 public class LinuxMACFetcher {
     private static final Path ARP_TABLE = Path.of("/proc/net/arp");
     private int flagsIndex;
