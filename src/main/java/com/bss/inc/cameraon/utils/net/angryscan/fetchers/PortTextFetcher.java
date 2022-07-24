@@ -17,6 +17,7 @@ import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static com.bss.inc.cameraon.utils.net.angryscan.fetchers.PortsFetcher.PARAMETER_OPEN_PORTS;
 import static java.lang.Thread.currentThread;
 import static java.util.Collections.singleton;
 
