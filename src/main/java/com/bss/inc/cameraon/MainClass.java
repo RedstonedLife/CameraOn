@@ -57,7 +57,7 @@ public class MainClass extends Application {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        try {pingerRegistry = new PingerRegistry(config.forScanner(), injector);} catch (ClassNotFoundException e) {throw new RuntimeException(e);} catch (Exception e) {throw new RuntimeException(e);}
+        try {pingerRegistry = new PingerRegistry();} catch (ClassNotFoundException e) {throw new RuntimeException(e);} catch (Exception e) {throw new RuntimeException(e);}
         //
         scanner = new Scanner();
         scanningResults = new ScanningResultList(stateMachine);
