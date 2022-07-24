@@ -38,8 +38,6 @@ public class PingerRegistry {
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-        injector.register(FilteredPortsFetcher.class, WebDetectFetcher.class, HTTPSenderFetcher.class,
-                NetBIOSInfoFetcher.class, PacketLossFetcher.class, HTTPProxyFetcher.class, MACVendorFetcher.class);
         //
         pingers = new LinkedHashMap<>();
         pingers.put("pinger.udp", UDPPinger.class);
