@@ -5,8 +5,8 @@ import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
 import java.util.regex.Matcher;
 
 public class HTTPProxyFetcher extends PortTextFetcher {
-    public HTTPProxyFetcher(ScannerConfig scannerConfig) {
-        super(scannerConfig, 3128, "HEAD http://www.google.com HTTP/1.0\r\n\r\n", "^(HTTP/[\\d\\.]+ [23].*)$");
+    public HTTPProxyFetcher() {
+        super( 3128, "HEAD http://www.google.com HTTP/1.0\r\n\r\n", "^(HTTP/[\\d\\.]+ [23].*)$");
         this.scanOpenPorts = true;
     }
 
