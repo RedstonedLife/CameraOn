@@ -21,7 +21,7 @@ import static com.bss.inc.cameraon.utils.net.angryscan.fetchers.PortsFetcher.PAR
 import static java.lang.Thread.currentThread;
 import static java.util.Collections.singleton;
 
-public class PortTextFetcher extends AbstractFetcher {
+public abstract class PortTextFetcher extends AbstractFetcher {
     private static final Logger LOG = LoggerFactory.getLogger();
 
     private ScannerConfig scannerConfig;
