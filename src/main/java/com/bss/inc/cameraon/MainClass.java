@@ -12,9 +12,11 @@ import com.bss.inc.cameraon.utils.net.angryscan.Scanner;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningResultList;
 import com.bss.inc.cameraon.utils.net.angryscan.config.ComponentRegistry;
 import com.bss.inc.cameraon.utils.net.angryscan.config.Config;
+import com.bss.inc.cameraon.utils.net.angryscan.config.Platform;
 import com.bss.inc.cameraon.utils.net.angryscan.core.ScannerDispatcherThreadFactory;
 import com.bss.inc.cameraon.utils.net.angryscan.di.Injector;
 import com.bss.inc.cameraon.utils.net.angryscan.enums.DisplayResultType;
+import com.bss.inc.cameraon.utils.net.angryscan.fetchers.*;
 import com.bss.inc.cameraon.utils.net.angryscan.state.PingerRegistry;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateMachine;
 import javafx.application.Application;
@@ -57,7 +59,19 @@ public class MainClass extends Application {
     static {
         DisplayType = DisplayResultType.valueOf(((JSONObject)Launcher.SettingsContainer.getValue("scanResultDisplay")).getString("displayResult"));
         injector = new Injector();
-        try {componentRegistry.init(injector);} catch (Exception e) {throw new RuntimeException(e);}
+        injector.register(IPFetcher.class, PingFetcher.class, PingTTLFetcher.class, HostnameFetcher.class, PortsFetcher.class);
+        try {
+            injector.register(MACFetcher.class, (MACFetcher) Class.forName(MACFetcher.class.getPackage().getName() +
+                    (Platform.WINDOWS ? ".WinMACFetcher" : Platform.LINUX ? ".LinuxMACFetcher" : ".UnixMACFetcher")).newInstance());
+        } catch (InstantiationException e) {
+            throw new RuntimeException(e);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        injector.register(FilteredPortsFetcher.class, WebDetectFetcher.class, HTTPSenderFetcher.class,
+                NetBIOSInfoFetcher.class, PacketLossFetcher.class, HTTPProxyFetcher.class, MACVendorFetcher.class);
         try {pingerRegistry = new PingerRegistry(config.forScanner(), injector);} catch (ClassNotFoundException e) {throw new RuntimeException(e);}
         scanner = new Scanner();
         scanningResults = new ScanningResultList(stateMachine);
