@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 import static com.bss.inc.cameraon.utils.net.angryscan.fetchers.UnixMACFetcher.getLocalMAC;
 
-public class LinuxMACFetcher {
+public class LinuxMACFetcher extends MACFetcher {
     private static final Path ARP_TABLE = Path.of("/proc/net/arp");
     private int flagsIndex;
     private int macIndex;
