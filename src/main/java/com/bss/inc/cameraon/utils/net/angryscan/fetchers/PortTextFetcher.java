@@ -1,5 +1,25 @@
 package com.bss.inc.cameraon.utils.net.angryscan.fetchers;
 
+import com.bss.inc.cameraon.utils.net.angryscan.ScanningResult;
+import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
+import com.bss.inc.cameraon.utils.net.angryscan.config.LoggerFactory;
+import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.*;
+import java.util.Iterator;
+import java.util.SortedSet;
+import java.util.TreeSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import static java.lang.Thread.currentThread;
+import static java.util.Collections.singleton;
+
 public class PortTextFetcher extends AbstractFetcher {
     private static final Logger LOG = LoggerFactory.getLogger();
 
@@ -37,7 +57,7 @@ public class PortTextFetcher extends AbstractFetcher {
                     Matcher matcher = matchingRegexp.matcher(line);
                     if (matcher.find()) {
                         // mark that additional info is available
-                        subject.setResultType(ResultType.WITH_PORTS);
+                        subject.setResultType(ScanningResult.ResultType.WITH_PORTS);
                         // return the required contents
                         return getResult(matcher, socket.getPort());
                     }
