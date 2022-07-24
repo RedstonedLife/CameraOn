@@ -28,7 +28,7 @@ public class PingerRegistry {
     @SuppressWarnings("unchecked")
     public PingerRegistry(Injector i) throws ClassNotFoundException {
         this.scannerConfig = MainClass.getConfig().forScanner();
-        this.injector = MainClass.getInjector();
+        this.injector = i;
         pingers = new LinkedHashMap<>();
         pingers.put("pinger.udp", UDPPinger.class);
         pingers.put("pinger.tcp", TCPPinger.class);
