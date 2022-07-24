@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan.fetchers;
 
+import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.logging.Level;
 import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningResult;
@@ -32,8 +33,8 @@ public abstract class PortTextFetcher extends AbstractFetcher {
     protected Pattern matchingRegexp;
     protected int extractGroup;
 
-    public PortTextFetcher(ScannerConfig scannerConfig, int defaultPort, String defaultTextToSend, String matchingRegexp) {
-        this.scannerConfig = scannerConfig;
+    public PortTextFetcher(int defaultPort, String defaultTextToSend, String matchingRegexp) {
+        this.scannerConfig = MainClass.getConfig().forScanner();
         this.defaultPort = defaultPort;
         this.textToSend = getPreferences().get("textToSend", defaultTextToSend);
         this.matchingRegexp = Pattern.compile(getPreferences().get("matchingRegexp", matchingRegexp));
