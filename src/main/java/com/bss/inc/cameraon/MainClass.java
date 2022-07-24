@@ -57,6 +57,7 @@ public class MainClass extends Application {
     static {
         DisplayType = DisplayResultType.valueOf(((JSONObject)Launcher.SettingsContainer.getValue("scanResultDisplay")).getString("displayResult"));
         injector = new Injector();
+        try {pingerRegistry = new PingerRegistry(config.forScanner(), injector);} catch (ClassNotFoundException e) {throw new RuntimeException(e);}
         injector.register(IPFetcher.class);
         injector.register(PingFetcher.class);
         injector.register(PingTTLFetcher.class);
@@ -74,7 +75,6 @@ public class MainClass extends Application {
         }
         injector.register(FilteredPortsFetcher.class, WebDetectFetcher.class, HTTPSenderFetcher.class,
                 NetBIOSInfoFetcher.class, PacketLossFetcher.class, HTTPProxyFetcher.class, MACVendorFetcher.class);
-        try {pingerRegistry = new PingerRegistry(config.forScanner(), injector);} catch (ClassNotFoundException e) {throw new RuntimeException(e);}
         scanner = new Scanner();
         scanningResults = new ScanningResultList(stateMachine);
         scannerDispatcherThreadFactory = new ScannerDispatcherThreadFactory(scanningResults,scanner,stateMachine,config.forScanner());
