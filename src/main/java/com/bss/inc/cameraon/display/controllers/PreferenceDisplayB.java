@@ -31,7 +31,7 @@ public class PreferenceDisplayB implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        pingMethodCb.getItems().addAll("pinger.windows", "pinger.udp", "pinger.tcp", "pinger.combined", "pinger.java", "pinger.arp");
+        pingMethodCb.getItems().addAll("pinger.windows", "pinger.udp", "pinger.tcp", "pinger.combined", "pinger.java");
         $UI$01.u_08$1$6(MainClass.getConfig().forScanner(),new TextField[]{threadsDelayTf,threadsMaxTf,pingProbesTf,pingTimeoutTf,defaultPortTimeoutTf,minAdptdConTimeoutTf},
                 new CheckBox[]{scanDeadHostsCHKb,skipUnassignedCHKb,adaptTimeoutToPingCHKb,forEachHostCHKb},portToScanTa,pingMethodCb);
         $UI$01.u_08$1$1();
