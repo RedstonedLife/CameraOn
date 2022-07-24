@@ -100,7 +100,7 @@ public class PortTextFetcher extends AbstractFetcher {
 
     @Override
     public Class<? extends FetcherPrefs> getPreferencesClass() {
-        return PortTextFetcherPrefs.class;
+        return null;
     }
 
     public String getTextToSend() {
