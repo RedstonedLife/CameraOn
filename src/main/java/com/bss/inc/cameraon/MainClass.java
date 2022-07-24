@@ -3,11 +3,9 @@ package com.bss.inc.cameraon;
 import com.bss.inc.cameraon.constants.FrontendPaths;
 import com.bss.inc.cameraon.display.Dialog;
 import com.bss.inc.cameraon.display.DialogManager;
-import com.bss.inc.cameraon.i18n.I18n;
 import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.utils.$UI$02;
 import com.bss.inc.cameraon.utils.SHA512;
-import com.bss.inc.cameraon.utils.WinRegistry;
 import com.bss.inc.cameraon.utils.net.angryscan.Scanner;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningResultList;
 import com.bss.inc.cameraon.utils.net.angryscan.config.Config;
@@ -15,21 +13,17 @@ import com.bss.inc.cameraon.utils.net.angryscan.config.Platform;
 import com.bss.inc.cameraon.utils.net.angryscan.core.ScannerDispatcherThreadFactory;
 import com.bss.inc.cameraon.utils.net.angryscan.di.Injector;
 import com.bss.inc.cameraon.utils.net.angryscan.enums.DisplayResultType;
-import com.bss.inc.cameraon.utils.net.angryscan.fetchers.*;
+import com.bss.inc.cameraon.utils.net.angryscan.fetchers.MACFetcher;
 import com.bss.inc.cameraon.utils.net.angryscan.state.PingerRegistry;
 import com.bss.inc.cameraon.utils.net.angryscan.state.state.StateMachine;
 import javafx.application.Application;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import org.json.JSONObject;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.security.NoSuchAlgorithmException;
-import java.time.LocalDateTime;
-import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
 
 public class MainClass extends Application {
