@@ -10,7 +10,6 @@ import com.bss.inc.cameraon.utils.SHA512;
 import com.bss.inc.cameraon.utils.WinRegistry;
 import com.bss.inc.cameraon.utils.net.angryscan.Scanner;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningResultList;
-import com.bss.inc.cameraon.utils.net.angryscan.config.ComponentRegistry;
 import com.bss.inc.cameraon.utils.net.angryscan.config.Config;
 import com.bss.inc.cameraon.utils.net.angryscan.config.Platform;
 import com.bss.inc.cameraon.utils.net.angryscan.core.ScannerDispatcherThreadFactory;
