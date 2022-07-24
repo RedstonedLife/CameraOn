@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan.fetchers;
 
+import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningResult;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
 import com.bss.inc.cameraon.utils.net.angryscan.config.LoggerFactory;
@@ -12,8 +13,6 @@ import java.net.*;
 import java.util.Iterator;
 import java.util.SortedSet;
 import java.util.TreeSet;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
