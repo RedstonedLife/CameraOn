@@ -1,7 +1,15 @@
 package com.bss.inc.cameraon.utils.net.angryscan;
 
+import com.sun.jna.Library;
+import com.sun.jna.Native;
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
+
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
+
+import static java.lang.reflect.Modifier.isStatic;
 
 public interface WinIpHlpDll extends Library {
     WinIpHlpDll dll = Loader.load();
