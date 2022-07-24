@@ -46,7 +46,6 @@ public class PingerRegistry {
      */
     public Pinger createPinger(boolean isLAN) throws FetcherException {
         Class<? extends Pinger> pingerClass = pingers.get(scannerConfig.selectedPinger);
-        System.out.println(scannerConfig.selectedPinger);
         if (pingerClass == null) {
             Map.Entry<String, Class<? extends Pinger>> first = pingers.entrySet().iterator().next();
             scannerConfig.selectedPinger = first.getKey();
