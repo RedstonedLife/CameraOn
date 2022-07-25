@@ -226,10 +226,10 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         barTitle.setText("Tasks Left 4/4 (Copying To Cache) | Current Scanner State: " + stateMachine.getState().toString());
         Bar.setProgress(1d);
         subBar.setProgress(0.0d);
-        subBarTitle.setText("Parsing Results To Cache (0/"+(resultTable.getResults().size()-1)+")");
+        subBarTitle.setText("Parsing Results To Cache (0/"+(resultTable.getResults().size()-1)+") | 0.0%");
         double perInc = Math.abs(1.0 / (resultTable.getResults().size()+1));
         for(int i=0; i<resultTable.getResults().size(); i++) {
-            subBarTitle.setText("Parsing Results To Cache ("+i+"/"+(resultTable.getResults().size()-1)+")");
+            subBarTitle.setText("Parsing Results To Cache ("+i+"/"+(resultTable.getResults().size()-1)+") | "  + ((subBar.getProgress()+perInc)*100) + "%");
             results.add(resultTable.getResults().get(i));
             subBar.setProgress(subBar.getProgress()+perInc);
             try {
