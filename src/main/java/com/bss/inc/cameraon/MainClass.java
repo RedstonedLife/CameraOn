@@ -41,7 +41,6 @@ public class MainClass extends Application {
     private static Scanner scanner;
     private static PingerRegistry pingerRegistry;
     private static ScannerDispatcherThreadFactory scannerDispatcherThreadFactory;
-    private static Config config = new Config();
 
     public static StateMachine getStateMachine() {return stateMachine;}
 
