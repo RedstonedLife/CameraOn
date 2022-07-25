@@ -23,6 +23,7 @@ public class Apply implements Initializable {
     @FXML private Button settingsSceneBtn,cctvSceneBtn,scanSceneBtn,applySceneBtn,HelpBtn,btnClose,btnMinimize,applyBtn;
     @FXML private SplitPane cmainsplit;
     @FXML private Text taskslefttxt,backendtxt,applystatustxt,versiontxt,licensetxt;
+    @FXML private TextArea ssblTA;
 
 
     @Override
