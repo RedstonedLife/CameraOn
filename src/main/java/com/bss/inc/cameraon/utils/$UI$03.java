@@ -12,5 +12,5 @@ public class $UI$03 {
     private TextArea status;
     private Button button;
 
-    
+
 }
