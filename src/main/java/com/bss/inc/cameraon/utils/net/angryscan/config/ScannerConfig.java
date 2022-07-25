@@ -47,7 +47,7 @@ public class ScannerConfig {
         boolean useDefault = false;
         Object[] data = new Object[16];
 
-        if(Launcher.SettingsContainer.getValue("scanResultDisplay") == null || Launcher.SettingsContainer.getValue("scanSettings") == null) {
+        if(SettingsContainer.getValue("scanResultDisplay") == null || SettingsContainer.getValue("scanSettings") == null) {
             Logger.getLogger("BNC").info("Could not find 'scanResultDisplay' column or 'scanSettings' column in 'app.settings.json'");
             Logger.getLogger("BNC").info("Reverting to default settings, and creating both columns!");
             Logger.getLogger("BNC").warn("If this issue persists contact support.");
