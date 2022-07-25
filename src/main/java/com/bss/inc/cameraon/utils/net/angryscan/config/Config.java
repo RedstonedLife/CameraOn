@@ -33,7 +33,7 @@ public final class Config {
         }
         allowReports = preferences.getBoolean("allowReports", true);
     }
-    
+
     public void store() {
         preferences.put("language", language);
         preferences.put("uuid", uuid);
