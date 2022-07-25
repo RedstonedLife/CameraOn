@@ -33,15 +33,7 @@ public final class Config {
         }
         allowReports = preferences.getBoolean("allowReports", true);
     }
-
-    private static class ConfigHolder {
-        static final Config INSTANCE = new Config();
-    }
-
-    public static Config getConfig() {
-        return ConfigHolder.INSTANCE;
-    }
-
+    
     public void store() {
         preferences.put("language", language);
         preferences.put("uuid", uuid);
