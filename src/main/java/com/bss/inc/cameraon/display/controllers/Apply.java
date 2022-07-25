@@ -20,7 +20,7 @@ public class Apply implements Initializable {
 
     private Class<MainClass> instance = MainClass.class;
 
-    @FXML private Button settingsSceneBtn,cctvSceneBtn,scanSceneBtn,applySceneBtn,HelpBtn,btnClose,btnMinimize,;
+    @FXML private Button settingsSceneBtn,cctvSceneBtn,scanSceneBtn,applySceneBtn,HelpBtn,btnClose,btnMinimize,applyBtn;
     @FXML private SplitPane cmainsplit;
     @FXML private Text taskslefttxt,backendtxt,applystatustxt,versiontxt,licensetxt;
 
