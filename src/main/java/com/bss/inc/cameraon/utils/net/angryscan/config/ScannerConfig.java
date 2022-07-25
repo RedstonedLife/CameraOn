@@ -3,6 +3,7 @@ package com.bss.inc.cameraon.utils.net.angryscan.config;
 import com.bss.inc.cameraon.Launcher;
 import com.bss.inc.cameraon.i18n.I18n;
 import com.bss.inc.cameraon.logging.Logger;
+import com.bss.inc.cameraon.settings.Settings;
 import com.bss.inc.cameraon.utils.net.angryscan.enums.DisplayResultType;
 import org.json.JSONObject;
 
@@ -40,7 +41,7 @@ public class ScannerConfig {
      * It loads all preferences.
      * @param preferences
      */
-    public ScannerConfig(Preferences preferences) {
+    public ScannerConfig(Preferences preferences, Settings SettingsContainer) {
         Logger.getLogger("BNC").info("Initializing ScannerConfig");
         this.preferences = preferences;
         boolean useDefault = false;
