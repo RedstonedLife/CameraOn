@@ -44,7 +44,7 @@ public class MainClass extends Application {
 
     public static StateMachine getStateMachine() {return stateMachine;}
 
-    public static Config getConfig() {return config;}
+    public static Config getConfig() {return Launcher.getConfig();}
     public static DisplayResultType DisplayType;
     private static $UI$02 ui02;
 
