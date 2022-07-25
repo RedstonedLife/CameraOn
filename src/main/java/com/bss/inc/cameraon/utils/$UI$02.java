@@ -193,7 +193,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         barTitle.setText("Tasks Left 3/4 (Parsing Results) | Current Scanner State: " + stateMachine.getState().toString());
         Bar.setProgress(0.75d);
         subBar.setProgress(0.0d);
-        subBarTitle.setText("Parsing Results (0/"+(resultTable.getResults().size()-1)+")");
+        subBarTitle.setText("Parsing Results (0/"+(resultTable.getResults().size()-1)+") | 0.0% ");
         double perInc = Math.abs(1.0 / (resultTable.getResults().size()+1));
         for(int i=0; i<resultTable.getResults().size(); i++) {
             StringBuilder sb = new StringBuilder(1024);
@@ -210,7 +210,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             sfm.append(sb.toString());
             if(status.getText().length() < 80000) {status.setText("");}
             status.appendText(sb.toString()+"\n");
-            subBarTitle.setText("Parsing Results ("+i+"/"+(resultTable.getResults().size()-1)+")");
+            subBarTitle.setText("Parsing Results ("+i+"/"+(resultTable.getResults().size()-1)+") | "  + ((subBar.getProgress()+perInc)*100) + "%");
             subBar.setProgress(subBar.getProgress()+perInc);
             try {
                 TimeUnit.MILLISECONDS.sleep(20);
