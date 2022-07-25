@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan.values;
 
+import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.utils.net.angryscan.config.Config;
 
 public class NotScanned extends Empty {
@@ -11,7 +12,7 @@ public class NotScanned extends Empty {
      * Displays a user-friendly text string :-)
      */
     public String toString() {
-        return Config.getConfig().forScanner().notScannedText;
+        return MainClass.getConfig().forScanner().notScannedText;
     }
 
     @Override
