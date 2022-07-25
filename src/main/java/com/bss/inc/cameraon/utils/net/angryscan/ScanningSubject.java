@@ -1,6 +1,7 @@
 package com.bss.inc.cameraon.utils.net.angryscan;
 
 
+import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.utils.net.angryscan.config.Config;
 import com.bss.inc.cameraon.utils.net.angryscan.config.ScannerConfig;
 import com.bss.inc.cameraon.utils.net.angryscan.state.PingResult;
@@ -49,7 +50,7 @@ public class ScanningSubject {
         this.netIf = netIf;
         this.ifAddr = ifAddr;
         this.parameters = new HashMap<>(); // single-threaded access only
-        this.config = Config.getConfig().forScanner();
+        this.config = MainClass.getConfig().forScanner();
     }
 
     public InetAddress getAddress() {
