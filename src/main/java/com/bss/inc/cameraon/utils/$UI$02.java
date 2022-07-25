@@ -207,7 +207,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             }
             sb.append("TYPE-"+resultTable.getResults().get(i).getType().toString());
             sfm.append(sb.toString());
-            if(status.getText().length() < )
+            if(status.getText().length() < 8)
             status.appendText(sb.toString()+"\n");
 
             subBarTitle.setText("Parsing Results ("+i+"/"+(resultTable.getResults().size()-1)+")");
