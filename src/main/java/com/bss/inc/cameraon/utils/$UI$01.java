@@ -142,7 +142,7 @@ public class $UI$01 {
     public static void u_08$1$8(TextField utf, TextField ptf) {
         utf.textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
-            
+            scannerConfig.username = utf.getText()
         });
     }
 
