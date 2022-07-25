@@ -33,7 +33,7 @@ public class $UI$01 {
     static TextArea ptsct;
     static ChoiceBox<String> pingMethod;
     static ScannerConfig scannerConfig;
-    static String usernameTf,passwordTf;
+    static TextField usernameTf,passwordTf;
 
     static {
         digitPattern = Pattern.compile("\\d+");
@@ -141,14 +141,16 @@ public class $UI$01 {
     public static boolean u_08$1$3(String i) {return digitPattern.matcher(i).matches();}
     public static boolean u_08$1$7(String i) {return licensePattern.matcher(i).matches();}
     public static void u_08$1$8(TextField utf, TextField ptf) {
-        utf.textProperty().addListener((observable, oldValue, newValue) -> {
+        usernameTf = utf;
+        passwordTf = ptf;
+        usernameTf.textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
-            utf.setText(newValue);
+            usernameTf.setText(newValue);
             u_08$3$1(newValue);
         });
-        ptf.textProperty().addListener((observable, oldValue, newValue) -> {
+        passwordTf.textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
-            ptf.setText(newValue);
+            passwordTf.setText(newValue);
             u_08$3$2(newValue);
         });
     }
