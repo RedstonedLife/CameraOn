@@ -141,8 +141,6 @@ public class $UI$01 {
     public static boolean u_08$1$3(String i) {return digitPattern.matcher(i).matches();}
     public static boolean u_08$1$7(String i) {return licensePattern.matcher(i).matches();}
     public static void u_08$1$8(TextField utf, TextField ptf) {
-        usernameTf = utf;
-        passwordTf = ptf;
         usernameTf.textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
             usernameTf.setText(newValue);
@@ -151,6 +149,10 @@ public class $UI$01 {
             if(oldValue == null || oldValue == "") {return;}
             passwordTf.setText(newValue);
         });
+    }
+    public static void u_08$2$3(TextField utf, TextField ptf) {
+        usernameTf = utf;
+        passwordTf = ptf;
     }
     public static String u_08$2$1() {return usernameTf.getText();}
     public static String u_08$2$2() {return passwordTf.getText();}
