@@ -105,8 +105,8 @@ public class ScannerConfig {
 
     public Object[] LoadFromFile() {
         Logger.getLogger("BNC").info("Loading settings from app.settings.json");
-        JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
-        JSONObject rj_ = (JSONObject) Launcher.SettingsContainer.getValue("scanResultDisplay");
+        JSONObject j_ = (JSONObject) SettingsContainer.getValue("scanSettings");
+        JSONObject rj_ = (JSONObject) SettingsContainer.getValue("scanResultDisplay");
         return new Object[] {
                 j_.getInt("maxThreads"),
                 j_.getInt("threadDelay"),
