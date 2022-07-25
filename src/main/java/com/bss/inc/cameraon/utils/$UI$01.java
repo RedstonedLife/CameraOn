@@ -234,7 +234,7 @@ public class $UI$01 {
                 if(oldValue.length() == 1) {textField.setText("");return;}
                 if(Integer.valueOf(newValue) > 512) {textField.setText(oldValue);return;}
                 if(!u_08$1$3(newValue)) {textField.setText(oldValue);return;}
-                if(Integer.valueOf(newValue) < 3) {textField.setText("")};
+                if(Integer.valueOf(newValue) < 3) {textField.setText("");return;}
                 if((newValue.length() > 5)) {textField.setText(oldValue);return;}
             });
         }
