@@ -146,18 +146,14 @@ public class $UI$01 {
         usernameTf.textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
             usernameTf.setText(newValue);
-            u_08$3$1(newValue);
         });
         passwordTf.textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
             passwordTf.setText(newValue);
-            u_08$3$2(newValue);
         });
     }
-    public static String u_08$2$1() {return username;}
-    public static String u_08$2$2() {return password;}
-    public static void u_08$3$1(String in) {username = in;}
-    public static void u_08$3$2(String in) {password = in;}
+    public static String u_08$2$1() {return usernameTf.getText();}
+    public static String u_08$2$2() {return passwordTf.getText();}
 
     /**
      * Validates a port pattern i.e 3-50,5,600-8000
