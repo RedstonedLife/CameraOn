@@ -33,7 +33,8 @@ public class $UI$01 {
     static TextArea ptsct;
     static ChoiceBox<String> pingMethod;
     static ScannerConfig scannerConfig;
-    static TextField usernameTf,passwordTf;
+    static TextField usernameTf;
+    static PasswordField passwordPf;
 
     static {
         digitPattern = Pattern.compile("\\d+");
