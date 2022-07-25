@@ -231,7 +231,7 @@ public class $UI$01 {
         for (TextField textField: tfs) {
             textField.textProperty().addListener((observable, oldValue, newValue) -> {
                 if(oldValue == null || oldValue == "") {return;}
-                if(oldValue.length() == 1 && !u_08$1$3("")) {textField.setText("");}
+                if(oldValue.length() == 1) {textField.setText("");}
                 if(!u_08$1$3(newValue)) {textField.setText(oldValue);}
                 if((newValue.length() > 5)) {textField.setText(oldValue);}
             });
