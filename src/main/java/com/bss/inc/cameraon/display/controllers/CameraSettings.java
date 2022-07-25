@@ -7,10 +7,7 @@ import com.bss.inc.cameraon.utils.$UI$01;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.SplitPane;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import org.json.JSONObject;
 
@@ -26,7 +23,8 @@ public class CameraSettings implements Initializable {
     @FXML private ChoiceBox<String> veCB,rCB,brCB;
     @FXML private SplitPane cmainsplit;
     @FXML private Text cctvencodingtxt,cctvencodingbetxt,cctvfpstxt,cctvrestxt,cctvbrtxt,fpscounttxt,versiontxt,licensetxt;
-    @FXML private TextField usernameTf,passwordTf;
+    @FXML private TextField usernameTf;
+    @FXML private PasswordField passwordPf;
 
     private void initializeLanguage() {
         cctvencodingtxt.setText(tl("settings.cctv.encoding"));
@@ -69,7 +67,7 @@ public class CameraSettings implements Initializable {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        $UI$01.u_08$2$3(usernameTf, passwordTf);
+        $UI$01.u_08$2$3(usernameTf, passwordPf);
         $UI$01.u_08$1$8();
     }
 }
