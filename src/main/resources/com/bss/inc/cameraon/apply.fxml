@@ -91,7 +91,7 @@
                                             </children></AnchorPane>
                                     </content>
                                 </ScrollPane>
-                                <Text fx:id="applystatustxt" fill="#e0e2e4" layoutX="7.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apply status">
+                                <Text fx:id="applystatustxt" fill="#e0e2e4" layoutX="7.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apply status">
                                     <font>
                                         <Font size="14.0" />
                                     </font>
