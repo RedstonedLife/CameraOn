@@ -1,5 +1,7 @@
 package com.bss.inc.cameraon.utils.net.angryscan.config;
 
+import com.bss.inc.cameraon.settings.Settings;
+
 import java.io.FileNotFoundException;
 import java.util.Locale;
 import java.util.UUID;
@@ -20,7 +22,7 @@ public final class Config {
     /** easily accessible scanner configuration */
     private ScannerConfig scannerConfig;
 
-    public Config() {
+    public Config(Settings) {
         preferences = Preferences.userRoot().node("cameraon");
         scannerConfig = new ScannerConfig(preferences);
         language = preferences.get("language", "en");
