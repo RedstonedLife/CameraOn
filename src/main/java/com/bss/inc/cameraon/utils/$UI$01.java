@@ -355,8 +355,7 @@ public class $UI$01 {
             }
             if(oldValue == null || oldValue == "") {return;}
             if((newValue.length() == 9 && oldValue != null)) {
-                textFields[1].requestFocus();textFields[0].setText(oldValue);
-                textFields[1].setText(newValue.substring(newValue.length()-1));}
+                textFields[0].setText(oldValue);textFields[1].setText(newValue.substring(newValue.length()-1));textFields[1].requestFocus();}
         });
         textFields[1].textProperty().addListener((observable, oldValue, newValue) -> {
             if(isCopyingLicenseKey) {return;}
@@ -376,7 +375,7 @@ public class $UI$01 {
             if(oldValue == null || oldValue == "") {return;}
             if(newValue == "") {textFields[0].requestFocus();}
             if((newValue.length() == 7)) {
-                textFields[2].requestFocus();textFields[1].setText(oldValue);textFields[2].setText(String.valueOf(newValue.indexOf(newValue.length()-1)));}
+                textFields[1].setText(oldValue);textFields[2].setText(newValue.substring(newValue.length()-1));textFields[2].requestFocus();}
         });
         textFields[2].textProperty().addListener((observable, oldValue, newValue) -> {
             if(isCopyingLicenseKey) {return;}
@@ -396,7 +395,7 @@ public class $UI$01 {
             if(oldValue == null || oldValue == "") {return;}
             if(newValue == "") {textFields[1].requestFocus();}
             if((newValue.length() == 7 && oldValue != null)) {
-                textFields[3].requestFocus();textFields[2].setText(oldValue);textFields[3].setText(String.valueOf(newValue.indexOf(newValue.length()-1)));}
+                textFields[2].setText(oldValue);textFields[3].setText(newValue.substring(newValue.length()-1));textFields[3].requestFocus();}
         });
         textFields[3].textProperty().addListener((observable, oldValue, newValue) -> {
             if(isCopyingLicenseKey) {return;}
@@ -416,7 +415,7 @@ public class $UI$01 {
             if(oldValue == null || oldValue == "") {return;}
             if(newValue == "") {textFields[2].requestFocus();}
             if((newValue.length() == 7 && oldValue != null)) {
-                textFields[4].requestFocus();textFields[3].setText(oldValue);textFields[4].setText(String.valueOf(newValue.indexOf(newValue.length()-1)));}
+                textFields[3].setText(oldValue);textFields[4].setText(newValue.substring(newValue.length()-1));textFields[4].requestFocus();}
         });
         textFields[4].textProperty().addListener((observable, oldValue, newValue) -> {
             if(isCopyingLicenseKey) {return;}
