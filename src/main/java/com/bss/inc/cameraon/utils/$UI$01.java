@@ -143,7 +143,7 @@ public class $UI$01 {
         utf.textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
             utf.setText(newValue);
-            scannerConfig.username = newValue;
+            Launcher.getConfig().forScanner().scannerConfig.username = newValue;
         });
         ptf.textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
