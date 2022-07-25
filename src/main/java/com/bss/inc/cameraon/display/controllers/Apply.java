@@ -31,7 +31,7 @@ public class Apply implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        ssblTA.textProperty().addListener(new ChangeListener<Object>() {@Override public void changed(ObservableValue<?> observable, Object oldValue, Object newValue) {ssblTA.setScrollTop(Double.MAX_VALUE);}});
+        ssblTA.textProperty().addListener((ChangeListener<Object>) (observable, oldValue, newValue) -> ssblTA.setScrollTop(Double.MAX_VALUE));
         $UI$01.u_01$1$1(cmainsplit,new Button[]{settingsSceneBtn,cctvSceneBtn,applySceneBtn,scanSceneBtn,HelpBtn});
         // I18n
         settingsSceneBtn.setText(tl("settings.btn.text"));
