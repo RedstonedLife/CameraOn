@@ -4,6 +4,8 @@ import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.constants.FrontendPaths;
 import com.bss.inc.cameraon.utils.$UI$01;
 import com.sun.tools.javac.Main;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -29,6 +31,7 @@ public class Apply implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        ssblTA.textProperty().addListener(new ChangeListener<Object>() {@Override public void changed(ObservableValue<?> observable, Object oldValue, Object newValue) {ssblTA.setScrollTop(Double.MAX_VALUE);}});
         $UI$01.u_01$1$1(cmainsplit,new Button[]{settingsSceneBtn,cctvSceneBtn,applySceneBtn,scanSceneBtn,HelpBtn});
         // I18n
         settingsSceneBtn.setText(tl("settings.btn.text"));
