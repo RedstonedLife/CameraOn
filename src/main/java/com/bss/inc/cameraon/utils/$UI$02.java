@@ -182,6 +182,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         else {
             barTitle.setText("Tasks Left 2/4 (Stopping Threads) | Current Scanner State: " + stateMachine.getState().toString());
             subBarTitle.setText("Closing Threads ("+runningThreads+" Threads Left)");
+            if(status.getText().length() < 80000) {status.setText("");}
             status.appendText("Closing Threads | Threads Left: " + runningThreads + "\n");
             Bar.setProgress(.5d);
         }
