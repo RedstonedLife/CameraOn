@@ -156,7 +156,7 @@ public class Launcher {
             throw new RuntimeException(e);
         }
         setSettings();
-        config = new Config();
+        config = new Config(SettingsContainer);
         MainClass.main(args);
     }
 
