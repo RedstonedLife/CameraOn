@@ -169,7 +169,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     public void updateProgress(InetAddress currentAddress, int runningThreads, double percentageComplete) {
         if(currentAddress!=null) {
             barTitle.setText("Tasks Left 1/4 (Scanning) | Current Scanner State: " + stateMachine.getState().toString());
-            subBarTitle.setText("Scanning ("+((currentAddress == null) ? "N/A" : currentAddress.getHostAddress().toString())+") | " + (percentageComplete*100) + "% ");
+            subBarTitle.setText("Scanning ("+((currentAddress == null) ? "N/A" : currentAddress.getHostAddress().toString())+") | " + ("%.2f".formatted(percentageComplete*100)) + "%");
             if(status.getText().length() < 80000) {status.setText("");}
             status.appendText(
                 "Trying " +
@@ -210,7 +210,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
             sfm.append(sb.toString());
             if(status.getText().length() < 80000) {status.setText("");}
             status.appendText(sb.toString()+"\n");
-            subBarTitle.setText("Parsing Results ("+i+"/"+(resultTable.getResults().size()-1)+") | "  + ((subBar.getProgress()+perInc)*100) + "%");
+            subBarTitle.setText("Parsing Results ("+i+"/"+(resultTable.getResults().size()-1)+") | "  + ("%.2f".formatted(subBar.getProgress()*100)) + "%");
             subBar.setProgress(subBar.getProgress()+perInc);
             try {
                 TimeUnit.MILLISECONDS.sleep(20);
@@ -229,7 +229,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
         subBarTitle.setText("Parsing Results To Cache (0/"+(resultTable.getResults().size()-1)+") | 0.0%");
         double perInc = Math.abs(1.0 / (resultTable.getResults().size()+1));
         for(int i=0; i<resultTable.getResults().size(); i++) {
-            subBarTitle.setText("Parsing Results To Cache ("+i+"/"+(resultTable.getResults().size()-1)+") | "  + ((subBar.getProgress()+perInc)*100) + "%");
+            subBarTitle.setText("Parsing Results To Cache ("+i+"/"+(resultTable.getResults().size()-1)+") | "  + ("%.2f".formatted(subBar.getProgress()*100)) + "%");
             results.add(resultTable.getResults().get(i));
             subBar.setProgress(subBar.getProgress()+perInc);
             try {
