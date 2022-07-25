@@ -73,7 +73,7 @@ public class CameraSettings implements Initializable {
             e.printStackTrace();
         }
         System.out.println("PASSED!");
-        $UI$01.u_08$1$8(usernameTf,passwordTf);
+        //$UI$01.u_08$1$8(usernameTf,passwordTf);
         System.out.println("PASSED!");
     }
 }
