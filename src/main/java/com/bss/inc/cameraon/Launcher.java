@@ -23,7 +23,7 @@ public class Launcher {
     public static final LocalDateTime _INIT_TIME = LocalDateTime.now();
     public static Settings SettingsContainer;
     private static HardwareUtils hu = new HardwareUtils();
-    private static Config config = new Config();
+    private static Config config;
 
     static {
         LM = new LogManager();
@@ -156,6 +156,7 @@ public class Launcher {
             throw new RuntimeException(e);
         }
         setSettings();
+        config = new Config();
         MainClass.main(args);
     }
 
