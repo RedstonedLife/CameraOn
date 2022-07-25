@@ -60,20 +60,15 @@ public class CameraSettings implements Initializable {
         brCB.getItems().addAll("4096 Kb/s (4 Mb/s)", "3072 Kb/s (3 Mb/s)", "2048 Kb/s (2 Mb/s)", "1024 Kb/s (1 Mb/s)");
 
         JSONObject settings = new JSONObject(Launcher.SettingsContainer.getValue("cameraSettings").toString());
-        System.out.println(Launcher.SettingsContainer.getValue("cameraSettings").toString());
         fpscounttxt.setText(String.valueOf(settings.getInt("frameRate")));
-        System.out.println(String.valueOf(settings.getInt("frameRate")));
         veCB.setValue(veCB.getItems().get(settings.getInt("videnc")));
         rCB.setValue(rCB.getItems().get(settings.getInt("resolution")));
         brCB.setValue(brCB.getItems().get(settings.getInt("bitrate")));
-        System.out.println("PASSED!");
         try {
             $UI$01.u_07$1$1(new Button[]{fpsDleftbtn,fpsleftbtn,fpsrightbtn,fpsDrightbtn},fpscounttxt,new ChoiceBox[]{veCB,rCB,brCB});
         } catch (Exception e) {
             e.printStackTrace();
         }
-        System.out.println("PASSED!");
-        //$UI$01.u_08$1$8(usernameTf,passwordTf);
-        System.out.println("PASSED!");
+        $UI$01.u_08$1$8(usernameTf,passwordTf);
     }
 }
