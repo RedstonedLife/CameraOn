@@ -7,6 +7,7 @@ import com.bss.inc.cameraon.logging.Logger;
 import com.bss.inc.cameraon.settings.Settings;
 import com.bss.inc.cameraon.utils.HardwareUtils;
 import com.bss.inc.cameraon.utils.SHA512;
+import com.bss.inc.cameraon.utils.net.angryscan.config.Config;
 import org.json.JSONObject;
 
 import java.io.FileNotFoundException;
@@ -22,6 +23,7 @@ public class Launcher {
     public static final LocalDateTime _INIT_TIME = LocalDateTime.now();
     public static Settings SettingsContainer;
     private static HardwareUtils hu = new HardwareUtils();
+    private static Config config = new Config();
 
     static {
         LM = new LogManager();
@@ -158,4 +160,5 @@ public class Launcher {
     }
 
     public static HardwareUtils getHu() {return hu;}
+    public static Config getConfig() {return config;}
 }
