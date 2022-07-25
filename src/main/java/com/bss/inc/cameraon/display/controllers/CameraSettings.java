@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.SplitPane;
+import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import org.json.JSONObject;
 
@@ -25,6 +26,7 @@ public class CameraSettings implements Initializable {
     @FXML private ChoiceBox<String> veCB,rCB,brCB;
     @FXML private SplitPane cmainsplit;
     @FXML private Text cctvencodingtxt,cctvencodingbetxt,cctvfpstxt,cctvrestxt,cctvbrtxt,fpscounttxt,versiontxt,licensetxt;
+    @FXML private TextField ;
 
     private void initializeLanguage() {
         cctvencodingtxt.setText(tl("settings.cctv.encoding"));
