@@ -26,7 +26,7 @@ public class CameraSettings implements Initializable {
     @FXML private ChoiceBox<String> veCB,rCB,brCB;
     @FXML private SplitPane cmainsplit;
     @FXML private Text cctvencodingtxt,cctvencodingbetxt,cctvfpstxt,cctvrestxt,cctvbrtxt,fpscounttxt,versiontxt,licensetxt;
-    @FXML private TextField ;
+    @FXML private TextField usernameTf,passwordTf;
 
     private void initializeLanguage() {
         cctvencodingtxt.setText(tl("settings.cctv.encoding"));
