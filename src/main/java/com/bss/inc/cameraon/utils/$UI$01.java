@@ -415,7 +415,7 @@ public class $UI$01 {
             if(oldValue == null || oldValue == "") {return;}
             if(newValue == "") {textFields[2].requestFocus();}
             if((newValue.length() == 7 && oldValue != null)) {
-                textFields[3].setText(oldValue);textFields[4].setText(newValue.substring(newValue.length()-1));textFields[4].requestFocus();}
+                textFields[3].setText(oldValue);textFields[4].requestFocus();textFields[4].setText(newValue.substring(newValue.length()-1));}
         });
         textFields[4].textProperty().addListener((observable, oldValue, newValue) -> {
             if(isCopyingLicenseKey) {return;}
