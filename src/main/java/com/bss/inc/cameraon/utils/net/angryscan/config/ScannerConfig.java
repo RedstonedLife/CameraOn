@@ -129,7 +129,7 @@ public class ScannerConfig {
     }
 
     public void onExit() throws FileNotFoundException {
-        JSONObject j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanSettings");
+        JSONObject j_ = (JSONObject) SettingsContainer.getValue("scanSettings");
         if(j_.has("threadDelay")) {
             Logger.getLogger("BNC").info(tl("scannerconfig.found1","threadDelay","scanSettings"));
             Logger.getLogger("BNC").info(tl("scannerconfig.found2","threadDelay"));
@@ -190,8 +190,8 @@ public class ScannerConfig {
             Logger.getLogger("BNC").info(tl("scannerconfig.found2","useRequestedPorts"));
             j_.put("useRequestedPorts", preferences.getBoolean("useRequestedPorts", true));
         } // Use Requested Ports  useRequestedPorts     (Default true)              (bool)
-        Launcher.SettingsContainer.setValue("scanSettings", j_);
-        j_ = (JSONObject) Launcher.SettingsContainer.getValue("scanResultDisplay");
+        SettingsContainer.setValue("scanSettings", j_);
+        j_ = (JSONObject) SettingsContainer.getValue("scanResultDisplay");
         if(j_.has("displayResult")) {
             Logger.getLogger("BNC").info(tl("scannerconfig.found1","displayResult","scanResultDisplay"));
             Logger.getLogger("BNC").info(tl("scannerconfig.found2","displayResult"));
@@ -217,6 +217,6 @@ public class ScannerConfig {
             Logger.getLogger("BNC").info(tl("scannerconfig.found2","showInfoDialogAfterScan"));
             j_.put("showInfoDialogAfterScan",   preferences.getBoolean("showInfoDialogAfterScan", false));
         }
-        Launcher.SettingsContainer.Save();
+        SettingsContainer.Save();
     }
 }
