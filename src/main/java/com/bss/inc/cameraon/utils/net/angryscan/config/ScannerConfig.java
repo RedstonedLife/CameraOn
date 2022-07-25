@@ -30,7 +30,7 @@ public class ScannerConfig {
     public String notAvailableText;
     public String notScannedText;
     public String username,password;
-
+    public Settings SettingsContainer;
     public DisplayResultType displayResultType;
 
     public boolean askConfirmationBeforeScan;
@@ -43,6 +43,7 @@ public class ScannerConfig {
      */
     public ScannerConfig(Preferences preferences, Settings SettingsContainer) {
         Logger.getLogger("BNC").info("Initializing ScannerConfig");
+        this.SettingsContainer = SettingsContainer;
         this.preferences = preferences;
         boolean useDefault = false;
         Object[] data = new Object[16];
