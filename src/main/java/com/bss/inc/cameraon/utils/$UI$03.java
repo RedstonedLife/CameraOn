@@ -11,5 +11,6 @@ public class $UI$03 {
     private Text barTitle,subBarTitle;
     private TextArea status;
     private Button button;
+
     
 }
