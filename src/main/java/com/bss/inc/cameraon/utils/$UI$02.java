@@ -169,7 +169,7 @@ public class $UI$02 implements StateTransitionListener, ScanningProgressCallback
     public void updateProgress(InetAddress currentAddress, int runningThreads, double percentageComplete) {
         if(currentAddress!=null) {
             barTitle.setText("Tasks Left 1/4 (Scanning) | Current Scanner State: " + stateMachine.getState().toString());
-            subBarTitle.setText("Scanning ("+((currentAddress == null) ? "N/A" : currentAddress.getHostAddress().toString())+") | " + );
+            subBarTitle.setText("Scanning ("+((currentAddress == null) ? "N/A" : currentAddress.getHostAddress().toString())+") | " + (percentageComplete));
             if(status.getText().length() < 80000) {status.setText("");}
             status.appendText(
                 "Trying " +
