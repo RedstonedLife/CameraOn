@@ -28,7 +28,7 @@ public class ScannerConfig {
     public boolean useRequestedPorts = true; // DEFAULT true
     public String notAvailableText;
     public String notScannedText;
-    public String 
+    public String username,password;
 
     public DisplayResultType displayResultType;
 
