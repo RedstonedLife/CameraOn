@@ -1,5 +1,6 @@
 package com.bss.inc.cameraon.utils.net.angryscan.fetchers;
 
+import com.bss.inc.cameraon.MainClass;
 import com.bss.inc.cameraon.i18n.I18n;
 import com.bss.inc.cameraon.utils.net.angryscan.ScanningSubject;
 import com.bss.inc.cameraon.utils.net.angryscan.config.Config;
@@ -27,7 +28,7 @@ public abstract class AbstractFetcher implements Fetcher {
     }
 
     public Preferences getPreferences() {
-        return Config.getConfig().getPreferences().node(getId().replace("fetcher.", ""));
+        return MainClass.getConfig().getPreferences().node(getId().replace("fetcher.", ""));
     }
 
     public Class<? extends FetcherPrefs> getPreferencesClass() {
