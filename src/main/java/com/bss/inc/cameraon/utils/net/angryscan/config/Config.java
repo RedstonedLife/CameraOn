@@ -22,9 +22,9 @@ public final class Config {
     /** easily accessible scanner configuration */
     private ScannerConfig scannerConfig;
 
-    public Config(Settings) {
+    public Config(Settings settings) {
         preferences = Preferences.userRoot().node("cameraon");
-        scannerConfig = new ScannerConfig(preferences);
+        scannerConfig = new ScannerConfig(preferences,settings);
         language = preferences.get("language", "en");
         uuid = preferences.get("uuid", null);
         if (uuid == null) {
