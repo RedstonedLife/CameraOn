@@ -33,6 +33,7 @@ public class $UI$01 {
     static TextArea ptsct;
     static ChoiceBox<String> pingMethod;
     static ScannerConfig scannerConfig;
+    static String username,password;
 
     static {
         digitPattern = Pattern.compile("\\d+");
@@ -143,14 +144,16 @@ public class $UI$01 {
         utf.textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
             utf.setText(newValue);
-            Launcher.getConfig().forScanner().username = newValue;
+            username = newValue;
         });
         ptf.textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
             ptf.setText(newValue);
-            Launcher.getConfig().forScanner().password = newValue;
+            password = newValue;
         });
     }
+    public static String u_08$2$1() {return username;}
+    public static String u_08$2$2() {return password;}
 
     /**
      * Validates a port pattern i.e 3-50,5,600-8000
