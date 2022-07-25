@@ -60,8 +60,8 @@ public class MainClass extends Application {
         //
         scanner = new Scanner();
         scanningResults = new ScanningResultList(stateMachine);
-        scannerDispatcherThreadFactory = new ScannerDispatcherThreadFactory(scanningResults,scanner,stateMachine,config.forScanner());
-        ui02 = new $UI$02(scannerDispatcherThreadFactory,stateMachine,pingerRegistry,config.forScanner());
+        scannerDispatcherThreadFactory = new ScannerDispatcherThreadFactory(scanningResults,scanner,stateMachine,Launcher.getConfig().forScanner());
+        ui02 = new $UI$02(scannerDispatcherThreadFactory,stateMachine,pingerRegistry,Launcher.getConfig().forScanner());
 
     }
 
@@ -108,7 +108,7 @@ public class MainClass extends Application {
     }
     @Override
     public void stop() throws FileNotFoundException {
-        config.onExit();
+        Launcher.getConfig().onExit();
     }
     public static void main(String[] args) {
         try {if(regi.get("ST", null) == null) {regi.put("ST", SHA512.getSalt().toString());}}
