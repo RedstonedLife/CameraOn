@@ -154,6 +154,7 @@ public class $UI$01 {
     }
     public static String u_08$2$1() {return username;}
     public static String u_08$2$2() {return password;}
+    public static void u_08$3$1(String in) {}
 
     /**
      * Validates a port pattern i.e 3-50,5,600-8000
