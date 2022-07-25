@@ -148,7 +148,7 @@ public class $UI$01 {
         ptf.textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
             ptf.setText(newValue);
-            Launcher.getConfig().forScanner().username = newValue;
+            Launcher.getConfig().forScanner().password = newValue;
         });
     }
 
