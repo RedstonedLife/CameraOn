@@ -355,7 +355,7 @@ public class $UI$01 {
             }
             if(oldValue == null || oldValue == "") {return;}
             if((newValue.length() == 9 && oldValue != null)) {
-                textFields[1].requestFocus();textFields[0].setText(oldValue);textFields[1].setText(String.valueOf(newValue.indexOf(textFields.length-1)));}
+                textFields[1].requestFocus();textFields[0].setText(oldValue);textFields[1].setText(String.valueOf(newValue.indexOf(newValue.length-1)));}
         });
         textFields[1].textProperty().addListener((observable, oldValue, newValue) -> {
             if(isCopyingLicenseKey) {return;}
@@ -375,7 +375,7 @@ public class $UI$01 {
             if(oldValue == null || oldValue == "") {return;}
             if(newValue == "") {textFields[0].requestFocus();}
             if((newValue.length() == 7)) {
-                textFields[2].requestFocus();textFields[1].setText(oldValue);}
+                textFields[2].requestFocus();textFields[1].setText(oldValue);textFields[2].setText(String.valueOf(newValue.indexOf(textFields.length-1)));}
         });
         textFields[2].textProperty().addListener((observable, oldValue, newValue) -> {
             if(isCopyingLicenseKey) {return;}
