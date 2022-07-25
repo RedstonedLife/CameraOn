@@ -60,6 +60,7 @@ public class CameraSettings implements Initializable {
         brCB.getItems().addAll("4096 Kb/s (4 Mb/s)", "3072 Kb/s (3 Mb/s)", "2048 Kb/s (2 Mb/s)", "1024 Kb/s (1 Mb/s)");
 
         JSONObject settings = new JSONObject(Launcher.SettingsContainer.getValue("cameraSettings").toString());
+        System.out.println(Launcher.SettingsContainer.getValue("cameraSettings").toString());
         fpscounttxt.setText(String.valueOf(settings.getInt("frameRate")));
 
         int[] cb = new int[] {settings.getInt("resolution"), settings.getInt("bitrate"), settings.getInt("videnc")};
