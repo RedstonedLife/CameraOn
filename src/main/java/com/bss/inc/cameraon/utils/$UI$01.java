@@ -435,7 +435,7 @@ public class $UI$01 {
             if(oldValue == null || oldValue == "") {return;}
             if(newValue == "") {textFields[3].requestFocus();}
             if((newValue.length() == 7 && oldValue != null)) {
-                textFields[4].setText(oldValue);}
+                textFields[4].setText(oldValue);activateButton.fire();}
         });
     }
 
