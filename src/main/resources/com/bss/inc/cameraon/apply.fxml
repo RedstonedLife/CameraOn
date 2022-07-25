@@ -83,7 +83,7 @@
                                     <content>
                                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="292.0" prefWidth="646.0">
                                             <children>
-                                                <TextArea fx:id="ssblTA" editable="false" layoutX="-14.0" layoutY="-152.0" prefHeight="284.0" prefWidth="646.0" wrapText="true" AnchorPane.bottomAnchor="152.0" AnchorPane.leftAnchor="-14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="-152.0">
+                                                <TextArea fx:id="ssblTA" editable="false" layoutX="-7.0" layoutY="-89.0" prefHeight="284.0" prefWidth="646.0" wrapText="true" AnchorPane.bottomAnchor="89.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="-89.0">
                                                     <font>
                                                         <Font size="14.0" />
                                                     </font>
