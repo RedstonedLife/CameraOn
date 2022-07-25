@@ -146,17 +146,17 @@ public class $UI$01 {
             if(oldValue == null || oldValue == "") {return;}
             usernameTf.setText(newValue);
         });
-        passwordTf.textProperty().addListener((observable, oldValue, newValue) -> {
+        passwordPf.textProperty().addListener((observable, oldValue, newValue) -> {
             if(oldValue == null || oldValue == "") {return;}
-            passwordTf.setText(newValue);
+            passwordPf.setText(newValue);
         });
     }
-    public static void u_08$2$3(TextField utf, TextField ptf) {
+    public static void u_08$2$3(TextField utf, PasswordField ptf) {
         usernameTf = utf;
-        passwordTf = ptf;
+        passwordPf = ptf;
     }
     public static String u_08$2$1() {return usernameTf.getText();}
-    public static String u_08$2$2() {return passwordTf.getText();}
+    public static String u_08$2$2() {return passwordPf.getText();}
 
     /**
      * Validates a port pattern i.e 3-50,5,600-8000
