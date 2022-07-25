@@ -68,8 +68,8 @@ public class Launcher {
         if(!j_.has("selectedPinger")) {
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","selectedPinger","scanSettings"));
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","selectedPinger","pinger.arp"));
-            j_.put("selectedPinger", "pinger.arp");
-        } // Selected Pinger      selectedPinger        (Default "pinger.arp")      (string)
+            j_.put("selectedPinger", "pinger.java");
+        } // Selected Pinger      selectedPinger        (Default "pinger.java")      (string)
         if(!j_.has("pingTimeout")) {
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind1","pingTimeout","scanSettings"));
             Logger.getLogger("BNC").info(tl("launcher.couldnotfind2","pingTimeout","20 MS"));
