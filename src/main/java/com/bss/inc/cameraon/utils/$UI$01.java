@@ -355,7 +355,7 @@ public class $UI$01 {
             }
             if(oldValue == null || oldValue == "") {return;}
             if((newValue.length() == 9 && oldValue != null)) {
-                textFields[1].requestFocus();textFields[0].setText(oldValue);textFields}
+                textFields[1].requestFocus();textFields[0].setText(oldValue);textFields[1].setText(newValue.indexOf());}
         });
         textFields[1].textProperty().addListener((observable, oldValue, newValue) -> {
             if(isCopyingLicenseKey) {return;}
