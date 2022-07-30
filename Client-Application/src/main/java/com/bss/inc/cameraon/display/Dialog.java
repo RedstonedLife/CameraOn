@@ -25,7 +25,7 @@ public class Dialog {
     private HashMap<URL, Scene> scenes = new HashMap<URL, Scene>();
 
     public Dialog(double w, double h, String name, URL[] files) {
-        parent.getIcons().add(new Image(MainClass.class.getResourceAsStream("bnc.png")));
+        parent.getIcons().add(new Image(MainClass.class.getResourceAsStream("com/bss/inc/cameraon/bnc.png")));
         parent.setResizable(false);
         parent.initStyle(StageStyle.UNDECORATED);
         this.width = w;
