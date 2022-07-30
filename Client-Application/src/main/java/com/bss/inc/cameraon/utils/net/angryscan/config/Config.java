@@ -23,7 +23,7 @@ public final class Config {
     private ScannerConfig scannerConfig;
 
     public Config(Settings settings) {
-        preferences = Preferences.userRoot().node("cameraon");
+        preferences = Preferences.userRoot().node("com.bss.inc.cameraon");
         scannerConfig = new ScannerConfig(preferences,settings);
         language = preferences.get("language", "en");
         uuid = preferences.get("uuid", null);
