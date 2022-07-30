@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>Client-Application</module>
+        <module>BSSLF</module>
     </modules>
     <name>CameraOn</name>
 
