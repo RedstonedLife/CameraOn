@@ -10,10 +10,10 @@ extern "C" {
 /*
  * Class:     com_bss_inc_utils_ProductKeyUtils
  * Method:    buildHexStr
- * Signature: ()Ljava/lang/String;
+ * Signature: (IJ)Ljava/lang/String;
  */
 JNIEXPORT jstring JNICALL Java_com_bss_inc_utils_ProductKeyUtils_buildHexStr
-  (JNIEnv *, jobject);
+  (JNIEnv *, jobject, jint, jlong);
 
 #ifdef __cplusplus
 }
