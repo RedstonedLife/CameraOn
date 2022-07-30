@@ -25,7 +25,7 @@ public class MACVendorFetcher extends AbstractFetcher {
 
     @Override
     public void init() {
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(MainClass.class.getResourceAsStream("/com/bss/inc/cameraon/mac-vendors.txt")))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(MainClass.class.getResourceAsStream("/mac-vendors.txt")))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 if (line.isEmpty()) continue;

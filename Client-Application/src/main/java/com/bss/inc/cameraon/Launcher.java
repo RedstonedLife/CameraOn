@@ -16,7 +16,7 @@ import static com.bss.inc.cameraon.i18n.I18n.tl;
 
 public class Launcher {
     private static LogManager LM;
-    private static I18n _i18n = new I18n(Launcher.class);
+    private static I18n _i18n = new I18n(MainClass.class);
     public static final LocalDateTime _INIT_TIME = LocalDateTime.now();
     public static Settings SettingsContainer;
     private static HardwareUtils hu = new HardwareUtils();
