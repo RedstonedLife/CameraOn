@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "com_bss_inc_utils_ProductKeyUtils.h"
+#include "com_weilerhaus_productKeys_utils_ProductKeyUtils.h"
 #include <cstring>
 #include "ProductKeyUtilsImpl.h"
 
@@ -22,7 +22,7 @@ jstring str2jstring(JNIEnv* env,const char* pat)
     return (jstring)(env)->NewObject(strClass, ctorID, bytes, encoding);
 }
 
-JNIEXPORT jstring JNICALL Java_com_bss_inc_utils_ProductKeyUtils_buildHexStr(JNIEnv* env, jobject obj, jint explength, jlong content) {
+JNIEXPORT jstring JNICALL Java_com_weilerhaus_productKeys_utils_ProductKeyUtils_buildHexStr(JNIEnv* env, jobject obj, jint explength, jlong content) {
     const char *hex = bhs(explength, content).c_str();
     return str2jstring(env, hex);
 }
