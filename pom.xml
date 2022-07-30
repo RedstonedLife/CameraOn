@@ -11,6 +11,7 @@
     <modules>
         <module>Client-Application</module>
         <module>BSSLF</module>
+        <module>BSSLF-Server</module>
     </modules>
     <name>CameraOn</name>
 
