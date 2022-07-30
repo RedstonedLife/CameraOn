@@ -7,7 +7,7 @@
 #ifdef __cplusplus
     extern "C" {
 #endif
-    std::string buildHexStr();
+    std::string bhs(int expectedLength, long content);
 #ifdef __cplusplus
     }
 #endif
