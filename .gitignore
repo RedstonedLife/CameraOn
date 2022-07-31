@@ -13,6 +13,9 @@ target/
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
+# CLion / C++ / C
+cmake-build-debug/
+
 # Python
 __pycache__/
 
