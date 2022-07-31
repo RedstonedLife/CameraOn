@@ -16,3 +16,8 @@ std::string StringUtils::rtrim(const std::string &s) {
 std::string StringUtils::trim(const std::string &s) {
     return rtrim(ltrim(s));
 }
+std::string StringUtils::toUpper(std::string &s) {
+    std::string result = s;
+    std::transform(result.begin(), result.end(), result.begin(), ::toupper);
+    return result;
+}
