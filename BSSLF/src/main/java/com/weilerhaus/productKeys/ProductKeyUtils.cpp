@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "com_weilerhaus_productKeys_utils_ProductKeyUtils.h"
+#include "com_weilerhaus_productKeys_ProductKeyUtils.h"
 #include <cstring>
 #include "ProductKeyUtilsImpl.h"
 

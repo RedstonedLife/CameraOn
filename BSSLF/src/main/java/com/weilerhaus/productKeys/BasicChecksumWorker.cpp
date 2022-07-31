@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <../utils/ProductKeyUtilsImpl.h>
+#include "ProductKeyUtilsImpl.h"
 
 class BasicChecksumWorker
 {
