@@ -2,10 +2,10 @@
 #include <string>
 #include <vector>
 #include "ProductKeyUtilsImpl.h"
-#include "BasicChecksumWorker.h"
+#include "ChecksumWorker.h"
 #include "StringUtils.h"
 
-std::string BasicChecksumWorker::buildProductKeyChecksum(std::string productKey) {
+std::string ChecksumWorker::buildProductKeyChecksum(std::string productKey) {
     if((productKey != nullptr) && (StringUtils::trim(productKey).length() > 0)) {
         productKey = StringUtils::trim(productKey);
         int left = 86;
@@ -20,7 +20,7 @@ std::string BasicChecksumWorker::buildProductKeyChecksum(std::string productKey)
     }
     return nullptr;
 }
-bool BasicChecksumWorker::verifyProductKeyChecksum(std::string productKey) {
+bool ChecksumWorker::verifyProductKeyChecksum(std::string productKey) {
     if((productKey != nullptr) && (StringUtils::trim(productKey).length() > 0)) {
         productKey = productKey.trim();
         if (productKey.length() > 4)

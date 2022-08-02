@@ -1,6 +1,6 @@
 #include <string>
 #include <iostream>
-#include "BasicProductKeySectionWorker.h"
+#include "ProductKeySectionWorker.h"
 
 int BasicProductKeySectionWorker::buildProductKeySection(long seed, BasicProductKeyEncodingData &encodingData) {
     int a = (int)(((int)encodingData->getA()) % 25);

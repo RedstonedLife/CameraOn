@@ -2,10 +2,10 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-#include "BasicProductKeyStylingWorker.h"
+#include "ProductKeyStylingWorker.h"
 #include "StringUtils.h"
 
-std::string BasicProductKeyStyling::addStyling(std::string productKey) {
+std::string ProductKeyStyling::addStyling(std::string productKey) {
     if((productKey != nullptr) && (StringUtils::trim(productKey).length() > 0)) {
         std::string streamString;
         streamString = StringUtils::toUpper(StringUtils::trim(productKey));
@@ -21,7 +21,7 @@ std::string BasicProductKeyStyling::addStyling(std::string productKey) {
     }
     return productKey;
 }
-std::string BasicProductKeyStyling::removeStyling(std::string productKey) {
+std::string ProductKeyStyling::removeStyling(std::string productKey) {
     if((productKey != nullptr) && (StringUtils::trim(productKey) > 0)) {return productKey.replace('-','');}
     return productKey;
 }

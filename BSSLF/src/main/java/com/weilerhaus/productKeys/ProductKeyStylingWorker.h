@@ -1,7 +1,7 @@
 #include <string>
-#ifndef BASICPRODUCTKEYSTYLINGWORKER_H
-#define BASICPRODUCTKEYSTYLINGWORKER_H
-class BasicProductKeyStyling {
+#ifndef PRODUCTKEYSTYLINGWORKER_H
+#define PRODUCTKEYSTYLINGWORKER_H
+class ProductKeyStyling {
 public:
     std::string addStyling(std::string productKey);
     std::string removeStyling(std::string productKey);
