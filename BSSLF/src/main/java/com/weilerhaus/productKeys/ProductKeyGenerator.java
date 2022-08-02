@@ -1,131 +1,13 @@
-package com.weilerhaus.productKeys;
-
-import com.weilerhaus.productKeys.beans.ProductKeyEncodingData;
-import com.weilerhaus.productKeys.enums.ProductKeyState;
-import com.weilerhaus.productKeys.exceptions.EncodingDataNotCompleteException;
-import com.weilerhaus.productKeys.exceptions.InvalidSeedException;
-import com.weilerhaus.productKeys.exceptions.ProductKeyEncoderNotDefinedException;
-import com.weilerhaus.productKeys.exceptions.ProductKeyGenerationException;
-import com.weilerhaus.productKeys.exceptions.SeedAlreadyTakenException;
-import com.weilerhaus.productKeys.exceptions.SeedIsBlacklistedException;
-import com.weilerhaus.productKeys.utils.ProductKeyUtils;
-import com.weilerhaus.productKeys.workers.BlacklistWorker;
-import com.weilerhaus.productKeys.workers.ChecksumWorker;
-import com.weilerhaus.productKeys.workers.ProductKeySectionWorker;
-import com.weilerhaus.productKeys.workers.ProductKeyStylingWorker;
-import com.weilerhaus.productKeys.workers.SeedAvailabilityWorker;
-
-/**
- * This class can be extended to provide an application specific product-key generator.
- * 
- * @author Matthew Weiler
- */
-public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData>
+abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData>
 {
-	
-	
-	/* PRIVATE VARIABLES */
-	/**
-	 * This will store the number of HEXADECIMAL characters, based on the provided seed at
-	 * generation time, that will appear at the beginning of the generated product-key thus
-	 * partially defining its total length.
-	 * <br />
-	 * <br />
-	 * This value must be positive and cannot exceeds 15; if it exceeds these bounds, it will be
-	 * assigned a number between 1 and 15 inclusive.
-	 * <br />
-	 * <i>If this value were to be allowed to exceed 15, the HEXADECIMAL value will be too large for
-	 * {@link Long} to parse it.</i>
-	 */
+
 	private final int seedCharLength;
-	/**
-	 * This will store the array of {@link ProductKeyEncodingData} elements that will be used to
-	 * generate/verify product-keys.
-	 * <br />
-	 * <i>
-	 * If a {@link ProductKeyEncodingData} element is <code>null</code>, that section of the
-	 * product-key will not be validated.
-	 * <br />
-	 * However, it should be noted that the encoding will only work if all
-	 * {@link ProductKeyEncodingData} elements are present.
-	 * <br />
-	 * <br />
-	 * When including this in the client application code, omit some {@link ProductKeyEncodingData}
-	 * elements by setting them to <code>null</code>.
-	 * <br />
-	 * This will ensure that the application code running on the clients device never has the entire
-	 * logic for creating a product-key; if reverse engineered, they will only be able to create a
-	 * product-key that will work on that build/version of your application.
-	 * <br />
-	 * Each new build/version of your client application should/could change the omitted
-	 * {@link ProductKeyEncodingData} elements thus ensuring that if a previously cracked key
-	 * worked, it won't in the new build/version.
-	 * </i>
-	 */
 	private final ED[] productKeyEncodingData;
-	/**
-	 * This will store the {@link ProductKeySectionWorker} to be used by this
-	 * {@link ProductKeyGenerator}.
-	 */
 	private ProductKeySectionWorker<ED> productKeySectionWorker = null;
-	/**
-	 * This will store the {@link ChecksumWorker} to be used by this {@link ProductKeyGenerator}.
-	 */
 	private ChecksumWorker checksumWorker = null;
-	/**
-	 * This will store the {@link BlacklistWorker} to be used by this {@link ProductKeyGenerator}.
-	 */
 	private BlacklistWorker blacklistWorker = null;
-	/**
-	 * This will store the {@link ProductKeyStylingWorker} to be used by this
-	 * {@link ProductKeyGenerator}.
-	 */
 	private ProductKeyStylingWorker productKeyStylingWorker = null;
-	/**
-	 * This will store the {@link SeedAvailabilityWorker} to be used by this
-	 * {@link ProductKeyGenerator}.
-	 */
 	private SeedAvailabilityWorker seedAvailabilityWorker = null;
-	
-	/* CONSTRUCTORS */
-	/**
-	 * This will create a new instance of a {@link ProductKeyGenerator}.
-	 * 
-	 * @param seedCharLength
-	 * The number of HEXADECIMAL characters, based on the provided seed at generation time, that
-	 * will appear at the beginning of the generated product-key thus partially defining its total
-	 * length.
-	 * <br />
-	 * <br />
-	 * This value must be positive and cannot exceeds 15; if it exceeds these bounds, it will be
-	 * assigned a number between 1 and 15 inclusive.
-	 * <br />
-	 * <i>If this value were to be allowed to exceed 15, the HEXADECIMAL value will be too large for
-	 * {@link Long} to parse it.</i>
-	 * @param productKeyEncodingData
-	 * The array of {@link ProductKeyEncodingData} elements that will be used to generate/verify
-	 * product-keys.
-	 * <br />
-	 * <i>
-	 * If a {@link ProductKeyEncodingData} element is <code>null</code>, that section of the
-	 * product-key will not be validated.
-	 * <br />
-	 * However, it should be noted that the encoding will only work if all
-	 * {@link ProductKeyEncodingData} elements are present.
-	 * <br />
-	 * <br />
-	 * When including this in the client application code, omit some {@link ProductKeyEncodingData}
-	 * elements by setting them to <code>null</code>.
-	 * <br />
-	 * This will ensure that the application code running on the clients device never has the entire
-	 * logic for creating a product-key; if reverse engineered, they will only be able to create a
-	 * product-key that will work on that build/version of your application.
-	 * <br />
-	 * Each new build/version of your client application should/could change the omitted
-	 * {@link ProductKeyEncodingData} elements thus ensuring that if a previously cracked key
-	 * worked, it won't in the new build/version.
-	 * </i>
-	 */
 	@SafeVarargs
 	public ProductKeyGenerator(final int seedCharLength, final ED...productKeyEncodingData)
 	{
@@ -140,45 +22,10 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData>
 			this.productKeyEncodingData = null;
 		}
 	}
-	
-	/* PUBLIC METHODS */
-	/**
-	 * This method will get the number of HEXADECIMAL characters, based on the provided seed at
-	 * generation time, that will appear at the beginning of the generated product-key thus
-	 * partially defining its total length.
-	 * <br />
-	 * <br />
-	 * This value must be positive and cannot exceeds 15; if it exceeds these bounds, it will be
-	 * assigned a number between 1 and 15 inclusive.
-	 * <br />
-	 * <i>If this value were to be allowed to exceed 15, the HEXADECIMAL value will be too large for
-	 * {@link Long} to parse it.</i>
-	 * 
-	 * @return
-	 * The number of HEXADECIMAL characters, based on the provided seed at generation time, that
-	 * will appear at the beginning of the generated product-key thus partially defining its total
-	 * length.
-	 * <br />
-	 * <br />
-	 * This value must be positive and cannot exceeds 15; if it exceeds these bounds, it will be
-	 * assigned a number between 1 and 15 inclusive.
-	 * <br />
-	 * <i>If this value were to be allowed to exceed 15, the HEXADECIMAL value will be too large for
-	 * {@link Long} to parse it.</i>
-	 */
 	public int getSeedCharLength()
 	{
 		return this.seedCharLength;
 	}
-	
-	/**
-	 * This method will verify the product-key specified.
-	 * 
-	 * @param productKey
-	 * The product-key to be verified.
-	 * @return
-	 * The {@link ProductKeyState} that best describes the specified product-key.
-	 */
 	public ProductKeyState verifyProductKey(final String productKey)
 	{
 		if ((productKey != null) && (productKey.trim().length() > 0))
@@ -254,21 +101,7 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData>
 		
 		return ProductKeyState.KEY_PHONY;
 	}
-	
-	/**
-	 * This method will generate a new product-key for the specified seed.
-	 * 
-	 * @param seed
-	 * The seed to use to ensure that the product-key is unique.
-	 * @return
-	 * The generated product-key.
-	 * <br />
-	 * <i>This will be <code>null</code> if the seed is not valid or this
-	 * {@link ProductKeyGenerator}
-	 * is not capable of creating a product key.</i>
-	 * @throws ProductKeyGenerationException
-	 * If the generation of the product-key failed.
-	 */
+
 	public String generateProductKey(long seed) throws ProductKeyGenerationException
 	{
 		// Build the HEXADECIMAL string representing the seed.
@@ -340,61 +173,11 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData>
 			throw new InvalidSeedException();
 		}
 	}
-	
-	/* PROTECTED METHODS */
-	/**
-	 * This method will build the {@link ProductKeySectionWorker} to be used by this
-	 * {@link ProductKeyGenerator}.
-	 * 
-	 * @return
-	 * The {@link ProductKeySectionWorker} to be used by this {@link ProductKeyGenerator}.
-	 */
 	protected abstract ProductKeySectionWorker<ED> buildProductKeySectionWorker();
-	
-	/**
-	 * This method will build the {@link ChecksumWorker} to be used by this
-	 * {@link ProductKeyGenerator}.
-	 * 
-	 * @return
-	 * The {@link ChecksumWorker} to be used by this {@link ProductKeyGenerator}.
-	 */
 	protected abstract ChecksumWorker buildChecksumWorker();
-	
-	/**
-	 * This method will build the {@link BlacklistWorker} to be used by this
-	 * {@link ProductKeyGenerator}.
-	 * 
-	 * @return
-	 * The {@link BlacklistWorker} to be used by this {@link ProductKeyGenerator}.
-	 */
 	protected abstract BlacklistWorker buildBlacklistWorker();
-	
-	/**
-	 * This method will build the {@link ProductKeyStylingWorker} to be used by this
-	 * {@link ProductKeyGenerator}.
-	 * 
-	 * @return
-	 * The {@link ProductKeyStylingWorker} to be used by this {@link ProductKeyGenerator}.
-	 */
 	protected abstract ProductKeyStylingWorker buildProductKeyStylingWorker();
-	
-	/**
-	 * This method will build the {@link SeedAvailabilityWorker} to be used by this
-	 * {@link ProductKeyGenerator}.
-	 * 
-	 * @return
-	 * The {@link SeedAvailabilityWorker} to be used by this {@link ProductKeyGenerator}.
-	 */
 	protected abstract SeedAvailabilityWorker buildSeedAvailabilityWorker();
-	
-	/* PRIVATE METHODS */
-	/**
-	 * This method will get the {@link ProductKeySectionWorker} to be used by this
-	 * {@link ProductKeyGenerator}.
-	 * 
-	 * @return
-	 * The {@link ProductKeySectionWorker} to be used by this {@link ProductKeyGenerator}.
-	 */
 	private ProductKeySectionWorker<ED> getProductKeySectionWorker()
 	{
 		if (this.productKeySectionWorker == null)
@@ -404,14 +187,6 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData>
 		
 		return this.productKeySectionWorker;
 	}
-	
-	/**
-	 * This method will get the {@link ChecksumWorker} to be used by this
-	 * {@link ProductKeyGenerator}.
-	 * 
-	 * @return
-	 * The {@link ChecksumWorker} to be used by this {@link ProductKeyGenerator}.
-	 */
 	private ChecksumWorker getChecksumWorker()
 	{
 		if (this.checksumWorker == null)
@@ -420,15 +195,7 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData>
 		}
 		
 		return this.checksumWorker;
-	}
-	
-	/**
-	 * This method will get the {@link BlacklistWorker} to be used by this
-	 * {@link ProductKeyGenerator}.
-	 * 
-	 * @return
-	 * The {@link BlacklistWorker} to be used by this {@link ProductKeyGenerator}.
-	 */
+    }
 	private BlacklistWorker getBlacklistWorker()
 	{
 		if (this.blacklistWorker == null)
@@ -438,14 +205,6 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData>
 		
 		return this.blacklistWorker;
 	}
-	
-	/**
-	 * This method will get the {@link ProductKeyStylingWorker} to be used by this
-	 * {@link ProductKeyGenerator}.
-	 * 
-	 * @return
-	 * The {@link ProductKeyStylingWorker} to be used by this {@link ProductKeyGenerator}.
-	 */
 	private ProductKeyStylingWorker getProductKeyStylingWorker()
 	{
 		if (this.productKeyStylingWorker == null)
@@ -455,14 +214,6 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData>
 		
 		return this.productKeyStylingWorker;
 	}
-	
-	/**
-	 * This method will get the {@link SeedAvailabilityWorker} to be used by this
-	 * {@link ProductKeyGenerator}.
-	 * 
-	 * @return
-	 * The {@link SeedAvailabilityWorker} to be used by this {@link ProductKeyGenerator}.
-	 */
 	private SeedAvailabilityWorker getSeedAvailabilityWorker()
 	{
 		if (this.seedAvailabilityWorker == null)
@@ -472,5 +223,208 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData>
 		
 		return this.seedAvailabilityWorker;
 	}
-	
+}
+
+interface BlacklistWorker
+{
+	boolean isKeyBlackListed(String productKey);
+	boolean isSeedBlackListed(String seedHex);
+}
+
+interface ChecksumWorker
+{
+	String buildProductKeyChecksum(String productKey);
+	boolean verifyProductKeyChecksum(String productKey);
+}
+interface ProductKeySectionWorker<ED extends ProductKeyEncodingData>
+{
+	byte buildProductKeySection(final long seed, ED productKeyEncodingDate);
+}
+interface ProductKeyStylingWorker
+{
+	String addStyling(String productKey);
+	String removeStyling(String productKey);
+}
+interface SeedAvailabilityWorker
+{
+	boolean isSeedAvailable(String seedHex);
+}
+class ProductKeyEncodingData
+{
+	private final byte a;
+	private final byte b;
+	private final byte c;
+	public ProductKeyEncodingData(final byte a, final byte b, final byte c)
+	{
+		this.a = a;
+		this.b = b;
+		this.c = c;
+	}
+	public byte getA()
+	{
+		return this.a;
+	}
+	public byte getB()
+	{
+		return this.b;
+	}
+	public byte getC()
+	{
+		return this.c;
+	}
+
+}
+class ProductKeyUtils
+{
+
+
+	/**
+	 * This method will build a HEXADECIMAL {@link String} that will be of the specified length
+	 * using the specified content.
+	 *
+	 * @param expectedLength
+	 * The expected length of the string... if the HEXADECIMAL {@link String} is longer than this,
+	 * the leading characters will be removed.
+	 * @param content
+	 * The content to be used when building the HEXADECIMAL {@link String}.
+	 * @return
+	 * The HEXADECIMAL {@link String}.
+	 */
+	public static String buildHexString(final int expectedLength, final long content)
+	{
+		String hexStr = String.format("%0" + expectedLength + "X", content);
+
+		if (hexStr.length() > expectedLength)
+		{
+			hexStr = hexStr.substring(hexStr.length() - expectedLength);
+		}
+
+		while (hexStr.length() < expectedLength)
+		{
+			hexStr = "0" + hexStr;
+		}
+
+		return hexStr;
+	}
+
+}
+enum ProductKeyState
+{
+	KEY_GOOD,
+	KEY_INVALID,
+	KEY_BLACKLISTED,
+	KEY_PHONY
+}
+class ProductKeyGenerationException extends Exception
+{
+
+
+	/* PRIVATE CONSTANTS */
+	private static final long serialVersionUID = 1L;
+
+	/* CONSTRUCTORS */
+	/**
+	 * This will create a new instance of a {@link ProductKeyGenerationException}.
+	 */
+	public ProductKeyGenerationException()
+	{
+		super("Failed to generate a product-key.");
+	}
+
+	/**
+	 * This will create a new instance of a {@link ProductKeyGenerationException}.
+	 *
+	 * @param detailedMessage
+	 * The details for this {@link ProductKeyGenerationException}.
+	 */
+	public ProductKeyGenerationException(final String detailedMessage)
+	{
+		super("Failed to generate a product-key: " + detailedMessage);
+	}
+
+}
+class SeedIsBlacklistedException extends ProductKeyGenerationException
+{
+
+
+	/* PRIVATE CONSTANTS */
+	private static final long serialVersionUID = 1L;
+
+	/* CONSTRUCTORS */
+	/**
+	 * This will create a new instance of a {@link SeedIsBlacklistedException}.
+	 */
+	public SeedIsBlacklistedException()
+	{
+		super("Seed provided is black-listed.");
+	}
+
+}
+class SeedAlreadyTakenException extends ProductKeyGenerationException
+{
+
+
+	/* PRIVATE CONSTANTS */
+	private static final long serialVersionUID = 1L;
+
+	/* CONSTRUCTORS */
+	/**
+	 * This will create a new instance of a {@link SeedAlreadyTakenException}.
+	 */
+	public SeedAlreadyTakenException()
+	{
+		super("Seed is already taken.");
+	}
+
+}
+class EncodingDataNotCompleteException extends ProductKeyGenerationException
+{
+
+
+	/* PRIVATE CONSTANTS */
+	private static final long serialVersionUID = 1L;
+
+	/* CONSTRUCTORS */
+	/**
+	 * This will create a new instance of a {@link EncodingDataNotCompleteException}.
+	 */
+	public EncodingDataNotCompleteException()
+	{
+		super("Encoding-data must be complete for generating product-keys.");
+	}
+
+}
+class ProductKeyEncoderNotDefinedException extends ProductKeyGenerationException
+{
+
+
+	/* PRIVATE CONSTANTS */
+	private static final long serialVersionUID = 1L;
+
+	/* CONSTRUCTORS */
+	/**
+	 * This will create a new instance of a {@link ProductKeyEncoderNotDefinedException}.
+	 */
+	public ProductKeyEncoderNotDefinedException()
+	{
+		super("Product-key encoder is not defined.");
+	}
+
+}
+class InvalidSeedException extends ProductKeyGenerationException
+{
+
+
+	/* PRIVATE CONSTANTS */
+	private static final long serialVersionUID = 1L;
+
+	/* CONSTRUCTORS */
+	/**
+	 * This will create a new instance of a {@link InvalidSeedException}.
+	 */
+	public InvalidSeedException()
+	{
+		super("Seed is invalid.");
+	}
+
 }
