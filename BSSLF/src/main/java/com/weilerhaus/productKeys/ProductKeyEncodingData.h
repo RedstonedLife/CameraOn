@@ -9,7 +9,7 @@ class ProductKeyEncodingData {
     int c;
     friend int ProductKeySectionWorker::buildProductKeySection(long seed, ProductKeyEncodingData& encodingData);
     public:
-    BasicProductKeyEncodingData(int a, int b, int c);
+    ProductKeyEncodingData(int a, int b, int c);
     void setInts(int a, int b, int c);
     int getA() {return a;}
     int getB() {return b;}
