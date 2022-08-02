@@ -16,7 +16,7 @@ public class ProductKeyUtils
 	 * @return
 	 * The HEXADECIMAL {@link String}.
 	 */
-	public static String buildHexStr(final int expectedLength, final long content)
+	public static String buildHexString(final int expectedLength, final long content)
 	{
 		String hexStr = String.format("%0" + expectedLength + "X", content);
 		

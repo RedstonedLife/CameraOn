@@ -229,7 +229,6 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData>
 							if (this.productKeyEncodingData[n] != null)
 							{
 								tmpKeySection = cleanedProductKey.substring(currentKeyCharIndex, currentKeyCharIndex + 2);
-								
 								if ( !tmpKeySection.equals(ProductKeyUtils.buildHexString(2, this.getProductKeySectionWorker().buildProductKeySection(seed, this.productKeyEncodingData[n]))))
 								{
 									return ProductKeyState.KEY_PHONY;
