@@ -2,7 +2,7 @@ package com.weilerhaus.productKeys.exceptions;
 
 public class ProductKeyEncoderNotDefinedException extends ProductKeyGenerationException
 {
-	
+
 	/* PRIVATE CONSTANTS */
 	private static final long serialVersionUID = 1L;
 	
