@@ -1,5 +1,5 @@
 #include "ProductKeyEncodingData.h"
-
+#include "ProductKeySectionWorker.h"
 #ifndef BASICPRODUCTKEYENCODINGDATA_H
 #define BASICPRODUCTKEYENCODINGDATA_H
 

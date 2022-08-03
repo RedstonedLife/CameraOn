@@ -1,5 +1,6 @@
 #include <string>
 #include "ChecksumWorker.h"
+#include "ProductKeyUtils.h"
 #include "StringUtils.h"
 
 #ifndef BASICCHECKSUMWORKER_H
@@ -40,6 +41,6 @@ public:
         }
         return false;
     };
-}
+};
 
 #endif //BASICCHECKSUMWORKER_H
