@@ -67,4 +67,4 @@ private:
 };
 
 
-#endif //CAMERAON_PRODUCTKEYGENERATOR_H
+#endif //PRODUCTKEYGENERATOR_H
