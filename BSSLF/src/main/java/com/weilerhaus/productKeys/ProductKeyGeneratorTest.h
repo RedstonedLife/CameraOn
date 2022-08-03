@@ -30,7 +30,7 @@ public:
         {
             tmpKey = nullptr;
             tmpTryCount = 0;
-            while ((tmpKey == nullptr) && (tmpTryCount < 10))
+            while ((!tmpKey.empty()) && (tmpTryCount < 10))
             {
                 try
                 {
@@ -40,7 +40,7 @@ public:
                 }
                 tmpTryCount++;
             }
-            if ((tmpKey != nullptr) && (tmpKey.trim().length() > 0))
+            if ((!tmpKey.empty()) && (tmpKey.trim().length() > 0))
             {
                 tmpGeneratedKeyState = productKeyGenerator->verifyProductKey(tmpKey);
                 if (ProductKeyState::KEY_GOOD == tmpGeneratedKeyState)
@@ -50,7 +50,7 @@ public:
                 }
                 else
                 {
-                    std::cout << std::to_string((n + 1)) + ")  " + ((((n < 9)) ? " " : "")) + "Product Key (BAD): " + tmpKey + ":  Key State: " + tmpGeneratedKeyState.name() << std::endl;
+                    std::cout << std::to_string((n + 1)) + ")  " + ((((n < 9)) ? " " : "")) + "Product Key (BAD): " + tmpKey + ":  Key State: " + tmpGeneratedKeyState << std::endl;
                 }
             }
             else
@@ -68,7 +68,7 @@ public:
         int keyIndex = 0;
         for (auto productKey : generatedProductKeys)
         {
-            if ((productKey != nullptr) && (productKey.trim().length() > 0))
+            if ((!productKey.empty()) && (productKey.trim().length() > 0))
             {
                 tmpGeneratedKeyState = basicProductKeyGenerator->verifyProductKey(productKey);
                 if (ProductKeyState::KEY_GOOD == tmpGeneratedKeyState)
@@ -77,7 +77,7 @@ public:
                 }
                 else
                 {
-                    std::cout << std::to_string((keyIndex + 1)) + ")  " + ((((keyIndex < 9)) ? " " : "")) + "Product Key (BAD): " + productKey + ":  Key State: " + tmpGeneratedKeyState.name() << std::endl;
+                    std::cout << std::to_string((keyIndex + 1)) + ")  " + ((((keyIndex < 9)) ? " " : "")) + "Product Key (BAD): " + productKey + ":  Key State: " + tmpGeneratedKeyState << std::endl;
                 }
                 keyIndex++;
             }
