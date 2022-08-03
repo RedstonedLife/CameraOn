@@ -1,29 +1,37 @@
+#include "ProductKeyUtils.h"
 #include <iostream>
+#include <memory>
 #include <string>
+#include <stdexcept>
 #include <vector>
-#include "com_weilerhaus_productKeys_ProductKeyUtils.h"
-#include <cstring>
-#include "ProductKeyUtilsImpl.h"
+#include <jni.h>
 
+using namespace std;
 
-jstring str2jstring(JNIEnv* env,const char* pat)
+template<typename ... Args>
+std::string string_format( const std::string& format, Args ... args )
 {
-   //Define the java String class strClass
-    jclass strClass = (env)->FindClass("Ljava/lang/String;");
-   //Get the constructor of String(byte[],String) to convert the local byte[] array into a new String
-    jmethodID ctorID = (env)->GetMethodID(strClass, "<init>", "([BLjava/lang/String;)V");
-   //Create byte array
-    jbyteArray bytes = (env)->NewByteArray(strlen(pat));
-   //Convert char* to byte array
-    (env)->SetByteArrayRegion(bytes, 0, strlen(pat), (jbyte*)pat);
-   //Set the String, save the language type, used for the parameters when the byte array is converted to String
-    jstring encoding = (env)->NewStringUTF("GB2312");
-   //Convert the byte array to java String and output
-    return (jstring)(env)->NewObject(strClass, ctorID, bytes, encoding);
+    int size_s = std::snprintf( nullptr, 0, format.c_str(), args ... ) + 1; // Extra space for '\0'
+    if( size_s <= 0 ){ throw std::runtime_error( "Error during formatting." ); }
+    auto size = static_cast<size_t>( size_s );
+    std::unique_ptr<char[]> buf( new char[ size ] );
+    std::snprintf( buf.get(), size, format.c_str(), args ... );
+    return std::string( buf.get(), buf.get() + size - 1 ); // We don't want the '\0' inside
 }
 
-JNIEXPORT jstring JNICALL Java_com_weilerhaus_productKeys_utils_ProductKeyUtils_buildHexStr(JNIEnv* env, jobject obj, jint explength, jlong content) {
-    const char *hex = bhs(explength, content).c_str();
-    return str2jstring(env, hex);
+std::string buildHexStr(int expectedLength, long content)
+{
+        std::string pZ = "%0";
+        std::string xS = "X";
+        std::string result = pZ + to_string(expectedLength).c_str() + xS;
+        std::string hexStr = string_format(result.c_str(), content);
+        if (hexStr.length() > expectedLength)
+        {
+            hexStr = hexStr.substr(hexStr.length() - expectedLength);
+        }
+        while (hexStr.length() < expectedLength)
+        {
+            hexStr =+ "0";
+        }
+        return hexStr;
 }
-
