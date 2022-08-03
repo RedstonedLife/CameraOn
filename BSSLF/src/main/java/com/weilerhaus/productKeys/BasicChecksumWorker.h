@@ -1,4 +1,4 @@
-#include "BlacklistWorker.h"
+#include "ChecksumWorker.h"
 
 #ifndef BASICCHECKSUMWORKER_H
 #define BASICCHECKSUMWORKER_H
