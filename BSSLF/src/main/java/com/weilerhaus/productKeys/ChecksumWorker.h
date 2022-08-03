@@ -1,7 +1,7 @@
-#ifndef BASICCHECKSUMWORKER_H
-#define BASICCHECKSUMWORKER_H
+#ifndef CHECKSUMWORKER_H
+#define CHECKSUMWORKER_H
 
-class BasicChecksumWorker {
+class ChecksumWorker {
 public:
     std::string buildProductKeyChecksum(std::string productKey);
     bool verifyProductKeyChecksum(std::string productKey);

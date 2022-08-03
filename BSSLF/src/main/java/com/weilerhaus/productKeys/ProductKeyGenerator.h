@@ -1,4 +1,11 @@
 #include "ProductKeyEncodingData.h"
+#include "ProductKeyState.h"
+#include "ProductKeyGenerationException.h"
+#include "ProductKeySectionWorker.h"
+#include "ChecksumWorker.h"
+#include "BlacklistWorker.h"
+#include "ProductKeyStylingWorker.h"
+#include "SeedAvailabilityWorker.h"
 
 
 #ifndef PRODUCTKEYGENERATOR_H
@@ -18,6 +25,14 @@ private:
 public:
     public ProductKeyGenerator(int seedCharLength, params ED[] productKeyEncodingData);
     int getSeedCharLength();
+    ProductKeyState* verifyProductKey(std::string productKey);
+    std::string generateProductKey(long seed) throws ProductKeyGenerationException;
+protected:
+    virtual ProductKeySectionWorker* buildProductKeySectionWorker() = 0;
+    virtual ChecksumWorker* buildChecksumWorker() = 0;
+    virtual BlacklistWorker* buildBlacklistWorker() = 0;
+    virtual ProductKeyStylingWorker* buildProductKeyStylingWorker() = 0;
+    virtual SeedAvailabilityWorker* buildSeedAvailabilityWorker() = 0;
 };
 
 

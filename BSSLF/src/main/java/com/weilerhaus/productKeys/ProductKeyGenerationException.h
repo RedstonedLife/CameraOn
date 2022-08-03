@@ -4,7 +4,7 @@ using namespace std;
 
 class ProductKeyGenerationException : public exception {
 public:
-    string message() {
+    std::string message() {
         return "Failed to generate a product-key.";
     }
 };
