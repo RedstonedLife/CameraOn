@@ -3,8 +3,8 @@
 
 class ChecksumWorker {
 public:
-    std::string buildProductKeyChecksum(std::string productKey);
-    bool verifyProductKeyChecksum(std::string productKey);
+    virtual std::string buildProductKeyChecksum(std::string productKey);
+    virtual bool verifyProductKeyChecksum(std::string productKey);
 };
 
 #endif
