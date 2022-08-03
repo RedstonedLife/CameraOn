@@ -81,7 +81,7 @@ public
                             if (this->productKeyEncodingData[n] != nullptr)
                             {
                                 tmpKeySection = cleanedProductKey.substr(currentKeyCharIndex,currentKeyCharIndex + 2);
-                                if (!(tmpKeySection.compare(ProductKeyUtils::buildHexString(2, this->getProductKeySectionWorker()->buildProductKeySection(seed, this->productKeyEncodingData[n]))) != 0))
+                                if (!(tmpKeySection.compare(ProductKeyUtils::buildHexStr(2, this->getProductKeySectionWorker()->buildProductKeySection(seed, this->productKeyEncodingData[n]))) != 0))
                                 {
                                     return ProductKeyState::KEY_PHONY;
                                 }
@@ -102,7 +102,7 @@ public
     std::string generateProductKey(long seed) throws ProductKeyGenerationException
             {
                     // Build the HEXADECIMAL string representing the seed.
-                    std::string seedHex = ProductKeyUtils::buildHexString(this->getSeedCharLength(), seed);
+                    std::string seedHex = ProductKeyUtils::buildHexStr(this->getSeedCharLength(), seed);
             try
             {
                 // Try to parse the HEXADECIMAL string representing the seed and use that for the seed.
@@ -112,7 +112,7 @@ public
                     if (this->getProductKeySectionWorker() != nullptr)
                     {
                         std::string keySb = "";
-                        seedHex = ProductKeyUtils::buildHexString(this->getSeedCharLength(), seed);
+                        seedHex = ProductKeyUtils::buildHexStr(this->getSeedCharLength(), seed);
                         if ((this->getBlacklistWorker() != nullptr) && (this->getBlacklistWorker()->isSeedBlackListed(seedHex)))
                         {
                             throw std::logic_error("SeedIsBlacklistedException");
@@ -130,7 +130,7 @@ public
                             {
                                 throw std::logic_error("EncodingDataNotCompleteException");
                             }
-                            keySb = keySb + (ProductKeyUtils::buildHexString(2, this->getProductKeySectionWorker()->buildProductKeySection(seed, this->productKeyEncodingData[n])));
+                            keySb = keySb + (ProductKeyUtils::buildHexStr(2, this->getProductKeySectionWorker()->buildProductKeySection(seed, this->productKeyEncodingData[n])));
                         }
                         // Add checksum to key string.
                         if (this->getChecksumWorker() != nullptr)

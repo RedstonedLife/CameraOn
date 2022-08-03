@@ -229,7 +229,7 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData>
 							if (this.productKeyEncodingData[n] != null)
 							{
 								tmpKeySection = cleanedProductKey.substring(currentKeyCharIndex, currentKeyCharIndex + 2);
-								if ( !tmpKeySection.equals(ProductKeyUtils.buildHexString(2, this.getProductKeySectionWorker().buildProductKeySection(seed, this.productKeyEncodingData[n]))))
+								if ( !tmpKeySection.equals(ProductKeyUtils.buildHexStr(2, this.getProductKeySectionWorker().buildProductKeySection(seed, this.productKeyEncodingData[n]))))
 								{
 									return ProductKeyState.KEY_PHONY;
 								}
@@ -271,7 +271,7 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData>
 	public String generateProductKey(long seed) throws ProductKeyGenerationException
 	{
 		// Build the HEXADECIMAL string representing the seed.
-		String seedHex = ProductKeyUtils.buildHexString(this.getSeedCharLength(), seed);
+		String seedHex = ProductKeyUtils.buildHexStr(this.getSeedCharLength(), seed);
 		
 		try
 		{
@@ -284,7 +284,7 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData>
 				{
 					final StringBuilder keySb = new StringBuilder();
 					
-					seedHex = ProductKeyUtils.buildHexString(this.getSeedCharLength(), seed);
+					seedHex = ProductKeyUtils.buildHexStr(this.getSeedCharLength(), seed);
 					
 					if ((this.getBlacklistWorker() != null) && (this.getBlacklistWorker().isSeedBlackListed(seedHex)))
 					{
@@ -307,7 +307,7 @@ public abstract class ProductKeyGenerator<ED extends ProductKeyEncodingData>
 							throw new EncodingDataNotCompleteException();
 						}
 						
-						keySb.append(ProductKeyUtils.buildHexString(2, this.getProductKeySectionWorker().buildProductKeySection(seed, this.productKeyEncodingData[n])));
+						keySb.append(ProductKeyUtils.buildHexStr(2, this.getProductKeySectionWorker().buildProductKeySection(seed, this.productKeyEncodingData[n])));
 					}
 					
 					// Add checksum to key string.

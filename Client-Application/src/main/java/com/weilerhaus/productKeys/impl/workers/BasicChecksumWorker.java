@@ -34,7 +34,7 @@ public class BasicChecksumWorker implements ChecksumWorker
 				}
 			}
 			
-			return ProductKeyUtils.buildHexString(4, (left << 8) + right);
+			return ProductKeyUtils.buildHexStr(4, (left << 8) + right);
 		}
 		
 		return null;

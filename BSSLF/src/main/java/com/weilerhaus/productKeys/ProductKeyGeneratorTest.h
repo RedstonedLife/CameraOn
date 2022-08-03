@@ -2,9 +2,7 @@
 #include "BasicProductKeyStylingWorker.h"
 #include "BasicProductKeySectionWorker.h"
 #include "BasicProductKeyEncodingData.h"
-#include "BasicProductKeyGenerator.h"
 #include "ProductKeyGenerator.h"
-#include "ProductKeyState.h"
 #include "StringUtils.h"
 #include <random>
 
@@ -12,19 +10,19 @@
 #ifndef PRODUCTKEYGENERATORTEST_H
 #define PRODUCTKEYGENERATORTEST_H
 
-
+using namespace KeyGenerator;
 
 class ProductKeyGeneratorTest
 {
 public:
-    std::string stateToString(ProductKeyState state) {
+    static std::string stateToString(ProductKeyState state) {
         switch (state)
         {
             case KEY_GOOD:   return "KEY_GOOD";
             case KEY_INVALID:   return "KEY_INVALID";
             case KEY_BLACKLISTED: return "KEY_BLACKLISTED";
-            case KEY_PHONY: return "KEY_PHONY"
-            default:      return "KEY_????"
+            case KEY_PHONY: return "KEY_PHONY";
+            default:      return "KEY_????";
         }
     }
     static void main(std::vector<std::string> &args)
@@ -33,7 +31,7 @@ public:
         ProductKeyState tmpGeneratedKeyState;
         std::vector<std::string> generatedProductKeys(25);
         // @formatter:off
-        ProductKeyGenerator* productKeyGenerator = new BasicProductKeyGenerator(
+        ProductKeyGenerator keyGen = new ProductKeyGenerator(
                 new BasicProductKeyEncodingData((int)24, (int)3, (int)101),
                 new BasicProductKeyEncodingData((int)10, (int)4, (int)56),
                 new BasicProductKeyEncodingData((int)1, (int)2, (int)91),
@@ -43,31 +41,29 @@ public:
                 new BasicProductKeyEncodingData((int)21, (int)67, (int)25),
                 new BasicProductKeyEncodingData((int)3, (int)76, (int)12),
                 new BasicProductKeyEncodingData((int)31, (int)22, (int)34),
-                new BasicProductKeyEncodingData((int)15, (int)72, (int)65)
-                );
+                new BasicProductKeyEncodingData((int)15, (int)72, (int)65));
         // @formatter:on
         int tmpTryCount;
         std::cout << "**** BUILDING KEYS ****" << std::endl;
         std::default_random_engine generator;
         std::uniform_int_distribution<long> distribution(LONG_MIN, LONG_MAX);
-        long result = distribution(generator)
-        for (int n = 0; n < 25; n++)
-        {
+        long result = distribution(generator);
+        for(int n = 0; n <= 25; n++){
             tmpKey = nullptr;
             tmpTryCount = 0;
             while ((!tmpKey.empty()) && (tmpTryCount < 10))
             {
                 try
                 {
-                    tmpKey = productKeyGenerator->generateProductKey(result);
-                }catch (Exception e)
+                    tmpKey = keyGen->generateProductKey(result);
+                }catch (_exception e)
                 {
                 }
                 tmpTryCount++;
             }
             if ((!tmpKey.empty()) && (StringUtils::trim(tmpKey).length() > 0))
             {
-                tmpGeneratedKeyState = productKeyGenerator->verifyProductKey(tmpKey);
+                tmpGeneratedKeyState = keyGen->verifyProductKey(tmpKey);
                 if (ProductKeyState::KEY_GOOD == tmpGeneratedKeyState)
                 {
                     generatedProductKeys[n] = tmpKey;
@@ -88,7 +84,7 @@ public:
         std::cout << std::endl;
         std::cout << "**** VERIFYING KEYS ****" << std::endl;
         // @formatter:off
-        BasicProductKeyGenerator* basicProductKeyGenerator = new BasicProductKeyGenerator(
+        ProductKeyGenerator basicProductKeyGenerator = new ProductKeyGenerator(
                 new BasicProductKeyEncodingData((int)24, (int)3, (int)101),
                 nullptr,
                 new BasicProductKeyEncodingData((int)1, (int)2, (int)91),
@@ -98,8 +94,7 @@ public:
                 new BasicProductKeyEncodingData((int)21, (int)67, (int)25),
                 nullptr,
                 new BasicProductKeyEncodingData((int)31, (int)22, (int)34),
-                nullptr
-                );
+                nullptr);
         // @formatter:on
         int keyIndex = 0;
         for (auto productKey : generatedProductKeys)
