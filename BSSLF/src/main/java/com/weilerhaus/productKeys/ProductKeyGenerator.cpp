@@ -4,7 +4,9 @@
 #include <stdexcept>
 #include <vector>
 #include <algorithm>
-/* This class are provide by kalkicode.com (java to c++) */
+#include "StringUtils.h"
+#include "ProductKeyGenerator.h"
+#include "StringUtils.h"
 
 template<typename ED extends ProductKeyEncodingData>
 class ProductKeyGenerator
@@ -43,11 +45,11 @@ public
             String cleanedProductKey;
             if (this->getProductKeyStylingWorker() != nullptr)
             {
-                cleanedProductKey = Settlement::string_to_upper(this->getProductKeyStylingWorker()->removeStyling(productKey));
+                cleanedProductKey = StringUtils::toUpper(this->getProductKeyStylingWorker()->removeStyling(productKey));
             }
             else
             {
-                cleanedProductKey = Settlement::string_to_upper(productKey);
+                cleanedProductKey = StringUtils::toUpper(productKey);
             }
             // Verify that the format of the product-key is valid.
             if ((this->getChecksumWorker() != nullptr) && (!this->getChecksumWorker()->verifyProductKeyChecksum(cleanedProductKey)))
@@ -109,7 +111,7 @@ public
                 {
                     if (this->getProductKeySectionWorker() != nullptr)
                     {
-                        StringBuilder keySb =  java.lang.StringBuilder();
+                        std::string keySb = "";
                         seedHex = ProductKeyUtils::buildHexString(this->getSeedCharLength(), seed);
                         if ((this->getBlacklistWorker() != nullptr) && (this->getBlacklistWorker()->isSeedBlackListed(seedHex)))
                         {
@@ -120,7 +122,7 @@ public
                             throw std::logic_error("SeedAlreadyTakenException");
                         }
                         // The key string begins with a HEXADECIMAL string of the seed.
-                        keySb.append(seedHex);
+                        keySb = keySb + seedHex;
                         // Build the byte for the key-section derived from the seed.
                         for (int n = 0; n < this->productKeyEncodingData.size(); n++)
                         {
@@ -128,19 +130,19 @@ public
                             {
                                 throw std::logic_error("EncodingDataNotCompleteException");
                             }
-                            keySb.append(ProductKeyUtils::buildHexString(2, this->getProductKeySectionWorker()->buildProductKeySection(seed, this->productKeyEncodingData[n])));
+                            keySb = keySb + (ProductKeyUtils::buildHexString(2, this->getProductKeySectionWorker()->buildProductKeySection(seed, this->productKeyEncodingData[n])));
                         }
                         // Add checksum to key string.
                         if (this->getChecksumWorker() != nullptr)
                         {
-                            keySb.append(this->getChecksumWorker()->buildProductKeyChecksum(keySb.toString()));
+                            keySb = keySb + this->getChecksumWorker()->buildProductKeyChecksum(keySb.toString());
                         }
                         // Add dashes to the product-key and return it.
                         if (this->getProductKeyStylingWorker() != nullptr)
                         {
                             return this->getProductKeyStylingWorker()->addStyling(keySb.toString());
                         }
-                        return keySb.toString();
+                        return keySb;
                     }
                     else
                     {
@@ -156,51 +158,4 @@ public
                 throw std::logic_error("InvalidSeedException");
             }
             }
-protected:
-    virtual ProductKeySectionWorker* buildProductKeySectionWorker() = 0;
-    virtual ChecksumWorker* buildChecksumWorker() = 0;
-    virtual BlacklistWorker* buildBlacklistWorker() = 0;
-    virtual ProductKeyStylingWorker* buildProductKeyStylingWorker() = 0;
-    virtual SeedAvailabilityWorker* buildSeedAvailabilityWorker() = 0;
-private:
-    ProductKeySectionWorker* getProductKeySectionWorker()
-    {
-        if (this->productKeySectionWorker == nullptr)
-        {
-            this->productKeySectionWorker = this->buildProductKeySectionWorker();
-        }
-        return this->productKeySectionWorker;
-    }
-    ChecksumWorker* getChecksumWorker()
-    {
-        if (this->checksumWorker == nullptr)
-        {
-            this->checksumWorker = this->buildChecksumWorker();
-        }
-        return this->checksumWorker;
-    }
-    BlacklistWorker* getBlacklistWorker()
-    {
-        if (this->blacklistWorker == nullptr)
-        {
-            this->blacklistWorker = this->buildBlacklistWorker();
-        }
-        return this->blacklistWorker;
-    }
-    ProductKeyStylingWorker* getProductKeyStylingWorker()
-    {
-        if (this->productKeyStylingWorker == nullptr)
-        {
-            this->productKeyStylingWorker = this->buildProductKeyStylingWorker();
-        }
-        return this->productKeyStylingWorker;
-    }
-    SeedAvailabilityWorker* getSeedAvailabilityWorker()
-    {
-        if (this->seedAvailabilityWorker == nullptr)
-        {
-            this->seedAvailabilityWorker = this->buildSeedAvailabilityWorker();
-        }
-        return this->seedAvailabilityWorker;
-    }
 };

@@ -25,6 +25,7 @@ private:
 public:
     public ProductKeyGenerator(int seedCharLength, params ED[] productKeyEncodingData);
     int getSeedCharLength();
+    void setSeedCharLength(int in);
     ProductKeyState* verifyProductKey(std::string productKey);
     std::string generateProductKey(long seed) throws ProductKeyGenerationException;
 protected:
