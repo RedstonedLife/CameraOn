@@ -1,8 +1,10 @@
-#include "ProductKeySectionWorker.h"
-#include "ChecksumWorker.h"
+#include "BasicProductKeySectionWorker.h"
+#include "BasicChecksumWorker.h"
 #include "BlacklistWorker.h"
-#include "ProductKeyStylingWorker.h"
+#include "BasicProductKeyStylingWorker.h"
 #include "SeedAvailabilityWorker.h"
+#include "ProductKeyGenerator.h"
+#include "ProductKeyEncodingData.h"
 
 #ifndef BASICPRODUCTKEYGENERATOR_H
 #define BASICPRODUCTKEYGENERATOR_H
