@@ -33,6 +33,37 @@ protected:
     virtual BlacklistWorker* buildBlacklistWorker() = 0;
     virtual ProductKeyStylingWorker* buildProductKeyStylingWorker() = 0;
     virtual SeedAvailabilityWorker* buildSeedAvailabilityWorker() = 0;
+private:
+    ProductKeySectionWorker* getProductKeySectionWorker() {
+        if(this->productKeySectionWorker == nullptr) {
+            this->productKeySectionWorker = this->buildProductKeySectionWorker();
+        }
+        return this->productKeySectionWorker;
+    }
+    ChecksumWorker* getChecksumWorker() {
+        if(this->checksumWorker == nullptr) {
+            this->checksumWorker = this->buildChecksumWorker();
+        }
+        return this->checksumWorker;
+    }
+    BlacklistWorker* getBlacklistWorker() {
+        if(this->blacklistWorker == nullptr) {
+            this->blacklistWorker = this->buildBlacklistWorker();
+        }
+        return this->blacklistWorker;
+    }
+    ProductKeyStylingWorker* getProductKeyStylingWorker() {
+        if(this->productKeyStylingWorker == nullptr) {
+            this->productKeyStylingWorker = this->buildProductKeyStylingWorker();
+        }
+        return this->productKeyStylingWorker;
+    }
+    SeedAvailabilityWorker* getSeedAvailabilityWorker() {
+        if(this->seedAvailabilityWorker == nullptr) {
+            this->seedAvailabilityWorker = this->buildSeedAvailabilityWorker();
+        }
+        return this->seedAvailabilityWorker;
+    }
 };
 
 
