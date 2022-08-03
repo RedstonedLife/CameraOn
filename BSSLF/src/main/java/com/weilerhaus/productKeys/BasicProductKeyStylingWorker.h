@@ -27,7 +27,7 @@ public:
         return productKey;
     }
     std::string removeStyling(std::string productKey) {
-        if((productKey != nullptr) && (StringUtils::trim(productKey) > 0)) {return productKey.replace('-','');}
+        if((productKey != nullptr) && (StringUtils::trim(productKey) > 0)) {return productKey.replace('-','\0');}
         return productKey;
     }
 };
