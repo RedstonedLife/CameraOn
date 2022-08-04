@@ -25,10 +25,8 @@ namespace KeyGenerator {
     public:
         ProductKeyGenerator(int seedCharLength,BasicProductKeyEncodingData... productKeyEncodingData) {
             this->seedCharLength = ((((seedCharLength > 0) && (seedCharLength <= 15))) ? seedCharLength : 10);
-            if ((productKeyEncodingData != nullptr) && (productKeyEncodingData.size() > 0)) {
+            if (productKeyEncodingData.size() > 0) {
                 this->productKeyEncodingData = productKeyEncodingData;
-            } else {
-                this->productKeyEncodingData = nullptr;
             }
         }
 
@@ -37,10 +35,10 @@ namespace KeyGenerator {
         }
 
         ProductKeyState verifyProductKey(std::string productKey) {
-            if (!productKey.empty() {
+            if (!productKey.empty()) {
                 if (StringUtils::trim(productKey).length() > 0) {
                     // Remove styling.
-                    String cleanedProductKey;
+                    std::string cleanedProductKey;
                     if (this->getProductKeyStylingWorker() != nullptr) {
                         cleanedProductKey = StringUtils::toUpper(
                                 this->getProductKeyStylingWorker()->removeStyling(productKey));
@@ -59,11 +57,11 @@ namespace KeyGenerator {
                     }
                     // If the product-key section bytes are present and valid in length, then verify the
                     // product-key sections.
-                    if ((this->productKeyEncodingData != nullptr) && (this->productKeyEncodingData.size() > 0)) {
+                    if (this->productKeyEncodingData.size() > 0) {
                         if (this->getProductKeySectionWorker() != nullptr) {
                             try {
                                 // Extract the seed from the product-key.
-                                long seed = long long.parseLong(cleanedProductKey.substr(0, this->getSeedCharLength()),
+                                long seed = long.parseLong(cleanedProductKey.substr(0, this->getSeedCharLength()),
                                                                 16);
                                 int currentKeyCharIndex = this->getSeedCharLength();
                                 std::string tmpKeySection;
